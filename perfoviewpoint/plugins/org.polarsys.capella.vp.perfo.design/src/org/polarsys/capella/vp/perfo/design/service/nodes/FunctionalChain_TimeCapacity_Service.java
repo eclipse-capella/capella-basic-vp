@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2006, 2015 Thales Global Services
+ * Copyright (c) 2006, 2016 Thales Global Services
  *   All rights reserved. This program and the accompanying materials
  *   are made available under the terms of the Eclipse Public License v1.0
  *   which accompanies this distribution, and is available at
@@ -10,11 +10,7 @@
  ******************************************************************************/
 package org.polarsys.capella.vp.perfo.design.service.nodes;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.sirius.diagram.DDiagram;
-import org.eclipse.sirius.diagram.DDiagramElement;
 import org.polarsys.capella.vp.perfo.perfo.TimeCapacity;
 import org.polarsys.capella.vp.perfo.services.PerformanceServices;
 
@@ -46,8 +42,9 @@ public class FunctionalChain_TimeCapacity_Service {
 	 * @generated NOT
 	 */
 	public boolean performanceSaturated(EObject eObject, EObject view, EObject container) {
-		return ((TimeCapacity) eObject).getValue() != 0
-				&& (((TimeCapacity) eObject).getValue() == performanceService.checkPerformance(eObject, container));
+		int checkPerformance = performanceService.checkPerformance(eObject, container);
+		int value = ((TimeCapacity) eObject).getValue();
+		return value != 0 && value == checkPerformance;
 	}
 
 	/**
@@ -59,7 +56,9 @@ public class FunctionalChain_TimeCapacity_Service {
 	 * @generated NOT
 	 */
 	public boolean performanceOverhead(EObject eObject, EObject view, EObject container) {
-		return (((TimeCapacity) eObject).getValue() < performanceService.checkPerformance(eObject, container));
+		int value = ((TimeCapacity) eObject).getValue();
+		int checkPerformance = performanceService.checkPerformance(eObject, container);
+		return value != 0 && value < checkPerformance;
 	}
 
 }
