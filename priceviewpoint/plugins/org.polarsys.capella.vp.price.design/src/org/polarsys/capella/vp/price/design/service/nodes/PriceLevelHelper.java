@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2006, 2015 Thales Global Services
+ * Copyright (c) 2006, 2016 Thales Global Services
  *   All rights reserved. This program and the accompanying materials
  *   are made available under the terms of the Eclipse Public License v1.0
  *   which accompanies this distribution, and is available at
@@ -81,16 +81,29 @@ public class PriceLevelHelper {
 	
 	
 	private boolean evaluatePriceStatus(EObject eObject, PriceStatus flag){
+		final int current = maPriceService.computePrice(eObject);
+		final int maxValue = ((Price) eObject).getMaxValue();
 		
-		int current = maPriceService.computePrice(eObject);
-		
-		if (flag.equals(PriceStatus.OVERHEAD)){
-			return current > ((Price) eObject).getMaxValue();
+		if (maxValue<= 0)
+		{
+			return false;
+		}
+		else
+		{
+			switch (flag) {
+			case OVERHEAD:
+				return current > maxValue;
+
+			case SATURATED:
+				return current != 0 && current == maxValue;
+			}
 		}
 		
-		if (flag.equals(PriceStatus.SATURATED)){
-			return current != 0 && current == ((Price) eObject).getMaxValue();
-		}
+//		if (flag.equals(PriceStatus.OVERHEAD))
+//			return current > maxValue;
+//		
+//		if (flag.equals(PriceStatus.SATURATED))
+//			return current != 0 && current == maxValue;
 		
 		//May be a runtimeException
 		return false;
