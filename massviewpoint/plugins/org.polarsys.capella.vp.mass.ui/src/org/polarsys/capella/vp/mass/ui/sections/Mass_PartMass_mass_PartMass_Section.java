@@ -17,6 +17,7 @@ import java.util.List;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
@@ -26,9 +27,12 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
+import org.polarsys.capella.common.data.modellingcore.AbstractTypedElement;
 import org.polarsys.capella.common.data.modellingcore.ModelElement;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
 import org.polarsys.capella.core.data.cs.Part;
+import org.polarsys.capella.core.data.pa.PhysicalArchitecture;
+import org.polarsys.capella.core.data.pa.PhysicalComponent;
 import org.polarsys.capella.core.ui.properties.fields.AbstractSemanticField;
 import org.polarsys.capella.core.ui.properties.fields.TextValueGroup;
 import org.polarsys.capella.core.ui.properties.sections.AbstractSection;
@@ -128,19 +132,19 @@ public class Mass_PartMass_mass_PartMass_Section extends AbstractSection {
 	private EObject getMassObject(Object element) {
 		EObject parent = null;
 		if (element instanceof Part)
+		{
 			parent = (EObject) element;
+		}
 		else
+		{
 			parent = getPartParent(element);
+		}
 		
-		if (parent == null)
+		if (parent == null 
+			|| (parent != null && parent.eContents() == null)
+			|| !isViewpointActive(parent))
 			return null;
 		
-		if (!isViewpointActive(parent))
-			return null;
-
-		if (parent == null || (parent != null && parent.eContents() == null))
-			return null;
-
 		EObject result = null;
 		
 		for (EObject iEObject : parent.eContents()) 
@@ -163,17 +167,31 @@ public class Mass_PartMass_mass_PartMass_Section extends AbstractSection {
 	 */
 	private static EObject getPartParent(Object element){
 		EObject result = null;
-		
 		try {
 			Object adapter = ((IAdaptable) element).getAdapter(EObject.class);
 			if (adapter instanceof EObject) 
 			{
 				result = (EObject) Platform.getAdapterManager().getAdapter(adapter, ModelElement.class);
 			}
+
+			// Manage the PAB target
+			if (result instanceof PhysicalComponent && result.eContainer() instanceof PhysicalArchitecture)
+			{
+				PhysicalComponent physicalComponent = (PhysicalComponent)result;
+				EList<AbstractTypedElement> abstractTypedElements = physicalComponent.getAbstractTypedElements();
+				for (AbstractTypedElement abstractTypedElement : abstractTypedElements) 
+				{
+					if (abstractTypedElement instanceof Part)
+					{
+						result = abstractTypedElement;
+						break;
+					}
+				}
+			}
 		} catch (Exception e) {
 			// Do nothing to return null and ignore the selection 
 		}
-		
+
 		return result;
 	}
 
