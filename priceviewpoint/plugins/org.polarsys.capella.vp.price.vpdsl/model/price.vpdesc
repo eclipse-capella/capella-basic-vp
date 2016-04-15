@@ -4,27 +4,27 @@
     <VP_Classes name="Price">
       <VP_Class_Attributes name="value">
         <owned_type xsi:type="vpdesc:ExternalAttributeType">
-          <type href="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         </owned_type>
       </VP_Class_Attributes>
       <VP_Class_Attributes name="maxValue">
         <owned_type xsi:type="vpdesc:ExternalAttributeType">
-          <type href="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         </owned_type>
       </VP_Class_Attributes>
       <VP_Class_Attributes name="minValue">
         <owned_type xsi:type="vpdesc:ExternalAttributeType">
-          <type href="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         </owned_type>
       </VP_Class_Attributes>
     </VP_Classes>
     <VP_Classes name="PartPrice" icon="PartPrice.gif">
       <VP_Class_Attributes name="currentPrice">
         <owned_type xsi:type="vpdesc:ExternalAttributeType">
-          <type href="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         </owned_type>
       </VP_Class_Attributes>
-      <extends href="../../../plugin/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//Part"/>
+      <extends href="http://www.polarsys.org/capella/core/cs/1.0.0#//Part"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.0"/>
     </VP_Classes>
   </VP_Data>
@@ -61,7 +61,7 @@
           <style label_position="node">
             <node_Label>
               <value>
-                <expressionElements xsi:type="expression:StringElement" value="Current: &lt;%currentPrice%> - Max: &lt;%maxValue%>"/>
+                <expressionElements xsi:type="expression:StringElement" value="&lt;%currentPrice%> - Max: &lt;%maxValue%>"/>
               </value>
             </node_Label>
             <style xsi:type="vpdiagram:BasicStyle" borderColor="orange" backgroundColor="light_yellow"/>
@@ -69,7 +69,7 @@
           <style label_position="node">
             <node_Label>
               <value>
-                <expressionElements xsi:type="expression:StringElement" value="Current: &lt;%currentPrice%> - Max: &lt;%maxValue%>"/>
+                <expressionElements xsi:type="expression:StringElement" value="&lt;%currentPrice%> - Max: &lt;%maxValue%>"/>
               </value>
             </node_Label>
             <condition>
@@ -80,7 +80,7 @@
           <style label_position="node">
             <node_Label>
               <value>
-                <expressionElements xsi:type="expression:StringElement" value="Current: &lt;%currentPrice%> - Max: &lt;%maxValue%>"/>
+                <expressionElements xsi:type="expression:StringElement" value="&lt;%currentPrice%> - Max: &lt;%maxValue%>"/>
               </value>
             </node_Label>
             <condition>
@@ -111,7 +111,7 @@
           <style label_position="node">
             <node_Label>
               <value>
-                <expressionElements xsi:type="expression:StringElement" value="Current: &lt;%currentPrice%> - Max: &lt;%maxValue%>"/>
+                <expressionElements xsi:type="expression:StringElement" value="&lt;%currentPrice%> - Max: &lt;%maxValue%>"/>
               </value>
             </node_Label>
             <style xsi:type="vpdiagram:BasicStyle" borderColor="orange" backgroundColor="light_yellow"/>
@@ -119,7 +119,7 @@
           <style label_position="node">
             <node_Label>
               <value>
-                <expressionElements xsi:type="expression:StringElement" value="Current: &lt;%currentPrice%> - Max: &lt;%maxValue%>"/>
+                <expressionElements xsi:type="expression:StringElement" value="&lt;%currentPrice%> - Max: &lt;%maxValue%>"/>
               </value>
             </node_Label>
             <condition>
@@ -130,7 +130,7 @@
           <style label_position="node">
             <node_Label>
               <value>
-                <expressionElements xsi:type="expression:StringElement" value="Current: &lt;%currentPrice%> - Max: &lt;%maxValue%>"/>
+                <expressionElements xsi:type="expression:StringElement" value="&lt;%currentPrice%> - Max: &lt;%maxValue%>"/>
               </value>
             </node_Label>
             <condition>
