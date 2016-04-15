@@ -4,17 +4,17 @@
     <VP_Classes name="PerformanceCriteria">
       <VP_Class_Attributes name="value">
         <owned_type xsi:type="vpdesc:ExternalAttributeType">
-          <type href="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         </owned_type>
       </VP_Class_Attributes>
       <VP_Class_Attributes name="maxValue">
         <owned_type xsi:type="vpdesc:ExternalAttributeType">
-          <type href="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         </owned_type>
       </VP_Class_Attributes>
       <VP_Class_Attributes name="minValue">
         <owned_type xsi:type="vpdesc:ExternalAttributeType">
-          <type href="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         </owned_type>
       </VP_Class_Attributes>
     </VP_Classes>
@@ -25,19 +25,19 @@
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.0"/>
     </VP_Classes>
     <VP_Classes name="TimeConsumption" icon="TimeConsumption.gif">
-      <extends href="../../../plugin/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore#//FunctionalExchange"/>
-      <extends href="../../../plugin/org.polarsys.capella.core.data.gen/model/PhysicalArchitecture.ecore#//PhysicalFunction"/>
-      <extends href="../../../plugin/org.polarsys.capella.core.data.gen/model/LogicalArchitecture.ecore#//LogicalFunction"/>
+      <extends href="http://www.polarsys.org/capella/core/fa/1.0.0#//FunctionalExchange"/>
+      <extends href="http://www.polarsys.org/capella/core/pa/1.0.0#//PhysicalFunction"/>
+      <extends href="http://www.polarsys.org/capella/core/la/1.0.0#//LogicalFunction"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.1"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.5"/>
     </VP_Classes>
     <VP_Classes name="TimeCapacity" icon="TimeCapacity.gif">
       <VP_Class_Attributes name="currentExecutionTime">
         <owned_type xsi:type="vpdesc:ExternalAttributeType">
-          <type href="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         </owned_type>
       </VP_Class_Attributes>
-      <extends href="../../../plugin/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore#//FunctionalChain"/>
+      <extends href="http://www.polarsys.org/capella/core/fa/1.0.0#//FunctionalChain"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.2"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.5"/>
     </VP_Classes>
@@ -45,7 +45,7 @@
       <VP_Class_Attributes name="measurementUnit">
         <owned_values name="Millisecond" literal="Millisecond"/>
         <owned_type xsi:type="vpdesc:ExternalAttributeType">
-          <type href="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EEnumerator"/>
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EEnumerator"/>
         </owned_type>
       </VP_Class_Attributes>
     </VP_Classes>
@@ -123,7 +123,6 @@
               <style label_position="node">
                 <node_Label>
                   <value>
-                    <expressionElements xsi:type="expression:StringElement" value="Current: "/>
                     <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.4/@VP_Class_Attributes.0"/>
                     <expressionElements xsi:type="expression:StringElement" value=" - Max: "/>
                     <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.0"/>
@@ -134,7 +133,6 @@
               <style label_position="node">
                 <node_Label>
                   <value>
-                    <expressionElements xsi:type="expression:StringElement" value="Current: "/>
                     <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.4/@VP_Class_Attributes.0"/>
                     <expressionElements xsi:type="expression:StringElement" value=" - Max: "/>
                     <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.0"/>
@@ -148,7 +146,6 @@
               <style label_position="node">
                 <node_Label>
                   <value>
-                    <expressionElements xsi:type="expression:StringElement" value="Current: "/>
                     <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.4/@VP_Class_Attributes.0"/>
                     <expressionElements xsi:type="expression:StringElement" value=" - Max: "/>
                     <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.0"/>
@@ -209,7 +206,6 @@
               <style label_position="node">
                 <node_Label>
                   <value>
-                    <expressionElements xsi:type="expression:StringElement" value="Current: "/>
                     <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.4/@VP_Class_Attributes.0"/>
                     <expressionElements xsi:type="expression:StringElement" value=" - Max: "/>
                     <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.0"/>
@@ -220,7 +216,6 @@
               <style label_position="node">
                 <node_Label>
                   <value>
-                    <expressionElements xsi:type="expression:StringElement" value="Current: "/>
                     <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.4/@VP_Class_Attributes.0"/>
                     <expressionElements xsi:type="expression:StringElement" value=" - Max: "/>
                     <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.0"/>
@@ -234,7 +229,6 @@
               <style label_position="node">
                 <node_Label>
                   <value>
-                    <expressionElements xsi:type="expression:StringElement" value="Current: "/>
                     <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.4/@VP_Class_Attributes.0"/>
                     <expressionElements xsi:type="expression:StringElement" value=" - Max: "/>
                     <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.0"/>
