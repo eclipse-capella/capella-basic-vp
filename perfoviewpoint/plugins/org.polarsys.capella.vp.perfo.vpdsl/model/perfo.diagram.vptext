@@ -68,7 +68,7 @@ Diagrams perfo.diagram {
 						provided-by association external emde.ExtensibleElement.ownedExtensions
 						Representation {
 							Label {
-								content: "Current: " + perfo.data.TimeCapacity.currentExecutionTime + " - Max: " + perfo.data.PerformanceCriteria.value
+								content: perfo.data.TimeCapacity.currentExecutionTime + " - Max: " + perfo.data.PerformanceCriteria.value
 								position: node
 							}
 							Style {
@@ -82,7 +82,7 @@ Diagrams perfo.diagram {
 						Representation {
 							condition: Java performanceSaturated
 							Label {
-								content: "Current: " + perfo.data.TimeCapacity.currentExecutionTime + " - Max: " + perfo.data.PerformanceCriteria.value
+								content: perfo.data.TimeCapacity.currentExecutionTime + " - Max: " + perfo.data.PerformanceCriteria.value
 								position: node
 							}
 							Style {
@@ -96,7 +96,7 @@ Diagrams perfo.diagram {
 						Representation {
 							condition: Java performanceOverhead
 							Label {
-								content: "Current: " + perfo.data.TimeCapacity.currentExecutionTime + " - Max: " + perfo.data.PerformanceCriteria.value
+								content: perfo.data.TimeCapacity.currentExecutionTime + " - Max: " + perfo.data.PerformanceCriteria.value
 								position: node
 							}
 							Style {
@@ -182,7 +182,7 @@ Diagrams perfo.diagram {
 						provided-by association external emde.ExtensibleElement.ownedExtensions
 						Representation {
 							Label {
-								content: "Current: " + perfo.data.TimeCapacity.currentExecutionTime + " - Max: " + perfo.data.PerformanceCriteria.value
+								content: perfo.data.TimeCapacity.currentExecutionTime + " - Max: " + perfo.data.PerformanceCriteria.value
 								position: node
 							}
 							Style {
@@ -196,7 +196,7 @@ Diagrams perfo.diagram {
 						Representation {
 							condition: Java performanceSaturated
 							Label {
-								content: "Current: " + perfo.data.TimeCapacity.currentExecutionTime + " - Max: " + perfo.data.PerformanceCriteria.value
+								content: perfo.data.TimeCapacity.currentExecutionTime + " - Max: " + perfo.data.PerformanceCriteria.value
 								position: node
 							}
 							Style {
@@ -210,7 +210,7 @@ Diagrams perfo.diagram {
 						Representation {
 							condition: Java performanceOverhead
 							Label {
-								content: "Current: " + perfo.data.TimeCapacity.currentExecutionTime + " - Max: " + perfo.data.PerformanceCriteria.value
+								content: perfo.data.TimeCapacity.currentExecutionTime + " - Max: " + perfo.data.PerformanceCriteria.value
 								position: node
 							}
 							Style {
