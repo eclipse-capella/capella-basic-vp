@@ -15,6 +15,7 @@ import java.util.List;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
@@ -24,9 +25,12 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
+import org.polarsys.capella.common.data.modellingcore.AbstractTypedElement;
 import org.polarsys.capella.common.data.modellingcore.ModelElement;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
 import org.polarsys.capella.core.data.cs.Part;
+import org.polarsys.capella.core.data.pa.PhysicalArchitecture;
+import org.polarsys.capella.core.data.pa.PhysicalComponent;
 import org.polarsys.capella.core.ui.properties.fields.AbstractSemanticField;
 import org.polarsys.capella.core.ui.properties.fields.TextValueGroup;
 import org.polarsys.capella.core.ui.properties.sections.AbstractSection;
@@ -166,10 +170,25 @@ public class Pricema_PartPrice_pricema_PartPrice_Section extends AbstractSection
 			{
 				result = (EObject) Platform.getAdapterManager().getAdapter(adapter, ModelElement.class);
 			}
+
+			// Manage the PAB target
+			if (result instanceof PhysicalComponent && result.eContainer() instanceof PhysicalArchitecture)
+			{
+				PhysicalComponent physicalComponent = (PhysicalComponent)result;
+				EList<AbstractTypedElement> abstractTypedElements = physicalComponent.getAbstractTypedElements();
+				for (AbstractTypedElement abstractTypedElement : abstractTypedElements) 
+				{
+					if (abstractTypedElement instanceof Part)
+					{
+						result = abstractTypedElement;
+						break;
+					}
+				}
+			}
 		} catch (Exception e) {
 			// Do nothing to return null and ignore the selection 
 		}
-		
+
 		return result;
 	}
 
