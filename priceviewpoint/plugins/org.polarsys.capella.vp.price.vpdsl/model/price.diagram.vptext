@@ -1,5 +1,5 @@
 /******************************************************************************
-* Copyright (c) 2006, 2015 Thales Global Services 
+* Copyright (c) 2006, 2016 Thales Global Services 
  * All rights reserved. This program and the accompanying materials 
  * are made available under the terms of the Eclipse Public License v1.0 
  * which accompanies this distribution, and is available at 
@@ -12,13 +12,13 @@ Diagrams price.diagram {
 		DiagramExtension "Price_PhysicalArchitectureBlanc" {
 		extended-diagram: PhysicalArchitectureBlank
 		Mapping {
-			Node PAB_Global_Price {
+			Node PAB_Global_Price { 
 				domain-context: price.data.PartPrice
 				provided-by query "<%getPriceObjects()%>"
 				
-				Representation {
+				Representation { 
 					Label {
-						content: "Current: <%currentPrice%> - Max: <%maxValue%>"
+						content: "<%currentPrice%> - Max: <%maxValue%>"
 						position: node
 					}
 					Style {
@@ -33,7 +33,7 @@ Diagrams price.diagram {
 				Representation {
 					condition: Java isPriceSaturated
 					Label {
-						content: "Current: <%currentPrice%> - Max: <%maxValue%>"
+						content: "<%currentPrice%> - Max: <%maxValue%>"
 						position: node
 					}
 					Style {
@@ -48,7 +48,7 @@ Diagrams price.diagram {
 				Representation {
 					condition: Java isPriceOverhead
 					Label {
-						content: "Current: <%currentPrice%> - Max: <%maxValue%>"
+						content: "<%currentPrice%> - Max: <%maxValue%>"
 						position: node
 					}
 					Style {
@@ -89,7 +89,7 @@ Diagrams price.diagram {
 					provided-by query "<%getPriceObjects($diagram)%>"
 					Representation {
 						Label  {
-							content: "Current: <%currentPrice%> - Max: <%maxValue%>" 
+							content: "<%currentPrice%> - Max: <%maxValue%>" 
 							position: node
 						}
 						Style {
@@ -104,7 +104,7 @@ Diagrams price.diagram {
 					Representation {
 						condition: Java isPriceSaturated
 						Label {
-							content: "Current: <%currentPrice%> - Max: <%maxValue%>"
+							content: "<%currentPrice%> - Max: <%maxValue%>"
 							position: node
 						}
 						Style {
@@ -119,7 +119,7 @@ Diagrams price.diagram {
 					Representation {
 						condition: Java isPriceOverhead
 						Label {
-							content: "Current: <%currentPrice%> - Max: <%maxValue%>"
+							content: "<%currentPrice%> - Max: <%maxValue%>"
 							position: node
 						}
 						Style {
