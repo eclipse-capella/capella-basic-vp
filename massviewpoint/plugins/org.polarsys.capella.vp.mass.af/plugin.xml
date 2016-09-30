@@ -14,7 +14,7 @@
 	<extension
 	     point="org.eclipse.ui.views">
 	  <view
-	        name="Basic Mass"
+	        name="mass"
 	        icon="icons/view.gif"
 	        category="org.polarsys.kitalpha.view.category"
 	        class="org.polarsys.kitalpha.ad.viewpoint.ui.views.ViewpointView"
@@ -27,7 +27,7 @@
 	        domain="AF"
 	        id="org.polarsys.capella.vp.mass"
 	        tags="vp"
-	        name="Basic Mass"
+	        name="mass"
 	        path="/org.polarsys.capella.vp.mass.af/model/mass.vp#_Z-IWIEcaEeW1r_C8yGdaRg"/>
 	</extension>
 	<extension 

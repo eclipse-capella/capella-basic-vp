@@ -20,6 +20,8 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.swt.widgets.*;
+import org.eclipse.swt.layout.*;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -27,6 +29,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
+import org.polarsys.capella.core.ui.properties.controllers.*;
+import org.polarsys.capella.common.mdsofa.common.constant.ICommonConstants;
 import org.polarsys.capella.common.data.modellingcore.AbstractTypedElement;
 import org.polarsys.capella.common.data.modellingcore.ModelElement;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
@@ -39,6 +43,7 @@ import org.polarsys.capella.core.ui.properties.sections.AbstractSection;
 import org.polarsys.capella.vp.mass.mass.Mass;
 import org.polarsys.capella.vp.mass.mass.MassPackage;
 import org.polarsys.kitalpha.ad.services.manager.ViewpointManager;
+import org.polarsys.capella.core.ui.properties.fields.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -90,8 +95,7 @@ public class Mass_PartMass_mass_PartMass_Section extends AbstractSection {
 
 		if (eObjectToTest instanceof Mass)
 			return true;
-		else 
-		{
+		else {
 			EObject children = getMassObject(eObject);
 			if (children != null)
 				return true;
@@ -99,7 +103,7 @@ public class Mass_PartMass_mass_PartMass_Section extends AbstractSection {
 
 		return false;
 	}
-	
+
 	/**
 	* <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
@@ -109,20 +113,19 @@ public class Mass_PartMass_mass_PartMass_Section extends AbstractSection {
 	*/
 	public void setInput(IWorkbenchPart part, ISelection selection) {
 		EObject newEObject = super.setInputSelection(part, selection);
-		
-		if (newEObject != null && !(newEObject instanceof Mass))
-		{
-			final Object firstElement = ((StructuredSelection)selection).getFirstElement();
+
+		if (newEObject != null && !(newEObject instanceof Mass)) {
+			final Object firstElement = ((StructuredSelection) selection).getFirstElement();
 			newEObject = getMassObject(firstElement);
 		}
-		
+
 		if (newEObject != null) {
 			loadData((CapellaElement) newEObject);
 		} else {
 			return;
 		}
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -131,26 +134,19 @@ public class Mass_PartMass_mass_PartMass_Section extends AbstractSection {
 	 */
 	private EObject getMassObject(Object element) {
 		EObject parent = null;
-		if (element instanceof Part)
-		{
+		if (element instanceof Part) {
 			parent = (EObject) element;
-		}
-		else
-		{
+		} else {
 			parent = getPartParent(element);
 		}
-		
-		if (parent == null 
-			|| (parent != null && parent.eContents() == null)
-			|| !isViewpointActive(parent))
+
+		if (parent == null || (parent != null && parent.eContents() == null) || !isViewpointActive(parent))
 			return null;
-		
+
 		EObject result = null;
-		
-		for (EObject iEObject : parent.eContents()) 
-		{
-			if (iEObject instanceof Mass) 
-			{
+
+		for (EObject iEObject : parent.eContents()) {
+			if (iEObject instanceof Mass) {
 				result = (result == null ? (Mass) iEObject : null);
 				// This case is true when there is more then one extension of the same type. 
 				if (result == null)
@@ -159,30 +155,26 @@ public class Mass_PartMass_mass_PartMass_Section extends AbstractSection {
 		}
 		return result;
 	}
-	
+
 	/**
 	 * Getting the {@link Part} element from the selection.
 	 * @param element the current selection
 	 * @return the selected {@link Part} 
 	 */
-	private static EObject getPartParent(Object element){
+	private static EObject getPartParent(Object element) {
 		EObject result = null;
 		try {
 			Object adapter = ((IAdaptable) element).getAdapter(EObject.class);
-			if (adapter instanceof EObject) 
-			{
+			if (adapter instanceof EObject) {
 				result = (EObject) Platform.getAdapterManager().getAdapter(adapter, ModelElement.class);
 			}
 
 			// Manage the PAB target
-			if (result instanceof PhysicalComponent && result.eContainer() instanceof PhysicalArchitecture)
-			{
-				PhysicalComponent physicalComponent = (PhysicalComponent)result;
+			if (result instanceof PhysicalComponent && result.eContainer() instanceof PhysicalArchitecture) {
+				PhysicalComponent physicalComponent = (PhysicalComponent) result;
 				EList<AbstractTypedElement> abstractTypedElements = physicalComponent.getAbstractTypedElements();
-				for (AbstractTypedElement abstractTypedElement : abstractTypedElements) 
-				{
-					if (abstractTypedElement instanceof Part)
-					{
+				for (AbstractTypedElement abstractTypedElement : abstractTypedElements) {
+					if (abstractTypedElement instanceof Part) {
 						result = abstractTypedElement;
 						break;
 					}

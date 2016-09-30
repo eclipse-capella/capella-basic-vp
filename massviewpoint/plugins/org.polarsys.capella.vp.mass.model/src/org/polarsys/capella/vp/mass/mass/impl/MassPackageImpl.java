@@ -1,13 +1,13 @@
-/*******************************************************************************
- * Copyright (c) 2006, 2015 Thales Global Services
- *   All rights reserved. This program and the accompanying materials
- *   are made available under the terms of the Eclipse Public License v1.0
- *   which accompanies this distribution, and is available at
- *   http://www.eclipse.org/legal/epl-v10.html
+/******************************************************************************
+* Copyright (c) 2006, 2016 Thales Global Services 
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Eclipse Public License v1.0 
+ * which accompanies this distribution, and is available at 
+ * http://www.eclipse.org/legal/epl-v10.html 
  * 
- *   Contributors:
- *      Thales - initial API and implementation
- ******************************************************************************/
+ * Contributors: 
+ *    Thales - initial API and implementation
+*****************************************************************************/
 
 package org.polarsys.capella.vp.mass.mass.impl;
 
@@ -273,7 +273,6 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 		// Obtain other dependent packages
 		CapellacorePackage theCapellacorePackage = (CapellacorePackage) EPackage.Registry.INSTANCE
 				.getEPackage(CapellacorePackage.eNS_URI);
-		EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		EmdePackage theEmdePackage = (EmdePackage) EPackage.Registry.INSTANCE.getEPackage(EmdePackage.eNS_URI);
 
 		// Create type parameters
@@ -287,16 +286,16 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(massEClass, Mass.class, "Mass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
-		initEAttribute(getMass_Value(), theEcorePackage.getEInt(), "value", null, 0, 1, Mass.class, !IS_TRANSIENT, //$NON-NLS-1$
+		initEAttribute(getMass_Value(), ecorePackage.getEInt(), "value", null, 0, 1, Mass.class, !IS_TRANSIENT, //$NON-NLS-1$
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMass_MaxValue(), theEcorePackage.getEInt(), "maxValue", null, 0, 1, Mass.class, !IS_TRANSIENT, //$NON-NLS-1$
+		initEAttribute(getMass_MaxValue(), ecorePackage.getEInt(), "maxValue", null, 0, 1, Mass.class, !IS_TRANSIENT, //$NON-NLS-1$
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMass_MinValue(), theEcorePackage.getEInt(), "minValue", null, 0, 1, Mass.class, !IS_TRANSIENT, //$NON-NLS-1$
+		initEAttribute(getMass_MinValue(), ecorePackage.getEInt(), "minValue", null, 0, 1, Mass.class, !IS_TRANSIENT, //$NON-NLS-1$
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(partMassEClass, PartMass.class, "PartMass", !IS_ABSTRACT, !IS_INTERFACE, //$NON-NLS-1$
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPartMass_CurrentMass(), theEcorePackage.getEInt(), "currentMass", null, 0, 1, PartMass.class, //$NON-NLS-1$
+		initEAttribute(getPartMass_CurrentMass(), ecorePackage.getEInt(), "currentMass", null, 0, 1, PartMass.class, //$NON-NLS-1$
 				IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
@@ -318,8 +317,8 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	protected void createConstraintAnnotations() {
 		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraint"; //$NON-NLS-1$	
 		addAnnotation(partMassEClass, source,
-				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/cs/1.0.0#//Part" //$NON-NLS-1$ //$NON-NLS-2$
-		});
+				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/cs/1.1.0#//Part" //$NON-NLS-1$ //$NON-NLS-2$
+				});
 	}
 
 	/**
