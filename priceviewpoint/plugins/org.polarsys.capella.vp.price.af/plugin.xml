@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
+<?eclipse version="3.4"?>
 <!--
   Copyright (c) 2006, 2016 Thales Global Services
   All rights reserved. This program and the accompanying materials
@@ -14,7 +15,7 @@
 	<extension
 	     point="org.eclipse.ui.views">
 	  <view
-	        name="Basic Price"
+	        name="price"
 	        icon="icons/view.gif"
 	        category="org.polarsys.kitalpha.view.category"
 	        class="org.polarsys.kitalpha.ad.viewpoint.ui.views.ViewpointView"
@@ -27,7 +28,7 @@
 	        domain="AF"
 	        id="org.polarsys.capella.vp.price"
 	        tags="vp"
-	        name="Basic Price"
+	        name="price"
 	        path="/org.polarsys.capella.vp.price.af/model/price.vp#_m5weQEdKEeWR7Jf9qee-NA"/>
 	</extension>
 	<extension 

@@ -1,13 +1,13 @@
-/*******************************************************************************
- * Copyright (c) 2006, 2016 Thales Global Services
- *   All rights reserved. This program and the accompanying materials
- *   are made available under the terms of the Eclipse Public License v1.0
- *   which accompanies this distribution, and is available at
- *   http://www.eclipse.org/legal/epl-v10.html
+/******************************************************************************
+* Copyright (c) 2006, 2016 Thales Global Services 
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Eclipse Public License v1.0 
+ * which accompanies this distribution, and is available at 
+ * http://www.eclipse.org/legal/epl-v10.html 
  * 
- *   Contributors:
- *      Thales - initial API and implementation
- ******************************************************************************/
+ * Contributors: 
+ *    Thales - initial API and implementation
+*****************************************************************************/
 package org.polarsys.capella.vp.price.ui.sections;
 
 import java.util.ArrayList;
@@ -18,6 +18,8 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.swt.widgets.*;
+import org.eclipse.swt.layout.*;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -25,6 +27,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
+import org.polarsys.capella.core.ui.properties.controllers.*;
+import org.polarsys.capella.common.mdsofa.common.constant.ICommonConstants;
 import org.polarsys.capella.common.data.modellingcore.AbstractTypedElement;
 import org.polarsys.capella.common.data.modellingcore.ModelElement;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
@@ -37,6 +41,7 @@ import org.polarsys.capella.core.ui.properties.sections.AbstractSection;
 import org.polarsys.capella.vp.price.price.Price;
 import org.polarsys.capella.vp.price.price.PricePackage;
 import org.polarsys.kitalpha.ad.services.manager.ViewpointManager;
+import org.polarsys.capella.core.ui.properties.fields.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -71,10 +76,10 @@ public class Pricema_PartPrice_pricema_PartPrice_Section extends AbstractSection
 	/**
 	* <!-- begin-model-doc -->
 	* <!-- end-model-doc -->
-	* <!-- begin-user-doc -->
+		* <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @generated
-	*/
+		* @generated
+		*/
 	private Group pricema_PartPrice_AttributeGroup;
 
 	/**
@@ -88,8 +93,7 @@ public class Pricema_PartPrice_pricema_PartPrice_Section extends AbstractSection
 
 		if (eObjectToTest instanceof Price)
 			return true;
-		else 
-		{
+		else {
 			EObject children = getPriceObject(eObject);
 			if (children != null)
 				return true;
@@ -106,20 +110,19 @@ public class Pricema_PartPrice_pricema_PartPrice_Section extends AbstractSection
 	*/
 	public void setInput(IWorkbenchPart part, ISelection selection) {
 		EObject newEObject = super.setInputSelection(part, selection);
-		
-		if (newEObject != null && !(newEObject instanceof Price))
-		{
-			final Object firstElement = ((StructuredSelection)selection).getFirstElement();
+
+		if (newEObject != null && !(newEObject instanceof Price)) {
+			final Object firstElement = ((StructuredSelection) selection).getFirstElement();
 			newEObject = getPriceObject(firstElement);
 		}
-		
+
 		if (newEObject != null) {
 			loadData((CapellaElement) newEObject);
 		} else {
 			return;
 		}
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -132,10 +135,10 @@ public class Pricema_PartPrice_pricema_PartPrice_Section extends AbstractSection
 			parent = (EObject) element;
 		else
 			parent = getPartParent(element);
-		
+
 		if (parent == null)
 			return null;
-		
+
 		if (!isViewpointActive(parent))
 			return null;
 
@@ -143,11 +146,9 @@ public class Pricema_PartPrice_pricema_PartPrice_Section extends AbstractSection
 			return null;
 
 		EObject result = null;
-		
-		for (EObject iEObject : parent.eContents()) 
-		{
-			if (iEObject instanceof Price) 
-			{
+
+		for (EObject iEObject : parent.eContents()) {
+			if (iEObject instanceof Price) {
 				result = (result == null ? (Price) iEObject : null);
 				// This case is true when there is more then one extension of the same type. 
 				if (result == null)
@@ -156,30 +157,26 @@ public class Pricema_PartPrice_pricema_PartPrice_Section extends AbstractSection
 		}
 		return result;
 	}
-	
+
 	/**
 	 * Getting the {@link Part} element from the selection.
 	 * @param element the current selection
 	 * @return the selected {@link Part} 
 	 */
-	private static EObject getPartParent(Object element){
+	private static EObject getPartParent(Object element) {
 		EObject result = null;
 		try {
 			Object adapter = ((IAdaptable) element).getAdapter(EObject.class);
-			if (adapter instanceof EObject) 
-			{
+			if (adapter instanceof EObject) {
 				result = (EObject) Platform.getAdapterManager().getAdapter(adapter, ModelElement.class);
 			}
 
 			// Manage the PAB target
-			if (result instanceof PhysicalComponent && result.eContainer() instanceof PhysicalArchitecture)
-			{
-				PhysicalComponent physicalComponent = (PhysicalComponent)result;
+			if (result instanceof PhysicalComponent && result.eContainer() instanceof PhysicalArchitecture) {
+				PhysicalComponent physicalComponent = (PhysicalComponent) result;
 				EList<AbstractTypedElement> abstractTypedElements = physicalComponent.getAbstractTypedElements();
-				for (AbstractTypedElement abstractTypedElement : abstractTypedElements) 
-				{
-					if (abstractTypedElement instanceof Part)
-					{
+				for (AbstractTypedElement abstractTypedElement : abstractTypedElements) {
+					if (abstractTypedElement instanceof Part) {
 						result = abstractTypedElement;
 						break;
 					}

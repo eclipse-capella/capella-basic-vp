@@ -1,20 +1,24 @@
-/*******************************************************************************
- * Copyright (c) 2006, 2016 Thales Global Services
- *   All rights reserved. This program and the accompanying materials
- *   are made available under the terms of the Eclipse Public License v1.0
- *   which accompanies this distribution, and is available at
- *   http://www.eclipse.org/legal/epl-v10.html
+/******************************************************************************
+* Copyright (c) 2006, 2016 Thales Global Services 
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Eclipse Public License v1.0 
+ * which accompanies this distribution, and is available at 
+ * http://www.eclipse.org/legal/epl-v10.html 
  * 
- *   Contributors:
- *      Thales - initial API and implementation
- ******************************************************************************/
+ * Contributors: 
+ *    Thales - initial API and implementation
+*****************************************************************************/
 // Generated on 20.08.2015 at 04:49:15 CEST by Viewpoint DSL Generator V 0.1
 
 package org.polarsys.capella.vp.price.design.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.sirius.diagram.DDiagram;
+import org.eclipse.sirius.diagram.DDiagramElement;
 import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.viewpoint.DSemanticDecorator;
 import org.polarsys.capella.core.data.cs.Part;
@@ -39,7 +43,7 @@ public class PriceOpenJavaService {
 	public PriceOpenJavaService() {
 		// TODO Auto-generated method stub
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -52,7 +56,7 @@ public class PriceOpenJavaService {
 			final EObject target = node.getTarget();
 			if (target instanceof Part) {
 				EList<EObject> priceElement = getPriceObjects(target);
-				if (priceElement != null && ! priceElement.isEmpty() ) {
+				if (priceElement != null && !priceElement.isEmpty()) {
 					result.addAll(priceElement);
 				}
 			}

@@ -1,13 +1,13 @@
-/*******************************************************************************
- * Copyright (c) 2006, 2015 Thales Global Services
- *   All rights reserved. This program and the accompanying materials
- *   are made available under the terms of the Eclipse Public License v1.0
- *   which accompanies this distribution, and is available at
- *   http://www.eclipse.org/legal/epl-v10.html
+/******************************************************************************
+* Copyright (c) 2006, 2016 Thales Global Services 
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Eclipse Public License v1.0 
+ * which accompanies this distribution, and is available at 
+ * http://www.eclipse.org/legal/epl-v10.html 
  * 
- *   Contributors:
- *      Thales - initial API and implementation
- ******************************************************************************/
+ * Contributors: 
+ *    Thales - initial API and implementation
+*****************************************************************************/
 package org.polarsys.capella.vp.price.price.provider;
 
 import java.util.Collection;
@@ -76,15 +76,15 @@ public class PartPriceItemProvider extends PriceItemProvider implements IEditing
 
 		// begin-extension-code
 		itemPropertyDescriptors.add(createItemPropertyDescriptor
-				// end-extension-code
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-						getString("_UI_PartPrice_currentPrice_feature"), //$NON-NLS-1$
-						getString("_UI_PropertyDescriptor_description", "_UI_PartPrice_currentPrice_feature", //$NON-NLS-1$//$NON-NLS-2$
-								"_UI_PartPrice_type"), //$NON-NLS-1$
-						PricePackage.Literals.PART_PRICE__CURRENT_PRICE, true, false, false,
-						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null,
-						// begin-extension-code
-						null));
+		// end-extension-code
+		(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_PartPrice_currentPrice_feature"), //$NON-NLS-1$
+				getString("_UI_PropertyDescriptor_description", "_UI_PartPrice_currentPrice_feature", //$NON-NLS-1$//$NON-NLS-2$
+						"_UI_PartPrice_type"), //$NON-NLS-1$
+				PricePackage.Literals.PART_PRICE__CURRENT_PRICE, true, false, false,
+				ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null,
+				// begin-extension-code
+				null));
 		// end-extension-code
 	}
 

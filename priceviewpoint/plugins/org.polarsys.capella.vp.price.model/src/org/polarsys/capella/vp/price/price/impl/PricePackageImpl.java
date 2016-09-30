@@ -1,13 +1,13 @@
-/*******************************************************************************
- * Copyright (c) 2006, 2015 Thales Global Services
- *   All rights reserved. This program and the accompanying materials
- *   are made available under the terms of the Eclipse Public License v1.0
- *   which accompanies this distribution, and is available at
- *   http://www.eclipse.org/legal/epl-v10.html
+/******************************************************************************
+* Copyright (c) 2006, 2016 Thales Global Services 
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Eclipse Public License v1.0 
+ * which accompanies this distribution, and is available at 
+ * http://www.eclipse.org/legal/epl-v10.html 
  * 
- *   Contributors:
- *      Thales - initial API and implementation
- ******************************************************************************/
+ * Contributors: 
+ *    Thales - initial API and implementation
+*****************************************************************************/
 package org.polarsys.capella.vp.price.price.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -255,7 +255,6 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 		// Obtain other dependent packages
 		CapellacorePackage theCapellacorePackage = (CapellacorePackage) EPackage.Registry.INSTANCE
 				.getEPackage(CapellacorePackage.eNS_URI);
-		EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		EmdePackage theEmdePackage = (EmdePackage) EPackage.Registry.INSTANCE.getEPackage(EmdePackage.eNS_URI);
 
 		// Create type parameters
@@ -269,18 +268,17 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(priceEClass, Price.class, "Price", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
-		initEAttribute(getPrice_Value(), theEcorePackage.getEInt(), "value", null, 0, 1, Price.class, !IS_TRANSIENT, //$NON-NLS-1$
+		initEAttribute(getPrice_Value(), ecorePackage.getEInt(), "value", null, 0, 1, Price.class, !IS_TRANSIENT, //$NON-NLS-1$
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPrice_MaxValue(), theEcorePackage.getEInt(), "maxValue", null, 0, 1, Price.class, //$NON-NLS-1$
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPrice_MinValue(), theEcorePackage.getEInt(), "minValue", null, 0, 1, Price.class, //$NON-NLS-1$
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPrice_MaxValue(), ecorePackage.getEInt(), "maxValue", null, 0, 1, Price.class, !IS_TRANSIENT, //$NON-NLS-1$
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPrice_MinValue(), ecorePackage.getEInt(), "minValue", null, 0, 1, Price.class, !IS_TRANSIENT, //$NON-NLS-1$
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(partPriceEClass, PartPrice.class, "PartPrice", !IS_ABSTRACT, !IS_INTERFACE, //$NON-NLS-1$
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPartPrice_CurrentPrice(), theEcorePackage.getEInt(), "currentPrice", null, 0, 1, //$NON-NLS-1$
-				PartPrice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPartPrice_CurrentPrice(), ecorePackage.getEInt(), "currentPrice", null, 0, 1, PartPrice.class, //$NON-NLS-1$
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -301,8 +299,8 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	protected void createConstraintAnnotations() {
 		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraint"; //$NON-NLS-1$	
 		addAnnotation(partPriceEClass, source,
-				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/cs/1.0.0#//Part" //$NON-NLS-1$ //$NON-NLS-2$
-		});
+				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/cs/1.1.0#//Part" //$NON-NLS-1$ //$NON-NLS-2$
+				});
 	}
 
 	/**
