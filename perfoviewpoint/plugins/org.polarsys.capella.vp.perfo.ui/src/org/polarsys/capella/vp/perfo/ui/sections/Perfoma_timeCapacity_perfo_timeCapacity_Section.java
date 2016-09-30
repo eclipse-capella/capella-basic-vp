@@ -1,13 +1,13 @@
-/*******************************************************************************
- * Copyright (c) 2006, 2016 Thales Global Services
- *   All rights reserved. This program and the accompanying materials
- *   are made available under the terms of the Eclipse Public License v1.0
- *   which accompanies this distribution, and is available at
- *   http://www.eclipse.org/legal/epl-v10.html
+/******************************************************************************
+* Copyright (c) 2006, 2016 Thales Global Services 
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Eclipse Public License v1.0 
+ * which accompanies this distribution, and is available at 
+ * http://www.eclipse.org/legal/epl-v10.html 
  * 
- *   Contributors:
- *      Thales - initial API and implementation
- ******************************************************************************/
+ * Contributors: 
+ *    Thales - initial API and implementation
+*****************************************************************************/
 package org.polarsys.capella.vp.perfo.ui.sections;
 
 import java.util.ArrayList;
@@ -15,20 +15,27 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.swt.widgets.*;
+import org.eclipse.swt.layout.*;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
+import org.polarsys.capella.core.ui.properties.controllers.*;
+import org.polarsys.capella.common.mdsofa.common.constant.ICommonConstants;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
 import org.polarsys.capella.core.ui.properties.fields.AbstractSemanticField;
 import org.polarsys.capella.core.ui.properties.fields.TextValueGroup;
 import org.polarsys.capella.core.ui.properties.sections.AbstractSection;
 import org.polarsys.capella.vp.perfo.perfo.PerfoPackage;
+import org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria;
+import org.polarsys.capella.vp.perfo.perfo.UnityElement;
 import org.polarsys.capella.vp.perfo.perfo.TimeCapacity;
 import org.polarsys.capella.vp.perfo.ui.fields.MeasurementUnitField_semanticKindGroup;
 import org.polarsys.kitalpha.ad.services.manager.ViewpointManager;
+import org.polarsys.capella.core.ui.properties.fields.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -49,7 +56,7 @@ public class Perfoma_timeCapacity_perfo_timeCapacity_Section extends AbstractSec
 	* <!-- end-user-doc -->
 	* @generated
 	*/
-	private TextValueGroup ValueField;
+	private TextValueGroup ValueTimeCapacityConsumption;
 
 	/**
 	* <!-- begin-model-doc -->
@@ -80,13 +87,12 @@ public class Perfoma_timeCapacity_perfo_timeCapacity_Section extends AbstractSec
 
 		if (eObjectToTest instanceof TimeCapacity)
 			return true;
-		else 
-		{
+		else {
 			EObject children = getTimeCapacityObject(eObjectToTest);
 			if (children != null)
 				return true;
 		}
-		
+
 		return false;
 	}
 
@@ -99,17 +105,17 @@ public class Perfoma_timeCapacity_perfo_timeCapacity_Section extends AbstractSec
 	*/
 	public void setInput(IWorkbenchPart part, ISelection selection) {
 		EObject newEObject = super.setInputSelection(part, selection);
-		
+
 		if (newEObject != null && !(newEObject instanceof TimeCapacity))
 			newEObject = getTimeCapacityObject(newEObject);
-		
+
 		if (newEObject != null) {
 			loadData((CapellaElement) newEObject);
 		} else {
 			return;
 		}
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -124,10 +130,8 @@ public class Perfoma_timeCapacity_perfo_timeCapacity_Section extends AbstractSec
 			return null;
 
 		EObject result = null;
-		for (EObject iEObject : parent.eContents()) 
-		{
-			if (iEObject instanceof TimeCapacity) 
-			{
+		for (EObject iEObject : parent.eContents()) {
+			if (iEObject instanceof TimeCapacity) {
 				result = (result == null ? (TimeCapacity) iEObject : null);
 				// This case is true when there is more then one extension of the same type. 
 				if (result == null)
@@ -163,7 +167,8 @@ public class Perfoma_timeCapacity_perfo_timeCapacity_Section extends AbstractSec
 		gdperfo_timeCapacity_AttributeGroup.horizontalSpan = ((GridLayout) _rootParentComposite.getLayout()).numColumns;
 		perfo_timeCapacity_AttributeGroup.setLayoutData(gdperfo_timeCapacity_AttributeGroup);
 
-		ValueField = new TextValueGroup(perfo_timeCapacity_AttributeGroup, "Time Limit :", getWidgetFactory(), true);
+		ValueTimeCapacityConsumption = new TextValueGroup(perfo_timeCapacity_AttributeGroup, "Time Limit :",
+				getWidgetFactory(), true);
 
 		MeasurementUnitField = new MeasurementUnitField_semanticKindGroup(perfo_timeCapacity_AttributeGroup,
 				getWidgetFactory());
@@ -179,7 +184,7 @@ public class Perfoma_timeCapacity_perfo_timeCapacity_Section extends AbstractSec
 	public void loadData(CapellaElement capellaElement_p) {
 		super.loadData(capellaElement_p);
 
-		ValueField.loadData(capellaElement_p, PerfoPackage.eINSTANCE.getPerformanceCriteria_Value());
+		ValueTimeCapacityConsumption.loadData(capellaElement_p, PerfoPackage.eINSTANCE.getPerformanceCriteria_Value());
 
 		MeasurementUnitField.loadData(capellaElement_p, PerfoPackage.eINSTANCE.getUnityElement_MeasurementUnit());
 
@@ -193,7 +198,7 @@ public class Perfoma_timeCapacity_perfo_timeCapacity_Section extends AbstractSec
 	public List<AbstractSemanticField> getSemanticFields() {
 		List<AbstractSemanticField> abstractSemanticFields = new ArrayList<AbstractSemanticField>();
 
-		abstractSemanticFields.add(ValueField);
+		abstractSemanticFields.add(ValueTimeCapacityConsumption);
 
 		abstractSemanticFields.add(MeasurementUnitField);
 

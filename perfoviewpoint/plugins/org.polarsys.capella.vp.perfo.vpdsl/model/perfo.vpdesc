@@ -25,9 +25,9 @@
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.0"/>
     </VP_Classes>
     <VP_Classes name="TimeConsumption" icon="TimeConsumption.gif">
-      <extends href="http://www.polarsys.org/capella/core/fa/1.0.0#//FunctionalExchange"/>
-      <extends href="http://www.polarsys.org/capella/core/pa/1.0.0#//PhysicalFunction"/>
-      <extends href="http://www.polarsys.org/capella/core/la/1.0.0#//LogicalFunction"/>
+      <extends href="http://www.polarsys.org/capella/core/fa/1.1.0#//FunctionalExchange"/>
+      <extends href="http://www.polarsys.org/capella/core/pa/1.1.0#//PhysicalFunction"/>
+      <extends href="http://www.polarsys.org/capella/core/la/1.1.0#//LogicalFunction"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.1"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.5"/>
     </VP_Classes>
@@ -37,7 +37,7 @@
           <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         </owned_type>
       </VP_Class_Attributes>
-      <extends href="http://www.polarsys.org/capella/core/fa/1.0.0#//FunctionalChain"/>
+      <extends href="http://www.polarsys.org/capella/core/fa/1.1.0#//FunctionalChain"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.2"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.5"/>
     </VP_Classes>
@@ -53,6 +53,9 @@
   <VP_Aspects xsi:type="vpconf:Configuration" name="perfo.conf">
     <vpConfigurationElements xsi:type="vpconf:TargetApplication" type="Capella"/>
     <vpConfigurationElements xsi:type="vpconf:GenerationConfiguration" projectName="org.polarsys.capella.vp.perfo" nsuri="http://www.polarsys.org/capella/perfo"/>
+    <vpConfigurationElements xsi:type="vpconf:Release" viewpointVersion="1.1.0.qualifier" viewpointDescription="Capella Basic Performance Viewpoint">
+      <requiredExecutionEnvironment>JavaSE-1.7</requiredExecutionEnvironment>
+    </vpConfigurationElements>
     <vpConfigurationElements xsi:type="vpconf:Generation">
       <ownedDataGenerationConf/>
       <ownedExtensionGenConf xsi:type="configuration:DiagramGenerationConfiguration" overwriteVSM="true"/>
@@ -63,7 +66,7 @@
     <UIs name="perfoma_timeConsumption" label="Basic Performance">
       <UI_Containers name="perfo_timeConsumption_Section">
         <subContainers name="perfo_timeConsumption_AttributeGroup" label="Time Consumption Attributes">
-          <UI_fields name="valueField" label="Execution Time">
+          <UI_fields name="valueTimeConsumptionField" label="Execution Time">
             <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.0"/>
           </UI_fields>
         </subContainers>
@@ -72,7 +75,7 @@
     <UIs name="perfoma_timeCapacity" label="Basic Performance">
       <UI_Containers name="perfo_timeCapacity_Section">
         <subContainers name="perfo_timeCapacity_AttributeGroup" label="Time Capacity Attributes">
-          <UI_fields name="valueField" label="Time Limit">
+          <UI_fields name="valueTimeCapacityConsumption" label="Time Limit">
             <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.0"/>
           </UI_fields>
           <UI_fields name="measurementUnitField" label="Measurement Unit" type="radiobox">

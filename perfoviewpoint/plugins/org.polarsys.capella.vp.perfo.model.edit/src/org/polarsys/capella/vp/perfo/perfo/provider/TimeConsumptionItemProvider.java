@@ -1,13 +1,13 @@
-/*******************************************************************************
- * Copyright (c) 2006, 2015 Thales Global Services
- *   All rights reserved. This program and the accompanying materials
- *   are made available under the terms of the Eclipse Public License v1.0
- *   which accompanies this distribution, and is available at
- *   http://www.eclipse.org/legal/epl-v10.html
+/******************************************************************************
+* Copyright (c) 2006, 2016 Thales Global Services 
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Eclipse Public License v1.0 
+ * which accompanies this distribution, and is available at 
+ * http://www.eclipse.org/legal/epl-v10.html 
  * 
- *   Contributors:
- *      Thales - initial API and implementation
- ******************************************************************************/
+ * Contributors: 
+ *    Thales - initial API and implementation
+*****************************************************************************/
 
 package org.polarsys.capella.vp.perfo.perfo.provider;
 
@@ -78,15 +78,15 @@ public class TimeConsumptionItemProvider extends PerformanceConsumptionItemProvi
 
 		// begin-extension-code
 		itemPropertyDescriptors.add(createItemPropertyDescriptor
-				// end-extension-code
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-						getString("_UI_UnityElement_measurementUnit_feature"), //$NON-NLS-1$
-						getString("_UI_PropertyDescriptor_description", "_UI_UnityElement_measurementUnit_feature", //$NON-NLS-1$//$NON-NLS-2$
-								"_UI_UnityElement_type"), //$NON-NLS-1$
-						PerfoPackage.Literals.UNITY_ELEMENT__MEASUREMENT_UNIT, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
-						// begin-extension-code
-						null));
+		// end-extension-code
+		(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_UnityElement_measurementUnit_feature"), //$NON-NLS-1$
+				getString("_UI_PropertyDescriptor_description", "_UI_UnityElement_measurementUnit_feature", //$NON-NLS-1$//$NON-NLS-2$
+						"_UI_UnityElement_type"), //$NON-NLS-1$
+				PerfoPackage.Literals.UNITY_ELEMENT__MEASUREMENT_UNIT, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
+				// begin-extension-code
+				null));
 		// end-extension-code
 	}
 

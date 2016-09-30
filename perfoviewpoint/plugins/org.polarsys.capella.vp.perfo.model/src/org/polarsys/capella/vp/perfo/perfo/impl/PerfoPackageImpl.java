@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2006, 2015 Thales Global Services
+ * Copyright (c) 2006, 2016 Thales Global Services
  *   All rights reserved. This program and the accompanying materials
  *   are made available under the terms of the Eclipse Public License v1.0
  *   which accompanies this distribution, and is available at
@@ -378,7 +378,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 		// Obtain other dependent packages
 		CapellacorePackage theCapellacorePackage = (CapellacorePackage) EPackage.Registry.INSTANCE
 				.getEPackage(CapellacorePackage.eNS_URI);
-		EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		EmdePackage theEmdePackage = (EmdePackage) EPackage.Registry.INSTANCE.getEPackage(EmdePackage.eNS_URI);
 
 		// Create type parameters
@@ -400,13 +399,13 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 		// Initialize classes and features; add operations and parameters
 		initEClass(performanceCriteriaEClass, PerformanceCriteria.class, "PerformanceCriteria", !IS_ABSTRACT, //$NON-NLS-1$
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPerformanceCriteria_Value(), theEcorePackage.getEInt(), "value", null, 0, 1, //$NON-NLS-1$
+		initEAttribute(getPerformanceCriteria_Value(), ecorePackage.getEInt(), "value", null, 0, 1, //$NON-NLS-1$
 				PerformanceCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPerformanceCriteria_MaxValue(), theEcorePackage.getEInt(), "maxValue", null, 0, 1, //$NON-NLS-1$
+		initEAttribute(getPerformanceCriteria_MaxValue(), ecorePackage.getEInt(), "maxValue", null, 0, 1, //$NON-NLS-1$
 				PerformanceCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPerformanceCriteria_MinValue(), theEcorePackage.getEInt(), "minValue", null, 0, 1, //$NON-NLS-1$
+		initEAttribute(getPerformanceCriteria_MinValue(), ecorePackage.getEInt(), "minValue", null, 0, 1, //$NON-NLS-1$
 				PerformanceCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -421,8 +420,8 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 
 		initEClass(timeCapacityEClass, TimeCapacity.class, "TimeCapacity", !IS_ABSTRACT, !IS_INTERFACE, //$NON-NLS-1$
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTimeCapacity_CurrentExecutionTime(), theEcorePackage.getEInt(), "currentExecutionTime", null, //$NON-NLS-1$
-				0, 1, TimeCapacity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getTimeCapacity_CurrentExecutionTime(), ecorePackage.getEInt(), "currentExecutionTime", null, 0, //$NON-NLS-1$
+				1, TimeCapacity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(unityElementEClass, UnityElement.class, "UnityElement", !IS_ABSTRACT, !IS_INTERFACE, //$NON-NLS-1$
@@ -454,11 +453,11 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	protected void createConstraintAnnotations() {
 		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraint"; //$NON-NLS-1$	
 		addAnnotation(timeConsumptionEClass, source, new String[] { "ExtendedElement", //$NON-NLS-1$
-				" http://www.polarsys.org/capella/core/fa/1.0.0#//FunctionalExchange http://www.polarsys.org/capella/core/pa/1.0.0#//PhysicalFunction http://www.polarsys.org/capella/core/la/1.0.0#//LogicalFunction" //$NON-NLS-1$
+				" http://www.polarsys.org/capella/core/fa/1.1.0#//FunctionalExchange http://www.polarsys.org/capella/core/pa/1.1.0#//PhysicalFunction http://www.polarsys.org/capella/core/la/1.1.0#//LogicalFunction" //$NON-NLS-1$
 		});
 		addAnnotation(timeCapacityEClass, source,
-				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/fa/1.0.0#//FunctionalChain" //$NON-NLS-1$ //$NON-NLS-2$
-		});
+				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/fa/1.1.0#//FunctionalChain" //$NON-NLS-1$ //$NON-NLS-2$
+				});
 	}
 
 	/**
