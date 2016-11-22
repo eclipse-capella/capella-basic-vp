@@ -2,7 +2,7 @@
 <buildcore:Job xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:buildcore="http://www.eclipse.org/egf/1.0.1/buildcore" xmlns:buildfile="http://www.eclipse.org/egf/1.0.0/buildfile" xmlns:buildscm="http://www.eclipse.org/egf/1.0.0/buildscm" xmlns:buildstep="http://www.eclipse.org/egf/1.0.2/buildstep" xmi:id="_PHUjIG0CEeWZLqZa10vhXw" name="BasicPrice">
   <properties xmi:id="_Ehc5IG3dEeW8Or0zSwVlzA" key="usedTP" value="${publish}/BasicPrice" type="INLINED"/>
   <properties xmi:id="_3Z3PUm0BEeWZLqZa10vhXw" key="feature.name" value="org.polarsys.capella.vp.price.feature" type="INLINED"/>
-  <properties xmi:id="_3Z3PU20BEeWZLqZa10vhXw" key="buildVersion" value="1.0.0-${timestamp}"/>
+  <properties xmi:id="_3Z3PU20BEeWZLqZa10vhXw" key="buildVersion" value="1.1.0-${timestamp}"/>
   <properties xmi:id="_LKCqAEdjEeaBs9qdr3CMlg" key="eclipse.name" value="mars"/>
   <steps xsi:type="buildstep:CleanStep" xmi:id="_3Z3PVG0BEeWZLqZa10vhXw" name="Clean Result" type="Result"/>
   <steps xsi:type="buildfile:DeleteStep" xmi:id="_VLXRsG3dEeW8Or0zSwVlzA" name="delete TP">
