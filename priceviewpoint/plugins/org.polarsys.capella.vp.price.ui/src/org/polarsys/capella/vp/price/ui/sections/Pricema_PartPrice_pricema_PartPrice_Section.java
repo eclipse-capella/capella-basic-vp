@@ -208,11 +208,11 @@ public class Pricema_PartPrice_pricema_PartPrice_Section extends AbstractSection
 	public void createControls(Composite parent, TabbedPropertySheetPage aTabbedPropertySheetPage) {
 		super.createControls(parent, aTabbedPropertySheetPage);
 
-		pricema_PartPrice_AttributeGroup = getWidgetFactory().createGroup(_rootParentComposite,
+		pricema_PartPrice_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite,
 				"Part Price Attributes");
 		pricema_PartPrice_AttributeGroup.setLayout(new GridLayout(1, false));
 		GridData gdpricema_PartPrice_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
-		gdpricema_PartPrice_AttributeGroup.horizontalSpan = ((GridLayout) _rootParentComposite.getLayout()).numColumns;
+		gdpricema_PartPrice_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite.getLayout()).numColumns;
 		pricema_PartPrice_AttributeGroup.setLayoutData(gdpricema_PartPrice_AttributeGroup);
 
 		ValueField = new TextValueGroup(pricema_PartPrice_AttributeGroup, "Value :", getWidgetFactory(), true);

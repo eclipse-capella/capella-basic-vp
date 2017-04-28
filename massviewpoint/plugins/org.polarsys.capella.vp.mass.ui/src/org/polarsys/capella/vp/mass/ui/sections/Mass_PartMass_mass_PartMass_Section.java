@@ -206,10 +206,10 @@ public class Mass_PartMass_mass_PartMass_Section extends AbstractSection {
 	public void createControls(Composite parent, TabbedPropertySheetPage aTabbedPropertySheetPage) {
 		super.createControls(parent, aTabbedPropertySheetPage);
 
-		mass_PartMass_AttributeGroup = getWidgetFactory().createGroup(_rootParentComposite, "Part Mass Attributes");
+		mass_PartMass_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite, "Part Mass Attributes");
 		mass_PartMass_AttributeGroup.setLayout(new GridLayout(1, false));
 		GridData gdmass_PartMass_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
-		gdmass_PartMass_AttributeGroup.horizontalSpan = ((GridLayout) _rootParentComposite.getLayout()).numColumns;
+		gdmass_PartMass_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite.getLayout()).numColumns;
 		mass_PartMass_AttributeGroup.setLayoutData(gdmass_PartMass_AttributeGroup);
 
 		ValueField = new TextValueGroup(mass_PartMass_AttributeGroup, "Value :", getWidgetFactory(), true);

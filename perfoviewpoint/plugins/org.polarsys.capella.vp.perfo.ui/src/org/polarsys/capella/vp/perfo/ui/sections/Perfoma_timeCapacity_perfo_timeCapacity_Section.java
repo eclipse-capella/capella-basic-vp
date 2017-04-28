@@ -160,11 +160,11 @@ public class Perfoma_timeCapacity_perfo_timeCapacity_Section extends AbstractSec
 	public void createControls(Composite parent, TabbedPropertySheetPage aTabbedPropertySheetPage) {
 		super.createControls(parent, aTabbedPropertySheetPage);
 
-		perfo_timeCapacity_AttributeGroup = getWidgetFactory().createGroup(_rootParentComposite,
+		perfo_timeCapacity_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite,
 				"Time Capacity Attributes");
 		perfo_timeCapacity_AttributeGroup.setLayout(new GridLayout(1, false));
 		GridData gdperfo_timeCapacity_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
-		gdperfo_timeCapacity_AttributeGroup.horizontalSpan = ((GridLayout) _rootParentComposite.getLayout()).numColumns;
+		gdperfo_timeCapacity_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite.getLayout()).numColumns;
 		perfo_timeCapacity_AttributeGroup.setLayoutData(gdperfo_timeCapacity_AttributeGroup);
 
 		ValueTimeCapacityConsumption = new TextValueGroup(perfo_timeCapacity_AttributeGroup, "Time Limit :",

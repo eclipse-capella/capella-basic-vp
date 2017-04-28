@@ -149,11 +149,11 @@ public class Perfoma_timeConsumption_perfo_timeConsumption_Section extends Abstr
 	public void createControls(Composite parent, TabbedPropertySheetPage aTabbedPropertySheetPage) {
 		super.createControls(parent, aTabbedPropertySheetPage);
 
-		perfo_timeConsumption_AttributeGroup = getWidgetFactory().createGroup(_rootParentComposite,
+		perfo_timeConsumption_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite,
 				"Time Consumption Attributes");
 		perfo_timeConsumption_AttributeGroup.setLayout(new GridLayout(1, false));
 		GridData gdperfo_timeConsumption_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
-		gdperfo_timeConsumption_AttributeGroup.horizontalSpan = ((GridLayout) _rootParentComposite
+		gdperfo_timeConsumption_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite
 				.getLayout()).numColumns;
 		perfo_timeConsumption_AttributeGroup.setLayoutData(gdperfo_timeConsumption_AttributeGroup);
 
