@@ -20,11 +20,11 @@
       <factory class="org.polarsys.capella.vp.mass.mass.provider.MassItemProviderAdapterFactory" supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider                org.eclipse.emf.edit.provider.IStructuredItemContentProvider                org.eclipse.emf.edit.provider.ITreeItemContentProvider                org.eclipse.emf.edit.provider.IItemLabelProvider                org.eclipse.emf.edit.provider.IItemPropertySource" uri="http://www.polarsys.org/capella/mass"/>
    </extension>
 
-   
 <!--@generated-->
   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated mass -->
+      <extender class="org.polarsys.capella.vp.mass.mass.provider.MassItemProviderAdapterFactory$SharedmodelChildCreationExtender" uri="http://www.polarsys.org/capella/core/sharedmodel/1.2.0"/>
       <extender class="org.polarsys.capella.vp.mass.mass.provider.MassItemProviderAdapterFactory$EmdeChildCreationExtender" uri="http://www.polarsys.org/kitalpha/emde/1.0.0"/>
-      <extender class="org.polarsys.capella.vp.mass.mass.provider.MassItemProviderAdapterFactory$SharedmodelChildCreationExtender" uri="http://www.polarsys.org/capella/core/sharedmodel/1.0.0"/>
    </extension>
 
 

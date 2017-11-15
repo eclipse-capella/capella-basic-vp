@@ -27,12 +27,12 @@ import org.polarsys.capella.vp.price.price.PricePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.polarsys.capella.vp.price.price.impl.PriceImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.polarsys.capella.vp.price.price.impl.PriceImpl#getMaxValue <em>Max Value</em>}</li>
  *   <li>{@link org.polarsys.capella.vp.price.price.impl.PriceImpl#getMinValue <em>Min Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

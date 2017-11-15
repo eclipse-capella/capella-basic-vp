@@ -208,10 +208,11 @@ public class Pricema_PartPrice_pricema_PartPrice_Section extends AbstractSection
 	public void createControls(Composite parent, TabbedPropertySheetPage aTabbedPropertySheetPage) {
 		super.createControls(parent, aTabbedPropertySheetPage);
 
-		pricema_PartPrice_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite,
-				"Part Price Attributes");
+		pricema_PartPrice_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite, "Part Price Attributes");
 		pricema_PartPrice_AttributeGroup.setLayout(new GridLayout(1, false));
+
 		GridData gdpricema_PartPrice_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
+
 		gdpricema_PartPrice_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite.getLayout()).numColumns;
 		pricema_PartPrice_AttributeGroup.setLayoutData(gdpricema_PartPrice_AttributeGroup);
 
@@ -224,15 +225,15 @@ public class Pricema_PartPrice_pricema_PartPrice_Section extends AbstractSection
 	/**
 	* <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @param capellaElement_p
+	* @param object
 	* @generated
 	*/
-	public void loadData(CapellaElement capellaElement_p) {
-		super.loadData(capellaElement_p);
+	public void loadData(EObject object) {
+		super.loadData(object);
 
-		ValueField.loadData(capellaElement_p, PricePackage.eINSTANCE.getPrice_Value());
+		ValueField.loadData(object, PricePackage.eINSTANCE.getPrice_Value());
 
-		MaxValueField.loadData(capellaElement_p, PricePackage.eINSTANCE.getPrice_MaxValue());
+		MaxValueField.loadData(object, PricePackage.eINSTANCE.getPrice_MaxValue());
 
 	}
 

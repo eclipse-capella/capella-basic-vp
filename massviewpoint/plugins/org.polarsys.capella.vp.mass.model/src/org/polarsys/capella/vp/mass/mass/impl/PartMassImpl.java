@@ -25,10 +25,10 @@ import org.polarsys.capella.vp.mass.mass.PartMass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.polarsys.capella.vp.mass.mass.impl.PartMassImpl#getCurrentMass <em>Current Mass</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

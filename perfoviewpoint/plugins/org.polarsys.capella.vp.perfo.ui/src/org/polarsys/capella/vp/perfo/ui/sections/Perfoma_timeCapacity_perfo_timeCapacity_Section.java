@@ -163,7 +163,9 @@ public class Perfoma_timeCapacity_perfo_timeCapacity_Section extends AbstractSec
 		perfo_timeCapacity_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite,
 				"Time Capacity Attributes");
 		perfo_timeCapacity_AttributeGroup.setLayout(new GridLayout(1, false));
+
 		GridData gdperfo_timeCapacity_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
+
 		gdperfo_timeCapacity_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite.getLayout()).numColumns;
 		perfo_timeCapacity_AttributeGroup.setLayoutData(gdperfo_timeCapacity_AttributeGroup);
 
@@ -178,15 +180,15 @@ public class Perfoma_timeCapacity_perfo_timeCapacity_Section extends AbstractSec
 	/**
 	* <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @param capellaElement_p
+	* @param object
 	* @generated
 	*/
-	public void loadData(CapellaElement capellaElement_p) {
-		super.loadData(capellaElement_p);
+	public void loadData(EObject object) {
+		super.loadData(object);
 
-		ValueTimeCapacityConsumption.loadData(capellaElement_p, PerfoPackage.eINSTANCE.getPerformanceCriteria_Value());
+		ValueTimeCapacityConsumption.loadData(object, PerfoPackage.eINSTANCE.getPerformanceCriteria_Value());
 
-		MeasurementUnitField.loadData(capellaElement_p, PerfoPackage.eINSTANCE.getUnityElement_MeasurementUnit());
+		MeasurementUnitField.loadData(object, PerfoPackage.eINSTANCE.getUnityElement_MeasurementUnit());
 
 	}
 

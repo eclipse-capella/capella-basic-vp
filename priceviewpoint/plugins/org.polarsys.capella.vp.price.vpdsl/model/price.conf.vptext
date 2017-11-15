@@ -1,5 +1,5 @@
 /******************************************************************************
-* Copyright (c) 2006, 2016 Thales Global Services 
+* Copyright (c) 2006, 2017 Thales Global Services 
  * All rights reserved. This program and the accompanying materials 
  * are made available under the terms of the Eclipse Public License v1.0 
  * which accompanies this distribution, and is available at 
@@ -13,7 +13,7 @@ Configuration price.conf {
 	project org.polarsys.capella.vp.price
 	nsuri "http://www.polarsys.org/capella/price"
 	release {
-		version : 1.1.0.qualifier
+		version : 1.2.0.qualifier
 		description : "Capella Basic Price Viewpoint"
 		execution environments : "JavaSE-1.7"
 	}

@@ -20,12 +20,13 @@
       <factory class="org.polarsys.capella.vp.price.price.provider.PriceItemProviderAdapterFactory" supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider                org.eclipse.emf.edit.provider.IStructuredItemContentProvider                org.eclipse.emf.edit.provider.ITreeItemContentProvider                org.eclipse.emf.edit.provider.IItemLabelProvider                org.eclipse.emf.edit.provider.IItemPropertySource" uri="http://www.polarsys.org/capella/price"/>
    </extension>
 
-   
 <!--@generated-->
   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated price -->
+      <extender class="org.polarsys.capella.vp.price.price.provider.PriceItemProviderAdapterFactory$SharedmodelChildCreationExtender" uri="http://www.polarsys.org/capella/core/sharedmodel/1.2.0"/>
       <extender class="org.polarsys.capella.vp.price.price.provider.PriceItemProviderAdapterFactory$EmdeChildCreationExtender" uri="http://www.polarsys.org/kitalpha/emde/1.0.0"/>
-      <extender class="org.polarsys.capella.vp.price.price.provider.PriceItemProviderAdapterFactory$SharedmodelChildCreationExtender" uri="http://www.polarsys.org/capella/core/sharedmodel/1.0.0"/>
    </extension>
+
 
 
 <!--@generated-->

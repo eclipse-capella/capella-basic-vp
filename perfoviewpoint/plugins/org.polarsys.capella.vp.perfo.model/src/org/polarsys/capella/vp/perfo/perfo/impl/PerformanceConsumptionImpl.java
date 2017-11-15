@@ -19,8 +19,6 @@ import org.polarsys.capella.vp.perfo.perfo.PerformanceConsumption;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Performance Consumption</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

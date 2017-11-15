@@ -299,7 +299,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	protected void createConstraintAnnotations() {
 		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraint"; //$NON-NLS-1$	
 		addAnnotation(partPriceEClass, source,
-				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/cs/1.1.0#//Part" //$NON-NLS-1$ //$NON-NLS-2$
+				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/cs/1.2.0#//Part" //$NON-NLS-1$ //$NON-NLS-2$
 				});
 	}
 

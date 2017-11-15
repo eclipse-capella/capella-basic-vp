@@ -27,12 +27,12 @@ import org.polarsys.capella.vp.mass.mass.MassPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.polarsys.capella.vp.mass.mass.impl.MassImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.polarsys.capella.vp.mass.mass.impl.MassImpl#getMaxValue <em>Max Value</em>}</li>
  *   <li>{@link org.polarsys.capella.vp.mass.mass.impl.MassImpl#getMinValue <em>Min Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

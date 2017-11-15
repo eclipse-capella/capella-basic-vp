@@ -208,7 +208,9 @@ public class Mass_PartMass_mass_PartMass_Section extends AbstractSection {
 
 		mass_PartMass_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite, "Part Mass Attributes");
 		mass_PartMass_AttributeGroup.setLayout(new GridLayout(1, false));
+
 		GridData gdmass_PartMass_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
+
 		gdmass_PartMass_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite.getLayout()).numColumns;
 		mass_PartMass_AttributeGroup.setLayoutData(gdmass_PartMass_AttributeGroup);
 
@@ -221,15 +223,15 @@ public class Mass_PartMass_mass_PartMass_Section extends AbstractSection {
 	/**
 	* <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @param capellaElement_p
+	* @param object
 	* @generated
 	*/
-	public void loadData(CapellaElement capellaElement_p) {
-		super.loadData(capellaElement_p);
+	public void loadData(EObject object) {
+		super.loadData(object);
 
-		ValueField.loadData(capellaElement_p, MassPackage.eINSTANCE.getMass_Value());
+		ValueField.loadData(object, MassPackage.eINSTANCE.getMass_Value());
 
-		MaxValueField.loadData(capellaElement_p, MassPackage.eINSTANCE.getMass_MaxValue());
+		MaxValueField.loadData(object, MassPackage.eINSTANCE.getMass_MaxValue());
 
 	}
 

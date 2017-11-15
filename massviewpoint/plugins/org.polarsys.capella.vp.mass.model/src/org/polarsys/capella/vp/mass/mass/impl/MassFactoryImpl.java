@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import org.polarsys.capella.common.lib.IdGenerator;
 import org.polarsys.capella.vp.mass.mass.*;
 
 /**
@@ -79,6 +80,11 @@ public class MassFactoryImpl extends EFactoryImpl implements MassFactory {
 	 */
 	public Mass createMass() {
 		MassImpl mass = new MassImpl();
+		//begin-capella-code
+
+		mass.setId(IdGenerator.createId());
+
+		//end-capella-code
 		return mass;
 	}
 
@@ -89,6 +95,11 @@ public class MassFactoryImpl extends EFactoryImpl implements MassFactory {
 	 */
 	public PartMass createPartMass() {
 		PartMassImpl partMass = new PartMassImpl();
+		//begin-capella-code
+
+		partMass.setId(IdGenerator.createId());
+
+		//end-capella-code
 		return partMass;
 	}
 
@@ -110,6 +121,32 @@ public class MassFactoryImpl extends EFactoryImpl implements MassFactory {
 	@Deprecated
 	public static MassPackage getPackage() {
 		return MassPackage.eINSTANCE;
+	}
+
+	/**
+	 * Creates class and sets its name
+	 * (This method comes from a customization of the standard EMF generator)
+	 *
+	 * @param name_p : default name of created element
+	 * @generated
+	 */
+	public Mass createMass(String name_p) {
+		Mass mass = createMass();
+		mass.setName(name_p);
+		return mass;
+	}
+
+	/**
+	 * Creates class and sets its name
+	 * (This method comes from a customization of the standard EMF generator)
+	 *
+	 * @param name_p : default name of created element
+	 * @generated
+	 */
+	public PartMass createPartMass(String name_p) {
+		PartMass partMass = createPartMass();
+		partMass.setName(name_p);
+		return partMass;
 	}
 
 } //MassFactoryImpl

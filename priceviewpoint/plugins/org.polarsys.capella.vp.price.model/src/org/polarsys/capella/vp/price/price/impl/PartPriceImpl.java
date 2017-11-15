@@ -25,10 +25,10 @@ import org.polarsys.capella.vp.price.price.PricePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.polarsys.capella.vp.price.price.impl.PartPriceImpl#getCurrentPrice <em>Current Price</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

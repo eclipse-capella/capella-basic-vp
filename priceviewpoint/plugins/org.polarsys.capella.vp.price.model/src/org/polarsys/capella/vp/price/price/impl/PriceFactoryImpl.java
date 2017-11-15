@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.polarsys.capella.common.lib.IdGenerator;
 import org.polarsys.capella.vp.price.price.*;
 import org.polarsys.capella.vp.price.price.PartPrice;
 import org.polarsys.capella.vp.price.price.Price;
@@ -80,6 +81,11 @@ public class PriceFactoryImpl extends EFactoryImpl implements PriceFactory {
 	 */
 	public Price createPrice() {
 		PriceImpl price = new PriceImpl();
+		//begin-capella-code
+
+		price.setId(IdGenerator.createId());
+
+		//end-capella-code
 		return price;
 	}
 
@@ -90,6 +96,11 @@ public class PriceFactoryImpl extends EFactoryImpl implements PriceFactory {
 	 */
 	public PartPrice createPartPrice() {
 		PartPriceImpl partPrice = new PartPriceImpl();
+		//begin-capella-code
+
+		partPrice.setId(IdGenerator.createId());
+
+		//end-capella-code
 		return partPrice;
 	}
 
@@ -111,6 +122,32 @@ public class PriceFactoryImpl extends EFactoryImpl implements PriceFactory {
 	@Deprecated
 	public static PricePackage getPackage() {
 		return PricePackage.eINSTANCE;
+	}
+
+	/**
+	 * Creates class and sets its name
+	 * (This method comes from a customization of the standard EMF generator)
+	 *
+	 * @param name_p : default name of created element
+	 * @generated
+	 */
+	public Price createPrice(String name_p) {
+		Price price = createPrice();
+		price.setName(name_p);
+		return price;
+	}
+
+	/**
+	 * Creates class and sets its name
+	 * (This method comes from a customization of the standard EMF generator)
+	 *
+	 * @param name_p : default name of created element
+	 * @generated
+	 */
+	public PartPrice createPartPrice(String name_p) {
+		PartPrice partPrice = createPartPrice();
+		partPrice.setName(name_p);
+		return partPrice;
 	}
 
 } //PriceFactoryImpl

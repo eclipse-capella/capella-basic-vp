@@ -20,10 +20,10 @@
       <factory class="org.polarsys.capella.vp.perfo.perfo.provider.PerfoItemProviderAdapterFactory" supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider                org.eclipse.emf.edit.provider.IStructuredItemContentProvider                org.eclipse.emf.edit.provider.ITreeItemContentProvider                org.eclipse.emf.edit.provider.IItemLabelProvider                org.eclipse.emf.edit.provider.IItemPropertySource" uri="http://www.polarsys.org/capella/perfo"/>
    </extension>
 
-   
 <!--@generated-->
   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <extender class="org.polarsys.capella.vp.perfo.perfo.provider.PerfoItemProviderAdapterFactory$SharedmodelChildCreationExtender" uri="http://www.polarsys.org/capella/core/sharedmodel/1.0.0"/>
+      <!-- @generated perfo -->
+      <extender class="org.polarsys.capella.vp.perfo.perfo.provider.PerfoItemProviderAdapterFactory$SharedmodelChildCreationExtender" uri="http://www.polarsys.org/capella/core/sharedmodel/1.2.0"/>
       <extender class="org.polarsys.capella.vp.perfo.perfo.provider.PerfoItemProviderAdapterFactory$EmdeChildCreationExtender" uri="http://www.polarsys.org/kitalpha/emde/1.0.0"/>
    </extension>
 

@@ -152,7 +152,9 @@ public class Perfoma_timeConsumption_perfo_timeConsumption_Section extends Abstr
 		perfo_timeConsumption_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite,
 				"Time Consumption Attributes");
 		perfo_timeConsumption_AttributeGroup.setLayout(new GridLayout(1, false));
+
 		GridData gdperfo_timeConsumption_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
+
 		gdperfo_timeConsumption_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite
 				.getLayout()).numColumns;
 		perfo_timeConsumption_AttributeGroup.setLayoutData(gdperfo_timeConsumption_AttributeGroup);
@@ -165,13 +167,13 @@ public class Perfoma_timeConsumption_perfo_timeConsumption_Section extends Abstr
 	/**
 	* <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @param capellaElement_p
+	* @param object
 	* @generated
 	*/
-	public void loadData(CapellaElement capellaElement_p) {
-		super.loadData(capellaElement_p);
+	public void loadData(EObject object) {
+		super.loadData(object);
 
-		ValueTimeConsumptionField.loadData(capellaElement_p, PerfoPackage.eINSTANCE.getPerformanceCriteria_Value());
+		ValueTimeConsumptionField.loadData(object, PerfoPackage.eINSTANCE.getPerformanceCriteria_Value());
 
 	}
 

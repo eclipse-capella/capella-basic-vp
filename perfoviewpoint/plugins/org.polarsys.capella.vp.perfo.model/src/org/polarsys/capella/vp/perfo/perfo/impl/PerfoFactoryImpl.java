@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import org.polarsys.capella.common.lib.IdGenerator;
 import org.polarsys.capella.vp.perfo.perfo.*;
 
 /**
@@ -118,6 +119,11 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	 */
 	public PerformanceCriteria createPerformanceCriteria() {
 		PerformanceCriteriaImpl performanceCriteria = new PerformanceCriteriaImpl();
+		//begin-capella-code
+
+		performanceCriteria.setId(IdGenerator.createId());
+
+		//end-capella-code
 		return performanceCriteria;
 	}
 
@@ -128,6 +134,11 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	 */
 	public PerformanceConsumption createPerformanceConsumption() {
 		PerformanceConsumptionImpl performanceConsumption = new PerformanceConsumptionImpl();
+		//begin-capella-code
+
+		performanceConsumption.setId(IdGenerator.createId());
+
+		//end-capella-code
 		return performanceConsumption;
 	}
 
@@ -138,6 +149,11 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	 */
 	public PerformanceCapacity createPerformanceCapacity() {
 		PerformanceCapacityImpl performanceCapacity = new PerformanceCapacityImpl();
+		//begin-capella-code
+
+		performanceCapacity.setId(IdGenerator.createId());
+
+		//end-capella-code
 		return performanceCapacity;
 	}
 
@@ -148,6 +164,11 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	 */
 	public TimeConsumption createTimeConsumption() {
 		TimeConsumptionImpl timeConsumption = new TimeConsumptionImpl();
+		//begin-capella-code
+
+		timeConsumption.setId(IdGenerator.createId());
+
+		//end-capella-code
 		return timeConsumption;
 	}
 
@@ -158,6 +179,11 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	 */
 	public TimeCapacity createTimeCapacity() {
 		TimeCapacityImpl timeCapacity = new TimeCapacityImpl();
+		//begin-capella-code
+
+		timeCapacity.setId(IdGenerator.createId());
+
+		//end-capella-code
 		return timeCapacity;
 	}
 
@@ -168,6 +194,11 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	 */
 	public UnityElement createUnityElement() {
 		UnityElementImpl unityElement = new UnityElementImpl();
+		//begin-capella-code
+
+		unityElement.setId(IdGenerator.createId());
+
+		//end-capella-code
 		return unityElement;
 	}
 
@@ -211,6 +242,84 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	@Deprecated
 	public static PerfoPackage getPackage() {
 		return PerfoPackage.eINSTANCE;
+	}
+
+	/**
+	 * Creates class and sets its name
+	 * (This method comes from a customization of the standard EMF generator)
+	 *
+	 * @param name_p : default name of created element
+	 * @generated
+	 */
+	public PerformanceCriteria createPerformanceCriteria(String name_p) {
+		PerformanceCriteria performanceCriteria = createPerformanceCriteria();
+		performanceCriteria.setName(name_p);
+		return performanceCriteria;
+	}
+
+	/**
+	 * Creates class and sets its name
+	 * (This method comes from a customization of the standard EMF generator)
+	 *
+	 * @param name_p : default name of created element
+	 * @generated
+	 */
+	public PerformanceConsumption createPerformanceConsumption(String name_p) {
+		PerformanceConsumption performanceConsumption = createPerformanceConsumption();
+		performanceConsumption.setName(name_p);
+		return performanceConsumption;
+	}
+
+	/**
+	 * Creates class and sets its name
+	 * (This method comes from a customization of the standard EMF generator)
+	 *
+	 * @param name_p : default name of created element
+	 * @generated
+	 */
+	public PerformanceCapacity createPerformanceCapacity(String name_p) {
+		PerformanceCapacity performanceCapacity = createPerformanceCapacity();
+		performanceCapacity.setName(name_p);
+		return performanceCapacity;
+	}
+
+	/**
+	 * Creates class and sets its name
+	 * (This method comes from a customization of the standard EMF generator)
+	 *
+	 * @param name_p : default name of created element
+	 * @generated
+	 */
+	public TimeConsumption createTimeConsumption(String name_p) {
+		TimeConsumption timeConsumption = createTimeConsumption();
+		timeConsumption.setName(name_p);
+		return timeConsumption;
+	}
+
+	/**
+	 * Creates class and sets its name
+	 * (This method comes from a customization of the standard EMF generator)
+	 *
+	 * @param name_p : default name of created element
+	 * @generated
+	 */
+	public TimeCapacity createTimeCapacity(String name_p) {
+		TimeCapacity timeCapacity = createTimeCapacity();
+		timeCapacity.setName(name_p);
+		return timeCapacity;
+	}
+
+	/**
+	 * Creates class and sets its name
+	 * (This method comes from a customization of the standard EMF generator)
+	 *
+	 * @param name_p : default name of created element
+	 * @generated
+	 */
+	public UnityElement createUnityElement(String name_p) {
+		UnityElement unityElement = createUnityElement();
+		unityElement.setName(name_p);
+		return unityElement;
 	}
 
 } //PerfoFactoryImpl

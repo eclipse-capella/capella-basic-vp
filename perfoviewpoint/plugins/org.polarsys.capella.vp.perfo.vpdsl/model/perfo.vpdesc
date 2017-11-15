@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<vpdesc:Viewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DocGenConfiguration="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/DocGenConfiguration/1.0.0" xmlns:commondata="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/commondata/1.0.0" xmlns:configuration="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdiagram/conf/1.0.0" xmlns:expression="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdiagram/expression/1.0.0" xmlns:vpconf="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpconf/1.0.0" xmlns:vpdesc="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdesc/1.0.0" xmlns:vpdiagram="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdiagram/1.0.0" xmlns:vpui="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpui/1.0.0" name="perfo" shortName="perfo">
+<vpdesc:Viewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:commondata="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/commondata/1.0.0" xmlns:configuration="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdiagram/conf/1.0.0" xmlns:docGenConfiguration="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/DocGenConfiguration/1.0.0" xmlns:expression="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdiagram/expression/1.0.0" xmlns:vpconf="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpconf/1.0.0" xmlns:vpdesc="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdesc/1.0.0" xmlns:vpdiagram="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdiagram/1.0.0" xmlns:vpui="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpui/1.0.0" name="perfo" shortName="perfo">
   <VP_Data name="perfo.data">
     <VP_Classes name="PerformanceCriteria">
       <VP_Class_Attributes name="value">
@@ -25,9 +25,9 @@
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.0"/>
     </VP_Classes>
     <VP_Classes name="TimeConsumption" icon="TimeConsumption.gif">
-      <extends href="http://www.polarsys.org/capella/core/fa/1.1.0#//FunctionalExchange"/>
-      <extends href="http://www.polarsys.org/capella/core/pa/1.1.0#//PhysicalFunction"/>
-      <extends href="http://www.polarsys.org/capella/core/la/1.1.0#//LogicalFunction"/>
+      <extends href="http://www.polarsys.org/capella/core/fa/1.2.0#//FunctionalExchange"/>
+      <extends href="http://www.polarsys.org/capella/core/pa/1.2.0#//PhysicalFunction"/>
+      <extends href="http://www.polarsys.org/capella/core/la/1.2.0#//LogicalFunction"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.1"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.5"/>
     </VP_Classes>
@@ -37,7 +37,7 @@
           <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         </owned_type>
       </VP_Class_Attributes>
-      <extends href="http://www.polarsys.org/capella/core/fa/1.1.0#//FunctionalChain"/>
+      <extends href="http://www.polarsys.org/capella/core/fa/1.2.0#//FunctionalChain"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.2"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.5"/>
     </VP_Classes>
@@ -53,13 +53,13 @@
   <VP_Aspects xsi:type="vpconf:Configuration" name="perfo.conf">
     <vpConfigurationElements xsi:type="vpconf:TargetApplication" type="Capella"/>
     <vpConfigurationElements xsi:type="vpconf:GenerationConfiguration" projectName="org.polarsys.capella.vp.perfo" nsuri="http://www.polarsys.org/capella/perfo"/>
-    <vpConfigurationElements xsi:type="vpconf:Release" viewpointVersion="1.1.0.qualifier" viewpointDescription="Capella Basic Performance Viewpoint">
+    <vpConfigurationElements xsi:type="vpconf:Release" viewpointVersion="1.2.0.qualifier" viewpointDescription="Capella Basic Performance Viewpoint">
       <requiredExecutionEnvironment>JavaSE-1.7</requiredExecutionEnvironment>
     </vpConfigurationElements>
     <vpConfigurationElements xsi:type="vpconf:Generation">
       <ownedDataGenerationConf/>
       <ownedExtensionGenConf xsi:type="configuration:DiagramGenerationConfiguration" overwriteVSM="true"/>
-      <ownedExtensionGenConf xsi:type="DocGenConfiguration:DocumentationGenerationConfiguration"/>
+      <ownedExtensionGenConf xsi:type="docGenConfiguration:DocumentationGenerationConfiguration"/>
     </vpConfigurationElements>
   </VP_Aspects>
   <VP_Aspects xsi:type="vpui:UIDescription" name="perfo.ui">

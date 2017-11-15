@@ -30,11 +30,11 @@ import org.polarsys.kitalpha.emde.model.ElementExtension;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.polarsys.capella.vp.perfo.perfo.impl.TimeCapacityImpl#getMeasurementUnit <em>Measurement Unit</em>}</li>
  *   <li>{@link org.polarsys.capella.vp.perfo.perfo.impl.TimeCapacityImpl#getCurrentExecutionTime <em>Current Execution Time</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

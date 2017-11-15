@@ -25,7 +25,7 @@ import org.polarsys.kitalpha.emde.model.ElementExtension;
  * </ul>
  *
  * @see org.polarsys.capella.vp.price.price.PricePackage#getPartPrice()
- * @model annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraint ExtendedElement=' http://www.polarsys.org/capella/core/cs/1.1.0#//Part'"
+ * @model annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraint ExtendedElement=' http://www.polarsys.org/capella/core/cs/1.2.0#//Part'"
  *        annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraintMapping Mapping=' platform:/plugin/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//Part'"
  * @generated
  */

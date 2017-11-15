@@ -27,12 +27,12 @@ import org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.polarsys.capella.vp.perfo.perfo.impl.PerformanceCriteriaImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.polarsys.capella.vp.perfo.perfo.impl.PerformanceCriteriaImpl#getMaxValue <em>Max Value</em>}</li>
  *   <li>{@link org.polarsys.capella.vp.perfo.perfo.impl.PerformanceCriteriaImpl#getMinValue <em>Min Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

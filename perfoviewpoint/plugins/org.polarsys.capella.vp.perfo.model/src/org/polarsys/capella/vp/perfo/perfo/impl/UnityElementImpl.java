@@ -28,10 +28,10 @@ import org.polarsys.capella.vp.perfo.perfo.measurementUnit_Type;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.polarsys.capella.vp.perfo.perfo.impl.UnityElementImpl#getMeasurementUnit <em>Measurement Unit</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
