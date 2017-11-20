@@ -13,10 +13,10 @@
    <description url="http://www.polarsys.org/capella">
       Capella Basic Perfo Viewpoint
    </description>
-   <feature id="org.polarsys.capella.vp.perfo.feature" version="1.0.0.qualifier">
+   <feature id="org.polarsys.capella.vp.perfo.feature" version="1.2.0.qualifier">
       <category name="org.polarsys.capella.basic.perfo.viewpoint"/>
    </feature>
-   <feature id="org.polarsys.capella.vp.perfo.feature.source" version="1.0.0.qualifier">
+   <feature id="org.polarsys.capella.vp.perfo.feature.source" version="1.2.0.qualifier">
       <category name="org.polarsys.capella.basic.perfo.viewpoint"/>
    </feature>
    <category-def name="org.polarsys.capella.basic.perfo.viewpoint" label="Capella Basic Perfo Viewpoint"/>

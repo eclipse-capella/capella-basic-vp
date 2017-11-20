@@ -12,7 +12,7 @@
 <feature
       id="org.polarsys.capella.vp.perfo.feature"
       label="perfo Feature"
-      version="1.0.0.qualifier">
+      version="1.2.0.qualifier">
 
    <description url="%descriptionURL">
       %description
