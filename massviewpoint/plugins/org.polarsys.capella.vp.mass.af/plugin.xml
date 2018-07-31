@@ -18,7 +18,7 @@
 	        id="org.polarsys.capella.vp.mass"
 	        tags="vp"
 	        name="mass"
-	        path="/org.polarsys.capella.vp.mass.af/model/mass.vp#_Z-IWIEcaEeW1r_C8yGdaRg"/>
+	        path="/org.polarsys.capella.vp.mass.af/model/mass.vp#_0kcCQJWIEeigDbTy89mjoQ"/>
 	</extension>
 	<extension 
 	     point="org.eclipse.ui.propertiesView">

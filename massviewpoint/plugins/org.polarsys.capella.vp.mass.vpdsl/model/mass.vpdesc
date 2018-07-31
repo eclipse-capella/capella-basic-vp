@@ -58,13 +58,15 @@
     <diagrams xsi:type="vpdiagram:DiagramExtension" name="Mass-PhysicalArchitectureBlank">
       <the_MappingSet>
         <diagram_Elements xsi:type="vpdiagram:Node" name="PAB_Global_Mass">
-          <the_domain query="&lt;%getMassObjects()%>">
+          <the_domain query="aql:self.getMassObjects()">
             <domain_Class xsi:type="commondata:LocalClass" class="//@VP_Data/@VP_Classes.1"/>
           </the_domain>
           <style label_position="node">
             <node_Label>
               <value>
-                <expressionElements xsi:type="expression:StringElement" value="&lt;%currentMass%> - Max: &lt;%maxValue%>"/>
+                <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.1/@VP_Class_Attributes.0"/>
+                <expressionElements xsi:type="expression:StringElement" value=" - Max: "/>
+                <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.1"/>
               </value>
             </node_Label>
             <style xsi:type="vpdiagram:BasicStyle" borderColor="orange" backgroundColor="light_yellow"/>
@@ -72,7 +74,9 @@
           <style label_position="node">
             <node_Label>
               <value>
-                <expressionElements xsi:type="expression:StringElement" value="&lt;%currentMass%> - Max: &lt;%maxValue%>"/>
+                <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.1/@VP_Class_Attributes.0"/>
+                <expressionElements xsi:type="expression:StringElement" value=" - Max: "/>
+                <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.1"/>
               </value>
             </node_Label>
             <condition>
@@ -83,7 +87,9 @@
           <style label_position="node">
             <node_Label>
               <value>
-                <expressionElements xsi:type="expression:StringElement" value="&lt;%currentMass%> - Max: &lt;%maxValue%>"/>
+                <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.1/@VP_Class_Attributes.0"/>
+                <expressionElements xsi:type="expression:StringElement" value=" - Max: "/>
+                <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.1"/>
               </value>
             </node_Label>
             <condition>
@@ -123,13 +129,15 @@
           <imports href="../../../plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_Deployment']"/>
         </diagram_Elements>
         <diagram_Elements xsi:type="vpdiagram:Node" name="PC_Mass_Label">
-          <the_domain query="&lt;%getMassObjects($diagram)%>">
+          <the_domain query="aql:self.getMassObjects(diagram)">
             <domain_Class xsi:type="commondata:LocalClass" class="//@VP_Data/@VP_Classes.1"/>
           </the_domain>
           <style label_position="node">
             <node_Label>
               <value>
-                <expressionElements xsi:type="expression:StringElement" value="&lt;%currentMass%> - Max: &lt;%maxValue%>"/>
+                <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.1/@VP_Class_Attributes.0"/>
+                <expressionElements xsi:type="expression:StringElement" value=" - Max: "/>
+                <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.1"/>
               </value>
             </node_Label>
             <style xsi:type="vpdiagram:BasicStyle" borderColor="orange" backgroundColor="light_yellow"/>
@@ -137,7 +145,9 @@
           <style label_position="node">
             <node_Label>
               <value>
-                <expressionElements xsi:type="expression:StringElement" value="&lt;%currentMass%> - Max: &lt;%maxValue%>"/>
+                <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.1/@VP_Class_Attributes.0"/>
+                <expressionElements xsi:type="expression:StringElement" value=" - Max: "/>
+                <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.1"/>
               </value>
             </node_Label>
             <condition>
@@ -148,7 +158,9 @@
           <style label_position="node">
             <node_Label>
               <value>
-                <expressionElements xsi:type="expression:StringElement" value="&lt;%currentMass%> - Max: &lt;%maxValue%>"/>
+                <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.1/@VP_Class_Attributes.0"/>
+                <expressionElements xsi:type="expression:StringElement" value=" - Max: "/>
+                <expressionElements xsi:type="expression:DomainElement" attribute="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.1"/>
               </value>
             </node_Label>
             <condition>

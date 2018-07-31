@@ -92,7 +92,7 @@
           <imports href="../../../plugin/org.polarsys.capella.core.sirius.analysis/description/logical.odesign#//@ownedViewpoints[name='Logical%20Architecture']/@ownedRepresentations[name='Logical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='LAB%20Logical%20Component']/@subNodeMappings[name='LAB%20Logical%20Function']"/>
         </diagram_Elements>
         <diagram_Elements xsi:type="vpdiagram:Node" name="Performance_LAB_LogicalFunction_Label">
-          <the_domain query="&lt;%getTimeConsumptionObject($diagram)%>">
+          <the_domain query="aql:self.getTimeConsumptionObject(diagram)">
             <domain_Class xsi:type="commondata:LocalClass" class="//@VP_Data/@VP_Classes.3"/>
           </the_domain>
           <style label_position="node">
@@ -111,7 +111,7 @@
           <e_description>
             <style lineStyle="dash_dot"/>
           </e_description>
-          <the_domain target_query="&lt;%getTimeConsumptionObject()%>"/>
+          <the_domain target_query="aql:self.getTimeConsumptionObject()"/>
         </diagram_Elements>
         <diagram_Elements xsi:type="vpdiagram:Node" name="Performance_LAB_FunctionalChain_Label">
           <imports href="../../../plugin/org.polarsys.capella.core.sirius.analysis/description/logical.odesign#//@ownedViewpoints[name='Logical%20Architecture']/@ownedRepresentations[name='Logical%20Architecture%20Blank']/@defaultLayer/@nodeMappings[name='LAB_FunctionalChainEnd']"/>
@@ -175,7 +175,7 @@
           <imports href="../../../plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@nodeMappings[name='PAB_PhysicalFunction']"/>
         </diagram_Elements>
         <diagram_Elements xsi:type="vpdiagram:Node" name="Performance_PAB_PhysicalFunction_Label">
-          <the_domain query="&lt;%getTimeConsumptionObject($diagram)%>">
+          <the_domain query="aql:self.getTimeConsumptionObject(diagram)">
             <domain_Class xsi:type="commondata:LocalClass" class="//@VP_Data/@VP_Classes.3"/>
           </the_domain>
           <style label_position="node">
@@ -194,7 +194,7 @@
           <e_description>
             <style lineStyle="dash_dot"/>
           </e_description>
-          <the_domain target_query="&lt;%getTimeConsumptionObject()%>"/>
+          <the_domain target_query="aql:self.getTimeConsumptionObject()"/>
         </diagram_Elements>
         <diagram_Elements xsi:type="vpdiagram:Node" name="Performance_PAB_FunctionalChain_Label">
           <imports href="../../../plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@nodeMappings[name='PAB_FunctionalChainEnd']"/>

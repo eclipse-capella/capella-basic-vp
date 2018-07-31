@@ -14,11 +14,11 @@ Diagrams price.diagram {
 		Mapping {
 			Node PAB_Global_Price { 
 				domain-context: price.data.PartPrice
-				provided-by query "<%getPriceObjects()%>"
+				provided-by query "aql:self.getPriceObjects()"
 				
 				Representation { 
 					Label {
-						content: "<%currentPrice%> - Max: <%maxValue%>"
+						content: price.data.PartPrice.currentPrice + " - Max: " + price.data.Price.maxValue
 						position: node
 					}
 					Style {
@@ -33,7 +33,7 @@ Diagrams price.diagram {
 				Representation {
 					condition: Java isPriceSaturated
 					Label {
-						content: "<%currentPrice%> - Max: <%maxValue%>"
+						content: price.data.PartPrice.currentPrice + " - Max: " + price.data.Price.maxValue
 						position: node
 					}
 					Style {
@@ -48,7 +48,7 @@ Diagrams price.diagram {
 				Representation {
 					condition: Java isPriceOverhead
 					Label {
-						content: "<%currentPrice%> - Max: <%maxValue%>"
+						content: price.data.PartPrice.currentPrice + " - Max: " + price.data.Price.maxValue
 						position: node
 					}
 					Style {
@@ -86,10 +86,10 @@ Diagrams price.diagram {
 				
 			Node PC_Price_Label {
 					domain-context: price.data.PartPrice
-					provided-by query "<%getPriceObjects($diagram)%>"
+					provided-by query "aql:self.getPriceObjects(diagram)"
 					Representation {
 						Label  {
-							content: "<%currentPrice%> - Max: <%maxValue%>" 
+							content: price.data.PartPrice.currentPrice + " - Max: " + price.data.Price.maxValue 
 							position: node
 						}
 						Style {
@@ -104,7 +104,7 @@ Diagrams price.diagram {
 					Representation {
 						condition: Java isPriceSaturated
 						Label {
-							content: "<%currentPrice%> - Max: <%maxValue%>"
+							content: price.data.PartPrice.currentPrice + " - Max: " + price.data.Price.maxValue
 							position: node
 						}
 						Style {
@@ -119,7 +119,7 @@ Diagrams price.diagram {
 					Representation {
 						condition: Java isPriceOverhead
 						Label {
-							content: "<%currentPrice%> - Max: <%maxValue%>"
+							content: price.data.PartPrice.currentPrice + " - Max: " + price.data.Price.maxValue
 							position: node
 						}
 						Style {
