@@ -18,7 +18,7 @@
 	        id="org.polarsys.capella.vp.price"
 	        tags="vp"
 	        name="price"
-	        path="/org.polarsys.capella.vp.price.af/model/price.vp#_WKoWkMq2EeeLFfjU49xlvA"/>
+	        path="/org.polarsys.capella.vp.price.af/model/price.vp#_-LcWoJS1EeihEcdpHtqY9w"/>
 	</extension>
 	<extension 
 	     point="org.eclipse.ui.propertiesView">

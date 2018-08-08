@@ -18,6 +18,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.polarsys.capella.common.data.activity.ActivityPackage;
+import org.polarsys.capella.common.data.behavior.BehaviorPackage;
+import org.polarsys.capella.common.data.modellingcore.ModellingcorePackage;
 import org.polarsys.capella.core.data.capellacommon.CapellacommonPackage;
 
 import org.polarsys.capella.core.data.capellacore.CapellacorePackage;
@@ -163,6 +166,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
+		ActivityPackage.eINSTANCE.eClass();
 		CapellamodellerPackage.eINSTANCE.eClass();
 		CapellacorePackage.eINSTANCE.eClass();
 		OaPackage.eINSTANCE.eClass();
@@ -177,6 +181,9 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 		CsPackage.eINSTANCE.eClass();
 		FaPackage.eINSTANCE.eClass();
 		InteractionPackage.eINSTANCE.eClass();
+		ModellingcorePackage.eINSTANCE.eClass();
+		BehaviorPackage.eINSTANCE.eClass();
+		EmdePackage.eINSTANCE.eClass();
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects

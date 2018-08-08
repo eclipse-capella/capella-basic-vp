@@ -22,7 +22,7 @@ Diagrams perfo.diagram {
 			
 			Node Performance_LAB_LogicalFunction_Label {
 				domain-context: perfo.data.TimeConsumption
-				provided-by query "<%getTimeConsumptionObject($diagram)%>"
+				provided-by query "aql:self.getTimeConsumptionObject(diagram)"
 				
 				Representation {
 					Label {
@@ -47,7 +47,7 @@ Diagrams perfo.diagram {
 			}
 			
 			Edge LinkPerformance_LAB_FunctionalExchange {
-				association-context: query: "<%getTimeConsumptionObject()%>"
+				association-context: query: "aql:self.getTimeConsumptionObject()"
 				source: Performance_LAB.Performance_LAB_LogicalFunction_Import, Performance_LAB.Performance_FunctinalExchange_Import
 				target: Performance_LAB.Performance_LAB_LogicalFunction_Label
 				Representation {
@@ -137,7 +137,7 @@ Diagrams perfo.diagram {
 			
 			Node Performance_PAB_PhysicalFunction_Label {
 				domain-context: perfo.data.TimeConsumption
-				provided-by query "<%getTimeConsumptionObject($diagram)%>"
+				provided-by query "aql:self.getTimeConsumptionObject(diagram)"
 				
 				Representation {
 					Label {
@@ -162,7 +162,7 @@ Diagrams perfo.diagram {
 			}
 			
 			Edge LinkPerformance_PAB_PhysicalFunctionalExchange {
-				association-context: query: "<%getTimeConsumptionObject()%>"
+				association-context: query: "aql:self.getTimeConsumptionObject()"
 				source: Performance_PAB.Performance_PAB_PhysicalFunction_Import, Performance_PAB.Performance_PhysicalFunctionalExchange_Import
 				target: Performance_PAB.Performance_PAB_PhysicalFunction_Label
 				Representation {

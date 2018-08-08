@@ -18,7 +18,7 @@
 	        id="org.polarsys.capella.vp.perfo"
 	        tags="vp"
 	        name="perfo"
-	        path="/org.polarsys.capella.vp.perfo.af/model/perfo.vp#_D5m2QMq2EeeLFfjU49xlvA"/>
+	        path="/org.polarsys.capella.vp.perfo.af/model/perfo.vp#_ZyercJSzEeihEcdpHtqY9w"/>
 	</extension>
 	<extension 
 	     point="org.eclipse.ui.propertiesView">
