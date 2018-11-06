@@ -1,5 +1,5 @@
 /******************************************************************************
-* Copyright (c) 2006, 2017 Thales Global Services 
+* Copyright (c) 2006, 2018 Thales Global Services 
  * All rights reserved. This program and the accompanying materials 
  * are made available under the terms of the Eclipse Public License v1.0 
  * which accompanies this distribution, and is available at 
@@ -14,7 +14,7 @@ Configuration mass.conf {
 	project org.polarsys.capella.vp.mass
 	nsuri "http://www.polarsys.org/capella/mass"
 	release {
-		version : 1.2.0.qualifier
+		version : 1.3.0.qualifier
 		description : "Capella Basic Mass Viewpoint"
 		execution environments : "JavaSE-1.7"
 	}
@@ -28,7 +28,7 @@ Configuration mass.conf {
 			OverwriteEcore: true
 		)
 		diagram (
-			OverwriteOdesign: true
+			OverwriteOdesign: false
 		)
 		documentation (
 			EcoreToHtml: false

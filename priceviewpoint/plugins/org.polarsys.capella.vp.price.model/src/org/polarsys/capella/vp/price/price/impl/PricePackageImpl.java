@@ -1,5 +1,5 @@
 /******************************************************************************
-* Copyright (c) 2006, 2016 Thales Global Services 
+* Copyright (c) 2006, 2018 Thales Global Services 
  * All rights reserved. This program and the accompanying materials 
  * are made available under the terms of the Eclipse Public License v1.0 
  * which accompanies this distribution, and is available at 
@@ -306,7 +306,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	protected void createConstraintAnnotations() {
 		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraint"; //$NON-NLS-1$	
 		addAnnotation(partPriceEClass, source,
-				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/cs/1.2.0#//Part" //$NON-NLS-1$ //$NON-NLS-2$
+				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/cs/1.3.0#//Part" //$NON-NLS-1$ //$NON-NLS-2$
 				});
 	}
 
