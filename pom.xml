@@ -36,7 +36,7 @@
 		<tycho.testArgLine>-Xms256m -Xmx1024m</tycho.testArgLine>
 
 		<!-- for packaging -->
-		<platform-name>neon</platform-name>
+		<platform-name>oxygen</platform-name>
 		<eclipse-repo.url>http://download.eclipse.org/releases/${platform-name}</eclipse-repo.url>
 
 		<!-- for sonar -->
