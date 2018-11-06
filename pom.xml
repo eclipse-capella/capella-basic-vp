@@ -32,7 +32,8 @@
 		<jacoco-version>0.7.6.201602180812</jacoco-version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-
+		<java-version>JavaSE-1.8</java-version>
+		
 		<!-- for junit -->
 		<capella-product-id>org.polarsys.capella.core.platform.sirius.ui.perspective.product</capella-product-id>
 		<tycho.testArgLine>-Xms256m -Xmx1024m</tycho.testArgLine>
@@ -280,6 +281,7 @@
 								<goal>eclipse-run</goal>
 							</goals>
 							<configuration>
+								<executionEnvironment>${java-version}</executionEnvironment>
 								<appArgLine>-application org.eclipse.equinox.p2.repository.repo2runnable -source file:${project.build.directory}/repository -destination ${project.build.directory}/${packagedAddonName}/eclipse</appArgLine>
 							</configuration>
 						</execution>
