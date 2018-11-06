@@ -264,6 +264,10 @@
 								<artifactId>org.eclipse.equinox.ds</artifactId>
 								<type>eclipse-plugin</type>
 							</dependency>
+							<dependency>
+								<artifactId>org.eclipse.core.runtime</artifactId>
+								<type>eclipse-plugin</type>
+							</dependency>
 						</dependencies>
 					</configuration>
 					<executions>
