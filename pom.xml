@@ -30,6 +30,8 @@
 		<antrun-version>1.7</antrun-version>
 		<sonar-version>3.0.2</sonar-version>
 		<jacoco-version>0.7.6.201602180812</jacoco-version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 
 		<!-- for junit -->
 		<capella-product-id>org.polarsys.capella.core.platform.sirius.ui.perspective.product</capella-product-id>
