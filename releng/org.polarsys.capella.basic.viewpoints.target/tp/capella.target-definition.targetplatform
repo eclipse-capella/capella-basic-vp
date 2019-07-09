@@ -14,6 +14,6 @@ include "http://git.polarsys.org/c/capella/capella.git/plain/releng/plugins/org.
 
 with source, requirements
 
-location capella-master "https://ci.polarsys.org/capella/job/capella-master/1567/artifact/releng/plugins/org.polarsys.capella.rcp.site/target/repository/" {
-	org.polarsys.capella.rcp.feature.feature.group
+location capella-master "https://download.eclipse.org/capella/core/updates/nightly/1.4.x/org.polarsys.capella.rcp.site/" {
+	org.polarsys.capella.rcp.feature.feature.group lazy
 }
