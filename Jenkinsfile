@@ -16,7 +16,10 @@ pipeline {
         archiveArtifacts artifacts: 'releng/org.polarsys.capella.basic.mass.viewpoint.site/target/BasicMass-*.zip,releng/org.polarsys.capella.basic.perfo.viewpoint.site/target/BasicPerfo-*.zip,releng/org.polarsys.capella.basic.price.viewpoint.site/target/BasicPrice-*.zip,releng/org.polarsys.capella.basic.mass.viewpoint.site/target/repository/**,releng/org.polarsys.capella.basic.perfo.viewpoint.site/target/repository/**,releng/org.polarsys.capella.basic.price.viewpoint.site/target/repository/**'
       }
     }
-        stage('Deploy') {
+    stage('Deploy') {
+	  when {
+		  not { triggeredBy 'Gerrit' }
+	  }
       steps {
           sshagent ( ['projects-storage.eclipse.org-bot-ssh']) {
             sh '''
