@@ -6,12 +6,6 @@ pipeline {
         jdk 'oracle-jdk8-latest'
   }
   stages {
-    stage('Checkout sources') {
-        steps {
-            sh "git clone --depth 1 http://git.polarsys.org/r/capella/capella-basic-vp.git -b v1.3.x ."
-            sh "ls -lat"
-        }
-    }
     stage('Package basic vp') {
       steps {
         sh 'mvn clean install -Pmass -Pperfo -Pprice  -e -f pom.xml'
