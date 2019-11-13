@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2006, 2016 Thales Global Services
+ * Copyright (c) 2006, 2019 Thales Global Services
  *   All rights reserved. This program and the accompanying materials
  *   are made available under the terms of the Eclipse Public License v1.0
  *   which accompanies this distribution, and is available at
@@ -11,6 +11,7 @@
 package org.polarsys.capella.vp.price.helpers;
 
 import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.polarsys.capella.core.data.capellacore.NamedElement;
@@ -70,19 +71,17 @@ public class PriceHelper {
 	private EObject getCorrectContainer(EObject container){
 		if (! (container instanceof Part || container instanceof PhysicalComponent)){
 			return null;
-		}else{
-			if (container instanceof PhysicalComponent){
-				PhysicalComponent pc = (PhysicalComponent)container;
-				
-				if (PriceHelper.isPhysicalSystem(pc)){
-					return pc.getAbstractTypedElements().get(0);
-				}else{
-					if (pc.getOwnedPartitions() != null &&
-							pc.getOwnedPartitions().size() != 0){
-						return pc.getOwnedPartitions().get(0);
-					}
-				}
+		}
+		if (container instanceof PhysicalComponent){
+			PhysicalComponent pc = (PhysicalComponent)container;
+			
+			if (PriceHelper.isPhysicalSystem(pc)){
+				return pc.getAbstractTypedElements().get(0);
 			}
+			if (!pc.getOwnedFeatures().isEmpty()){
+				return pc.getOwnedFeatures().get(0);
+			}
+			
 		}
 		return container;
 	}
@@ -91,7 +90,7 @@ public class PriceHelper {
 		
 		EObject obj = getCorrectContainer(eObject);
 		if (obj == null){
-			return null;
+			return (EList<EObject>) ECollections.EMPTY_ELIST;
 		}
 		
 		EList<EObject> resulat = new BasicEList<EObject>(); 

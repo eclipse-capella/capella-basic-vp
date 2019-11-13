@@ -24,15 +24,15 @@
           <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         </owned_type>
       </VP_Class_Attributes>
-      <extends href="http://www.polarsys.org/capella/core/cs/1.3.0#//Part"/>
+      <extends href="http://www.polarsys.org/capella/core/cs/1.4.0#//Part"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.0"/>
     </VP_Classes>
   </VP_Data>
   <VP_Aspects xsi:type="vpconf:Configuration" name="mass.conf">
     <vpConfigurationElements xsi:type="vpconf:TargetApplication" type="Capella"/>
     <vpConfigurationElements xsi:type="vpconf:GenerationConfiguration" projectName="org.polarsys.capella.vp.mass" nsuri="http://www.polarsys.org/capella/mass"/>
-    <vpConfigurationElements xsi:type="vpconf:Release" viewpointVersion="1.3.0.qualifier" viewpointDescription="Capella Basic Mass Viewpoint">
-      <requiredExecutionEnvironment>JavaSE-1.7</requiredExecutionEnvironment>
+    <vpConfigurationElements xsi:type="vpconf:Release" viewpointVersion="1.4.0.qualifier" viewpointDescription="Capella Basic Mass Viewpoint">
+      <requiredExecutionEnvironment>JavaSE-1.8</requiredExecutionEnvironment>
     </vpConfigurationElements>
     <vpConfigurationElements xsi:type="vpconf:Generation">
       <ownedDataGenerationConf/>

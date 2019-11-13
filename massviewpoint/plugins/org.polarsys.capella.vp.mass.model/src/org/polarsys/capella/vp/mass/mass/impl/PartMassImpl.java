@@ -81,6 +81,7 @@ public class PartMassImpl extends MassImpl implements PartMass {
 	 * @generated
 	 */
 
+	@Override
 	public int getCurrentMass() {
 
 		return currentMass;
@@ -92,6 +93,7 @@ public class PartMassImpl extends MassImpl implements PartMass {
 	 * @generated
 	 */
 
+	@Override
 	public void setCurrentMass(int newCurrentMass) {
 
 		int oldCurrentMass = currentMass;
@@ -170,7 +172,7 @@ public class PartMassImpl extends MassImpl implements PartMass {
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (currentMass: "); //$NON-NLS-1$
 		result.append(currentMass);
 		result.append(')');

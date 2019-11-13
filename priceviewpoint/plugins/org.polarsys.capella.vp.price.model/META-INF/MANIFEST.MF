@@ -2,11 +2,12 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.capella.vp.price.model;singleton:=true
-Bundle-Version: 1.3.0.qualifier
+Automatic-Module-Name: org.polarsys.capella.vp.price.model
+Bundle-Version: 1.4.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.polarsys.capella.vp.price.price,
  org.polarsys.capella.vp.price.price.impl,
  org.polarsys.capella.vp.price.price.util

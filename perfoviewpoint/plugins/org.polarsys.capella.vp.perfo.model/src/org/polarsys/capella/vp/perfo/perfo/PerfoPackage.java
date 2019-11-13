@@ -121,6 +121,15 @@ public interface PerfoPackage extends EPackage {
 	int PERFORMANCE_CRITERIA__OWNED_CONSTRAINTS = CapellacorePackage.NAMED_ELEMENT__OWNED_CONSTRAINTS;
 
 	/**
+	 * The feature id for the '<em><b>Owned Migrated Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_CRITERIA__OWNED_MIGRATED_ELEMENTS = CapellacorePackage.NAMED_ELEMENT__OWNED_MIGRATED_ELEMENTS;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -354,6 +363,15 @@ public interface PerfoPackage extends EPackage {
 	 * @ordered
 	 */
 	int PERFORMANCE_CONSUMPTION__OWNED_CONSTRAINTS = PERFORMANCE_CRITERIA__OWNED_CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Migrated Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_CONSUMPTION__OWNED_MIGRATED_ELEMENTS = PERFORMANCE_CRITERIA__OWNED_MIGRATED_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -591,6 +609,15 @@ public interface PerfoPackage extends EPackage {
 	int PERFORMANCE_CAPACITY__OWNED_CONSTRAINTS = PERFORMANCE_CRITERIA__OWNED_CONSTRAINTS;
 
 	/**
+	 * The feature id for the '<em><b>Owned Migrated Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_CAPACITY__OWNED_MIGRATED_ELEMENTS = PERFORMANCE_CRITERIA__OWNED_MIGRATED_ELEMENTS;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -824,6 +851,15 @@ public interface PerfoPackage extends EPackage {
 	 * @ordered
 	 */
 	int TIME_CONSUMPTION__OWNED_CONSTRAINTS = PERFORMANCE_CONSUMPTION__OWNED_CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Migrated Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_CONSUMPTION__OWNED_MIGRATED_ELEMENTS = PERFORMANCE_CONSUMPTION__OWNED_MIGRATED_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1068,6 +1104,15 @@ public interface PerfoPackage extends EPackage {
 	 * @ordered
 	 */
 	int TIME_CAPACITY__OWNED_CONSTRAINTS = PERFORMANCE_CAPACITY__OWNED_CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Migrated Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_CAPACITY__OWNED_MIGRATED_ELEMENTS = PERFORMANCE_CAPACITY__OWNED_MIGRATED_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1321,6 +1366,15 @@ public interface PerfoPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNITY_ELEMENT__OWNED_CONSTRAINTS = CapellacorePackage.NAMED_ELEMENT__OWNED_CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Migrated Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNITY_ELEMENT__OWNED_MIGRATED_ELEMENTS = CapellacorePackage.NAMED_ELEMENT__OWNED_MIGRATED_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.

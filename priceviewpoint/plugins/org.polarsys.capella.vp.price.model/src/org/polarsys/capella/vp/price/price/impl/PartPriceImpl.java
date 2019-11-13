@@ -81,6 +81,7 @@ public class PartPriceImpl extends PriceImpl implements PartPrice {
 	 * @generated
 	 */
 
+	@Override
 	public int getCurrentPrice() {
 
 		return currentPrice;
@@ -92,6 +93,7 @@ public class PartPriceImpl extends PriceImpl implements PartPrice {
 	 * @generated
 	 */
 
+	@Override
 	public void setCurrentPrice(int newCurrentPrice) {
 
 		int oldCurrentPrice = currentPrice;
@@ -170,7 +172,7 @@ public class PartPriceImpl extends PriceImpl implements PartPrice {
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (currentPrice: "); //$NON-NLS-1$
 		result.append(currentPrice);
 		result.append(')');

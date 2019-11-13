@@ -107,6 +107,7 @@ public class TimeCapacityImpl extends PerformanceCapacityImpl implements TimeCap
 	 * @generated
 	 */
 
+	@Override
 	public measurementUnit_Type getMeasurementUnit() {
 
 		return measurementUnit;
@@ -118,6 +119,7 @@ public class TimeCapacityImpl extends PerformanceCapacityImpl implements TimeCap
 	 * @generated
 	 */
 
+	@Override
 	public void setMeasurementUnit(measurementUnit_Type newMeasurementUnit) {
 
 		measurementUnit_Type oldMeasurementUnit = measurementUnit;
@@ -134,6 +136,7 @@ public class TimeCapacityImpl extends PerformanceCapacityImpl implements TimeCap
 	 * @generated
 	 */
 
+	@Override
 	public int getCurrentExecutionTime() {
 
 		return currentExecutionTime;
@@ -145,6 +148,7 @@ public class TimeCapacityImpl extends PerformanceCapacityImpl implements TimeCap
 	 * @generated
 	 */
 
+	@Override
 	public void setCurrentExecutionTime(int newCurrentExecutionTime) {
 
 		int oldCurrentExecutionTime = currentExecutionTime;
@@ -281,7 +285,7 @@ public class TimeCapacityImpl extends PerformanceCapacityImpl implements TimeCap
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (measurementUnit: "); //$NON-NLS-1$
 		result.append(measurementUnit);
 		result.append(", currentExecutionTime: "); //$NON-NLS-1$

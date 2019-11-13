@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2006, 2016 Thales Global Services
+ * Copyright (c) 2006, 2019 Thales Global Services
  *   All rights reserved. This program and the accompanying materials
  *   are made available under the terms of the Eclipse Public License v1.0
  *   which accompanies this distribution, and is available at
@@ -13,7 +13,7 @@ package org.polarsys.capella.vp.price.helpers;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
-import org.polarsys.capella.core.data.cs.AbstractActor;
+import org.polarsys.capella.core.data.cs.Component;
 import org.polarsys.capella.core.data.cs.Part;
 import org.polarsys.capella.core.data.pa.PhysicalComponent;
 import org.polarsys.capella.vp.price.price.PartPrice;
@@ -66,7 +66,7 @@ public class PriceCreationToolHelper {
 			
 			if (eObject instanceof Part){
 				Part part = (Part) eObject;
-				if (part.getAbstractType() instanceof AbstractActor)
+				if (part.getAbstractType() instanceof Component && ((Component)part.getAbstractType()).isActor())
 					return false;
 				
 				part.getOwnedExtensions().add((ElementExtension)newPriceObject);

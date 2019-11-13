@@ -86,6 +86,7 @@ public class TimeConsumptionImpl extends PerformanceConsumptionImpl implements T
 	 * @generated
 	 */
 
+	@Override
 	public measurementUnit_Type getMeasurementUnit() {
 
 		return measurementUnit;
@@ -97,6 +98,7 @@ public class TimeConsumptionImpl extends PerformanceConsumptionImpl implements T
 	 * @generated
 	 */
 
+	@Override
 	public void setMeasurementUnit(measurementUnit_Type newMeasurementUnit) {
 
 		measurementUnit_Type oldMeasurementUnit = measurementUnit;
@@ -223,7 +225,7 @@ public class TimeConsumptionImpl extends PerformanceConsumptionImpl implements T
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (measurementUnit: "); //$NON-NLS-1$
 		result.append(measurementUnit);
 		result.append(')');

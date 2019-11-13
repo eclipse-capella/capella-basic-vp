@@ -144,7 +144,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link PerfoPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -159,9 +159,10 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 			return (PerfoPackage) EPackage.Registry.INSTANCE.getEPackage(PerfoPackage.eNS_URI);
 
 		// Obtain or create and register package
-		PerfoPackageImpl thePerfoPackage = (PerfoPackageImpl) (EPackage.Registry.INSTANCE
-				.get(eNS_URI) instanceof PerfoPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-						: new PerfoPackageImpl());
+		Object registeredPerfoPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		PerfoPackageImpl thePerfoPackage = registeredPerfoPackage instanceof PerfoPackageImpl
+				? (PerfoPackageImpl) registeredPerfoPackage
+				: new PerfoPackageImpl();
 
 		isInited = true;
 
@@ -205,6 +206,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPerformanceCriteria() {
 		return performanceCriteriaEClass;
 	}
@@ -214,6 +216,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPerformanceCriteria_Value() {
 		return (EAttribute) performanceCriteriaEClass.getEStructuralFeatures().get(0);
 	}
@@ -223,6 +226,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPerformanceCriteria_MaxValue() {
 		return (EAttribute) performanceCriteriaEClass.getEStructuralFeatures().get(1);
 	}
@@ -232,6 +236,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPerformanceCriteria_MinValue() {
 		return (EAttribute) performanceCriteriaEClass.getEStructuralFeatures().get(2);
 	}
@@ -241,6 +246,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPerformanceConsumption() {
 		return performanceConsumptionEClass;
 	}
@@ -250,6 +256,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPerformanceCapacity() {
 		return performanceCapacityEClass;
 	}
@@ -259,6 +266,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTimeConsumption() {
 		return timeConsumptionEClass;
 	}
@@ -268,6 +276,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTimeCapacity() {
 		return timeCapacityEClass;
 	}
@@ -277,6 +286,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTimeCapacity_CurrentExecutionTime() {
 		return (EAttribute) timeCapacityEClass.getEStructuralFeatures().get(0);
 	}
@@ -286,6 +296,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnityElement() {
 		return unityElementEClass;
 	}
@@ -295,6 +306,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnityElement_MeasurementUnit() {
 		return (EAttribute) unityElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -304,6 +316,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getmeasurementUnit_Type() {
 		return measurementUnit_TypeEEnum;
 	}
@@ -313,6 +326,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PerfoFactory getPerfoFactory() {
 		return (PerfoFactory) getEFactoryInstance();
 	}
@@ -458,12 +472,12 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * @generated
 	 */
 	protected void createConstraintAnnotations() {
-		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraint"; //$NON-NLS-1$	
+		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraint"; //$NON-NLS-1$
 		addAnnotation(timeConsumptionEClass, source, new String[] { "ExtendedElement", //$NON-NLS-1$
-				" http://www.polarsys.org/capella/core/fa/1.3.0#//FunctionalExchange http://www.polarsys.org/capella/core/pa/1.3.0#//PhysicalFunction http://www.polarsys.org/capella/core/la/1.3.0#//LogicalFunction" //$NON-NLS-1$
+				" http://www.polarsys.org/capella/core/fa/1.4.0#//FunctionalExchange http://www.polarsys.org/capella/core/pa/1.4.0#//PhysicalFunction http://www.polarsys.org/capella/core/la/1.4.0#//LogicalFunction" //$NON-NLS-1$
 		});
 		addAnnotation(timeCapacityEClass, source,
-				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/fa/1.3.0#//FunctionalChain" //$NON-NLS-1$ //$NON-NLS-2$
+				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/fa/1.4.0#//FunctionalChain" //$NON-NLS-1$ //$NON-NLS-2$
 				});
 	}
 
@@ -474,7 +488,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * @generated
 	 */
 	protected void createConstraintMappingAnnotations() {
-		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraintMapping"; //$NON-NLS-1$	
+		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraintMapping"; //$NON-NLS-1$
 		addAnnotation(timeConsumptionEClass, source, new String[] { "Mapping", //$NON-NLS-1$
 				" platform:/plugin/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore#//FunctionalExchange platform:/plugin/org.polarsys.capella.core.data.gen/model/PhysicalArchitecture.ecore#//PhysicalFunction platform:/plugin/org.polarsys.capella.core.data.gen/model/LogicalArchitecture.ecore#//LogicalFunction" //$NON-NLS-1$
 		});

@@ -105,7 +105,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link MassPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -120,9 +120,10 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 			return (MassPackage) EPackage.Registry.INSTANCE.getEPackage(MassPackage.eNS_URI);
 
 		// Obtain or create and register package
-		MassPackageImpl theMassPackage = (MassPackageImpl) (EPackage.Registry.INSTANCE
-				.get(eNS_URI) instanceof MassPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-						: new MassPackageImpl());
+		Object registeredMassPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		MassPackageImpl theMassPackage = registeredMassPackage instanceof MassPackageImpl
+				? (MassPackageImpl) registeredMassPackage
+				: new MassPackageImpl();
 
 		isInited = true;
 
@@ -166,6 +167,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMass() {
 		return massEClass;
 	}
@@ -175,6 +177,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMass_Value() {
 		return (EAttribute) massEClass.getEStructuralFeatures().get(0);
 	}
@@ -184,6 +187,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMass_MaxValue() {
 		return (EAttribute) massEClass.getEStructuralFeatures().get(1);
 	}
@@ -193,6 +197,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMass_MinValue() {
 		return (EAttribute) massEClass.getEStructuralFeatures().get(2);
 	}
@@ -202,6 +207,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPartMass() {
 		return partMassEClass;
 	}
@@ -211,6 +217,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPartMass_CurrentMass() {
 		return (EAttribute) partMassEClass.getEStructuralFeatures().get(0);
 	}
@@ -220,6 +227,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MassFactory getMassFactory() {
 		return (MassFactory) getEFactoryInstance();
 	}
@@ -322,9 +330,9 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * @generated
 	 */
 	protected void createConstraintAnnotations() {
-		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraint"; //$NON-NLS-1$	
+		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraint"; //$NON-NLS-1$
 		addAnnotation(partMassEClass, source,
-				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/cs/1.3.0#//Part" //$NON-NLS-1$ //$NON-NLS-2$
+				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/cs/1.4.0#//Part" //$NON-NLS-1$ //$NON-NLS-2$
 				});
 	}
 
@@ -335,7 +343,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * @generated
 	 */
 	protected void createConstraintMappingAnnotations() {
-		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraintMapping"; //$NON-NLS-1$	
+		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraintMapping"; //$NON-NLS-1$
 		addAnnotation(partMassEClass, source, new String[] { "Mapping", //$NON-NLS-1$
 				" platform:/plugin/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//Part" //$NON-NLS-1$
 		});

@@ -87,7 +87,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link PricePackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -102,9 +102,10 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 			return (PricePackage) EPackage.Registry.INSTANCE.getEPackage(PricePackage.eNS_URI);
 
 		// Obtain or create and register package
-		PricePackageImpl thePricePackage = (PricePackageImpl) (EPackage.Registry.INSTANCE
-				.get(eNS_URI) instanceof PricePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-						: new PricePackageImpl());
+		Object registeredPricePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		PricePackageImpl thePricePackage = registeredPricePackage instanceof PricePackageImpl
+				? (PricePackageImpl) registeredPricePackage
+				: new PricePackageImpl();
 
 		isInited = true;
 
@@ -148,6 +149,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrice() {
 		return priceEClass;
 	}
@@ -157,6 +159,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPrice_Value() {
 		return (EAttribute) priceEClass.getEStructuralFeatures().get(0);
 	}
@@ -166,6 +169,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPrice_MaxValue() {
 		return (EAttribute) priceEClass.getEStructuralFeatures().get(1);
 	}
@@ -175,6 +179,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPrice_MinValue() {
 		return (EAttribute) priceEClass.getEStructuralFeatures().get(2);
 	}
@@ -184,6 +189,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPartPrice() {
 		return partPriceEClass;
 	}
@@ -193,6 +199,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPartPrice_CurrentPrice() {
 		return (EAttribute) partPriceEClass.getEStructuralFeatures().get(0);
 	}
@@ -202,6 +209,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PriceFactory getPriceFactory() {
 		return (PriceFactory) getEFactoryInstance();
 	}
@@ -304,9 +312,9 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * @generated
 	 */
 	protected void createConstraintAnnotations() {
-		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraint"; //$NON-NLS-1$	
+		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraint"; //$NON-NLS-1$
 		addAnnotation(partPriceEClass, source,
-				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/cs/1.3.0#//Part" //$NON-NLS-1$ //$NON-NLS-2$
+				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/cs/1.4.0#//Part" //$NON-NLS-1$ //$NON-NLS-2$
 				});
 	}
 
@@ -317,7 +325,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * @generated
 	 */
 	protected void createConstraintMappingAnnotations() {
-		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraintMapping"; //$NON-NLS-1$	
+		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraintMapping"; //$NON-NLS-1$
 		addAnnotation(partPriceEClass, source, new String[] { "Mapping", //$NON-NLS-1$
 				" platform:/plugin/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//Part" //$NON-NLS-1$
 		});
