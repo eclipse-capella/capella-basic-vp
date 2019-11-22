@@ -12,14 +12,17 @@ package org.polarsys.capella.vp.price.helpers;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.polarsys.capella.common.data.modellingcore.AbstractType;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
 import org.polarsys.capella.core.data.cs.Component;
 import org.polarsys.capella.core.data.cs.Part;
 import org.polarsys.capella.core.data.pa.PhysicalComponent;
+import org.polarsys.capella.core.data.pa.PhysicalComponentPkg;
 import org.polarsys.capella.vp.price.price.PartPrice;
 import org.polarsys.capella.vp.price.price.Price;
 import org.polarsys.capella.vp.price.price.impl.PriceFactoryImpl;
 import org.polarsys.kitalpha.emde.model.ElementExtension;
+import org.polarsys.kitalpha.emde.model.ExtensibleElement;
 
 public class PriceCreationToolHelper {
 	
@@ -30,13 +33,22 @@ public class PriceCreationToolHelper {
 	private boolean createPriceObject(EObject eObject, int cls){
 
 		EObject correctPart = eObject;
-
-		if (eObject instanceof PhysicalComponent){
-			if (PriceHelper.isPhysicalSystem(eObject)){
-				correctPart = ((PhysicalComponent)eObject).getAbstractTypedElements().get(0);
-			}
+		
+		if (eObject instanceof PhysicalComponentPkg){
+			PhysicalComponentPkg pkg = (PhysicalComponentPkg)eObject;
+			correctPart = pkg.getOwnedParts().get(0);
+			
+		}
+		else if (eObject instanceof AbstractType) {
+			correctPart = ((AbstractType)eObject).getAbstractTypedElements().get(0);
 		}
 
+		if (correctPart instanceof Part){
+			Part part = (Part) correctPart;
+			if (part.getAbstractType() instanceof Component && ((Component)part.getAbstractType()).isActor())
+				return false;
+		}
+		
 		for (EObject iEO : correctPart.eContents()) {		
 			if (iEO instanceof PartPrice ){
 				return false;
@@ -49,34 +61,17 @@ public class PriceCreationToolHelper {
 			newPriceObject = PriceFactoryImpl.eINSTANCE.createPartPrice();
 		}
 		
-		if (newPriceObject != null){
-			newPriceObject.setMaxValue(0);
-			newPriceObject.setMinValue(0);
-			newPriceObject.setValue(0);
-			((CapellaElement)newPriceObject).setId(EcoreUtil.generateUUID());
-			
-			if (eObject instanceof PhysicalComponent){
-				PhysicalComponent pc = (PhysicalComponent)eObject;
-				if (PriceHelper.isPhysicalSystem(pc)){
-					eObject = (Part)pc.getAbstractTypedElements().get(0);
-				}else{
-					return false;
-				}
-			}
-			
-			if (eObject instanceof Part){
-				Part part = (Part) eObject;
-				if (part.getAbstractType() instanceof Component && ((Component)part.getAbstractType()).isActor())
-					return false;
-				
-				part.getOwnedExtensions().add((ElementExtension)newPriceObject);
-				return true;
-			}
-			
-		}else{
+		if (newPriceObject == null) {
 			return false;
 		}
-		return false;
+
+		newPriceObject.setMaxValue(0);
+		newPriceObject.setMinValue(0);
+		newPriceObject.setValue(0);
+		((CapellaElement)newPriceObject).setId(EcoreUtil.generateUUID());
+			
+		((ExtensibleElement)correctPart).getOwnedExtensions().add((ElementExtension)newPriceObject);
+		return true;
 	}
 
 }

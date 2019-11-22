@@ -18,6 +18,7 @@ import org.polarsys.capella.core.data.capellacore.NamedElement;
 import org.polarsys.capella.core.data.cs.Part;
 import org.polarsys.capella.core.data.pa.PhysicalArchitecture;
 import org.polarsys.capella.core.data.pa.PhysicalComponent;
+import org.polarsys.capella.core.data.pa.PhysicalComponentPkg;
 import org.polarsys.capella.vp.price.price.Price;
 
 
@@ -31,7 +32,7 @@ public class PriceHelper {
 	 * @return <code> True </code> if the element is the Physical System, <code> False </code> otherwise.
 	 */
 	public static final boolean isPhysicalSystem(EObject eObject){
-		return eObject instanceof PhysicalComponent && eObject.eContainer() instanceof PhysicalArchitecture;
+		return eObject instanceof PhysicalComponent && eObject.eContainer() instanceof PhysicalComponentPkg;
 	}
 	
 	public EList<EObject> getRootPriceObjects(EObject eO){
@@ -53,7 +54,6 @@ public class PriceHelper {
 	 */
 	public EList<EObject> getAllPriceObjects(EObject eObject){
 		EList<EObject> resultat = new BasicEList<EObject>();
-//		resultat.addAll((getPriceObjects(eObject, Weight)));
 		resultat.addAll((getPriceObjects(eObject, Price)));
 		return resultat;
 	}
@@ -63,25 +63,24 @@ public class PriceHelper {
 	}
 	
 	/**
-	 * This method is useful when the Melody Avdance project is defined as a mono part project. 
+	 * This method is useful when the Melody Advance project is defined as a mono part project. 
 	 * It get the first part defined for a Physical Component. Only the first because it contain only one.
 	 * @param container
 	 * @return
 	 */
 	private EObject getCorrectContainer(EObject container){
-		if (! (container instanceof Part || container instanceof PhysicalComponent)){
+		if (! (container instanceof Part || container instanceof PhysicalComponent || container instanceof PhysicalComponentPkg)){
 			return null;
 		}
-		if (container instanceof PhysicalComponent){
+		if (container instanceof PhysicalComponentPkg){
+			PhysicalComponentPkg pkg = (PhysicalComponentPkg)container;
+			return pkg.getOwnedParts().get(0);
+		} else if (container instanceof PhysicalComponent){
 			PhysicalComponent pc = (PhysicalComponent)container;
 			
-			if (PriceHelper.isPhysicalSystem(pc)){
-				return pc.getAbstractTypedElements().get(0);
-			}
 			if (!pc.getOwnedFeatures().isEmpty()){
 				return pc.getOwnedFeatures().get(0);
 			}
-			
 		}
 		return container;
 	}
