@@ -82,9 +82,8 @@ public class MassHelper {
 			return pkg.getOwnedParts().get(0);
 		} else if (container instanceof PhysicalComponent) {
 			PhysicalComponent pc = (PhysicalComponent) container;
-
-			if (!pc.getOwnedFeatures().isEmpty()) {
-				return pc.getOwnedFeatures().get(0);
+			if (!pc.getAbstractTypedElements().isEmpty()) {
+				return pc.getAbstractTypedElements().get(0);
 			}
 		}
 		return container;
