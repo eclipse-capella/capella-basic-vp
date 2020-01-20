@@ -10,7 +10,7 @@
  *******************************************************************************/
 target "CapellaBasicViewpoints"
 
-include "http://git.polarsys.org/c/capella/capella.git/plain/releng/plugins/org.polarsys.capella.targets/full/capella.target-definition.targetplatform?h=v1.3.x"
+include "https://github.com/eclipse/capella/raw/v1.3.x/releng/plugins/org.polarsys.capella.targets/full/capella.target-definition.targetplatform"
 
 with source, requirements
 
