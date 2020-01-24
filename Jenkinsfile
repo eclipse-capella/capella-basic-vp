@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Deploy') {
 	  when {
-		  not { triggeredBy 'Gerrit' }
+		  not { changeRequest() }
 	  }
       steps {
           sshagent ( ['projects-storage.eclipse.org-bot-ssh']) {
