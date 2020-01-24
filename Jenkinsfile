@@ -18,40 +18,40 @@ pipeline {
     }
     stage('Deploy') {
 	  when {
-		  not { triggeredBy 'Gerrit' }
+		  not { changeRequest() }
 	  }
       steps {
           sshagent ( ['projects-storage.eclipse.org-bot-ssh']) {
             sh '''
               echo "publish mass update site"
-              ssh genie.capella@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/capella/addons/basicmass/updates/nightly/1.4.0
-              ssh genie.capella@projects-storage.eclipse.org mkdir -p /home/data/httpd/download.eclipse.org/capella/addons/basicmass/updates/nightly/1.4.0
-              scp -r releng/org.polarsys.capella.basic.mass.viewpoint.site/target/repository/* genie.capella@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/capella/addons/basicmass/updates/nightly/1.4.0/
+              ssh genie.capella@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/capella/addons/basicmass/updates/nightly/1.4.x
+              ssh genie.capella@projects-storage.eclipse.org mkdir -p /home/data/httpd/download.eclipse.org/capella/addons/basicmass/updates/nightly/1.4.x
+              scp -r releng/org.polarsys.capella.basic.mass.viewpoint.site/target/repository/* genie.capella@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/capella/addons/basicmass/updates/nightly/1.4.x/
   
               echo "publish mass dropins"
-              ssh genie.capella@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/capella/addons/basicmass/dropins/nightly/1.4.0
-              ssh genie.capella@projects-storage.eclipse.org mkdir -p /home/data/httpd/download.eclipse.org/capella/addons/basicmass/dropins/nightly/1.4.0
-              scp -r releng/org.polarsys.capella.basic.mass.viewpoint.site/target/BasicMass-dropins*.zip genie.capella@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/capella/addons/basicmass/dropins/nightly/1.4.0/
+              ssh genie.capella@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/capella/addons/basicmass/dropins/nightly/1.4.x
+              ssh genie.capella@projects-storage.eclipse.org mkdir -p /home/data/httpd/download.eclipse.org/capella/addons/basicmass/dropins/nightly/1.4.x
+              scp -r releng/org.polarsys.capella.basic.mass.viewpoint.site/target/BasicMass-dropins*.zip genie.capella@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/capella/addons/basicmass/dropins/nightly/1.4.x/
  
               echo "publish perfo update site"
-              ssh genie.capella@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/capella/addons/basicperfo/updates/nightly/1.4.0
-              ssh genie.capella@projects-storage.eclipse.org mkdir -p /home/data/httpd/download.eclipse.org/capella/addons/basicperfo/updates/nightly/1.4.0
-              scp -r releng/org.polarsys.capella.basic.perfo.viewpoint.site/target/repository/* genie.capella@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/capella/addons/basicperfo/updates/nightly/1.4.0/
+              ssh genie.capella@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/capella/addons/basicperfo/updates/nightly/1.4.x
+              ssh genie.capella@projects-storage.eclipse.org mkdir -p /home/data/httpd/download.eclipse.org/capella/addons/basicperfo/updates/nightly/1.4.x
+              scp -r releng/org.polarsys.capella.basic.perfo.viewpoint.site/target/repository/* genie.capella@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/capella/addons/basicperfo/updates/nightly/1.4.x/
   
               echo "publish perfo dropins"
-              ssh genie.capella@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/capella/addons/basicperfo/dropins/nightly/1.4.0
-              ssh genie.capella@projects-storage.eclipse.org mkdir -p /home/data/httpd/download.eclipse.org/capella/addons/basicperfo/dropins/nightly/1.4.0
-              scp -r releng/org.polarsys.capella.basic.perfo.viewpoint.site/target/BasicPerfo-dropins*.zip genie.capella@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/capella/addons/basicperfo/dropins/nightly/1.4.0/
+              ssh genie.capella@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/capella/addons/basicperfo/dropins/nightly/1.4.x
+              ssh genie.capella@projects-storage.eclipse.org mkdir -p /home/data/httpd/download.eclipse.org/capella/addons/basicperfo/dropins/nightly/1.4.x
+              scp -r releng/org.polarsys.capella.basic.perfo.viewpoint.site/target/BasicPerfo-dropins*.zip genie.capella@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/capella/addons/basicperfo/dropins/nightly/1.4.x/
 
               echo "publish price update site"
-              ssh genie.capella@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/capella/addons/basicprice/updates/nightly/1.4.0
-              ssh genie.capella@projects-storage.eclipse.org mkdir -p /home/data/httpd/download.eclipse.org/capella/addons/basicprice/updates/nightly/1.4.0
-              scp -r releng/org.polarsys.capella.basic.price.viewpoint.site/target/repository/* genie.capella@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/capella/addons/basicprice/updates/nightly/1.4.0/
+              ssh genie.capella@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/capella/addons/basicprice/updates/nightly/1.4.x
+              ssh genie.capella@projects-storage.eclipse.org mkdir -p /home/data/httpd/download.eclipse.org/capella/addons/basicprice/updates/nightly/1.4.x
+              scp -r releng/org.polarsys.capella.basic.price.viewpoint.site/target/repository/* genie.capella@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/capella/addons/basicprice/updates/nightly/1.4.x/
   
               echo "publish price dropins"
-              ssh genie.capella@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/capella/addons/basicprice/dropins/nightly/1.4.0
-              ssh genie.capella@projects-storage.eclipse.org mkdir -p /home/data/httpd/download.eclipse.org/capella/addons/basicprice/dropins/nightly/1.4.0
-              scp -r releng/org.polarsys.capella.basic.price.viewpoint.site/target/BasicPrice-dropins*.zip genie.capella@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/capella/addons/basicprice/dropins/nightly/1.4.0/
+              ssh genie.capella@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/capella/addons/basicprice/dropins/nightly/1.4.x
+              ssh genie.capella@projects-storage.eclipse.org mkdir -p /home/data/httpd/download.eclipse.org/capella/addons/basicprice/dropins/nightly/1.4.x
+              scp -r releng/org.polarsys.capella.basic.price.viewpoint.site/target/BasicPrice-dropins*.zip genie.capella@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/capella/addons/basicprice/dropins/nightly/1.4.x/
 			  
             '''
         }
