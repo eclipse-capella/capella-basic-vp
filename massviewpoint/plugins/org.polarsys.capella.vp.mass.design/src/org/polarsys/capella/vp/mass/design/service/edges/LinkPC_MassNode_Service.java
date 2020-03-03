@@ -10,11 +10,7 @@
 *****************************************************************************/
 package org.polarsys.capella.vp.mass.design.service.edges;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.sirius.diagram.DDiagram;
-import org.eclipse.sirius.diagram.DDiagramElement;
 
 /**
  * <!-- begin-user-doc -->
