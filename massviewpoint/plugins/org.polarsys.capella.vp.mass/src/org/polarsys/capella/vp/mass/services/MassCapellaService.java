@@ -1,18 +1,21 @@
 /*******************************************************************************
  * Copyright (c) 2006, 2020 Thales Global Services
- *   This program and the accompanying materials are made available under the
- *   terms of the Eclipse Public License 2.0 which is available at
- *   http://www.eclipse.org/legal/epl-2.0
- *   
- *   SPDX-License-Identifier: EPL-2.0
+ *   All rights reserved. This program and the accompanying materials
+ *   are made available under the terms of the Eclipse Public License v1.0
+ *   which accompanies this distribution, and is available at
+ *   http://www.eclipse.org/legal/epl-v10.html
  * 
  *   Contributors:
  *      Thales - initial API and implementation
+ *      Obeo - Code improvement
  ******************************************************************************/
 package org.polarsys.capella.vp.mass.services;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.polarsys.capella.core.data.cs.Part;
 import org.polarsys.capella.vp.mass.generic.IMassVisitor;
 import org.polarsys.capella.vp.mass.generic.MassGenericRootService;
@@ -69,7 +72,9 @@ public class MassCapellaService extends MassGenericRootService {
 	
 	public int computeMass(EObject eObject) {
 		int m = super.compute(eObject, getVisitor(), Mass.class);
-		((PartMass) getMassObject(eObject)).setCurrentMass(m);
+		if(m!=-1) {
+			((PartMass) getMassObject(eObject)).setCurrentMass(m);
+		}
 		return m;
 	}
 
