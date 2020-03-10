@@ -1,13 +1,22 @@
 /*******************************************************************************
+<<<<<<< HEAD
  * Copyright (c) 2017, 2021 THALES GLOBAL SERVICES.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0
  * 
  * SPDX-License-Identifier: EPL-2.0
+=======
+ * Copyright (c)  2017, 2020 THALES GLOBAL SERVICES.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+>>>>>>> 47a8ba3 ([releng] Add new test profile to integrate JUnit tests to the build)
  *
  * Contributors:
  *    Thales - initial API and implementation
+ * 	  Obeo - add tests location
  *******************************************************************************/
 target "CapellaBasicViewpoints"
 
@@ -17,4 +26,17 @@ with source, requirements
 
 location capella-master "https://download.eclipse.org/capella/core/updates/stable/5.1.0-S20210422-093005/org.polarsys.capella.rcp.site/" {
 	org.polarsys.capella.rcp.feature.group lazy
+}
+
+//following locations are used for tests
+location capella-test "https://download.eclipse.org/capella/core/updates/releases/1.4.0-R20191121-173601/org.polarsys.capella.test.site/" {
+	org.polarsys.capella.test.framework lazy
+}
+
+location diffmerge-pattern "https://download.eclipse.org/diffmerge/releases/0.12.0/edm-patterns-site/" {
+	org.eclipse.emf.diffmerge.patterns.templates.gen lazy
+}
+
+location sirius-query-legacy "https://download.eclipse.org/sirius/updates/legacy/" {
+	org.eclipse.sirius.query.legacy lazy
 }
