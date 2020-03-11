@@ -6,7 +6,7 @@
  *   http://www.eclipse.org/legal/epl-v10.html
  * 
  *   Contributors:
- *      OBEO - initial API and implementation
+ *      Obeo - initial API and implementation
  ******************************************************************************/
 package org.polarsys.capella.vp.mass.design.service.massListener;
 
