@@ -7,7 +7,7 @@
  * 
  *   Contributors:
  *      Thales - initial API and implementation
- *      OBEO - Code improvement
+ *      Obeo - Code improvement
  ******************************************************************************/
 package org.polarsys.capella.vp.mass.design.service.nodes;
 

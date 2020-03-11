@@ -8,6 +8,7 @@
  * 
  *   Contributors:
  *      Thales - initial API and implementation
+ *      Obeo - Code improvement
  ******************************************************************************/
 // Generated on 20.08.2015 at 11:04:11 CEST by Viewpoint DSL Generator V 0.1
 
