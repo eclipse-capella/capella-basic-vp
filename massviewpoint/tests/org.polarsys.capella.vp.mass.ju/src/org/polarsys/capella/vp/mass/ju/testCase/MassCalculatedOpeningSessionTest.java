@@ -18,6 +18,7 @@ import org.polarsys.capella.vp.mass.mass.impl.PartMassImpl;
 /**
  * This test makes sure the mass of all the elements are correctly calculated
  * when opening a new session
+ * Used to check if the listener responds to the notification SET
  */
 public class MassCalculatedOpeningSessionTest extends MassTest {
 	PartMassImpl pc1PartMass;
