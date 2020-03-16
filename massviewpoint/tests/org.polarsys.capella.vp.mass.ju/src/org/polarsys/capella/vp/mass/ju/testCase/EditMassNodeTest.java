@@ -16,7 +16,8 @@ import org.polarsys.capella.vp.mass.mass.impl.PartMassImpl;
 
 /**
  * This test case checks if when editing the mass of a node the mass of its
- * parents is re-calculated
+ * parents is re-calculated.
+ * Used to check if the listener responds to the notification SET
  */
 public class EditMassNodeTest extends MassTest {
 	PartMassImpl pc1PartMass;
