@@ -279,10 +279,14 @@
             </ownedFeatures>
             <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="28a096c4-0e5f-4c34-b027-1edd2ffeeb61"
                 name="PC 1.3" abstractType="#143ddf10-5165-49f8-a678-1c53fe697628"/>
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="8e4f3810-4f33-4ddf-8ddc-5a61a41fd149"
+                name="PC 1.5" abstractType="#4cdf8e5f-3226-4841-b4da-ab31970683f0"/>
             <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
                 id="a2c7a4ee-aa96-46cf-bb44-413cb2dedbe9" name="PC 1.1" nature="NODE"/>
             <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
                 id="143ddf10-5165-49f8-a678-1c53fe697628" name="PC 1.3" nature="NODE"/>
+            <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+                id="4cdf8e5f-3226-4841-b4da-ab31970683f0" name="PC 1.5" nature="NODE"/>
           </ownedPhysicalComponents>
           <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
               id="815f060d-7821-4fc6-b889-a984b92099d7" name="PC 1.2" nature="BEHAVIOR"/>
