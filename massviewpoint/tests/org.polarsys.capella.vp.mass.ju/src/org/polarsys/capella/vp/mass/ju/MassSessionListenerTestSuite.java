@@ -17,7 +17,9 @@ import org.polarsys.capella.test.framework.api.BasicTestArtefact;
 import org.polarsys.capella.test.framework.api.BasicTestSuite;
 import org.polarsys.capella.vp.mass.ju.testCase.AddMassBehaviorTest;
 import org.polarsys.capella.vp.mass.ju.testCase.AddMassNodeTest;
+import org.polarsys.capella.vp.mass.ju.testCase.AddOneBehaviorOneNodeWithMassTest;
 import org.polarsys.capella.vp.mass.ju.testCase.DeleteBehaviorWithMassTest;
+import org.polarsys.capella.vp.mass.ju.testCase.DeleteManyNodesWithMassTest;
 import org.polarsys.capella.vp.mass.ju.testCase.DeleteNodeWithMassTest;
 import org.polarsys.capella.vp.mass.ju.testCase.DeletePartMassBehaviorTest;
 import org.polarsys.capella.vp.mass.ju.testCase.DeletePartMassNodeTest;
@@ -53,6 +55,8 @@ public class MassSessionListenerTestSuite extends BasicTestSuite {
 		tests.add(new DeleteBehaviorWithMassTest());
 		tests.add(new DeletePartMassBehaviorTest());
 		tests.add(new DeletePartMassNodeTest());
+		tests.add(new AddOneBehaviorOneNodeWithMassTest());
+		tests.add(new DeleteManyNodesWithMassTest());
 		return tests;
 	}
 
