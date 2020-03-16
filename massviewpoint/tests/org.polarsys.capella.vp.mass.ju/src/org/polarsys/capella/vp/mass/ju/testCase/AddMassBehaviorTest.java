@@ -17,7 +17,8 @@ import org.polarsys.capella.vp.mass.mass.impl.PartMassImpl;
 
 /**
  * This test case checks if when adding a mass to a Behavior PC the mass of its
- * parents are re-calculated
+ * parents are re-calculated.
+ * Used to check if the listener responds to the notification ADD
  */
 public class AddMassBehaviorTest extends MassTest {
 	PartMassImpl pc1PartMass;

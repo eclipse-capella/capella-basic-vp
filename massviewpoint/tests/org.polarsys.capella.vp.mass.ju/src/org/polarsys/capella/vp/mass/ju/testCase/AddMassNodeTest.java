@@ -18,6 +18,7 @@ import org.polarsys.capella.vp.mass.mass.impl.PartMassImpl;
 /**
  * This test case checks if after adding a mass to an already existing physical
  * node, the mass of its parent is re-calculated
+ * Used to check if the listener responds to the notification ADD
  */
 public class AddMassNodeTest extends MassTest {
 	PartMassImpl pc1PartMass;

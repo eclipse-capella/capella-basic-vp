@@ -11,14 +11,10 @@
 package org.polarsys.capella.vp.mass.ju.testCase;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-
 import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.business.api.session.Session;
 import org.eclipse.ui.internal.Workbench;
-import org.polarsys.capella.common.data.modellingcore.ModelElement;
 import org.polarsys.capella.common.ef.ExecutionManager;
 import org.polarsys.capella.common.ef.command.AbstractReadWriteCommand;
 import org.polarsys.capella.common.helpers.TransactionHelper;
@@ -29,10 +25,6 @@ import org.polarsys.capella.core.data.pa.PhysicalArchitecture;
 import org.polarsys.capella.core.data.pa.PhysicalComponent;
 import org.polarsys.capella.core.data.pa.PhysicalComponentPkg;
 import org.polarsys.capella.core.libraries.model.CapellaModel;
-import org.polarsys.capella.core.libraries.utils.ScopeModelWrapper;
-import org.polarsys.capella.core.platform.sirius.ui.commands.CapellaDeleteCommand;
-import org.polarsys.capella.shared.id.handler.IScope;
-import org.polarsys.capella.shared.id.handler.IdManager;
 import org.polarsys.capella.test.framework.api.BasicTestCase;
 import org.polarsys.capella.vp.mass.helpers.MassCreationToolHelper;
 import org.polarsys.capella.vp.mass.mass.impl.PartMassImpl;
@@ -77,30 +69,6 @@ public abstract class MassTest extends BasicTestCase {
 		PhysicalArchitecture physicalArchi = (PhysicalArchitecture) eng.getOwnedArchitectures().get(3);
 		PhysicalComponentPkg physicalComponentPkg = physicalArchi.getOwnedPhysicalComponentPkg();
 		return physicalComponentPkg.getOwnedPhysicalComponents().get(0);
-	}
-
-	/**
-	 * Delete an element of a capella model
-	 * @param the element to delete
-	 */
-	protected void deleteElement(ModelElement element) {
-		ExecutionManager manager = TransactionHelper.getExecutionManager(element);
-		manager.execute(new AbstractReadWriteCommand() {
-
-			@Override
-			public void run() {
-				CapellaModel model = getTestModel(getRequiredTestModels().get(0));
-				IScope scope = new ScopeModelWrapper(model);
-				EObject object = IdManager.getInstance().getEObject(((ModelElement) element).getId(), scope);
-				CapellaDeleteCommand command = new CapellaDeleteCommand(TransactionHelper.getExecutionManager(object),
-						Collections.singletonList(object), true, false, true);
-				if (command.canExecute()) {
-					command.execute();
-				} else {
-					assertTrue("cannot remove an element", false);
-				}
-			}
-		});
 	}
 
 	/**
