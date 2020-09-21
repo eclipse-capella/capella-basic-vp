@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Package basic vp') {
       steps {
-        sh 'mvn clean install -Pmass -Pperfo -Pprice  -e -f pom.xml'
+        sh 'mvn clean install -Pfull -Psign -e -f pom.xml'
       }
     }
     stage('Archive artifacts') {

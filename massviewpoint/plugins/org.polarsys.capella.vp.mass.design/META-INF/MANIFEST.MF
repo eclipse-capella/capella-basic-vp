@@ -11,8 +11,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecore,
  org.eclipse.sirius.diagram,
  org.polarsys.capella.vp.mass.model,
- org.eclipse.sirius.query.legacy,
- org.polarsys.capella.vp.mass;bundle-version="0.1.0",
+ org.polarsys.capella.vp.mass,
  org.eclipse.sirius.common.acceleo.aql
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
