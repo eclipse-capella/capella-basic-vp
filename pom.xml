@@ -28,7 +28,6 @@
 		<tycho-extras-version>1.1.0</tycho-extras-version>
 		<tycho.scmUrl>scm:git:http://git.polarsys.org/c/capella/capella-basic-vp.git</tycho.scmUrl>
 		<antrun-version>1.7</antrun-version>
-		<sonar-version>3.0.2</sonar-version>
 		<jacoco-version>0.7.6.201602180812</jacoco-version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
