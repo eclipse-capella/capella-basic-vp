@@ -81,8 +81,8 @@ public class PerfoOpenJavaService {
 			return null;
 
 		if (eO instanceof ExtensibleElement) {
-			ExtensibleElement logicalFunction = (ExtensibleElement) eO;
-			EList<ElementExtension> extensions = logicalFunction.getOwnedExtensions();
+			ExtensibleElement extensibleElement = (ExtensibleElement) eO;
+			EList<ElementExtension> extensions = extensibleElement.getOwnedExtensions();
 			for (ElementExtension elementExtension : extensions) {
 				if (elementExtension instanceof TimeConsumption) {
 					return elementExtension;
@@ -90,7 +90,7 @@ public class PerfoOpenJavaService {
 
 			}
 		}
-		return eO;
+		return null;
 	}
 
 	public EList<EObject> retrieveMaTimeCapacity(EObject eObject, DSemanticDiagram diagram) {
@@ -125,8 +125,8 @@ public class PerfoOpenJavaService {
 			return null;
 
 		if (eObject instanceof ExtensibleElement) {
-			ExtensibleElement functionalChain = (ExtensibleElement) eObject;
-			EList<ElementExtension> extensions = functionalChain.getOwnedExtensions();
+			ExtensibleElement extensibleElement = (ExtensibleElement) eObject;
+			EList<ElementExtension> extensions = extensibleElement.getOwnedExtensions();
 			for (ElementExtension elementExtension : extensions) {
 				if (elementExtension instanceof TimeCapacity) {
 					return elementExtension;
