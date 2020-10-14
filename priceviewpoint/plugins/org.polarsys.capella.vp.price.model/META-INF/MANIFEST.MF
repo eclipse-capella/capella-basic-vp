@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.capella.vp.price.model;singleton:=true
 Automatic-Module-Name: org.polarsys.capella.vp.price.model
-Bundle-Version: 1.4.0.qualifier
+Bundle-Version: 1.4.2.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin

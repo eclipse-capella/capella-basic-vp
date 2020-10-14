@@ -13,7 +13,7 @@ Configuration perfo.conf {
 	project org.polarsys.capella.vp.perfo
 	nsuri "http://www.polarsys.org/capella/perfo"
 	release {
-		version : 1.4.0.qualifier
+		version : 1.4.2.qualifier
 		description : "Capella Basic Performance Viewpoint"
 		execution environments : "JavaSE-1.8"
 	}
