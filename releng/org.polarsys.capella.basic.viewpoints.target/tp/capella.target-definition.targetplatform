@@ -10,10 +10,10 @@
  *******************************************************************************/
 target "CapellaBasicViewpoints"
 
-include "https://github.com/eclipse/capella/raw/master/releng/plugins/org.polarsys.capella.targets/full/capella.target-definition.targetplatform"
+include "https://download.eclipse.org/capella/core/updates/stable/5.0.0-S20201125-151213/targets/capella.target-definition.targetplatform"
 
 with source, requirements
 
-location capella-master "https://download.eclipse.org/capella/core/updates/nightly/master/org.polarsys.capella.rcp.site/" {
-	org.polarsys.capella.rcp.feature.feature.group lazy
+location capella-master "https://download.eclipse.org/capella/core/updates/stable/5.0.0-S20201125-151213/org.polarsys.capella.rcp.site/" {
+	org.polarsys.capella.rcp.feature.group lazy
 }
