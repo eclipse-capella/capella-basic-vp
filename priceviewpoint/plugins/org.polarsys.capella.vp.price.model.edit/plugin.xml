@@ -26,7 +26,7 @@
 <!--@generated-->
   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated price -->
-      <extender class="org.polarsys.capella.vp.price.price.provider.PriceItemProviderAdapterFactory$SharedmodelChildCreationExtender" uri="http://www.polarsys.org/capella/core/sharedmodel/1.4.0"/>
+      <extender class="org.polarsys.capella.vp.price.price.provider.PriceItemProviderAdapterFactory$SharedmodelChildCreationExtender" uri="http://www.polarsys.org/capella/core/sharedmodel/5.0.0"/>
       <extender class="org.polarsys.capella.vp.price.price.provider.PriceItemProviderAdapterFactory$EmdeChildCreationExtender" uri="http://www.polarsys.org/kitalpha/emde/1.0.0"/>
    </extension>
 
