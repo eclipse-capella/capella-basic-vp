@@ -10,9 +10,6 @@
  ******************************************************************************/
 package org.polarsys.capella.vp.mass.design.service.massSwitch;
 
-import org.eclipse.emf.common.util.EList;
-import org.polarsys.capella.common.data.modellingcore.AbstractTypedElement;
-import org.polarsys.capella.core.data.cs.Part;
 import org.polarsys.capella.core.data.pa.PhysicalComponent;
 import org.polarsys.capella.core.data.pa.PhysicalComponentPkg;
 
