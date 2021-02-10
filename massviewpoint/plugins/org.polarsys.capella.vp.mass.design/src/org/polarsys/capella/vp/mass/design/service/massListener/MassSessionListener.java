@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.sirius.business.api.session.Session;
+import org.eclipse.sirius.business.api.session.SessionManager;
 import org.eclipse.sirius.business.api.session.SessionManagerListener;
 import org.eclipse.sirius.viewpoint.description.Viewpoint;
 import org.polarsys.capella.core.data.capellamodeller.impl.ProjectImpl;
@@ -55,10 +56,29 @@ public class MassSessionListener implements SessionManagerListener {
 
 	@Override
 	public void viewpointSelected(Viewpoint selectedSirius) {
+		
+		if (!selectedSirius.getName().equals("Mass_ID")) return;
+		
+		// for each session already opened, a pre-commit listener is installed so the
+		// mass of the elements of the model can be calculated after specific events
+		Collection<Session> sessions = SessionManager.INSTANCE.getSessions();
+		for (Session session : sessions) {
+			MassChangePreCommitListener massListener = new MassChangePreCommitListener();
+			TransactionalEditingDomain transDomain = session.getTransactionalEditingDomain();
+			if (transDomain != null) {
+				transDomain.addResourceSetListener(massListener);
+				// the listener and the session its attached to are saved in order to unregister
+				// him when the viewpoint is deselected
+				registerPreCommitListener(session, massListener);
+				computeMass(session);
+			}
+		}
 	}
 
 	@Override
 	public void viewpointDeselected(Viewpoint deselectedSirius) {
+		
+		if (!deselectedSirius.getName().equals("Mass_ID")) return;
 
 		// for each session opened, remove the pre-commit listener
 		Set<Entry<Session, MassChangePreCommitListener>> setSessionsMassPreCommitListener = sessionsMassPreCommitListener
