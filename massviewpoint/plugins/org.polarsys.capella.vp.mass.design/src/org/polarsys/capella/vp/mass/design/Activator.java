@@ -65,21 +65,6 @@ public class Activator extends AbstractUIPlugin {
 		// model can be calculated when a new session is opened
 		sessionListener = new MassSessionListener();
 		SessionManager.INSTANCE.addSessionsListener(sessionListener);
-
-		// for each session already opened, a pre-commit listener is installed so the
-		// mass of the elements of the model can be calculated after specific events
-		Collection<Session> sessions = SessionManager.INSTANCE.getSessions();
-		for (Session session : sessions) {
-			MassChangePreCommitListener massListener = new MassChangePreCommitListener();
-			TransactionalEditingDomain transDomain = session.getTransactionalEditingDomain();
-			if(transDomain != null) {
-				transDomain.addResourceSetListener(massListener);
-				// the listener and the session its attached to are saved in order to unregister
-				// him when the viewpoint is deselected
-				sessionListener.registerPreCommitListener(session, massListener);
-				sessionListener.computeMass(session);
-			}
-		}
 	}
 
 	/*
@@ -90,18 +75,6 @@ public class Activator extends AbstractUIPlugin {
 	 */
 	public void stop(BundleContext context) throws Exception {
 		SessionManager.INSTANCE.removeSessionsListener(sessionListener);
-
-		// for each session opened, removes the pre-commit listener
-		Collection<Session> sessions = SessionManager.INSTANCE.getSessions();
-		for (Session session : sessions) {
-			EList<Adapter> adapters = session.getTransactionalEditingDomain().getResourceSet().eAdapters();
-			for (Adapter adapter : adapters) {
-				if (adapter instanceof MassChangePreCommitListener) {
-					session.getTransactionalEditingDomain()
-							.removeResourceSetListener((MassChangePreCommitListener) adapter);
-				}
-			}
-		}
 
 		plugin = null;
 		if (viewpoints != null) {
