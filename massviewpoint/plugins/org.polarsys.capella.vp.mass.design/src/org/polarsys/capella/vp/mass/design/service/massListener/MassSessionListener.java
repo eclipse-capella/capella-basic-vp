@@ -14,9 +14,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
@@ -120,7 +122,7 @@ public class MassSessionListener implements SessionManagerListener {
 			protected void doExecute() {
 				TopDownComputeMassPaSwitch topDownSwitch = new TopDownComputeMassPaSwitch();
 
-				ArrayList<PhysicalComponentPkg> physicalComponentPkgs = retrievesPhysicalComponentPkgFromSession(session);
+				List<PhysicalComponentPkg> physicalComponentPkgs = retrievesPhysicalComponentPkgFromSession(session);
 				
 				for(PhysicalComponentPkg physicalComponentPkg : physicalComponentPkgs) {
 					topDownSwitch.doSwitch(physicalComponentPkg);
@@ -136,9 +138,9 @@ public class MassSessionListener implements SessionManagerListener {
 	 * @param session
 	 * @return the PhysicalComponentPkg containing the components of the physical architecture of a capella model
 	 */
-	private ArrayList<PhysicalComponentPkg> retrievesPhysicalComponentPkgFromSession(Session session) {
+	private List<PhysicalComponentPkg> retrievesPhysicalComponentPkgFromSession(Session session) {
 		Collection<Resource> resources = session.getSemanticResources();
-		ArrayList<PhysicalComponentPkg> physicalComponentPkg = new ArrayList<>();
+		List<PhysicalComponentPkg> physicalComponentPkg = new ArrayList<>();
 
 		resources.stream()
 			.filter(resource -> resource instanceof CapellamodellerResourceImpl)
