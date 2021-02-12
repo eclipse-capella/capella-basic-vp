@@ -21,7 +21,7 @@
 	<parent>
 		<groupId>org.polarsys</groupId>
 		<artifactId>org.polarsys.capella.basic.mass.viewpoint.tests</artifactId>
-		<version>1.4.0-SNAPSHOT</version>
+		<version>5.0.0-SNAPSHOT</version>
 		<relativePath>../</relativePath>
 	</parent>
 	
@@ -58,7 +58,7 @@
 						<extraRequirements>
 							<requirement>
 								<type>eclipse-feature</type>
-								<id>org.polarsys.capella.rcp.feature</id>
+								<id>org.polarsys.capella.rcp</id>
 								<versionRange>0.0.0</versionRange>
 							</requirement>
 							<requirement>
