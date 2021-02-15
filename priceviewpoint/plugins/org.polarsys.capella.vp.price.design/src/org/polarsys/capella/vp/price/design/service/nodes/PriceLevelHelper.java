@@ -85,7 +85,7 @@ public class PriceLevelHelper {
 	private boolean evaluatePriceStatus(EObject eObject, PriceStatus flag){
 		
 		if (eObject instanceof Price) {
-			final int current = maPriceService.computePrice(eObject);
+			final int current = ((PartPrice) eObject).getCurrentPrice();
 			final int maxValue = ((Price) eObject).getMaxValue();
 			
 			if (maxValue<= 0)
