@@ -13,9 +13,6 @@ package org.polarsys.capella.vp.mass.services;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.transaction.RecordingCommand;
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
-import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.polarsys.capella.core.data.cs.Part;
 import org.polarsys.capella.vp.mass.generic.IMassVisitor;
 import org.polarsys.capella.vp.mass.generic.MassGenericRootService;
