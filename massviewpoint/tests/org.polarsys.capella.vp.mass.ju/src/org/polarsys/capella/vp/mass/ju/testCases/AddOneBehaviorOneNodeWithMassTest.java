@@ -8,7 +8,7 @@
  *   Contributors:
  *      Obeo - initial API and implementation
  ******************************************************************************/
-package org.polarsys.capella.vp.mass.ju.testCase;
+package org.polarsys.capella.vp.mass.ju.testCases;
 
 import org.polarsys.capella.common.ef.ExecutionManager;
 import org.polarsys.capella.common.ef.command.AbstractReadWriteCommand;
