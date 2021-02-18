@@ -8,24 +8,24 @@
  *   Contributors:
  *      Obeo - initial API and implementation
  ******************************************************************************/
-package org.polarsys.capella.vp.mass.ju;
+package org.polarsys.capella.vp.mass.ju.testSuite;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.polarsys.capella.test.framework.api.BasicTestArtefact;
 import org.polarsys.capella.test.framework.api.BasicTestSuite;
-import org.polarsys.capella.vp.mass.ju.testCase.AddMassBehaviorTest;
-import org.polarsys.capella.vp.mass.ju.testCase.AddMassNodeTest;
-import org.polarsys.capella.vp.mass.ju.testCase.AddOneBehaviorOneNodeWithMassTest;
-import org.polarsys.capella.vp.mass.ju.testCase.DeleteBehaviorWithMassTest;
-import org.polarsys.capella.vp.mass.ju.testCase.DeleteManyNodesWithMassTest;
-import org.polarsys.capella.vp.mass.ju.testCase.DeleteNodeWithMassTest;
-import org.polarsys.capella.vp.mass.ju.testCase.DeletePartMassBehaviorTest;
-import org.polarsys.capella.vp.mass.ju.testCase.DeletePartMassNodeTest;
-import org.polarsys.capella.vp.mass.ju.testCase.EditMassBehaviorTest;
-import org.polarsys.capella.vp.mass.ju.testCase.EditMassNodeTest;
-import org.polarsys.capella.vp.mass.ju.testCase.MassCalculatedOpeningSessionTest;
+import org.polarsys.capella.vp.mass.ju.testCases.AddMassBehaviorTest;
+import org.polarsys.capella.vp.mass.ju.testCases.AddMassNodeTest;
+import org.polarsys.capella.vp.mass.ju.testCases.AddOneBehaviorOneNodeWithMassTest;
+import org.polarsys.capella.vp.mass.ju.testCases.DeleteBehaviorWithMassTest;
+import org.polarsys.capella.vp.mass.ju.testCases.DeleteManyNodesWithMassTest;
+import org.polarsys.capella.vp.mass.ju.testCases.DeleteNodeWithMassTest;
+import org.polarsys.capella.vp.mass.ju.testCases.DeletePartMassBehaviorTest;
+import org.polarsys.capella.vp.mass.ju.testCases.DeletePartMassNodeTest;
+import org.polarsys.capella.vp.mass.ju.testCases.EditMassBehaviorTest;
+import org.polarsys.capella.vp.mass.ju.testCases.EditMassNodeTest;
+import org.polarsys.capella.vp.mass.ju.testCases.MassCalculatedOpeningSessionTest;
 
 import junit.framework.Test;
 
