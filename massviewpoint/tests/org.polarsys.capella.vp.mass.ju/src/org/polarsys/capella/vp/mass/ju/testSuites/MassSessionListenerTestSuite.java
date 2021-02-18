@@ -8,7 +8,7 @@
  *   Contributors:
  *      Obeo - initial API and implementation
  ******************************************************************************/
-package org.polarsys.capella.vp.mass.ju.testSuite;
+package org.polarsys.capella.vp.mass.ju.testSuites;
 
 import java.util.ArrayList;
 import java.util.List;
