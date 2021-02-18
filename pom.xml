@@ -150,6 +150,18 @@
 				<module>releng/org.polarsys.capella.basic.mass.viewpoint.site</module>
 			</modules>
 		</profile>
+		<profile>
+			<id>priceTests</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>priceviewpoint/tests</module>
+				<module>priceviewpoint/features</module>
+				<module>priceviewpoint/plugins</module>
+				<module>releng/org.polarsys.capella.basic.price.viewpoint.site</module>
+			</modules>
+		</profile>
 	</profiles>
 
 	<build>
