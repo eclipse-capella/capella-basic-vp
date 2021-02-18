@@ -36,8 +36,8 @@
 					<application>${capella-application-id}</application>
 					<useUIHarness>true</useUIHarness>
 					<useUIThread>false</useUIThread>
-					<testSuite>org.polarsys.capella.vp.mass.ju.testSuite</testSuite>
-					<testClass>org.polarsys.capella.vp.mass.ju.testSuite.MassSessionListenerTestSuite</testClass>
+					<testSuite>org.polarsys.capella.vp.mass.ju.testSuites</testSuite>
+					<testClass>org.polarsys.capella.vp.mass.ju.testSuites.MassSessionListenerTestSuite</testClass>
 					<dependencies>
 						<!-- see https://bugs.eclipse.org/bugs/show_bug.cgi?id=462862 -->
 						<dependency>
