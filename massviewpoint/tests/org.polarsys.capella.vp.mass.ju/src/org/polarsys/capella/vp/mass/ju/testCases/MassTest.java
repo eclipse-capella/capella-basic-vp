@@ -8,10 +8,11 @@
  *   Contributors:
  *      Obeo - initial API and implementation
  ******************************************************************************/
-package org.polarsys.capella.vp.mass.ju.testCase;
+package org.polarsys.capella.vp.mass.ju.testCases;
 
 import java.util.Arrays;
 import java.util.List;
+
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.sirius.business.api.session.Session;
 import org.eclipse.ui.internal.Workbench;
