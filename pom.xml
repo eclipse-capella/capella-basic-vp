@@ -157,6 +157,18 @@
 				<module>releng/org.polarsys.capella.basic.price.viewpoint.site</module>
 			</modules>
 		</profile>
+		<profile>
+			<id>perfoTests</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>perfoviewpoint/tests</module>
+				<module>perfoviewpoint/features</module>
+				<module>perfoviewpoint/plugins</module>
+				<module>releng/org.polarsys.capella.basic.perfo.viewpoint.site</module>
+			</modules>
+		</profile>
 	</profiles>
 
 	<build>
