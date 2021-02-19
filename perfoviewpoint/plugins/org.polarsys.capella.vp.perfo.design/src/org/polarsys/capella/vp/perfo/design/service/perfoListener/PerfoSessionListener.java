@@ -49,6 +49,12 @@ public class PerfoSessionListener implements SessionManagerListener {
 
 	@Override
 	public void notifyAddSession(Session newSession) {
+		//check if viewpoint is selected to add listener
+		Collection<Viewpoint> viewpoints = newSession.getSelectedViewpoints(false);
+		for (Viewpoint viewpoint : viewpoints) {
+			if (viewpoint.getName().equals("Perfo_ID")) return;
+		}
+		
 		PerfoChangePreCommitListener perfoListener = new PerfoChangePreCommitListener();
 		newSession.getTransactionalEditingDomain().addResourceSetListener(perfoListener);
 		registerPreCommitListener(newSession, perfoListener);
