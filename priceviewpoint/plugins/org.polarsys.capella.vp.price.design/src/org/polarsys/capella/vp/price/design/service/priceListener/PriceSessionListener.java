@@ -46,6 +46,13 @@ public class PriceSessionListener implements SessionManagerListener {
 
 	@Override
 	public void notifyAddSession(Session newSession) {
+		// check if viewpoint is selected to add listener
+		Collection<Viewpoint> viewpoints = newSession.getSelectedViewpoints(false);
+		for (Viewpoint viewpoint : viewpoints) {
+			if (viewpoint.getName().equals("Price_ID"))
+				return;
+		}
+				
 		PriceChangePreCommitListener priceListener = new PriceChangePreCommitListener();
 		newSession.getTransactionalEditingDomain().addResourceSetListener(priceListener);
 		registerPreCommitListener(newSession, priceListener);
