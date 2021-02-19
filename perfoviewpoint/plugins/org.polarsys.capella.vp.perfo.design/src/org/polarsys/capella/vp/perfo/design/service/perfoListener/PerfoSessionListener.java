@@ -30,6 +30,8 @@ import org.polarsys.capella.core.data.capellamodeller.impl.ProjectImpl;
 import org.polarsys.capella.core.data.capellamodeller.impl.SystemEngineeringImpl;
 import org.polarsys.capella.core.data.capellamodeller.util.CapellamodellerResourceImpl;
 import org.polarsys.capella.core.data.fa.FunctionalChain;
+import org.polarsys.capella.core.data.la.LogicalArchitecture;
+import org.polarsys.capella.core.data.la.impl.LogicalArchitectureImpl;
 import org.polarsys.capella.core.data.pa.PhysicalArchitecture;
 import org.polarsys.capella.core.data.pa.impl.PhysicalArchitectureImpl;
 import org.polarsys.capella.core.model.helpers.FunctionalChainExt;
@@ -132,9 +134,16 @@ public class PerfoSessionListener implements SessionManagerListener {
 			protected void doExecute() {
 	
 				PerformanceServices performanceServices = new PerformanceServices();
-				List<FunctionalChain> functionalChains = FunctionalChainExt.getAllFunctionalChains(retrievesPhysicalArchitectureFromSession(session));
+				List<FunctionalChain> physicalFunctionalChains = FunctionalChainExt.getAllFunctionalChains(retrievesPhysicalArchitectureFromSession(session));
+				List<FunctionalChain> logicalFunctionalChains = FunctionalChainExt.getAllFunctionalChains(retrievesLogicalArchitectureFromSession(session));
 				
-				functionalChains.stream().forEach((functionalChain) ->  {
+				physicalFunctionalChains.stream().forEach((functionalChain) ->  {
+					functionalChain.eContents().stream().filter(content -> content instanceof PerformanceCriteria).forEach((perfoObject) -> {
+						performanceServices.checkPerformance(perfoObject, functionalChain);
+					});
+				});
+				
+				logicalFunctionalChains.stream().forEach((functionalChain) ->  {
 					functionalChain.eContents().stream().filter(content -> content instanceof PerformanceCriteria).forEach((perfoObject) -> {
 						performanceServices.checkPerformance(perfoObject, functionalChain);
 					});
@@ -171,6 +180,34 @@ public class PerfoSessionListener implements SessionManagerListener {
 		});
 		
 		return physicalAchitecture.get(0);
+	}
+	
+	/**
+	 * Retrieves the Logical Architecture part of a capella model from its session
+	 * @param session
+	 * @return the logical architecture of a capella model
+	 */
+	private LogicalArchitecture retrievesLogicalArchitectureFromSession(Session session) {
+		Collection<Resource> resources = session.getSemanticResources();
+		List<LogicalArchitecture> logicalAchitecture = new ArrayList<>();
+
+		resources.stream().filter(resource -> resource instanceof CapellamodellerResourceImpl).forEach((resource) -> {
+			resource.getContents().stream().filter(content -> content instanceof ProjectImpl).forEach((content) -> {
+				((ProjectImpl) content).getOwnedModelRoots().stream()
+						.filter(modelRoot -> modelRoot instanceof SystemEngineeringImpl).forEach((modelRoot) -> {
+							((SystemEngineeringImpl) modelRoot).getOwnedArchitectures().stream()
+									.filter(architecture -> architecture instanceof LogicalArchitectureImpl)
+									.forEach((logicalArchitecture) -> {
+										logicalAchitecture.add(((LogicalArchitectureImpl) logicalArchitecture));
+									});
+							;
+						});
+				;
+			});
+			;
+		});
+		
+		return logicalAchitecture.get(0);
 	}
 
 }
