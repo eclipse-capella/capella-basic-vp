@@ -36,6 +36,7 @@ public class PerfoSessionListenersTestSuite extends BasicTestSuite {
 	protected List<BasicTestArtefact> getTests() {
 		List<BasicTestArtefact> tests = new ArrayList<BasicTestArtefact>();
 		tests.add(new PABPerfoSessionListenerTestSuite());
+		tests.add(new LABPerfoSessionListenerTestSuite());
 		return tests;
 	}
 
