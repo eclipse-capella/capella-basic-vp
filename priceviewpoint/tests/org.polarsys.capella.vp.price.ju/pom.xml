@@ -36,7 +36,6 @@
 					<application>${capella-application-id}</application>
 					<useUIHarness>true</useUIHarness>
 					<useUIThread>false</useUIThread>
-					<testSuite>org.polarsys.capella.vp.price.ju.testSuites</testSuite>
 					<testClass>org.polarsys.capella.vp.price.ju.testSuites.PriceSessionListenerTestSuite</testClass>
 					<dependencies>
 						<!-- see https://bugs.eclipse.org/bugs/show_bug.cgi?id=462862 -->
