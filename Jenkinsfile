@@ -1,6 +1,5 @@
 pipeline {
 	agent { label 'migration' }
-
 	tools {
 		maven 'apache-maven-latest'
 		jdk 'openjdk-jdk14-latest'
