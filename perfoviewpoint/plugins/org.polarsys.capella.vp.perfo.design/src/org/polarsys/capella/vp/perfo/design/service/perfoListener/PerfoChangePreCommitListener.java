@@ -27,12 +27,12 @@ import org.eclipse.emf.transaction.RollbackException;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.polarsys.capella.core.data.capellamodeller.impl.ProjectImpl;
 import org.polarsys.capella.core.data.capellamodeller.impl.SystemEngineeringImpl;
+import org.polarsys.capella.core.data.fa.AbstractFunction;
 import org.polarsys.capella.core.data.fa.FunctionalChain;
 import org.polarsys.capella.core.data.fa.FunctionalChainInvolvement;
 import org.polarsys.capella.core.data.fa.FunctionalExchange;
 import org.polarsys.capella.core.data.pa.PhysicalArchitecture;
 import org.polarsys.capella.core.data.pa.PhysicalComponent;
-import org.polarsys.capella.core.data.pa.PhysicalFunction;
 import org.polarsys.capella.core.data.pa.impl.PhysicalArchitectureImpl;
 import org.polarsys.capella.core.model.helpers.FunctionalChainExt;
 import org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria;
@@ -96,9 +96,9 @@ public class PerfoChangePreCommitListener implements ResourceSetListener {
 							// trigger computation of functional chain directly from notifier.eContainer()
 							performanceServices.checkPerformance(notifier, notifier.eContainer());
 
-						} else if (notifier.eContainer() instanceof PhysicalFunction) {
+						} else if (notifier.eContainer() instanceof AbstractFunction) {
 							// trigger computation of functional chains containing notifier.eContainer()
-							refreshFunctionalChainsPerfo((PhysicalFunction) notifier.eContainer());
+							refreshFunctionalChainsPerfo((AbstractFunction) notifier.eContainer());
 
 						} else if (notifier.eContainer() instanceof FunctionalExchange) {
 							// trigger computation of functional chains containing notifier.eContainer()
@@ -159,8 +159,8 @@ public class PerfoChangePreCommitListener implements ResourceSetListener {
 						// Performance information is removed from an element
 						if (next.getOldValue() instanceof PerformanceCriteria) {
 
-							if (notifier instanceof PhysicalFunction) {
-								refreshFunctionalChainsPerfo((PhysicalFunction) notifier);
+							if (notifier instanceof AbstractFunction) {
+								refreshFunctionalChainsPerfo((AbstractFunction) notifier);
 
 							} else if (notifier instanceof FunctionalExchange) {
 								refreshFunctionalChainsPerfo((FunctionalExchange) notifier);
@@ -174,7 +174,7 @@ public class PerfoChangePreCommitListener implements ResourceSetListener {
 									});
 							
 						// An element containing performance informations is removed
-						} else if (next.getOldValue() instanceof PhysicalFunction 
+						} else if (next.getOldValue() instanceof AbstractFunction 
 								|| next.getOldValue() instanceof FunctionalExchange
 								|| next.getOldValue() instanceof PhysicalComponent) {
 							
@@ -202,8 +202,8 @@ public class PerfoChangePreCommitListener implements ResourceSetListener {
 										performanceServices.checkPerformance(perfoObject, notifier);
 									});
 							
-						} else if (notifier instanceof PhysicalFunction) {
-							refreshFunctionalChainsPerfo((PhysicalFunction) notifier);
+						} else if (notifier instanceof AbstractFunction) {
+							refreshFunctionalChainsPerfo((AbstractFunction) notifier);
 							
 						} else if (notifier instanceof FunctionalExchange) {
 							refreshFunctionalChainsPerfo((FunctionalExchange) notifier);
@@ -249,12 +249,12 @@ public class PerfoChangePreCommitListener implements ResourceSetListener {
 	}
 
 	/**
-	 * Compute the performance of the functional chains involving the physical function
+	 * Compute the performance of the functional chains involving the abstract function
 	 * 
-	 * @param physicalFunction
+	 * @param abstractFunction
 	 */
-	private void refreshFunctionalChainsPerfo(PhysicalFunction physicalFunction) {
-		List<FunctionalChain> functionalChains = ((PhysicalFunction) physicalFunction)
+	private void refreshFunctionalChainsPerfo(AbstractFunction abstractFunction) {
+		List<FunctionalChain> functionalChains = ((AbstractFunction) abstractFunction)
 				.getInvolvingFunctionalChains();
 
 		functionalChains.stream().forEach((functionalChain) -> {
