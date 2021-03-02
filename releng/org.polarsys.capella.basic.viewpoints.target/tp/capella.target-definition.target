@@ -109,7 +109,7 @@
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.rcp.feature.group" version="0.0.0"/>
-      <repository id="capella-master" location="https://download.eclipse.org/capella/core/updates/stable/5.1.0-S20210422-093005/org.polarsys.capella.rcp.site/"/>
+      <repository id="capella-master" location="https://download.eclipse.org/capella/core/updates/releases/5.0.0-R20201202-123401/org.polarsys.capella.rcp.site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.test.framework" version="0.0.0"/>
