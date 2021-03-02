@@ -8,7 +8,9 @@ pipeline {
   stages {
     stage('Package basic vp') {
       steps {
-        sh 'mvn clean install -Pfull -Psign -e -f pom.xml'
+        wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
+          sh 'mvn clean install -Pfull -Psign -e -f pom.xml'
+        }
       }
     }
     stage('Archive artifacts') {
