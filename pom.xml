@@ -51,14 +51,17 @@
 			<modules>
 				<module>massviewpoint/features</module>
 				<module>massviewpoint/plugins</module>
+				<module>massviewpoint/tests</module>
 				<module>releng/org.polarsys.capella.basic.mass.viewpoint.site</module>
 
 				<module>perfoviewpoint/features</module>
 				<module>perfoviewpoint/plugins</module>
+				<module>perfoviewpoint/tests</module>
 				<module>releng/org.polarsys.capella.basic.perfo.viewpoint.site</module>
 
 				<module>priceviewpoint/features</module>
 				<module>priceviewpoint/plugins</module>
+				<module>priceviewpoint/tests</module>
 				<module>releng/org.polarsys.capella.basic.price.viewpoint.site</module>
 			</modules>
 		</profile>
