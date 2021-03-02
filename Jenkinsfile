@@ -13,11 +13,6 @@ pipeline {
         }
       }
     }
-    stage('Run tests') {
-      steps {
-        sh 'mvn integration-test -PmassTests -PpriceTests -PperfoTests -e -f pom.xml'
-      }
-    }
     stage('Archive artifacts') {
       steps {
         archiveArtifacts artifacts: 'releng/org.polarsys.capella.basic.mass.viewpoint.site/target/BasicMass-*.zip,releng/org.polarsys.capella.basic.perfo.viewpoint.site/target/BasicPerfo-*.zip,releng/org.polarsys.capella.basic.price.viewpoint.site/target/BasicPrice-*.zip,releng/org.polarsys.capella.basic.mass.viewpoint.site/target/repository/**,releng/org.polarsys.capella.basic.perfo.viewpoint.site/target/repository/**,releng/org.polarsys.capella.basic.price.viewpoint.site/target/repository/**'
