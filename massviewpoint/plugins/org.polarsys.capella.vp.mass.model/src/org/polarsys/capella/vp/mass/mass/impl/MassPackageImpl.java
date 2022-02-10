@@ -16,12 +16,14 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
-import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.polarsys.capella.common.data.activity.ActivityPackage;
+
 import org.polarsys.capella.common.data.behavior.BehaviorPackage;
+
 import org.polarsys.capella.common.data.modellingcore.ModellingcorePackage;
+
 import org.polarsys.capella.core.data.capellacommon.CapellacommonPackage;
 
 import org.polarsys.capella.core.data.capellacore.CapellacorePackage;
@@ -129,7 +131,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		ActivityPackage.eINSTANCE.eClass();
+		EmdePackage.eINSTANCE.eClass();
 		CapellamodellerPackage.eINSTANCE.eClass();
 		CapellacorePackage.eINSTANCE.eClass();
 		OaPackage.eINSTANCE.eClass();
@@ -144,10 +146,9 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 		CsPackage.eINSTANCE.eClass();
 		FaPackage.eINSTANCE.eClass();
 		InteractionPackage.eINSTANCE.eClass();
-		ModellingcorePackage.eINSTANCE.eClass();
 		BehaviorPackage.eINSTANCE.eClass();
-		EmdePackage.eINSTANCE.eClass();
-		EcorePackage.eINSTANCE.eClass();
+		ModellingcorePackage.eINSTANCE.eClass();
+		ActivityPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theMassPackage.createPackageContents();
@@ -168,7 +169,6 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getMass() {
 		return massEClass;
 	}
@@ -178,7 +178,6 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getMass_Value() {
 		return (EAttribute) massEClass.getEStructuralFeatures().get(0);
 	}
@@ -188,7 +187,6 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getMass_MaxValue() {
 		return (EAttribute) massEClass.getEStructuralFeatures().get(1);
 	}
@@ -198,7 +196,6 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getMass_MinValue() {
 		return (EAttribute) massEClass.getEStructuralFeatures().get(2);
 	}
@@ -208,7 +205,6 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getPartMass() {
 		return partMassEClass;
 	}
@@ -218,7 +214,6 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPartMass_CurrentMass() {
 		return (EAttribute) partMassEClass.getEStructuralFeatures().get(0);
 	}
@@ -228,7 +223,6 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public MassFactory getMassFactory() {
 		return (MassFactory) getEFactoryInstance();
 	}

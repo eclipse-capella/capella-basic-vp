@@ -82,7 +82,6 @@ public class PartPriceImpl extends PriceImpl implements PartPrice {
 	 * @generated
 	 */
 
-	@Override
 	public int getCurrentPrice() {
 
 		return currentPrice;
@@ -94,7 +93,6 @@ public class PartPriceImpl extends PriceImpl implements PartPrice {
 	 * @generated
 	 */
 
-	@Override
 	public void setCurrentPrice(int newCurrentPrice) {
 
 		int oldCurrentPrice = currentPrice;

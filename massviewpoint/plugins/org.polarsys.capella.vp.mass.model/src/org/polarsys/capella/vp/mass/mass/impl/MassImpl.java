@@ -126,7 +126,6 @@ public class MassImpl extends NamedElementImpl implements Mass {
 	 * @generated
 	 */
 
-	@Override
 	public int getValue() {
 
 		return value;
@@ -138,7 +137,6 @@ public class MassImpl extends NamedElementImpl implements Mass {
 	 * @generated
 	 */
 
-	@Override
 	public void setValue(int newValue) {
 
 		int oldValue = value;
@@ -154,7 +152,6 @@ public class MassImpl extends NamedElementImpl implements Mass {
 	 * @generated
 	 */
 
-	@Override
 	public int getMaxValue() {
 
 		return maxValue;
@@ -166,7 +163,6 @@ public class MassImpl extends NamedElementImpl implements Mass {
 	 * @generated
 	 */
 
-	@Override
 	public void setMaxValue(int newMaxValue) {
 
 		int oldMaxValue = maxValue;
@@ -182,7 +178,6 @@ public class MassImpl extends NamedElementImpl implements Mass {
 	 * @generated
 	 */
 
-	@Override
 	public int getMinValue() {
 
 		return minValue;
@@ -194,7 +189,6 @@ public class MassImpl extends NamedElementImpl implements Mass {
 	 * @generated
 	 */
 
-	@Override
 	public void setMinValue(int newMinValue) {
 
 		int oldMinValue = minValue;

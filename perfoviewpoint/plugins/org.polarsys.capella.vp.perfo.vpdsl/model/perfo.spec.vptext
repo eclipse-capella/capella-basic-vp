@@ -10,7 +10,7 @@
  *    Thales - initial API and implementation
 *****************************************************************************/
 Viewpoint perfo {
-	name: "perfo"
+	name: "Basic Performance"
 	Data perfo.data
 	UI perfo.ui
 	Diagrams perfo.diagram

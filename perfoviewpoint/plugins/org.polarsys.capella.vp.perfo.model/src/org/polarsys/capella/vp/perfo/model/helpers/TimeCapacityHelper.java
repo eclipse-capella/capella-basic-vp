@@ -30,8 +30,8 @@ public class TimeCapacityHelper {
 	}
 
 	/**
-	* @generated
-	*/
+	 * @generated
+	 */
 	public Object doSwitch(TimeCapacity object, EStructuralFeature feature) {
 		// handle derivated feature
 

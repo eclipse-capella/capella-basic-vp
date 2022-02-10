@@ -14,14 +14,14 @@ package org.polarsys.capella.vp.price.price.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import org.polarsys.capella.common.lib.IdGenerator;
+
 import org.polarsys.capella.vp.price.price.*;
-import org.polarsys.capella.vp.price.price.PartPrice;
-import org.polarsys.capella.vp.price.price.Price;
-import org.polarsys.capella.vp.price.price.PriceFactory;
-import org.polarsys.capella.vp.price.price.PricePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -83,9 +83,7 @@ public class PriceFactoryImpl extends EFactoryImpl implements PriceFactory {
 	public Price createPrice() {
 		PriceImpl price = new PriceImpl();
 		//begin-capella-code
-
 		price.setId(IdGenerator.createId());
-
 		//end-capella-code
 		return price;
 	}
@@ -98,9 +96,7 @@ public class PriceFactoryImpl extends EFactoryImpl implements PriceFactory {
 	public PartPrice createPartPrice() {
 		PartPriceImpl partPrice = new PartPriceImpl();
 		//begin-capella-code
-
 		partPrice.setId(IdGenerator.createId());
-
 		//end-capella-code
 		return partPrice;
 	}
@@ -124,6 +120,8 @@ public class PriceFactoryImpl extends EFactoryImpl implements PriceFactory {
 	public static PricePackage getPackage() {
 		return PricePackage.eINSTANCE;
 	}
+
+	//begin-capella-code
 
 	/**
 	 * Creates class and sets its name
@@ -151,4 +149,5 @@ public class PriceFactoryImpl extends EFactoryImpl implements PriceFactory {
 		return partPrice;
 	}
 
+	//end-capella-code
 } //PriceFactoryImpl

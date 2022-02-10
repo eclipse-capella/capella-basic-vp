@@ -30,8 +30,8 @@ public class TimeConsumptionHelper {
 	}
 
 	/**
-	* @generated
-	*/
+	 * @generated
+	 */
 	public Object doSwitch(TimeConsumption object, EStructuralFeature feature) {
 		// handle derivated feature
 

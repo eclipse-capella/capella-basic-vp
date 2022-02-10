@@ -126,7 +126,6 @@ public class PerformanceCriteriaImpl extends NamedElementImpl implements Perform
 	 * @generated
 	 */
 
-	@Override
 	public int getValue() {
 
 		return value;
@@ -138,7 +137,6 @@ public class PerformanceCriteriaImpl extends NamedElementImpl implements Perform
 	 * @generated
 	 */
 
-	@Override
 	public void setValue(int newValue) {
 
 		int oldValue = value;
@@ -155,7 +153,6 @@ public class PerformanceCriteriaImpl extends NamedElementImpl implements Perform
 	 * @generated
 	 */
 
-	@Override
 	public int getMaxValue() {
 
 		return maxValue;
@@ -167,7 +164,6 @@ public class PerformanceCriteriaImpl extends NamedElementImpl implements Perform
 	 * @generated
 	 */
 
-	@Override
 	public void setMaxValue(int newMaxValue) {
 
 		int oldMaxValue = maxValue;
@@ -184,7 +180,6 @@ public class PerformanceCriteriaImpl extends NamedElementImpl implements Perform
 	 * @generated
 	 */
 
-	@Override
 	public int getMinValue() {
 
 		return minValue;
@@ -196,7 +191,6 @@ public class PerformanceCriteriaImpl extends NamedElementImpl implements Perform
 	 * @generated
 	 */
 
-	@Override
 	public void setMinValue(int newMinValue) {
 
 		int oldMinValue = minValue;

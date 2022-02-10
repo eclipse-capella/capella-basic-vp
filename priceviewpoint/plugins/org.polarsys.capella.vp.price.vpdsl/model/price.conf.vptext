@@ -10,7 +10,7 @@
  *    Thales - initial API and implementation
 *****************************************************************************/
 Configuration price.conf {
-	target Capella
+	target "CDO for Capella"
 	project org.polarsys.capella.vp.price
 	nsuri "http://www.polarsys.org/capella/price"
 	release {
