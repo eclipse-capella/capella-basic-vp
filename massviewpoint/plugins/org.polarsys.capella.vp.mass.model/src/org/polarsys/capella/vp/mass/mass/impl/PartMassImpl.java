@@ -82,7 +82,6 @@ public class PartMassImpl extends MassImpl implements PartMass {
 	 * @generated
 	 */
 
-	@Override
 	public int getCurrentMass() {
 
 		return currentMass;
@@ -94,7 +93,6 @@ public class PartMassImpl extends MassImpl implements PartMass {
 	 * @generated
 	 */
 
-	@Override
 	public void setCurrentMass(int newCurrentMass) {
 
 		int oldCurrentMass = currentMass;

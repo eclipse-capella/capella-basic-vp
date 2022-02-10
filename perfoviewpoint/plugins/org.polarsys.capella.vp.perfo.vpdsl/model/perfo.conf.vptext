@@ -10,7 +10,7 @@
  *    Thales - initial API and implementation
 *****************************************************************************/
 Configuration perfo.conf {
-	target Capella
+	target "CDO for Capella"
 	project org.polarsys.capella.vp.perfo
 	nsuri "http://www.polarsys.org/capella/perfo"
 	release {

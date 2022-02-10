@@ -14,29 +14,48 @@ package org.polarsys.capella.vp.price.price.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EcorePackage;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import org.polarsys.capella.common.data.activity.ActivityPackage;
+
 import org.polarsys.capella.common.data.behavior.BehaviorPackage;
+
 import org.polarsys.capella.common.data.modellingcore.ModellingcorePackage;
+
 import org.polarsys.capella.core.data.capellacommon.CapellacommonPackage;
+
 import org.polarsys.capella.core.data.capellacore.CapellacorePackage;
+
 import org.polarsys.capella.core.data.capellamodeller.CapellamodellerPackage;
+
 import org.polarsys.capella.core.data.cs.CsPackage;
+
 import org.polarsys.capella.core.data.ctx.CtxPackage;
+
 import org.polarsys.capella.core.data.epbs.EpbsPackage;
+
 import org.polarsys.capella.core.data.fa.FaPackage;
+
 import org.polarsys.capella.core.data.information.InformationPackage;
+
 import org.polarsys.capella.core.data.interaction.InteractionPackage;
+
 import org.polarsys.capella.core.data.la.LaPackage;
+
 import org.polarsys.capella.core.data.oa.OaPackage;
+
 import org.polarsys.capella.core.data.pa.PaPackage;
+
 import org.polarsys.capella.core.data.requirement.RequirementPackage;
+
 import org.polarsys.capella.core.data.sharedmodel.SharedmodelPackage;
+
 import org.polarsys.capella.vp.price.price.PartPrice;
 import org.polarsys.capella.vp.price.price.Price;
 import org.polarsys.capella.vp.price.price.PriceFactory;
 import org.polarsys.capella.vp.price.price.PricePackage;
+
 import org.polarsys.kitalpha.emde.model.EmdePackage;
 
 /**
@@ -111,7 +130,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		ActivityPackage.eINSTANCE.eClass();
+		EmdePackage.eINSTANCE.eClass();
 		CapellamodellerPackage.eINSTANCE.eClass();
 		CapellacorePackage.eINSTANCE.eClass();
 		OaPackage.eINSTANCE.eClass();
@@ -126,10 +145,9 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 		CsPackage.eINSTANCE.eClass();
 		FaPackage.eINSTANCE.eClass();
 		InteractionPackage.eINSTANCE.eClass();
-		ModellingcorePackage.eINSTANCE.eClass();
 		BehaviorPackage.eINSTANCE.eClass();
-		EmdePackage.eINSTANCE.eClass();
-		EcorePackage.eINSTANCE.eClass();
+		ModellingcorePackage.eINSTANCE.eClass();
+		ActivityPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		thePricePackage.createPackageContents();
@@ -150,7 +168,6 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getPrice() {
 		return priceEClass;
 	}
@@ -160,7 +177,6 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPrice_Value() {
 		return (EAttribute) priceEClass.getEStructuralFeatures().get(0);
 	}
@@ -170,7 +186,6 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPrice_MaxValue() {
 		return (EAttribute) priceEClass.getEStructuralFeatures().get(1);
 	}
@@ -180,7 +195,6 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPrice_MinValue() {
 		return (EAttribute) priceEClass.getEStructuralFeatures().get(2);
 	}
@@ -190,7 +204,6 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getPartPrice() {
 		return partPriceEClass;
 	}
@@ -200,7 +213,6 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPartPrice_CurrentPrice() {
 		return (EAttribute) partPriceEClass.getEStructuralFeatures().get(0);
 	}
@@ -210,7 +222,6 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public PriceFactory getPriceFactory() {
 		return (PriceFactory) getEFactoryInstance();
 	}

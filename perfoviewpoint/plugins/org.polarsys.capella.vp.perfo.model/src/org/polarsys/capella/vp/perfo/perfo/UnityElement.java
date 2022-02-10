@@ -37,10 +37,6 @@ public interface UnityElement extends NamedElement {
 	 * The literals are from the enumeration {@link org.polarsys.capella.vp.perfo.perfo.measurementUnit_Type}.
 	
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Measurement Unit</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Measurement Unit</em>' attribute.
 	 * @see org.polarsys.capella.vp.perfo.perfo.measurementUnit_Type

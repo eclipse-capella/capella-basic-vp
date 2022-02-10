@@ -10,7 +10,7 @@
  *    Thales - initial API and implementation
 *****************************************************************************/
 Viewpoint price {
-	name: "price"
+	name: "Basic Price"
 	Data price.data
 	UI price.ui
 	Diagrams price.diagram

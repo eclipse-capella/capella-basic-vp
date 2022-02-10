@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import org.polarsys.capella.common.lib.IdGenerator;
+
 import org.polarsys.capella.vp.mass.mass.*;
 
 /**
@@ -82,9 +83,7 @@ public class MassFactoryImpl extends EFactoryImpl implements MassFactory {
 	public Mass createMass() {
 		MassImpl mass = new MassImpl();
 		//begin-capella-code
-
 		mass.setId(IdGenerator.createId());
-
 		//end-capella-code
 		return mass;
 	}
@@ -97,9 +96,7 @@ public class MassFactoryImpl extends EFactoryImpl implements MassFactory {
 	public PartMass createPartMass() {
 		PartMassImpl partMass = new PartMassImpl();
 		//begin-capella-code
-
 		partMass.setId(IdGenerator.createId());
-
 		//end-capella-code
 		return partMass;
 	}
@@ -123,6 +120,8 @@ public class MassFactoryImpl extends EFactoryImpl implements MassFactory {
 	public static MassPackage getPackage() {
 		return MassPackage.eINSTANCE;
 	}
+
+	//begin-capella-code
 
 	/**
 	 * Creates class and sets its name
@@ -150,4 +149,5 @@ public class MassFactoryImpl extends EFactoryImpl implements MassFactory {
 		return partMass;
 	}
 
+	//end-capella-code
 } //MassFactoryImpl

@@ -16,12 +16,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 
-import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.polarsys.capella.common.data.activity.ActivityPackage;
+
 import org.polarsys.capella.common.data.behavior.BehaviorPackage;
+
 import org.polarsys.capella.common.data.modellingcore.ModellingcorePackage;
+
 import org.polarsys.capella.core.data.capellacommon.CapellacommonPackage;
 
 import org.polarsys.capella.core.data.capellacore.CapellacorePackage;
@@ -59,6 +61,7 @@ import org.polarsys.capella.vp.perfo.perfo.TimeCapacity;
 import org.polarsys.capella.vp.perfo.perfo.TimeConsumption;
 import org.polarsys.capella.vp.perfo.perfo.UnityElement;
 import org.polarsys.capella.vp.perfo.perfo.measurementUnit_Type;
+
 import org.polarsys.kitalpha.emde.model.EmdePackage;
 
 /**
@@ -168,7 +171,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		ActivityPackage.eINSTANCE.eClass();
+		EmdePackage.eINSTANCE.eClass();
 		CapellamodellerPackage.eINSTANCE.eClass();
 		CapellacorePackage.eINSTANCE.eClass();
 		OaPackage.eINSTANCE.eClass();
@@ -183,10 +186,9 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 		CsPackage.eINSTANCE.eClass();
 		FaPackage.eINSTANCE.eClass();
 		InteractionPackage.eINSTANCE.eClass();
-		ModellingcorePackage.eINSTANCE.eClass();
 		BehaviorPackage.eINSTANCE.eClass();
-		EmdePackage.eINSTANCE.eClass();
-		EcorePackage.eINSTANCE.eClass();
+		ModellingcorePackage.eINSTANCE.eClass();
+		ActivityPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		thePerfoPackage.createPackageContents();
@@ -207,7 +209,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getPerformanceCriteria() {
 		return performanceCriteriaEClass;
 	}
@@ -217,7 +218,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPerformanceCriteria_Value() {
 		return (EAttribute) performanceCriteriaEClass.getEStructuralFeatures().get(0);
 	}
@@ -227,7 +227,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPerformanceCriteria_MaxValue() {
 		return (EAttribute) performanceCriteriaEClass.getEStructuralFeatures().get(1);
 	}
@@ -237,7 +236,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPerformanceCriteria_MinValue() {
 		return (EAttribute) performanceCriteriaEClass.getEStructuralFeatures().get(2);
 	}
@@ -247,7 +245,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getPerformanceConsumption() {
 		return performanceConsumptionEClass;
 	}
@@ -257,7 +254,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getPerformanceCapacity() {
 		return performanceCapacityEClass;
 	}
@@ -267,7 +263,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getTimeConsumption() {
 		return timeConsumptionEClass;
 	}
@@ -277,7 +272,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getTimeCapacity() {
 		return timeCapacityEClass;
 	}
@@ -287,7 +281,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getTimeCapacity_CurrentExecutionTime() {
 		return (EAttribute) timeCapacityEClass.getEStructuralFeatures().get(0);
 	}
@@ -297,7 +290,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getUnityElement() {
 		return unityElementEClass;
 	}
@@ -307,7 +299,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getUnityElement_MeasurementUnit() {
 		return (EAttribute) unityElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -317,7 +308,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EEnum getmeasurementUnit_Type() {
 		return measurementUnit_TypeEEnum;
 	}
@@ -327,7 +317,6 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public PerfoFactory getPerfoFactory() {
 		return (PerfoFactory) getEFactoryInstance();
 	}

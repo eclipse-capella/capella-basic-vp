@@ -87,7 +87,6 @@ public class TimeConsumptionImpl extends PerformanceConsumptionImpl implements T
 	 * @generated
 	 */
 
-	@Override
 	public measurementUnit_Type getMeasurementUnit() {
 
 		return measurementUnit;
@@ -99,7 +98,6 @@ public class TimeConsumptionImpl extends PerformanceConsumptionImpl implements T
 	 * @generated
 	 */
 
-	@Override
 	public void setMeasurementUnit(measurementUnit_Type newMeasurementUnit) {
 
 		measurementUnit_Type oldMeasurementUnit = measurementUnit;

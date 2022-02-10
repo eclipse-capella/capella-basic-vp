@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import org.polarsys.capella.common.lib.IdGenerator;
+
 import org.polarsys.capella.vp.perfo.perfo.*;
 
 /**
@@ -121,9 +122,7 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	public PerformanceCriteria createPerformanceCriteria() {
 		PerformanceCriteriaImpl performanceCriteria = new PerformanceCriteriaImpl();
 		//begin-capella-code
-
 		performanceCriteria.setId(IdGenerator.createId());
-
 		//end-capella-code
 		return performanceCriteria;
 	}
@@ -136,9 +135,7 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	public PerformanceConsumption createPerformanceConsumption() {
 		PerformanceConsumptionImpl performanceConsumption = new PerformanceConsumptionImpl();
 		//begin-capella-code
-
 		performanceConsumption.setId(IdGenerator.createId());
-
 		//end-capella-code
 		return performanceConsumption;
 	}
@@ -151,9 +148,7 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	public PerformanceCapacity createPerformanceCapacity() {
 		PerformanceCapacityImpl performanceCapacity = new PerformanceCapacityImpl();
 		//begin-capella-code
-
 		performanceCapacity.setId(IdGenerator.createId());
-
 		//end-capella-code
 		return performanceCapacity;
 	}
@@ -166,9 +161,7 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	public TimeConsumption createTimeConsumption() {
 		TimeConsumptionImpl timeConsumption = new TimeConsumptionImpl();
 		//begin-capella-code
-
 		timeConsumption.setId(IdGenerator.createId());
-
 		//end-capella-code
 		return timeConsumption;
 	}
@@ -181,9 +174,7 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	public TimeCapacity createTimeCapacity() {
 		TimeCapacityImpl timeCapacity = new TimeCapacityImpl();
 		//begin-capella-code
-
 		timeCapacity.setId(IdGenerator.createId());
-
 		//end-capella-code
 		return timeCapacity;
 	}
@@ -196,9 +187,7 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	public UnityElement createUnityElement() {
 		UnityElementImpl unityElement = new UnityElementImpl();
 		//begin-capella-code
-
 		unityElement.setId(IdGenerator.createId());
-
 		//end-capella-code
 		return unityElement;
 	}
@@ -244,6 +233,8 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 	public static PerfoPackage getPackage() {
 		return PerfoPackage.eINSTANCE;
 	}
+
+	//begin-capella-code
 
 	/**
 	 * Creates class and sets its name
@@ -323,4 +314,5 @@ public class PerfoFactoryImpl extends EFactoryImpl implements PerfoFactory {
 		return unityElement;
 	}
 
+	//end-capella-code
 } //PerfoFactoryImpl
