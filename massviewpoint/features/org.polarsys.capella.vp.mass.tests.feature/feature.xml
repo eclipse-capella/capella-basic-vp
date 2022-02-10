@@ -29,7 +29,7 @@
    </license>
 
    <plugin
-         id="org.polarsys.capella.vp.mass.ju"
+         id="org.polarsys.capella.vp.mass.tests.ju"
          download-size="0"
          install-size="0"
          version="0.0.0"

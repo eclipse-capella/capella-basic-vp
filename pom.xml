@@ -28,7 +28,7 @@
 		<tycho-version>2.0.0</tycho-version>
 		<tycho-extras-version>2.0.0</tycho-extras-version>
 		<tycho.scmUrl>scm:git:http://git.polarsys.org/c/capella/capella-basic-vp.git</tycho.scmUrl>
-		<antrun-version>1.7</antrun-version>
+		<antrun-version>3.0.0</antrun-version>
 		<jacoco-version>0.8.6</jacoco-version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -39,6 +39,7 @@
 		<capella-rcp-product-id>org.polarsys.capella.rcp.product</capella-rcp-product-id>
 		<capella-application-id>org.polarsys.capella.core.platform.sirius.ui.perspective.id</capella-application-id>
 		<tycho.testArgLine>-Xms256m -Xmx1024m</tycho.testArgLine>
+    	<tests.ignoreFailures>true</tests.ignoreFailures>
 
 		<!-- for packaging -->
 		<platform-name>oxygen</platform-name>
@@ -51,17 +52,17 @@
 			<modules>
 				<module>massviewpoint/features</module>
 				<module>massviewpoint/plugins</module>
-				<module>massviewpoint/tests</module>
+				<module>massviewpoint/tests/org.polarsys.capella.vp.mass.tests.ju</module>
 				<module>releng/org.polarsys.capella.basic.mass.viewpoint.site</module>
 
 				<module>perfoviewpoint/features</module>
 				<module>perfoviewpoint/plugins</module>
-				<module>perfoviewpoint/tests</module>
+				<module>perfoviewpoint/tests/org.polarsys.capella.vp.perfo.tests.ju</module>
 				<module>releng/org.polarsys.capella.basic.perfo.viewpoint.site</module>
 
 				<module>priceviewpoint/features</module>
 				<module>priceviewpoint/plugins</module>
-				<module>priceviewpoint/tests</module>
+				<module>priceviewpoint/tests/org.polarsys.capella.vp.price.tests.ju</module>
 				<module>releng/org.polarsys.capella.basic.price.viewpoint.site</module>
 			</modules>
 		</profile>
@@ -375,6 +376,22 @@
 											dir="${project.build.directory}/${packagedAddonName}/eclipse/features"
 											includes="**/META-INF/**" />
 									</delete>
+									
+									<!-- delete test feature (not included in dropins) -->
+									<delete includeemptydirs="true">
+										<fileset
+											dir="${project.build.directory}/${packagedAddonName}/eclipse/features"
+											includes="**/org.polarsys.capella.vp.*.tests*/**" />											  
+									</delete>
+									
+									
+									<!-- delete test plugin (not included in dropins) -->
+									<delete>
+										<fileset
+											dir="${project.build.directory}/${packagedAddonName}/eclipse/plugins"
+											includes="org.polarsys.capella.vp.*.tests.ju*" />
+									</delete>	
+									
 									<zip
 										destfile="${project.build.directory}/${packagedAddonName}-dropins-${unqualifiedVersion}.${buildQualifier}.zip">
 										<fileset dir="${project.build.directory}">
