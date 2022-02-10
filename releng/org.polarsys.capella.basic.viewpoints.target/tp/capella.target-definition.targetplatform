@@ -16,15 +16,16 @@ include "https://raw.githubusercontent.com/eclipse/capella/master/releng/plugins
 
 with source, requirements
 
-location capella-master "https://download.eclipse.org/capella/core/updates/stable/5.1.0-S20210422-093005/org.polarsys.capella.rcp.site/" {
+location capella-master "https://download.eclipse.org/capella/core/updates/nightly/master/org.polarsys.capella.rcp.site" {
 	org.polarsys.capella.rcp.feature.group lazy
+	org.polarsys.capella.cdo.mock.feature.feature.group lazy
+}
+
+location "https://download.eclipse.org/modeling/emf/cdo/drops/R20180613-0111/" {
+    org.eclipse.emf.cdo.sdk.feature.group
 }
 
 //following locations are used for tests
-location capella-test "https://download.eclipse.org/capella/core/updates/releases/5.0.0-R20201202-123401/org.polarsys.capella.test.site/" {
-	org.polarsys.capella.test.framework lazy
-}
-
-location diffmerge-pattern "https://download.eclipse.org/diffmerge/releases/0.12.0/edm-patterns-site/" {
-	org.eclipse.emf.diffmerge.patterns.templates.gen lazy
+location capella-test "https://download.eclipse.org/capella/core/updates/nightly/master/org.polarsys.capella.test.site" {
+	org.polarsys.capella.test.feature.feature.group
 }
