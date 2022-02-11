@@ -39,7 +39,7 @@
 		<capella-rcp-product-id>org.polarsys.capella.rcp.product</capella-rcp-product-id>
 		<capella-application-id>org.polarsys.capella.core.platform.sirius.ui.perspective.id</capella-application-id>
 		<tycho.testArgLine>-Xms256m -Xmx1024m</tycho.testArgLine>
-    	<tests.ignoreFailures>true</tests.ignoreFailures>
+    	<maven.test.failure.ignore>true</maven.test.failure.ignore>
 
 		<!-- for packaging -->
 		<platform-name>oxygen</platform-name>
