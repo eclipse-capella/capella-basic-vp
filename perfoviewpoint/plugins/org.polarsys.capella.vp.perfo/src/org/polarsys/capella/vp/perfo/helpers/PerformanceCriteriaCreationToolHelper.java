@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2021 Obeo
+ * Copyright (c) 2021, 2022 Obeo
  *   All rights reserved. This program and the accompanying materials
  *   are made available under the terms of the Eclipse Public License v1.0
  *   which accompanies this distribution, and is available at
@@ -18,9 +18,9 @@ import org.polarsys.capella.core.data.capellacore.CapellaElement;
 import org.polarsys.capella.core.data.fa.AbstractFunction;
 import org.polarsys.capella.core.data.fa.FunctionalChain;
 import org.polarsys.capella.core.data.fa.FunctionalExchange;
+import org.polarsys.capella.vp.perfo.perfo.PerfoFactory;
 import org.polarsys.capella.vp.perfo.perfo.TimeCapacity;
 import org.polarsys.capella.vp.perfo.perfo.TimeConsumption;
-import org.polarsys.capella.vp.perfo.perfo.impl.PerfoFactoryImpl;
 import org.polarsys.kitalpha.emde.model.ElementExtension;
 
 public class PerformanceCriteriaCreationToolHelper {
@@ -34,7 +34,7 @@ public class PerformanceCriteriaCreationToolHelper {
 			if (extension instanceof TimeCapacity) return false;
 		}
 		
-		TimeCapacity timeCapacity = PerfoFactoryImpl.eINSTANCE.createTimeCapacity();
+		TimeCapacity timeCapacity = PerfoFactory.eINSTANCE.createTimeCapacity();
 		timeCapacity.setCurrentExecutionTime(0);
 		timeCapacity.setMaxValue(0);
 		timeCapacity.setMinValue(0);
@@ -67,7 +67,7 @@ public class PerformanceCriteriaCreationToolHelper {
 				return false;
 		}
 		
-		TimeConsumption timeConsumption = PerfoFactoryImpl.eINSTANCE.createTimeConsumption();
+		TimeConsumption timeConsumption = PerfoFactory.eINSTANCE.createTimeConsumption();
 		timeConsumption.setMaxValue(0);
 		timeConsumption.setMinValue(0);
 		timeConsumption.setValue(0);

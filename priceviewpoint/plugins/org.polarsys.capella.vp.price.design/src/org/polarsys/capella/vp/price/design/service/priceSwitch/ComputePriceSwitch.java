@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2021 Obeo
+ * Copyright (c) 2021, 2022 Obeo
  *   All rights reserved. This program and the accompanying materials
  *   are made available under the terms of the Eclipse Public License v1.0
  *   which accompanies this distribution, and is available at
@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
 import org.polarsys.capella.common.data.modellingcore.AbstractTypedElement;
 import org.polarsys.capella.core.data.pa.PhysicalComponent;
 import org.polarsys.capella.core.data.pa.util.PaSwitch;
-import org.polarsys.capella.vp.price.price.impl.PartPriceImpl;
+import org.polarsys.capella.vp.price.price.PartPrice;
 import org.polarsys.capella.vp.price.services.PriceCapellaService;
 import org.polarsys.kitalpha.emde.model.ElementExtension;
 
@@ -36,7 +36,7 @@ public class ComputePriceSwitch extends PaSwitch<Void> {
 
 			for (ElementExtension extension : ownedExtensions) {
 
-				if (extension instanceof PartPriceImpl) {
+				if (extension instanceof PartPrice) {
 					PriceCapellaService maPriceService = new PriceCapellaService();
 					maPriceService.computePrice(part);
 				}

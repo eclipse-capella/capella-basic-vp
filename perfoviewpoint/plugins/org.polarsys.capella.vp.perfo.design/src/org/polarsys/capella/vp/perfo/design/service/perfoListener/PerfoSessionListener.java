@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2021 Obeo
+ * Copyright (c) 2021, 2022 Obeo
  *   All rights reserved. This program and the accompanying materials
  *   are made available under the terms of the Eclipse Public License v1.0
  *   which accompanies this distribution, and is available at
@@ -26,14 +26,12 @@ import org.eclipse.sirius.business.api.session.Session;
 import org.eclipse.sirius.business.api.session.SessionManager;
 import org.eclipse.sirius.business.api.session.SessionManagerListener;
 import org.eclipse.sirius.viewpoint.description.Viewpoint;
-import org.polarsys.capella.core.data.capellamodeller.impl.ProjectImpl;
-import org.polarsys.capella.core.data.capellamodeller.impl.SystemEngineeringImpl;
+import org.polarsys.capella.core.data.capellamodeller.Project;
+import org.polarsys.capella.core.data.capellamodeller.SystemEngineering;
 import org.polarsys.capella.core.data.capellamodeller.util.CapellamodellerResourceImpl;
 import org.polarsys.capella.core.data.fa.FunctionalChain;
 import org.polarsys.capella.core.data.la.LogicalArchitecture;
-import org.polarsys.capella.core.data.la.impl.LogicalArchitectureImpl;
 import org.polarsys.capella.core.data.pa.PhysicalArchitecture;
-import org.polarsys.capella.core.data.pa.impl.PhysicalArchitectureImpl;
 import org.polarsys.capella.core.model.helpers.FunctionalChainExt;
 import org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria;
 import org.polarsys.capella.vp.perfo.services.PerformanceServices;
@@ -169,13 +167,13 @@ public class PerfoSessionListener implements SessionManagerListener {
 		List<PhysicalArchitecture> physicalAchitecture = new ArrayList<>();
 
 		resources.stream().filter(resource -> resource instanceof CapellamodellerResourceImpl).forEach((resource) -> {
-			resource.getContents().stream().filter(content -> content instanceof ProjectImpl).forEach((content) -> {
-				((ProjectImpl) content).getOwnedModelRoots().stream()
-						.filter(modelRoot -> modelRoot instanceof SystemEngineeringImpl).forEach((modelRoot) -> {
-							((SystemEngineeringImpl) modelRoot).getOwnedArchitectures().stream()
-									.filter(architecture -> architecture instanceof PhysicalArchitectureImpl)
+			resource.getContents().stream().filter(Project.class::isInstance).forEach((content) -> {
+				((Project) content).getOwnedModelRoots().stream()
+						.filter(SystemEngineering.class::isInstance).forEach((modelRoot) -> {
+							((SystemEngineering) modelRoot).getOwnedArchitectures().stream()
+									.filter(PhysicalArchitecture.class::isInstance)
 									.forEach((physicalArchitecture) -> {
-										physicalAchitecture.add(((PhysicalArchitectureImpl) physicalArchitecture));
+										physicalAchitecture.add(((PhysicalArchitecture) physicalArchitecture));
 									});
 							;
 						});
@@ -197,13 +195,13 @@ public class PerfoSessionListener implements SessionManagerListener {
 		List<LogicalArchitecture> logicalAchitecture = new ArrayList<>();
 
 		resources.stream().filter(resource -> resource instanceof CapellamodellerResourceImpl).forEach((resource) -> {
-			resource.getContents().stream().filter(content -> content instanceof ProjectImpl).forEach((content) -> {
-				((ProjectImpl) content).getOwnedModelRoots().stream()
-						.filter(modelRoot -> modelRoot instanceof SystemEngineeringImpl).forEach((modelRoot) -> {
-							((SystemEngineeringImpl) modelRoot).getOwnedArchitectures().stream()
-									.filter(architecture -> architecture instanceof LogicalArchitectureImpl)
+			resource.getContents().stream().filter(Project.class::isInstance).forEach((content) -> {
+				((Project) content).getOwnedModelRoots().stream()
+						.filter(SystemEngineering.class::isInstance).forEach((modelRoot) -> {
+							((SystemEngineering) modelRoot).getOwnedArchitectures().stream()
+									.filter(LogicalArchitecture.class::isInstance)
 									.forEach((logicalArchitecture) -> {
-										logicalAchitecture.add(((LogicalArchitectureImpl) logicalArchitecture));
+										logicalAchitecture.add(((LogicalArchitecture) logicalArchitecture));
 									});
 							;
 						});
