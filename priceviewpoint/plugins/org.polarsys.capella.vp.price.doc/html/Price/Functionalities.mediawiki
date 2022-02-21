@@ -1,0 +1,45 @@
+<!--
+  Copyright (c) 2022 THALES GLOBAL SERVICES.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+
+  Contributors:
+       Thales - initial API and implementation
+-->
+==Purpose==
+
+The Price viewpoint enables to simply describe the non-functional aspect of price in Capella.
+
+==Scope==
+
+Price information can be added on a Physical Component or graphically in PAB diagrams.
+
+==Principles==
+
+On a Physical Component, a 'Price' indicator defines the price associated to a Component. A "Maximal Price" defines the upper price accepted by a component.
+
+When a component contains sub-components, recursively, the total price is the sum of the price of its sub-components and its price.
+
+Graphically, when:
+
+* Total price < Maximal Price: the Physical Component and associated annotation are displayed in '''green'''.
+* Total price = Maximal Price: the Physical Component and associated annotation are displayed in '''orange'''.
+* Total price > Maximal Price: the Physical Component and associated annotation are displayed in '''red'''.
+
+<center>[[Image:Images/functionalities_price.png|740px]]</center>
+
+<br>
+==Practice==
+The Basic Price viewpoint enriches the Capella palette with a new section composed of one icon:
+* '''Price''': it enables to set the price of a Physical Component Node or Behavioral Component.
+
+
+Use of Price:
+* Click on the icon and next on a Physical Component Node or Behavioral Component.
+* Set the current Value and Max Value in the 'Basic Price' section of the Properties view.
+* The Price of the components containing the current component are automatically recomputed and the colors change if needed.
+
+
+A Price can be alone on the current diagram. That means that this Price is applied on the Physical Component which contains the diagram (e.g., the Physical System).

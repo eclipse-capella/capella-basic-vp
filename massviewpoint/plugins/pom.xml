@@ -30,6 +30,7 @@
 		<module>org.polarsys.capella.vp.mass</module>
 		<module>org.polarsys.capella.vp.mass.af</module>
 		<module>org.polarsys.capella.vp.mass.design</module>
+		<module>org.polarsys.capella.vp.mass.doc</module>
 		<module>org.polarsys.capella.vp.mass.fc</module>
 		<module>org.polarsys.capella.vp.mass.model</module>
 		<module>org.polarsys.capella.vp.mass.model.cdo</module>

@@ -1,0 +1,19 @@
+<!--
+  Copyright (c) 2022 THALES GLOBAL SERVICES.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+
+  Contributors:
+       Thales - initial API and implementation
+-->
+=Introduction=
+
+The Price viewpoint enables to simply describe the non-functional aspect of price in Capella.
+It provides several capabilities:
+
+* Definition of price value to be associated with model elements
+* Definition of maximum price value to be associated with model elements
+* Computation of model element price value based on self price value and child price values
+* Visualization of maximum price value compliance with regards to computed value
