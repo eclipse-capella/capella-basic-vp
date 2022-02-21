@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2006, 2020 Thales Global Services
+ * Copyright (c) 2006, 2022 Thales Global Services
  *   This program and the accompanying materials are made available under the
  *   terms of the Eclipse Public License 2.0 which is available at
  *   http://www.eclipse.org/legal/epl-2.0
@@ -17,11 +17,10 @@ import org.polarsys.capella.common.data.modellingcore.AbstractType;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
 import org.polarsys.capella.core.data.cs.Component;
 import org.polarsys.capella.core.data.cs.Part;
-import org.polarsys.capella.core.data.pa.PhysicalComponent;
 import org.polarsys.capella.core.data.pa.PhysicalComponentPkg;
 import org.polarsys.capella.vp.price.price.PartPrice;
 import org.polarsys.capella.vp.price.price.Price;
-import org.polarsys.capella.vp.price.price.impl.PriceFactoryImpl;
+import org.polarsys.capella.vp.price.price.PriceFactory;
 import org.polarsys.kitalpha.emde.model.ElementExtension;
 import org.polarsys.kitalpha.emde.model.ExtensibleElement;
 
@@ -59,7 +58,7 @@ public class PriceCreationToolHelper {
 		Price newPriceObject = null;
 		
 		if (cls == 2){
-			newPriceObject = PriceFactoryImpl.eINSTANCE.createPartPrice();
+			newPriceObject = PriceFactory.eINSTANCE.createPartPrice();
 		}
 		
 		if (newPriceObject == null) {

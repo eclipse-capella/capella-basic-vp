@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2020 Obeo
+ * Copyright (c) 2020, 2022 Obeo
  *   All rights reserved. This program and the accompanying materials
  *   are made available under the terms of the Eclipse Public License v1.0
  *   which accompanies this distribution, and is available at
@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
 import org.polarsys.capella.common.data.modellingcore.AbstractTypedElement;
 import org.polarsys.capella.core.data.pa.PhysicalComponent;
 import org.polarsys.capella.core.data.pa.util.PaSwitch;
-import org.polarsys.capella.vp.mass.mass.impl.PartMassImpl;
+import org.polarsys.capella.vp.mass.mass.PartMass;
 import org.polarsys.capella.vp.mass.services.MassCapellaService;
 import org.polarsys.kitalpha.emde.model.ElementExtension;
 
@@ -33,7 +33,7 @@ public class ComputeMassSwitch extends PaSwitch<Void> {
 
 			for (ElementExtension extension : ownedExtensions) {
 
-				if (extension instanceof PartMassImpl) {
+				if (extension instanceof PartMass) {
 					MassCapellaService maMassService = new MassCapellaService();
 					maMassService.computeMass(part);
 				}

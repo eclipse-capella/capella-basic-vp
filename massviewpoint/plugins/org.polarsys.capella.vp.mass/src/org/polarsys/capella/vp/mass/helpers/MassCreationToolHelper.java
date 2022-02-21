@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2006, 2020 Thales Global Services
+ * Copyright (c) 2006, 2022 Thales Global Services
  *   This program and the accompanying materials are made available under the
  *   terms of the Eclipse Public License 2.0 which is available at
  *   http://www.eclipse.org/legal/epl-2.0
@@ -19,8 +19,8 @@ import org.polarsys.capella.core.data.cs.Component;
 import org.polarsys.capella.core.data.cs.Part;
 import org.polarsys.capella.core.data.pa.PhysicalComponentPkg;
 import org.polarsys.capella.vp.mass.mass.Mass;
+import org.polarsys.capella.vp.mass.mass.MassFactory;
 import org.polarsys.capella.vp.mass.mass.PartMass;
-import org.polarsys.capella.vp.mass.mass.impl.MassFactoryImpl;
 import org.polarsys.kitalpha.emde.model.ElementExtension;
 import org.polarsys.kitalpha.emde.model.ExtensibleElement;
 
@@ -62,7 +62,7 @@ public class MassCreationToolHelper {
 		
 		switch (cls) {
 		case 1:
-			newMassObject = MassFactoryImpl.eINSTANCE.createPartMass();
+			newMassObject = MassFactory.eINSTANCE.createPartMass();
 			break;
 		}
 

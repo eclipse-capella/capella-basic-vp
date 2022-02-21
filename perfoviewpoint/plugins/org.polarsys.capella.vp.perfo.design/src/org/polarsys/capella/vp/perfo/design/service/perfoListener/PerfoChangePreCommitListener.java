@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2021 Obeo
+ * Copyright (c) 2021, 2022 Obeo
  *   All rights reserved. This program and the accompanying materials
  *   are made available under the terms of the Eclipse Public License v1.0
  *   which accompanies this distribution, and is available at
@@ -25,15 +25,14 @@ import org.eclipse.emf.transaction.ResourceSetChangeEvent;
 import org.eclipse.emf.transaction.ResourceSetListener;
 import org.eclipse.emf.transaction.RollbackException;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
-import org.polarsys.capella.core.data.capellamodeller.impl.ProjectImpl;
-import org.polarsys.capella.core.data.capellamodeller.impl.SystemEngineeringImpl;
+import org.polarsys.capella.core.data.capellamodeller.Project;
+import org.polarsys.capella.core.data.capellamodeller.SystemEngineering;
 import org.polarsys.capella.core.data.fa.AbstractFunction;
 import org.polarsys.capella.core.data.fa.FunctionalChain;
 import org.polarsys.capella.core.data.fa.FunctionalChainInvolvement;
 import org.polarsys.capella.core.data.fa.FunctionalExchange;
 import org.polarsys.capella.core.data.pa.PhysicalArchitecture;
 import org.polarsys.capella.core.data.pa.PhysicalComponent;
-import org.polarsys.capella.core.data.pa.impl.PhysicalArchitectureImpl;
 import org.polarsys.capella.core.model.helpers.FunctionalChainExt;
 import org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria;
 import org.polarsys.capella.vp.perfo.services.PerformanceServices;
@@ -292,14 +291,14 @@ public class PerfoChangePreCommitListener implements ResourceSetListener {
 	private PhysicalArchitecture retrievePhysicalArchitectureFromEObject(EObject eobject) {
 		List<PhysicalArchitecture> physicalAchitecture = new ArrayList<>();
 
-		eobject.eResource().getContents().stream().filter(content -> content instanceof ProjectImpl)
+		eobject.eResource().getContents().stream().filter(Project.class::isInstance)
 				.forEach((content) -> {
-					((ProjectImpl) content).getOwnedModelRoots().stream()
-							.filter(modelRoot -> modelRoot instanceof SystemEngineeringImpl).forEach((modelRoot) -> {
-								((SystemEngineeringImpl) modelRoot).getOwnedArchitectures().stream()
-										.filter(architecture -> architecture instanceof PhysicalArchitectureImpl)
+					((Project) content).getOwnedModelRoots().stream()
+							.filter(SystemEngineering.class::isInstance).forEach((modelRoot) -> {
+								((SystemEngineering) modelRoot).getOwnedArchitectures().stream()
+										.filter(PhysicalArchitecture.class::isInstance)
 										.forEach((physicalArchitecture) -> {
-											physicalAchitecture.add(((PhysicalArchitectureImpl) physicalArchitecture));
+											physicalAchitecture.add(((PhysicalArchitecture) physicalArchitecture));
 										});
 								;
 							});
