@@ -30,6 +30,7 @@
 		<module>org.polarsys.capella.vp.price</module>
 		<module>org.polarsys.capella.vp.price.af</module>
 		<module>org.polarsys.capella.vp.price.design</module>
+		<module>org.polarsys.capella.vp.price.doc</module>
 		<module>org.polarsys.capella.vp.price.fc</module>
 		<module>org.polarsys.capella.vp.price.model</module>
 		<module>org.polarsys.capella.vp.price.model.cdo</module>

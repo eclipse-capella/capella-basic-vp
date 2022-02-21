@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	</head>
+	<body>
+		<h2 id="Purpose">Purpose</h2>
+		<p>The Performance viewpoint enables to simply describe the non-functional aspect of performance in Capella.</p>
+		<h2 id="Scope">Scope</h2>
+		<p>Performance information can be added on a Logical/PhysicalFunction, Logical/PhysicalFunctionExchange, and Logical/PhysicalFunctionalChain elements or graphically in LAB/PAB diagrams.</p>
+		<h2 id="Principles">Principles</h2>
+		<p>On a Functional Exchange or Function, an "Execution Time" indicator defines the execution time. A "Time Limit" defines the maximal execution accepted by a Functional Chain.</p>
+		<p>The Total Execution Time of a Functional Chain is the sum of the Execution Time of all the Functional Exchange and Function elements which compose the Functional Chain.</p>
+		<p>Graphically, when:</p>
+		<ul>
+			<li>Total Execution Time &lt; Execution Limit: the Execution Limit is displayed in 
+				<b>green</b>.
+			</li>
+			<li>Total Execution Time = Execution Limit: the Execution Limit is displayed in 
+				<b>orange</b>.
+			</li>
+			<li>Total Execution Time &gt; Execution Limit: the Execution Limit is displayed in 
+				<b>red</b>.
+			</li>
+		</ul>
+		<p><center>
+			<img width="740" border="0" src="Images/functionalities_perfo.png"/></center>
+		</p>
+		<p>
+			<br/>
+		</p>
+		<h2 id="Practice">Practice</h2>
+		<p>The Basic Performance viewpoint enriches the Capella palette with a new section composed of two icons:</p>
+		<ul>
+			<li>
+				<b>Function Time Consumption</b>: it enables to state a level of time consumption of a Function or Functional Exchange.
+			</li>
+			<li>
+				<b>Functional Chain Consumption</b> it enables to state the maximum level of time consumption accepted by a Functional Chain.
+			</li>
+		</ul>
+		<p>Use of Function Time Consumption:</p>
+		<ul>
+			<li>Click on the icon and next on a Function or Functional Exchange.</li>
+			<li>Set the execution time accessible in the 'Basic Performance' section of the Properties view.</li>
+			<li>The Functional Chain Consumption is automatically recomputed and the color changes if needed.</li>
+		</ul>
+		<p>Use of Functional Chain Consumption:</p>
+		<ul>
+			<li>Click on the icon and next on a functional chain.</li>
+			<li>Set the Execution Time Limit accessible in the 'Basic Performance' section of the Properties view.</li>
+			<li>The Functional Chain Consumption is automatically recomputed and the color changes if needed.</li>
+		</ul>
+	</body>
+</html>

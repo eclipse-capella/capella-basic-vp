@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	</head>
+	<body>
+		<h2 id="Purpose">Purpose</h2>
+		<p>The Price viewpoint enables to simply describe the non-functional aspect of price in Capella.</p>
+		<h2 id="Scope">Scope</h2>
+		<p>Price information can be added on a Physical Component or graphically in PAB diagrams.</p>
+		<h2 id="Principles">Principles</h2>
+		<p>On a Physical Component, a 'Price' indicator defines the price associated to a Component. A "Maximal Price" defines the upper price accepted by a component.</p>
+		<p>When a component contains sub-components, recursively, the total price is the sum of the price of its sub-components and its price.</p>
+		<p>Graphically, when:</p>
+		<ul>
+			<li>Total price &lt; Maximal Price: the Physical Component and associated annotation are displayed in 
+				<b>green</b>.
+			</li>
+			<li>Total price = Maximal Price: the Physical Component and associated annotation are displayed in 
+				<b>orange</b>.
+			</li>
+			<li>Total price &gt; Maximal Price: the Physical Component and associated annotation are displayed in 
+				<b>red</b>.
+			</li>
+		</ul>
+		<p><center>
+			<img width="740" border="0" src="Images/functionalities_price.png"/></center>
+		</p>
+		<p>
+			<br/>
+		</p>
+		<h2 id="Practice">Practice</h2>
+		<p>The Basic Price viewpoint enriches the Capella palette with a new section composed of one icon:</p>
+		<ul>
+			<li>
+				<b>Price</b>: it enables to set the price of a Physical Component Node or Behavioral Component.
+			</li>
+		</ul>
+		<p>Use of Price:</p>
+		<ul>
+			<li>Click on the icon and next on a Physical Component Node or Behavioral Component.</li>
+			<li>Set the current Value and Max Value in the 'Basic Price' section of the Properties view.</li>
+			<li>The Price of the components containing the current component are automatically recomputed and the colors change if needed.</li>
+		</ul>
+		<p>A Price can be alone on the current diagram. That means that this Price is applied on the Physical Component which contains the diagram (e.g., the Physical System).</p>
+	</body>
+</html>

@@ -30,6 +30,7 @@
 		<module>org.polarsys.capella.vp.perfo</module>
 		<module>org.polarsys.capella.vp.perfo.af</module>
 		<module>org.polarsys.capella.vp.perfo.design</module>
+		<module>org.polarsys.capella.vp.perfo.doc</module>
 		<module>org.polarsys.capella.vp.perfo.fc</module>
 		<module>org.polarsys.capella.vp.perfo.model</module>
 		<module>org.polarsys.capella.vp.perfo.model.cdo</module>
