@@ -47,11 +47,15 @@ public class MassSessionListener implements SessionManagerListener {
 	public void notifyAddSession(Session newSession) {
 		// check if viewpoint is selected to add listener
 		Collection<Viewpoint> viewpoints = newSession.getSelectedViewpoints(false);
+		boolean viewpointSelected = false;
 		for (Viewpoint viewpoint : viewpoints) {
 			if (viewpoint.getName().equals("Mass_ID"))
-				return;
+				viewpointSelected = true;
+		}		
+		if (!viewpointSelected) {
+			return;
 		}
-				
+		
 		MassChangePreCommitListener massListener = new MassChangePreCommitListener();
 		newSession.getTransactionalEditingDomain().addResourceSetListener(massListener);
 		registerPreCommitListener(newSession, massListener);

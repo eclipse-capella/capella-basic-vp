@@ -53,8 +53,13 @@ public class PerfoSessionListener implements SessionManagerListener {
 	public void notifyAddSession(Session newSession) {
 		//check if viewpoint is selected to add listener
 		Collection<Viewpoint> viewpoints = newSession.getSelectedViewpoints(false);
+		boolean viewpointSelected = false;
 		for (Viewpoint viewpoint : viewpoints) {
-			if (viewpoint.getName().equals("Perfo_ID")) return;
+			if (viewpoint.getName().equals("Perfo_ID"))
+				viewpointSelected = true;
+		}
+		if (!viewpointSelected) {
+			return;
 		}
 		
 		PerfoChangePreCommitListener perfoListener = new PerfoChangePreCommitListener();
