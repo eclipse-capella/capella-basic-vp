@@ -28,10 +28,10 @@ import org.eclipse.sirius.business.api.session.SessionManagerListener;
 import org.eclipse.sirius.viewpoint.description.Viewpoint;
 import org.polarsys.capella.core.data.capellamodeller.Project;
 import org.polarsys.capella.core.data.capellamodeller.SystemEngineering;
-import org.polarsys.capella.core.data.capellamodeller.util.CapellamodellerResourceImpl;
 import org.polarsys.capella.core.data.fa.FunctionalChain;
 import org.polarsys.capella.core.data.la.LogicalArchitecture;
 import org.polarsys.capella.core.data.pa.PhysicalArchitecture;
+import org.polarsys.capella.core.model.handler.command.CapellaResourceHelper;
 import org.polarsys.capella.core.model.helpers.FunctionalChainExt;
 import org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria;
 import org.polarsys.capella.vp.perfo.services.PerformanceServices;
@@ -166,7 +166,7 @@ public class PerfoSessionListener implements SessionManagerListener {
 		Collection<Resource> resources = session.getSemanticResources();
 		List<PhysicalArchitecture> physicalAchitecture = new ArrayList<>();
 
-		resources.stream().filter(resource -> resource instanceof CapellamodellerResourceImpl).forEach((resource) -> {
+		resources.stream().filter(CapellaResourceHelper::isCapellaResource).forEach((resource) -> {
 			resource.getContents().stream().filter(Project.class::isInstance).forEach((content) -> {
 				((Project) content).getOwnedModelRoots().stream()
 						.filter(SystemEngineering.class::isInstance).forEach((modelRoot) -> {
@@ -194,7 +194,7 @@ public class PerfoSessionListener implements SessionManagerListener {
 		Collection<Resource> resources = session.getSemanticResources();
 		List<LogicalArchitecture> logicalAchitecture = new ArrayList<>();
 
-		resources.stream().filter(resource -> resource instanceof CapellamodellerResourceImpl).forEach((resource) -> {
+		resources.stream().filter(CapellaResourceHelper::isCapellaResource).forEach((resource) -> {
 			resource.getContents().stream().filter(Project.class::isInstance).forEach((content) -> {
 				((Project) content).getOwnedModelRoots().stream()
 						.filter(SystemEngineering.class::isInstance).forEach((modelRoot) -> {

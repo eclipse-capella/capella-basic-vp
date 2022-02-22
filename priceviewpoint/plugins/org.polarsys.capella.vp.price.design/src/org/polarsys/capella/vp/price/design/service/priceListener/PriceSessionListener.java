@@ -28,9 +28,9 @@ import org.eclipse.sirius.business.api.session.SessionManagerListener;
 import org.eclipse.sirius.viewpoint.description.Viewpoint;
 import org.polarsys.capella.core.data.capellamodeller.Project;
 import org.polarsys.capella.core.data.capellamodeller.SystemEngineering;
-import org.polarsys.capella.core.data.capellamodeller.util.CapellamodellerResourceImpl;
 import org.polarsys.capella.core.data.pa.PhysicalArchitecture;
 import org.polarsys.capella.core.data.pa.PhysicalComponentPkg;
+import org.polarsys.capella.core.model.handler.command.CapellaResourceHelper;
 import org.polarsys.capella.vp.price.design.service.priceSwitch.TopDownComputePricePaSwitch;
 
 /**
@@ -155,7 +155,7 @@ public class PriceSessionListener implements SessionManagerListener {
 		List<PhysicalComponentPkg> physicalComponentPkg = new ArrayList<>();
 
 		resources.stream()
-			.filter(resource -> resource instanceof CapellamodellerResourceImpl)
+			.filter(CapellaResourceHelper::isCapellaResource)
 			.forEach((resource) -> {
 				resource.getContents().stream()
 					.filter(Project.class::isInstance)
