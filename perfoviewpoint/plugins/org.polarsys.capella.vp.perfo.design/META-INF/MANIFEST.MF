@@ -12,7 +12,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.diagram,
  org.polarsys.capella.vp.perfo.model,
  org.polarsys.capella.vp.perfo,
- org.eclipse.sirius.common.acceleo.aql
+ org.eclipse.sirius.common.acceleo.aql,
+ org.polarsys.capella.core.model.handler
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Localization: plugin
