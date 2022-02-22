@@ -23,7 +23,7 @@
    <feature id="org.polarsys.capella.vp.price.tests.feature.source">
       <category name="org.polarsys.capella.basic.price.viewpoint.tests"/>
    </feature>
-   <category-def name="org.polarsys.capella.basic.price.viewpoint" label="Capella Basic Price Viewpoint"/>
-   <category-def name="org.polarsys.capella.basic.price.viewpoint.collaboration" label="Capella Basic Price Viewpoint Collaboration"/>
-   <category-def name="org.polarsys.capella.basic.price.viewpoint.tests" label="Capella Basic Price Viewpoint Tests"/>
+   <category-def name="org.polarsys.capella.basic.price.viewpoint" label="Basic Price Viewpoint"/>
+   <category-def name="org.polarsys.capella.basic.price.viewpoint.collaboration" label="Basic Price Viewpoint Collaboration"/>
+   <category-def name="org.polarsys.capella.basic.price.viewpoint.tests" label="Basic Price Viewpoint Tests"/>
 </site>

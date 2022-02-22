@@ -23,7 +23,7 @@
    <feature id="org.polarsys.capella.vp.perfo.tests.feature.source">
       <category name="org.polarsys.capella.basic.perfo.viewpoint.tests"/>
    </feature>
-   <category-def name="org.polarsys.capella.basic.perfo.viewpoint" label="Capella Basic Perfo Viewpoint"/>
-   <category-def name="org.polarsys.capella.basic.perfo.viewpoint.collaboration" label="Capella Basic Perfo Viewpoint Collaboration"/>
-   <category-def name="org.polarsys.capella.basic.perfo.viewpoint.tests" label="Capella Basic Perfo Viewpoint Tests"/>
+   <category-def name="org.polarsys.capella.basic.perfo.viewpoint" label="Basic Perfo Viewpoint"/>
+   <category-def name="org.polarsys.capella.basic.perfo.viewpoint.collaboration" label="Basic Perfo Viewpoint Collaboration"/>
+   <category-def name="org.polarsys.capella.basic.perfo.viewpoint.tests" label="Basic Perfo Viewpoint Tests"/>
 </site>

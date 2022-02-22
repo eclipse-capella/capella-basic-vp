@@ -23,7 +23,7 @@
    <feature id="org.polarsys.capella.vp.mass.tests.feature.source">
       <category name="org.polarsys.capella.basic.mass.viewpoint.tests"/>
    </feature>
-   <category-def name="org.polarsys.capella.basic.mass.viewpoint" label="Capella Basic Mass Viewpoint"/>
-   <category-def name="org.polarsys.capella.basic.mass.viewpoint.collaboration" label="Capella Basic Mass Viewpoint Collaboration"/>
-   <category-def name="org.polarsys.capella.basic.mass.viewpoint.tests" label="Capella Basic Mass Viewpoint Tests"/>
+   <category-def name="org.polarsys.capella.basic.mass.viewpoint" label="Basic Mass Viewpoint"/>
+   <category-def name="org.polarsys.capella.basic.mass.viewpoint.collaboration" label="Basic Mass Viewpoint Collaboration"/>
+   <category-def name="org.polarsys.capella.basic.mass.viewpoint.tests" label="Basic Mass Viewpoint Tests"/>
 </site>
