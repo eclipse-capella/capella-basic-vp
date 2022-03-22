@@ -12,14 +12,14 @@
 -->
 <feature
       id="org.polarsys.capella.vp.perfo.feature"
-      label="perfo Feature"
+      label="%featureName"
       version="5.1.0.qualifier">
 
-   <description url="%descriptionURL">
+   <description>
       %description
    </description>
 
-   <copyright url="%copyrightURL">
+   <copyright>
       %copyright
    </copyright>
 
