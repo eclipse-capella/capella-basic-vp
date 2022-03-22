@@ -15,11 +15,11 @@
       label="perfo Feature"
       version="5.1.0.qualifier">
 
-   <description url="%descriptionURL">
+   <description>
       %description
    </description>
 
-   <copyright url="%copyrightURL">
+   <copyright>
       %copyright
    </copyright>
 
