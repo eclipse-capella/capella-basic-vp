@@ -108,6 +108,7 @@ public class TimeCapacityImpl extends PerformanceCapacityImpl implements TimeCap
 	 * @generated
 	 */
 
+	@Override
 	public measurementUnit_Type getMeasurementUnit() {
 
 		return measurementUnit;
@@ -119,6 +120,7 @@ public class TimeCapacityImpl extends PerformanceCapacityImpl implements TimeCap
 	 * @generated
 	 */
 
+	@Override
 	public void setMeasurementUnit(measurementUnit_Type newMeasurementUnit) {
 
 		measurementUnit_Type oldMeasurementUnit = measurementUnit;
@@ -135,6 +137,7 @@ public class TimeCapacityImpl extends PerformanceCapacityImpl implements TimeCap
 	 * @generated
 	 */
 
+	@Override
 	public int getCurrentExecutionTime() {
 
 		return currentExecutionTime;
@@ -146,6 +149,7 @@ public class TimeCapacityImpl extends PerformanceCapacityImpl implements TimeCap
 	 * @generated
 	 */
 
+	@Override
 	public void setCurrentExecutionTime(int newCurrentExecutionTime) {
 
 		int oldCurrentExecutionTime = currentExecutionTime;

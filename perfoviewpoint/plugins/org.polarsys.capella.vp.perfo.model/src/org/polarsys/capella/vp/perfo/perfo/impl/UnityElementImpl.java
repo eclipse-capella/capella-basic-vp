@@ -85,6 +85,7 @@ public class UnityElementImpl extends NamedElementImpl implements UnityElement {
 	 * @generated
 	 */
 
+	@Override
 	public measurementUnit_Type getMeasurementUnit() {
 
 		return measurementUnit;
@@ -96,6 +97,7 @@ public class UnityElementImpl extends NamedElementImpl implements UnityElement {
 	 * @generated
 	 */
 
+	@Override
 	public void setMeasurementUnit(measurementUnit_Type newMeasurementUnit) {
 
 		measurementUnit_Type oldMeasurementUnit = measurementUnit;

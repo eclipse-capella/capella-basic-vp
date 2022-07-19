@@ -209,6 +209,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPerformanceCriteria() {
 		return performanceCriteriaEClass;
 	}
@@ -218,6 +219,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPerformanceCriteria_Value() {
 		return (EAttribute) performanceCriteriaEClass.getEStructuralFeatures().get(0);
 	}
@@ -227,6 +229,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPerformanceCriteria_MaxValue() {
 		return (EAttribute) performanceCriteriaEClass.getEStructuralFeatures().get(1);
 	}
@@ -236,6 +239,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPerformanceCriteria_MinValue() {
 		return (EAttribute) performanceCriteriaEClass.getEStructuralFeatures().get(2);
 	}
@@ -245,6 +249,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPerformanceConsumption() {
 		return performanceConsumptionEClass;
 	}
@@ -254,6 +259,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPerformanceCapacity() {
 		return performanceCapacityEClass;
 	}
@@ -263,6 +269,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTimeConsumption() {
 		return timeConsumptionEClass;
 	}
@@ -272,6 +279,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTimeCapacity() {
 		return timeCapacityEClass;
 	}
@@ -281,6 +289,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTimeCapacity_CurrentExecutionTime() {
 		return (EAttribute) timeCapacityEClass.getEStructuralFeatures().get(0);
 	}
@@ -290,6 +299,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnityElement() {
 		return unityElementEClass;
 	}
@@ -299,6 +309,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnityElement_MeasurementUnit() {
 		return (EAttribute) unityElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -308,6 +319,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getmeasurementUnit_Type() {
 		return measurementUnit_TypeEEnum;
 	}
@@ -317,6 +329,7 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PerfoFactory getPerfoFactory() {
 		return (PerfoFactory) getEFactoryInstance();
 	}

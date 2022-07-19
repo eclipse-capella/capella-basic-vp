@@ -169,6 +169,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMass() {
 		return massEClass;
 	}
@@ -178,6 +179,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMass_Value() {
 		return (EAttribute) massEClass.getEStructuralFeatures().get(0);
 	}
@@ -187,6 +189,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMass_MaxValue() {
 		return (EAttribute) massEClass.getEStructuralFeatures().get(1);
 	}
@@ -196,6 +199,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMass_MinValue() {
 		return (EAttribute) massEClass.getEStructuralFeatures().get(2);
 	}
@@ -205,6 +209,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPartMass() {
 		return partMassEClass;
 	}
@@ -214,6 +219,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPartMass_CurrentMass() {
 		return (EAttribute) partMassEClass.getEStructuralFeatures().get(0);
 	}
@@ -223,6 +229,7 @@ public class MassPackageImpl extends EPackageImpl implements MassPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MassFactory getMassFactory() {
 		return (MassFactory) getEFactoryInstance();
 	}
