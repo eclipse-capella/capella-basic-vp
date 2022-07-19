@@ -168,6 +168,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrice() {
 		return priceEClass;
 	}
@@ -177,6 +178,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPrice_Value() {
 		return (EAttribute) priceEClass.getEStructuralFeatures().get(0);
 	}
@@ -186,6 +188,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPrice_MaxValue() {
 		return (EAttribute) priceEClass.getEStructuralFeatures().get(1);
 	}
@@ -195,6 +198,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPrice_MinValue() {
 		return (EAttribute) priceEClass.getEStructuralFeatures().get(2);
 	}
@@ -204,6 +208,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPartPrice() {
 		return partPriceEClass;
 	}
@@ -213,6 +218,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPartPrice_CurrentPrice() {
 		return (EAttribute) partPriceEClass.getEStructuralFeatures().get(0);
 	}
@@ -222,6 +228,7 @@ public class PricePackageImpl extends EPackageImpl implements PricePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PriceFactory getPriceFactory() {
 		return (PriceFactory) getEFactoryInstance();
 	}
