@@ -25,9 +25,9 @@
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.0"/>
     </VP_Classes>
     <VP_Classes name="TimeConsumption" icon="TimeConsumption.gif">
-      <extends href="http://www.polarsys.org/capella/core/fa/5.0.0#//FunctionalExchange"/>
-      <extends href="http://www.polarsys.org/capella/core/pa/5.0.0#//PhysicalFunction"/>
-      <extends href="http://www.polarsys.org/capella/core/la/5.0.0#//LogicalFunction"/>
+      <extends href="http://www.polarsys.org/capella/core/fa/6.0.0#//FunctionalExchange"/>
+      <extends href="http://www.polarsys.org/capella/core/pa/6.0.0#//PhysicalFunction"/>
+      <extends href="http://www.polarsys.org/capella/core/la/6.0.0#//LogicalFunction"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.1"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.5"/>
     </VP_Classes>
@@ -37,7 +37,7 @@
           <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         </owned_type>
       </VP_Class_Attributes>
-      <extends href="http://www.polarsys.org/capella/core/fa/5.0.0#//FunctionalChain"/>
+      <extends href="http://www.polarsys.org/capella/core/fa/6.0.0#//FunctionalChain"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.2"/>
       <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.5"/>
     </VP_Classes>

@@ -477,10 +477,10 @@ public class PerfoPackageImpl extends EPackageImpl implements PerfoPackage {
 	protected void createConstraintAnnotations() {
 		String source = "http://www.polarsys.org/kitalpha/emde/1.0.0/constraint"; //$NON-NLS-1$
 		addAnnotation(timeConsumptionEClass, source, new String[] { "ExtendedElement", //$NON-NLS-1$
-				" http://www.polarsys.org/capella/core/fa/5.0.0#//FunctionalExchange http://www.polarsys.org/capella/core/pa/5.0.0#//PhysicalFunction http://www.polarsys.org/capella/core/la/5.0.0#//LogicalFunction" //$NON-NLS-1$
+				" http://www.polarsys.org/capella/core/fa/6.0.0#//FunctionalExchange http://www.polarsys.org/capella/core/pa/6.0.0#//PhysicalFunction http://www.polarsys.org/capella/core/la/6.0.0#//LogicalFunction" //$NON-NLS-1$
 		});
 		addAnnotation(timeCapacityEClass, source,
-				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/fa/5.0.0#//FunctionalChain" //$NON-NLS-1$ //$NON-NLS-2$
+				new String[] { "ExtendedElement", " http://www.polarsys.org/capella/core/fa/6.0.0#//FunctionalChain" //$NON-NLS-1$ //$NON-NLS-2$
 				});
 	}
 
