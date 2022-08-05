@@ -14,7 +14,7 @@ Configuration mass.conf {
 	project org.polarsys.capella.vp.mass
 	nsuri "http://www.polarsys.org/capella/mass"
 	release {
-		version : 5.1.0.qualifier
+		version : 6.0.0.qualifier
 		description : "Capella Basic Mass Viewpoint"
 		execution environments : "JavaSE-1.8"
 	}
