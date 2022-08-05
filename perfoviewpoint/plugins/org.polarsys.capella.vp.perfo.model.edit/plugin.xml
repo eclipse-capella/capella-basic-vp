@@ -26,7 +26,7 @@
 <!--@generated-->
   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated perfo -->
-      <extender class="org.polarsys.capella.vp.perfo.perfo.provider.PerfoItemProviderAdapterFactory$SharedmodelChildCreationExtender" uri="http://www.polarsys.org/capella/core/sharedmodel/5.0.0"/>
+      <extender class="org.polarsys.capella.vp.perfo.perfo.provider.PerfoItemProviderAdapterFactory$SharedmodelChildCreationExtender" uri="http://www.polarsys.org/capella/core/sharedmodel/6.0.0"/>
       <extender class="org.polarsys.capella.vp.perfo.perfo.provider.PerfoItemProviderAdapterFactory$EmdeChildCreationExtender" uri="http://www.polarsys.org/kitalpha/emde/1.0.0"/>
    </extension>
 

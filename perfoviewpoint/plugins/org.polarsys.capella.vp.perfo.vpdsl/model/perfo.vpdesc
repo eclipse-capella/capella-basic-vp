@@ -53,7 +53,7 @@
   <VP_Aspects xsi:type="vpconf:Configuration" name="perfo.conf">
     <vpConfigurationElements xsi:type="vpconf:TargetApplication" type="CDO for Capella"/>
     <vpConfigurationElements xsi:type="vpconf:GenerationConfiguration" projectName="org.polarsys.capella.vp.perfo" nsuri="http://www.polarsys.org/capella/perfo"/>
-    <vpConfigurationElements xsi:type="vpconf:Release" viewpointVersion="5.1.0.qualifier" viewpointDescription="Capella Basic Performance Viewpoint">
+    <vpConfigurationElements xsi:type="vpconf:Release" viewpointVersion="6.0.0.qualifier" viewpointDescription="Capella Basic Performance Viewpoint">
       <requiredExecutionEnvironment>JavaSE-1.8</requiredExecutionEnvironment>
     </vpConfigurationElements>
     <vpConfigurationElements xsi:type="vpconf:Generation">

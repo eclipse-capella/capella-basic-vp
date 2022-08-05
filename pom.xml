@@ -22,7 +22,7 @@
 	<name>Capella Basic Viewpoints</name>
 	<groupId>org.polarsys</groupId>
 	<artifactId>org.polarsys.capella.addon.basic.viewpoints</artifactId>
-	<version>5.1.0-SNAPSHOT</version>
+	<version>6.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -211,7 +211,7 @@
 						<artifact>
 							<groupId>org.polarsys</groupId>
 							<artifactId>org.polarsys.capella.addon.basic.viewpoints</artifactId>
-							<version>5.1.0-SNAPSHOT</version>
+							<version>6.0.0-SNAPSHOT</version>
 							<classifier>releng/org.polarsys.capella.basic.viewpoints.target/tp/capella.target-definition</classifier>
 						</artifact>
 					</target>
