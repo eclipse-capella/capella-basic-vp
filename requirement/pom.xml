@@ -1,203 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright (c) 2017, 2020 THALES GLOBAL SERVICES.
+  Copyright (c) 2019, 2023 THALES GLOBAL SERVICES.
+  
   This program and the accompanying materials are made available under the
   terms of the Eclipse Public License 2.0 which is available at
   http://www.eclipse.org/legal/epl-2.0
-
+  
   SPDX-License-Identifier: EPL-2.0
-
+  
   Contributors:
        Thales - initial API and implementation
-       Obeo - add mass test profile
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
+	
 	<prerequisites>
 		<maven>3.0</maven>
 	</prerequisites>
-
-	<name>Capella Basic Viewpoints</name>
+	
+	<name>Capella Requirement Addon</name>
 	<groupId>org.polarsys</groupId>
-	<artifactId>org.polarsys.capella.addon.basic.viewpoints</artifactId>
-	<version>6.0.0-SNAPSHOT</version>
+	<artifactId>org.polarsys.capella.requirement</artifactId>
+	
+	<version>7.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-
 	<properties>
-		<tycho-version>2.2.0</tycho-version>
-		<tycho-extras-version>2.2.0</tycho-extras-version>
-		<tycho.scmUrl>scm:git:http://git.polarsys.org/c/capella/capella-basic-vp.git</tycho.scmUrl>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<tycho.version>2.7.5</tycho.version>
+		<tycho.extras.version>2.7.5</tycho.extras.version>
 		<antrun-version>3.0.0</antrun-version>
-		<jacoco-version>0.8.6</jacoco-version>
-		<java-version>JavaSE-1.8</java-version>
-		
-		<!-- for junit -->
-		<capella-product-id>org.polarsys.capella.core.platform.sirius.ui.perspective.product</capella-product-id>
-		<capella-rcp-product-id>org.polarsys.capella.rcp.product</capella-rcp-product-id>
-		<capella-application-id>org.polarsys.capella.core.platform.sirius.ui.perspective.id</capella-application-id>
-		<tycho.testArgLine>-Xms256m -Xmx1024m</tycho.testArgLine>
-    	<maven.test.failure.ignore>true</maven.test.failure.ignore>
 
 		<!-- for packaging -->
-		<platform-name>oxygen</platform-name>
+		<platform-name>neon</platform-name>
 		<eclipse-repo.url>http://download.eclipse.org/releases/${platform-name}</eclipse-repo.url>
+		<packagedAddonName>Requirement</packagedAddonName>
+
 	</properties>
 
-	<profiles>
-		<profile>
-			<id>full</id>
-			<modules>
-				<module>massviewpoint/features</module>
-				<module>massviewpoint/plugins</module>
-				<module>massviewpoint/tests/org.polarsys.capella.vp.mass.tests.ju</module>
-				<module>releng/org.polarsys.capella.basic.mass.viewpoint.site</module>
-
-				<module>perfoviewpoint/features</module>
-				<module>perfoviewpoint/plugins</module>
-				<module>perfoviewpoint/tests/org.polarsys.capella.vp.perfo.tests.ju</module>
-				<module>releng/org.polarsys.capella.basic.perfo.viewpoint.site</module>
-
-				<module>priceviewpoint/features</module>
-				<module>priceviewpoint/plugins</module>
-				<module>priceviewpoint/tests/org.polarsys.capella.vp.price.tests.ju</module>
-				<module>releng/org.polarsys.capella.basic.price.viewpoint.site</module>
-				
-				<module>requirement/features</module>
-				<module>requirement/plugins</module>
-				<module>requirement/tests/org.polarsys.capella.requirement.tests.ju</module>
-				<module>releng/org.polarsys.capella.basic.requirement.viewpoint.site</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>mass</id>
-			<modules>
-				<module>massviewpoint/features</module>
-				<module>massviewpoint/plugins</module>
-				<module>releng/org.polarsys.capella.basic.mass.viewpoint.site</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>requirement</id>
-			<modules>
-				<module>requirement/features</module>
-				<module>requirement/plugins</module>
-				<module>releng/org.polarsys.capella.basic.requirement.viewpoint.site</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>sign</id>
-			<activation>
-				<property>
-					<name>BUILD_SIGN</name>
-					<value>true</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.eclipse.cbi.maven.plugins</groupId>
-						<artifactId>eclipse-jarsigner-plugin</artifactId>
-						<version>1.3.2</version>
-						<executions>
-							<execution>
-								<id>sign</id>
-								<phase>package</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				<plugin>
-					<groupId>org.eclipse.tycho</groupId>
-					<artifactId>tycho-p2-plugin</artifactId>
-					<version>${tycho-version}</version>
-					<executions>
-						<execution>
-							<id>default-p2-metadata-default</id>
-							<configuration>
-								<attachP2Metadata>false</attachP2Metadata>
-							</configuration>
-						</execution>
-						<execution>
-							<id>attach-p2-metadata</id>
-							<phase>package</phase>
-							<goals>
-								<goal>p2-metadata</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<defaultP2Metadata>false</defaultP2Metadata>
-					</configuration>
-				</plugin>
-				</plugins>
-			</build>
-	
-			<pluginRepositories>
-				<pluginRepository>
-					<id>cbi</id>
-					<url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
-					<releases>
-						<enabled>true</enabled>
-					</releases>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-				</pluginRepository>
-			</pluginRepositories>
-		</profile>
-		<profile>
-			<id>massTests</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<modules>
-				<module>massviewpoint/tests</module>
-				<module>massviewpoint/features</module>
-				<module>massviewpoint/plugins</module>
-				<module>releng/org.polarsys.capella.basic.mass.viewpoint.site</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>priceTests</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<modules>
-				<module>priceviewpoint/tests</module>
-				<module>priceviewpoint/features</module>
-				<module>priceviewpoint/plugins</module>
-				<module>releng/org.polarsys.capella.basic.price.viewpoint.site</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>perfoTests</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<modules>
-				<module>perfoviewpoint/tests</module>
-				<module>perfoviewpoint/features</module>
-				<module>perfoviewpoint/plugins</module>
-				<module>releng/org.polarsys.capella.basic.perfo.viewpoint.site</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>requirementTests</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<modules>
-				<module>requirement/tests</module>
-				<module>requirement/features</module>
-				<module>requirement/plugins</module>
-				<module>releng/org.polarsys.capella.basic.requirement.viewpoint.site</module>
-			</modules>
-		</profile>
-	</profiles>
+	<modules>
+		<module>features</module>
+		<module>plugins</module>
+		<module>tests/org.polarsys.capella.requirement.tests.ju</module>
+		<module>releng/org.polarsys.capella.requirement.site</module>
+	</modules>
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -206,7 +54,7 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-packaging-plugin</artifactId>
-				<version>${tycho-version}</version>
+				<version>${tycho.version}</version>
 				<configuration>
 					<strictBinIncludes>false</strictBinIncludes>
 					<sourceReferences>
@@ -217,27 +65,27 @@
 					<dependency>
 						<groupId>org.eclipse.tycho.extras</groupId>
 						<artifactId>tycho-sourceref-jgit</artifactId>
-						<version>${tycho-extras-version}</version>
+						<version>${tycho.extras.version}</version>
 					</dependency>
 				</dependencies>
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
-				<version>${tycho-version}</version>
+				<version>${tycho.version}</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
-				<version>${tycho-version}</version>
+				<version>${tycho.version}</version>
 				<configuration>
 					<target>
 						<artifact>
 							<groupId>org.polarsys</groupId>
-							<artifactId>org.polarsys.capella.addon.basic.viewpoints</artifactId>
-							<version>6.0.0-SNAPSHOT</version>
-							<classifier>releng/org.polarsys.capella.basic.viewpoints.target/tp/capella.target-definition</classifier>
+							<artifactId>org.polarsys.capella.requirement</artifactId>
+							<version>7.0.0-SNAPSHOT</version>
+							<classifier>releng/org.polarsys.capella.requirement.update/capella.target-definition</classifier>
 						</artifact>
 					</target>
 					<environments>
@@ -263,7 +111,7 @@
 			<plugin>
 				<groupId>org.eclipse.tycho.extras</groupId>
 				<artifactId>tycho-source-feature-plugin</artifactId>
-				<version>${tycho-extras-version}</version>
+				<version>${tycho.extras.version}</version>
 				<executions>
 					<execution>
 						<id>source-feature</id>
@@ -277,7 +125,7 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-source-plugin</artifactId>
-				<version>${tycho-version}</version>
+				<version>${tycho.version}</version>
 				<executions>
 					<execution>
 						<id>plugin-source</id>
@@ -293,7 +141,7 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-p2-plugin</artifactId>
-				<version>${tycho-version}</version>
+				<version>${tycho.version}</version>
 				<executions>
 					<!-- These two should allow us not to get "duplicate artifact" warnings 
 						during the build. -->
@@ -320,10 +168,12 @@
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>tycho-compiler-plugin</artifactId>
-					<version>${tycho-version}</version>
+					<version>${tycho.version}</version>
 					<configuration>
 						<encoding>UTF-8</encoding>
 						<compilerArgument>-warn:+discouraged,forbidden</compilerArgument>
+							<source>1.8</source>
+							<target>1.8</target>
 					</configuration>
 				</plugin>
 
@@ -331,7 +181,7 @@
 				<plugin>
 					<groupId>org.eclipse.tycho.extras</groupId>
 					<artifactId>tycho-eclipserun-plugin</artifactId>
-					<version>${tycho-extras-version}</version>
+					<version>${tycho.extras.version}</version>
 					<configuration>
 						<repositories>
 							<repository>
@@ -357,11 +207,8 @@
 								<artifactId>org.eclipse.equinox.ds</artifactId>
 								<type>eclipse-plugin</type>
 							</dependency>
-							<dependency>
-								<artifactId>org.eclipse.core.runtime</artifactId>
-								<type>eclipse-plugin</type>
-							</dependency>
 						</dependencies>
+						<executionEnvironment>JavaSE-1.8</executionEnvironment>
 					</configuration>
 					<executions>
 						<execution>
@@ -371,8 +218,8 @@
 								<goal>eclipse-run</goal>
 							</goals>
 							<configuration>
-								<executionEnvironment>${java-version}</executionEnvironment>
 								<appArgLine>-application org.eclipse.equinox.p2.repository.repo2runnable -source file:${project.build.directory}/repository -destination ${project.build.directory}/${packagedAddonName}/eclipse</appArgLine>
+								<executionEnvironment>JavaSE-1.8</executionEnvironment>
 							</configuration>
 						</execution>
 					</executions>
@@ -400,12 +247,12 @@
 											dir="${project.build.directory}/${packagedAddonName}/eclipse/features"
 											includes="**/META-INF/**" />
 									</delete>
-									
+																		
 									<!-- delete test feature (not included in dropins) -->
 									<delete includeemptydirs="true">
 										<fileset
 											dir="${project.build.directory}/${packagedAddonName}/eclipse/features"
-											includes="**/org.polarsys.capella.vp.*.tests*/**" />											  
+											includes="**/org.polarsys.capella.requirement.tests*/**" />													  
 									</delete>
 									
 									
@@ -413,8 +260,8 @@
 									<delete>
 										<fileset
 											dir="${project.build.directory}/${packagedAddonName}/eclipse/plugins"
-											includes="org.polarsys.capella.vp.*.tests.ju*" />
-									</delete>	
+											includes="org.polarsys.capella.requirement.tests.ju*" />
+									</delete>
 									
 									<zip
 										destfile="${project.build.directory}/${packagedAddonName}-dropins-${unqualifiedVersion}.${buildQualifier}.zip">
@@ -431,7 +278,7 @@
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>tycho-p2-repository-plugin</artifactId>
-					<version>${tycho-version}</version>
+					<version>${tycho.version}</version>
 					<executions>
 						<execution>
 							<phase>package</phase>
@@ -445,7 +292,49 @@
 						</execution>
 					</executions>
 				</plugin>
+
 			</plugins>
-		</pluginManagement>
-	</build>
+    </pluginManagement>
+  </build>
+  <profiles>
+  	<profile>
+		<id>sign</id>
+		<activation>
+			<property>
+					<name>BUILD_SIGN</name>
+					<value>true</value>
+			</property>
+		</activation>
+		<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.cbi.maven.plugins</groupId>
+						<artifactId>eclipse-jarsigner-plugin</artifactId>
+						<version>1.3.2</version>
+						<executions>
+							<execution>
+								<id>sign</id>
+								<phase>package</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>cbi</id>
+					<url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+  </profiles>
 </project>

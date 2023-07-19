@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+
+
+<plugin>
+
+   
+<!--@generated-->
+  <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated Requirement -->
+      <factory class="org.polarsys.capella.requirement.provider.RequirementItemProviderAdapterFactory" supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider                org.eclipse.emf.edit.provider.IStructuredItemContentProvider                org.eclipse.emf.edit.provider.ITreeItemContentProvider                org.eclipse.emf.edit.provider.IItemLabelProvider                org.eclipse.emf.edit.provider.IItemPropertySource" uri="http://www.polarsys.org/capella/requirement/7.0.0"/>
+   </extension>
+
+  <extension
+        point="org.eclipse.emf.edit.childCreationExtenders">
+     <extender
+           class="org.polarsys.capella.requirement.provider.RequirementItemProviderAdapterFactory$EmdeChildCreationExtender"
+           uri="http://www.polarsys.org/kitalpha/emde/1.0.0">
+     </extender>
+  </extension>
+</plugin>
