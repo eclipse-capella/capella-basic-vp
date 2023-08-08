@@ -20,6 +20,11 @@ import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
+import org.polarsys.capella.basic.requirement.Requirement;
+import org.polarsys.capella.basic.requirement.RequirementPackage;
+import org.polarsys.capella.basic.requirement.RequirementsPkg;
+import org.polarsys.capella.basic.requirement.RequirementsTrace;
+import org.polarsys.capella.basic.requirement.helpers.RequirementHelper;
 import org.polarsys.capella.common.data.modellingcore.AbstractTrace;
 import org.polarsys.capella.common.data.modellingcore.ModellingcorePackage;
 import org.polarsys.capella.common.helpers.EObjectExt;
@@ -39,11 +44,6 @@ import org.polarsys.capella.core.data.oa.OperationalAnalysis;
 import org.polarsys.capella.core.data.pa.PaPackage;
 import org.polarsys.capella.core.data.pa.PhysicalArchitecture;
 import org.polarsys.capella.core.model.utils.ListExt;
-import org.polarsys.capella.basic.requirement.Requirement;
-import org.polarsys.capella.basic.requirement.RequirementPackage;
-import org.polarsys.capella.basic.requirement.RequirementsPkg;
-import org.polarsys.capella.basic.requirement.RequirementsTrace;
-import org.polarsys.capella.basic.requirement.helpers.RequirementHelper;
 
 /**
  */
@@ -172,7 +172,7 @@ public class CapellaElement_OutgoingRequirement implements IBusinessQuery {
   List<Requirement> getRequirements(BlockArchitecture arch) {
     List<Requirement> elements = new ArrayList<Requirement>();
 
-    for (RequirementsPkg pkg : RequirementHelper.getInstance().getRequirementsPkgs(arch)) {
+    for (RequirementsPkg pkg : RequirementHelper.getRequirementsPkgs(arch)) {
       for (EObject req : EObjectExt.getAll(pkg, RequirementPackage.Literals.REQUIREMENT)) {
         elements.add((Requirement) req);
       }

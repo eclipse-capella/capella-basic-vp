@@ -18,8 +18,8 @@ public class SystemUserRequirementSection extends NamedElementSection {
 	@Override
 	public boolean select(Object toTest) {
 		EObject obj = CapellaAdapterHelper.resolveSemanticObject(toTest);
-		
-		return obj != null && obj.eClass().equals(org.polarsys.capella.basic.requirement.RequirementPackage.eINSTANCE.getSystemUserRequirement());
+
+		return obj != null && obj.eClass()
+				.equals(org.polarsys.capella.basic.requirement.RequirementPackage.eINSTANCE.getSystemUserRequirement());
 	}
 }
-

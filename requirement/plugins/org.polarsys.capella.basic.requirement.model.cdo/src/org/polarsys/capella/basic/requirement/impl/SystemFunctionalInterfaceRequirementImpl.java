@@ -1,5 +1,4 @@
 
-
 package org.polarsys.capella.basic.requirement.impl;
 
 import org.eclipse.emf.ecore.EClass;
@@ -13,7 +12,8 @@ import org.polarsys.capella.basic.requirement.SystemFunctionalInterfaceRequireme
  *
  * @generated
  */
-public class SystemFunctionalInterfaceRequirementImpl extends RequirementImpl implements SystemFunctionalInterfaceRequirement {
+public class SystemFunctionalInterfaceRequirementImpl extends RequirementImpl
+		implements SystemFunctionalInterfaceRequirement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,6 +34,5 @@ public class SystemFunctionalInterfaceRequirementImpl extends RequirementImpl im
 	protected EClass eStaticClass() {
 		return RequirementPackage.Literals.SYSTEM_FUNCTIONAL_INTERFACE_REQUIREMENT;
 	}
-
 
 } //SystemFunctionalInterfaceRequirementImpl

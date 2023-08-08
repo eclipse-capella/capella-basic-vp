@@ -1,12 +1,10 @@
 
-
 package org.polarsys.capella.basic.requirement;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.polarsys.capella.core.data.capellacore.Structure;
 import org.polarsys.kitalpha.emde.model.ElementExtension;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -28,19 +26,16 @@ import org.polarsys.kitalpha.emde.model.ElementExtension;
  *        annotation="http://www.polarsys.org/kitalpha/ecore/documentation description='a container for Requirement elements, and sub packages containing Requirements\r\n[source: Capella study]' usage\040guideline='n/a' used\040in\040levels='operational,system,logical,physical,epbs' usage\040examples='n/a' constraints='none' comment/notes='none' reference\040documentation='none'"
  *        annotation="http://www.polarsys.org/capella/MNoE/CapellaLike/Mapping UML/SysML\040semantic\040equivalences='' base\040metaclass\040in\040UML/SysML\040profile\040='uml::Package' explanation='none' constraints='none'"
  *        annotation="http://www.polarsys.org/capella/semantic"
- *        annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraint ExtendedElement='http://www.polarsys.org/capella/core/core/7.0.0#//Structure'"
+ *        annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraint ExtendedElement='http://www.polarsys.org/capella/core/cs/7.0.0#//BlockArchitecture'"
+ *        annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraintMapping Mapping=' platform:/plugin/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture'"
  * @generated
  */
 
 public interface RequirementsPkg extends Structure, ElementExtension {
 
-
-
-
-
 	/**
 	 * Returns the value of the '<em><b>Additional Information</b></em>' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Additional Information</em>' attribute.
@@ -55,12 +50,9 @@ public interface RequirementsPkg extends Structure, ElementExtension {
 
 	String getAdditionalInformation();
 
-
-
-
 	/**
 	 * Sets the value of the '{@link org.polarsys.capella.basic.requirement.RequirementsPkg#getAdditionalInformation <em>Additional Information</em>}' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Additional Information</em>' attribute.
@@ -70,15 +62,9 @@ public interface RequirementsPkg extends Structure, ElementExtension {
 
 	void setAdditionalInformation(String value);
 
-
-
-
-
-
-
 	/**
 	 * Returns the value of the '<em><b>Level</b></em>' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level</em>' attribute.
@@ -93,12 +79,9 @@ public interface RequirementsPkg extends Structure, ElementExtension {
 
 	String getLevel();
 
-
-
-
 	/**
 	 * Sets the value of the '{@link org.polarsys.capella.basic.requirement.RequirementsPkg#getLevel <em>Level</em>}' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Level</em>' attribute.
@@ -108,16 +91,10 @@ public interface RequirementsPkg extends Structure, ElementExtension {
 
 	void setLevel(String value);
 
-
-
-
-
-
-
 	/**
 	 * Returns the value of the '<em><b>Owned Requirements</b></em>' containment reference list.
 	 * The list contents are of type {@link org.polarsys.capella.basic.requirement.Requirement}.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owned Requirements</em>' containment reference list.
@@ -134,16 +111,10 @@ public interface RequirementsPkg extends Structure, ElementExtension {
 
 	EList<Requirement> getOwnedRequirements();
 
-
-
-
-
-
-
 	/**
 	 * Returns the value of the '<em><b>Owned Requirement Pkgs</b></em>' containment reference list.
 	 * The list contents are of type {@link org.polarsys.capella.basic.requirement.RequirementsPkg}.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owned Requirement Pkgs</em>' containment reference list.
@@ -159,9 +130,5 @@ public interface RequirementsPkg extends Structure, ElementExtension {
 	 */
 
 	EList<RequirementsPkg> getOwnedRequirementPkgs();
-
-
-
-
 
 } // RequirementsPkg

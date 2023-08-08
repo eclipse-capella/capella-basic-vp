@@ -1,5 +1,4 @@
 
-
 package org.polarsys.capella.basic.requirement.impl;
 
 import java.util.Collection;
@@ -144,10 +143,6 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 		return RequirementPackage.Literals.REQUIREMENT;
 	}
 
-
-
-
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -158,32 +153,55 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public EList<Trace> getOwnedTraces() {
 
-		return (EList<Trace>)eDynamicGet(RequirementPackage.REQUIREMENT__OWNED_TRACES, CapellacorePackage.Literals.NAMESPACE__OWNED_TRACES, true, true);
+		return (EList<Trace>) eDynamicGet(RequirementPackage.REQUIREMENT__OWNED_TRACES,
+				CapellacorePackage.Literals.NAMESPACE__OWNED_TRACES, true, true);
 	}
-
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 
 	@Override
 	public EList<GenericTrace> getContainedGenericTraces() {
+		Object result = null;
+		// Helper that can get value for current feature.
+		IHelper helper = null;
+		// If current object is adaptable, ask it to get its IHelper.
+		if (this instanceof IAdaptable) {
+			helper = (IHelper) ((IAdaptable) this).getAdapter(IHelper.class);
+		}
+		if (null == helper) {
+			// No helper found yet.
+			// Ask the platform to get the adapter 'IHelper.class' for current object.
+			IAdapterManager adapterManager = Platform.getAdapterManager();
+			helper = (IHelper) adapterManager.getAdapter(this, IHelper.class);
+		}
+		if (null == helper) {
+			EPackage package_l = eClass().getEPackage();
+			// Get the root package of the owner package.
+			EPackage rootPackage = org.polarsys.capella.common.mdsofa.common.helper.EcoreHelper
+					.getRootPackage(package_l);
+			throw new org.polarsys.capella.common.model.helpers.HelperNotFoundException(
+					"No helper retrieved for nsURI " + rootPackage.getNsURI()); //$NON-NLS-1$
+		}
+		// A helper is found, let's use it. 
+		EAnnotation annotation = CapellacorePackage.Literals.NAMESPACE__CONTAINED_GENERIC_TRACES
+				.getEAnnotation(org.polarsys.capella.common.model.helpers.IModelConstants.HELPER_ANNOTATION_SOURCE);
+		result = helper.getValue(this, CapellacorePackage.Literals.NAMESPACE__CONTAINED_GENERIC_TRACES, annotation);
 
-
-		// TODO: implement this method to return the 'Contained Generic Traces' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
-
+		try {
+			@SuppressWarnings("unchecked")
+			Collection<GenericTrace> resultAsList = (Collection<GenericTrace>) result;
+			return new EcoreEList.UnmodifiableEList<GenericTrace>(this,
+					CapellacorePackage.Literals.NAMESPACE__CONTAINED_GENERIC_TRACES, resultAsList.size(),
+					resultAsList.toArray());
+		} catch (ClassCastException exception) {
+			exception.printStackTrace();
+			return org.eclipse.emf.common.util.ECollections.emptyEList();
+		}
 	}
-
-
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -195,13 +213,9 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public EList<NamingRule> getNamingRules() {
 
-		return (EList<NamingRule>)eDynamicGet(RequirementPackage.REQUIREMENT__NAMING_RULES, CapellacorePackage.Literals.NAMESPACE__NAMING_RULES, true, true);
+		return (EList<NamingRule>) eDynamicGet(RequirementPackage.REQUIREMENT__NAMING_RULES,
+				CapellacorePackage.Literals.NAMESPACE__NAMING_RULES, true, true);
 	}
-
-
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -212,10 +226,9 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public boolean isIsObsolete() {
 
-		return (Boolean)eDynamicGet(RequirementPackage.REQUIREMENT__IS_OBSOLETE, RequirementPackage.Literals.REQUIREMENT__IS_OBSOLETE, true, true);
+		return (Boolean) eDynamicGet(RequirementPackage.REQUIREMENT__IS_OBSOLETE,
+				RequirementPackage.Literals.REQUIREMENT__IS_OBSOLETE, true, true);
 	}
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -226,15 +239,10 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public void setIsObsolete(boolean newIsObsolete) {
 
-
-		eDynamicSet(RequirementPackage.REQUIREMENT__IS_OBSOLETE, RequirementPackage.Literals.REQUIREMENT__IS_OBSOLETE, newIsObsolete);
+		eDynamicSet(RequirementPackage.REQUIREMENT__IS_OBSOLETE, RequirementPackage.Literals.REQUIREMENT__IS_OBSOLETE,
+				newIsObsolete);
 
 	}
-
-
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -245,10 +253,9 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public String getRequirementId() {
 
-		return (String)eDynamicGet(RequirementPackage.REQUIREMENT__REQUIREMENT_ID, RequirementPackage.Literals.REQUIREMENT__REQUIREMENT_ID, true, true);
+		return (String) eDynamicGet(RequirementPackage.REQUIREMENT__REQUIREMENT_ID,
+				RequirementPackage.Literals.REQUIREMENT__REQUIREMENT_ID, true, true);
 	}
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -259,15 +266,10 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public void setRequirementId(String newRequirementId) {
 
-
-		eDynamicSet(RequirementPackage.REQUIREMENT__REQUIREMENT_ID, RequirementPackage.Literals.REQUIREMENT__REQUIREMENT_ID, newRequirementId);
+		eDynamicSet(RequirementPackage.REQUIREMENT__REQUIREMENT_ID,
+				RequirementPackage.Literals.REQUIREMENT__REQUIREMENT_ID, newRequirementId);
 
 	}
-
-
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -278,10 +280,9 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public String getAdditionalInformation() {
 
-		return (String)eDynamicGet(RequirementPackage.REQUIREMENT__ADDITIONAL_INFORMATION, RequirementPackage.Literals.REQUIREMENT__ADDITIONAL_INFORMATION, true, true);
+		return (String) eDynamicGet(RequirementPackage.REQUIREMENT__ADDITIONAL_INFORMATION,
+				RequirementPackage.Literals.REQUIREMENT__ADDITIONAL_INFORMATION, true, true);
 	}
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -292,15 +293,10 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public void setAdditionalInformation(String newAdditionalInformation) {
 
-
-		eDynamicSet(RequirementPackage.REQUIREMENT__ADDITIONAL_INFORMATION, RequirementPackage.Literals.REQUIREMENT__ADDITIONAL_INFORMATION, newAdditionalInformation);
+		eDynamicSet(RequirementPackage.REQUIREMENT__ADDITIONAL_INFORMATION,
+				RequirementPackage.Literals.REQUIREMENT__ADDITIONAL_INFORMATION, newAdditionalInformation);
 
 	}
-
-
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -311,10 +307,9 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public String getVerificationMethod() {
 
-		return (String)eDynamicGet(RequirementPackage.REQUIREMENT__VERIFICATION_METHOD, RequirementPackage.Literals.REQUIREMENT__VERIFICATION_METHOD, true, true);
+		return (String) eDynamicGet(RequirementPackage.REQUIREMENT__VERIFICATION_METHOD,
+				RequirementPackage.Literals.REQUIREMENT__VERIFICATION_METHOD, true, true);
 	}
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -325,15 +320,10 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public void setVerificationMethod(String newVerificationMethod) {
 
-
-		eDynamicSet(RequirementPackage.REQUIREMENT__VERIFICATION_METHOD, RequirementPackage.Literals.REQUIREMENT__VERIFICATION_METHOD, newVerificationMethod);
+		eDynamicSet(RequirementPackage.REQUIREMENT__VERIFICATION_METHOD,
+				RequirementPackage.Literals.REQUIREMENT__VERIFICATION_METHOD, newVerificationMethod);
 
 	}
-
-
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -344,10 +334,9 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public String getVerificationPhase() {
 
-		return (String)eDynamicGet(RequirementPackage.REQUIREMENT__VERIFICATION_PHASE, RequirementPackage.Literals.REQUIREMENT__VERIFICATION_PHASE, true, true);
+		return (String) eDynamicGet(RequirementPackage.REQUIREMENT__VERIFICATION_PHASE,
+				RequirementPackage.Literals.REQUIREMENT__VERIFICATION_PHASE, true, true);
 	}
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -358,15 +347,10 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public void setVerificationPhase(String newVerificationPhase) {
 
-
-		eDynamicSet(RequirementPackage.REQUIREMENT__VERIFICATION_PHASE, RequirementPackage.Literals.REQUIREMENT__VERIFICATION_PHASE, newVerificationPhase);
+		eDynamicSet(RequirementPackage.REQUIREMENT__VERIFICATION_PHASE,
+				RequirementPackage.Literals.REQUIREMENT__VERIFICATION_PHASE, newVerificationPhase);
 
 	}
-
-
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -377,10 +361,9 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public String getImplementationVersion() {
 
-		return (String)eDynamicGet(RequirementPackage.REQUIREMENT__IMPLEMENTATION_VERSION, RequirementPackage.Literals.REQUIREMENT__IMPLEMENTATION_VERSION, true, true);
+		return (String) eDynamicGet(RequirementPackage.REQUIREMENT__IMPLEMENTATION_VERSION,
+				RequirementPackage.Literals.REQUIREMENT__IMPLEMENTATION_VERSION, true, true);
 	}
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -391,15 +374,10 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public void setImplementationVersion(String newImplementationVersion) {
 
-
-		eDynamicSet(RequirementPackage.REQUIREMENT__IMPLEMENTATION_VERSION, RequirementPackage.Literals.REQUIREMENT__IMPLEMENTATION_VERSION, newImplementationVersion);
+		eDynamicSet(RequirementPackage.REQUIREMENT__IMPLEMENTATION_VERSION,
+				RequirementPackage.Literals.REQUIREMENT__IMPLEMENTATION_VERSION, newImplementationVersion);
 
 	}
-
-
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -410,10 +388,9 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public String getFeature() {
 
-		return (String)eDynamicGet(RequirementPackage.REQUIREMENT__FEATURE, RequirementPackage.Literals.REQUIREMENT__FEATURE, true, true);
+		return (String) eDynamicGet(RequirementPackage.REQUIREMENT__FEATURE,
+				RequirementPackage.Literals.REQUIREMENT__FEATURE, true, true);
 	}
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -424,36 +401,56 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public void setFeature(String newFeature) {
 
-
-		eDynamicSet(RequirementPackage.REQUIREMENT__FEATURE, RequirementPackage.Literals.REQUIREMENT__FEATURE, newFeature);
+		eDynamicSet(RequirementPackage.REQUIREMENT__FEATURE, RequirementPackage.Literals.REQUIREMENT__FEATURE,
+				newFeature);
 
 	}
-
-
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 
 	@Override
 	public EList<CapellaElement> getRelatedCapellaElements() {
+		Object result = null;
+		// Helper that can get value for current feature.
+		IHelper helper = null;
+		// If current object is adaptable, ask it to get its IHelper.
+		if (this instanceof IAdaptable) {
+			helper = (IHelper) ((IAdaptable) this).getAdapter(IHelper.class);
+		}
+		if (null == helper) {
+			// No helper found yet.
+			// Ask the platform to get the adapter 'IHelper.class' for current object.
+			IAdapterManager adapterManager = Platform.getAdapterManager();
+			helper = (IHelper) adapterManager.getAdapter(this, IHelper.class);
+		}
+		if (null == helper) {
+			EPackage package_l = eClass().getEPackage();
+			// Get the root package of the owner package.
+			EPackage rootPackage = org.polarsys.capella.common.mdsofa.common.helper.EcoreHelper
+					.getRootPackage(package_l);
+			throw new org.polarsys.capella.common.model.helpers.HelperNotFoundException(
+					"No helper retrieved for nsURI " + rootPackage.getNsURI()); //$NON-NLS-1$
+		}
+		// A helper is found, let's use it. 
+		EAnnotation annotation = RequirementPackage.Literals.REQUIREMENT__RELATED_CAPELLA_ELEMENTS
+				.getEAnnotation(org.polarsys.capella.common.model.helpers.IModelConstants.HELPER_ANNOTATION_SOURCE);
+		result = helper.getValue(this, RequirementPackage.Literals.REQUIREMENT__RELATED_CAPELLA_ELEMENTS, annotation);
 
-
-		// TODO: implement this method to return the 'Related Capella Elements' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
-
+		try {
+			@SuppressWarnings("unchecked")
+			Collection<CapellaElement> resultAsList = (Collection<CapellaElement>) result;
+			return new EcoreEList.UnmodifiableEList<CapellaElement>(this,
+					RequirementPackage.Literals.REQUIREMENT__RELATED_CAPELLA_ELEMENTS, resultAsList.size(),
+					resultAsList.toArray());
+		} catch (ClassCastException exception) {
+			exception.printStackTrace();
+			return org.eclipse.emf.common.util.ECollections.emptyEList();
+		}
 	}
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -463,10 +460,10 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case RequirementPackage.REQUIREMENT__OWNED_TRACES:
-				return ((InternalEList<?>)getOwnedTraces()).basicRemove(otherEnd, msgs);
-			case RequirementPackage.REQUIREMENT__NAMING_RULES:
-				return ((InternalEList<?>)getNamingRules()).basicRemove(otherEnd, msgs);
+		case RequirementPackage.REQUIREMENT__OWNED_TRACES:
+			return ((InternalEList<?>) getOwnedTraces()).basicRemove(otherEnd, msgs);
+		case RequirementPackage.REQUIREMENT__NAMING_RULES:
+			return ((InternalEList<?>) getNamingRules()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -479,28 +476,28 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RequirementPackage.REQUIREMENT__OWNED_TRACES:
-				return getOwnedTraces();
-			case RequirementPackage.REQUIREMENT__CONTAINED_GENERIC_TRACES:
-				return getContainedGenericTraces();
-			case RequirementPackage.REQUIREMENT__NAMING_RULES:
-				return getNamingRules();
-			case RequirementPackage.REQUIREMENT__IS_OBSOLETE:
-				return isIsObsolete();
-			case RequirementPackage.REQUIREMENT__REQUIREMENT_ID:
-				return getRequirementId();
-			case RequirementPackage.REQUIREMENT__ADDITIONAL_INFORMATION:
-				return getAdditionalInformation();
-			case RequirementPackage.REQUIREMENT__VERIFICATION_METHOD:
-				return getVerificationMethod();
-			case RequirementPackage.REQUIREMENT__VERIFICATION_PHASE:
-				return getVerificationPhase();
-			case RequirementPackage.REQUIREMENT__IMPLEMENTATION_VERSION:
-				return getImplementationVersion();
-			case RequirementPackage.REQUIREMENT__FEATURE:
-				return getFeature();
-			case RequirementPackage.REQUIREMENT__RELATED_CAPELLA_ELEMENTS:
-				return getRelatedCapellaElements();
+		case RequirementPackage.REQUIREMENT__OWNED_TRACES:
+			return getOwnedTraces();
+		case RequirementPackage.REQUIREMENT__CONTAINED_GENERIC_TRACES:
+			return getContainedGenericTraces();
+		case RequirementPackage.REQUIREMENT__NAMING_RULES:
+			return getNamingRules();
+		case RequirementPackage.REQUIREMENT__IS_OBSOLETE:
+			return isIsObsolete();
+		case RequirementPackage.REQUIREMENT__REQUIREMENT_ID:
+			return getRequirementId();
+		case RequirementPackage.REQUIREMENT__ADDITIONAL_INFORMATION:
+			return getAdditionalInformation();
+		case RequirementPackage.REQUIREMENT__VERIFICATION_METHOD:
+			return getVerificationMethod();
+		case RequirementPackage.REQUIREMENT__VERIFICATION_PHASE:
+			return getVerificationPhase();
+		case RequirementPackage.REQUIREMENT__IMPLEMENTATION_VERSION:
+			return getImplementationVersion();
+		case RequirementPackage.REQUIREMENT__FEATURE:
+			return getFeature();
+		case RequirementPackage.REQUIREMENT__RELATED_CAPELLA_ELEMENTS:
+			return getRelatedCapellaElements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -514,39 +511,38 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RequirementPackage.REQUIREMENT__OWNED_TRACES:
-				getOwnedTraces().clear();
-				getOwnedTraces().addAll((Collection<? extends Trace>)newValue);
-				return;
-			case RequirementPackage.REQUIREMENT__NAMING_RULES:
-				getNamingRules().clear();
-				getNamingRules().addAll((Collection<? extends NamingRule>)newValue);
-				return;
-			case RequirementPackage.REQUIREMENT__IS_OBSOLETE:
-				setIsObsolete((Boolean)newValue);
-				return;
-			case RequirementPackage.REQUIREMENT__REQUIREMENT_ID:
-				setRequirementId((String)newValue);
-				return;
-			case RequirementPackage.REQUIREMENT__ADDITIONAL_INFORMATION:
-				setAdditionalInformation((String)newValue);
-				return;
-			case RequirementPackage.REQUIREMENT__VERIFICATION_METHOD:
-				setVerificationMethod((String)newValue);
-				return;
-			case RequirementPackage.REQUIREMENT__VERIFICATION_PHASE:
-				setVerificationPhase((String)newValue);
-				return;
-			case RequirementPackage.REQUIREMENT__IMPLEMENTATION_VERSION:
-				setImplementationVersion((String)newValue);
-				return;
-			case RequirementPackage.REQUIREMENT__FEATURE:
-				setFeature((String)newValue);
-				return;
+		case RequirementPackage.REQUIREMENT__OWNED_TRACES:
+			getOwnedTraces().clear();
+			getOwnedTraces().addAll((Collection<? extends Trace>) newValue);
+			return;
+		case RequirementPackage.REQUIREMENT__NAMING_RULES:
+			getNamingRules().clear();
+			getNamingRules().addAll((Collection<? extends NamingRule>) newValue);
+			return;
+		case RequirementPackage.REQUIREMENT__IS_OBSOLETE:
+			setIsObsolete((Boolean) newValue);
+			return;
+		case RequirementPackage.REQUIREMENT__REQUIREMENT_ID:
+			setRequirementId((String) newValue);
+			return;
+		case RequirementPackage.REQUIREMENT__ADDITIONAL_INFORMATION:
+			setAdditionalInformation((String) newValue);
+			return;
+		case RequirementPackage.REQUIREMENT__VERIFICATION_METHOD:
+			setVerificationMethod((String) newValue);
+			return;
+		case RequirementPackage.REQUIREMENT__VERIFICATION_PHASE:
+			setVerificationPhase((String) newValue);
+			return;
+		case RequirementPackage.REQUIREMENT__IMPLEMENTATION_VERSION:
+			setImplementationVersion((String) newValue);
+			return;
+		case RequirementPackage.REQUIREMENT__FEATURE:
+			setFeature((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -556,38 +552,36 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RequirementPackage.REQUIREMENT__OWNED_TRACES:
-				getOwnedTraces().clear();
-				return;
-			case RequirementPackage.REQUIREMENT__NAMING_RULES:
-				getNamingRules().clear();
-				return;
-			case RequirementPackage.REQUIREMENT__IS_OBSOLETE:
-				setIsObsolete(IS_OBSOLETE_EDEFAULT);
-				return;
-			case RequirementPackage.REQUIREMENT__REQUIREMENT_ID:
-				setRequirementId(REQUIREMENT_ID_EDEFAULT);
-				return;
-			case RequirementPackage.REQUIREMENT__ADDITIONAL_INFORMATION:
-				setAdditionalInformation(ADDITIONAL_INFORMATION_EDEFAULT);
-				return;
-			case RequirementPackage.REQUIREMENT__VERIFICATION_METHOD:
-				setVerificationMethod(VERIFICATION_METHOD_EDEFAULT);
-				return;
-			case RequirementPackage.REQUIREMENT__VERIFICATION_PHASE:
-				setVerificationPhase(VERIFICATION_PHASE_EDEFAULT);
-				return;
-			case RequirementPackage.REQUIREMENT__IMPLEMENTATION_VERSION:
-				setImplementationVersion(IMPLEMENTATION_VERSION_EDEFAULT);
-				return;
-			case RequirementPackage.REQUIREMENT__FEATURE:
-				setFeature(FEATURE_EDEFAULT);
-				return;
+		case RequirementPackage.REQUIREMENT__OWNED_TRACES:
+			getOwnedTraces().clear();
+			return;
+		case RequirementPackage.REQUIREMENT__NAMING_RULES:
+			getNamingRules().clear();
+			return;
+		case RequirementPackage.REQUIREMENT__IS_OBSOLETE:
+			setIsObsolete(IS_OBSOLETE_EDEFAULT);
+			return;
+		case RequirementPackage.REQUIREMENT__REQUIREMENT_ID:
+			setRequirementId(REQUIREMENT_ID_EDEFAULT);
+			return;
+		case RequirementPackage.REQUIREMENT__ADDITIONAL_INFORMATION:
+			setAdditionalInformation(ADDITIONAL_INFORMATION_EDEFAULT);
+			return;
+		case RequirementPackage.REQUIREMENT__VERIFICATION_METHOD:
+			setVerificationMethod(VERIFICATION_METHOD_EDEFAULT);
+			return;
+		case RequirementPackage.REQUIREMENT__VERIFICATION_PHASE:
+			setVerificationPhase(VERIFICATION_PHASE_EDEFAULT);
+			return;
+		case RequirementPackage.REQUIREMENT__IMPLEMENTATION_VERSION:
+			setImplementationVersion(IMPLEMENTATION_VERSION_EDEFAULT);
+			return;
+		case RequirementPackage.REQUIREMENT__FEATURE:
+			setFeature(FEATURE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -597,31 +591,35 @@ public abstract class RequirementImpl extends NamedElementImpl implements Requir
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RequirementPackage.REQUIREMENT__OWNED_TRACES:
-				return !getOwnedTraces().isEmpty();
-			case RequirementPackage.REQUIREMENT__CONTAINED_GENERIC_TRACES:
-				return !getContainedGenericTraces().isEmpty();
-			case RequirementPackage.REQUIREMENT__NAMING_RULES:
-				return !getNamingRules().isEmpty();
-			case RequirementPackage.REQUIREMENT__IS_OBSOLETE:
-				return isIsObsolete() != IS_OBSOLETE_EDEFAULT;
-			case RequirementPackage.REQUIREMENT__REQUIREMENT_ID:
-				return REQUIREMENT_ID_EDEFAULT == null ? getRequirementId() != null : !REQUIREMENT_ID_EDEFAULT.equals(getRequirementId());
-			case RequirementPackage.REQUIREMENT__ADDITIONAL_INFORMATION:
-				return ADDITIONAL_INFORMATION_EDEFAULT == null ? getAdditionalInformation() != null : !ADDITIONAL_INFORMATION_EDEFAULT.equals(getAdditionalInformation());
-			case RequirementPackage.REQUIREMENT__VERIFICATION_METHOD:
-				return VERIFICATION_METHOD_EDEFAULT == null ? getVerificationMethod() != null : !VERIFICATION_METHOD_EDEFAULT.equals(getVerificationMethod());
-			case RequirementPackage.REQUIREMENT__VERIFICATION_PHASE:
-				return VERIFICATION_PHASE_EDEFAULT == null ? getVerificationPhase() != null : !VERIFICATION_PHASE_EDEFAULT.equals(getVerificationPhase());
-			case RequirementPackage.REQUIREMENT__IMPLEMENTATION_VERSION:
-				return IMPLEMENTATION_VERSION_EDEFAULT == null ? getImplementationVersion() != null : !IMPLEMENTATION_VERSION_EDEFAULT.equals(getImplementationVersion());
-			case RequirementPackage.REQUIREMENT__FEATURE:
-				return FEATURE_EDEFAULT == null ? getFeature() != null : !FEATURE_EDEFAULT.equals(getFeature());
-			case RequirementPackage.REQUIREMENT__RELATED_CAPELLA_ELEMENTS:
-				return !getRelatedCapellaElements().isEmpty();
+		case RequirementPackage.REQUIREMENT__OWNED_TRACES:
+			return !getOwnedTraces().isEmpty();
+		case RequirementPackage.REQUIREMENT__CONTAINED_GENERIC_TRACES:
+			return !getContainedGenericTraces().isEmpty();
+		case RequirementPackage.REQUIREMENT__NAMING_RULES:
+			return !getNamingRules().isEmpty();
+		case RequirementPackage.REQUIREMENT__IS_OBSOLETE:
+			return isIsObsolete() != IS_OBSOLETE_EDEFAULT;
+		case RequirementPackage.REQUIREMENT__REQUIREMENT_ID:
+			return REQUIREMENT_ID_EDEFAULT == null ? getRequirementId() != null
+					: !REQUIREMENT_ID_EDEFAULT.equals(getRequirementId());
+		case RequirementPackage.REQUIREMENT__ADDITIONAL_INFORMATION:
+			return ADDITIONAL_INFORMATION_EDEFAULT == null ? getAdditionalInformation() != null
+					: !ADDITIONAL_INFORMATION_EDEFAULT.equals(getAdditionalInformation());
+		case RequirementPackage.REQUIREMENT__VERIFICATION_METHOD:
+			return VERIFICATION_METHOD_EDEFAULT == null ? getVerificationMethod() != null
+					: !VERIFICATION_METHOD_EDEFAULT.equals(getVerificationMethod());
+		case RequirementPackage.REQUIREMENT__VERIFICATION_PHASE:
+			return VERIFICATION_PHASE_EDEFAULT == null ? getVerificationPhase() != null
+					: !VERIFICATION_PHASE_EDEFAULT.equals(getVerificationPhase());
+		case RequirementPackage.REQUIREMENT__IMPLEMENTATION_VERSION:
+			return IMPLEMENTATION_VERSION_EDEFAULT == null ? getImplementationVersion() != null
+					: !IMPLEMENTATION_VERSION_EDEFAULT.equals(getImplementationVersion());
+		case RequirementPackage.REQUIREMENT__FEATURE:
+			return FEATURE_EDEFAULT == null ? getFeature() != null : !FEATURE_EDEFAULT.equals(getFeature());
+		case RequirementPackage.REQUIREMENT__RELATED_CAPELLA_ELEMENTS:
+			return !getRelatedCapellaElements().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
-
 
 } //RequirementImpl

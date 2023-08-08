@@ -1,5 +1,4 @@
 
-
 package org.polarsys.capella.basic.requirement;
 
 import org.eclipse.emf.ecore.EFactory;
@@ -92,60 +91,6 @@ public interface RequirementFactory extends EFactory {
 	 * @generated
 	 */
 	RequirementPackage getRequirementPackage();
-
-  /**
-   * Creates class and sets its name (This method comes from a customization of the standard EMF generator)
-   *
-   * @param name_p
-   *          : default name of created element
-   * @generated
-   */
-  RequirementsPkg createRequirementsPkg(String name_p);
-
-  /**
-   * Creates class and sets its name (This method comes from a customization of the standard EMF generator)
-   *
-   * @param name_p
-   *          : default name of created element
-   * @generated
-   */
-  SystemFunctionalInterfaceRequirement createSystemFunctionalInterfaceRequirement(String name_p);
-
-  /**
-   * Creates class and sets its name (This method comes from a customization of the standard EMF generator)
-   *
-   * @param name_p
-   *          : default name of created element
-   * @generated
-   */
-  SystemFunctionalRequirement createSystemFunctionalRequirement(String name_p);
-
-  /**
-   * Creates class and sets its name (This method comes from a customization of the standard EMF generator)
-   *
-   * @param name_p
-   *          : default name of created element
-   * @generated
-   */
-  SystemNonFunctionalInterfaceRequirement createSystemNonFunctionalInterfaceRequirement(String name_p);
-
-  /**
-   * Creates class and sets its name (This method comes from a customization of the standard EMF generator)
-   *
-   * @param name_p
-   *          : default name of created element
-   * @generated
-   */
-  SystemNonFunctionalRequirement createSystemNonFunctionalRequirement(String name_p);
-
-  /**
-   * Creates class and sets its name (This method comes from a customization of the standard EMF generator)
-   *
-   * @param name_p
-   *          : default name of created element
-   * @generated
-   */
-  SystemUserRequirement createSystemUserRequirement(String name_p);
 
 	//begin-capella-code
 	//end-capella-code

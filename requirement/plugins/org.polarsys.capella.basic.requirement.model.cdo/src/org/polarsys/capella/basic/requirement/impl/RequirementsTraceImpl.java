@@ -1,5 +1,4 @@
 
-
 package org.polarsys.capella.basic.requirement.impl;
 
 import org.eclipse.core.runtime.IAdaptable;
@@ -30,11 +29,6 @@ import org.polarsys.capella.basic.requirement.RequirementsTrace;
  */
 public class RequirementsTraceImpl extends TraceImpl implements RequirementsTrace {
 
-
-
-
-
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,49 +50,31 @@ public class RequirementsTraceImpl extends TraceImpl implements RequirementsTrac
 		return RequirementPackage.Literals.REQUIREMENTS_TRACE;
 	}
 
-
-
-
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 
 	@Override
 	public TraceableElement getSource() {
 
-
-		// TODO: implement this method to return the 'Source' reference
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return getSourceElement();
 
 	}
-
-
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 
 	@Override
 	public TraceableElement getTarget() {
 
-
-		// TODO: implement this method to return the 'Target' reference
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return getTargetElement();
 
 	}
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,14 +84,13 @@ public class RequirementsTraceImpl extends TraceImpl implements RequirementsTrac
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RequirementPackage.REQUIREMENTS_TRACE__SOURCE:
-				return getSource();
-			case RequirementPackage.REQUIREMENTS_TRACE__TARGET:
-				return getTarget();
+		case RequirementPackage.REQUIREMENTS_TRACE__SOURCE:
+			return getSource();
+		case RequirementPackage.REQUIREMENTS_TRACE__TARGET:
+			return getTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,14 +100,12 @@ public class RequirementsTraceImpl extends TraceImpl implements RequirementsTrac
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RequirementPackage.REQUIREMENTS_TRACE__SOURCE:
-				return getSource() != null;
-			case RequirementPackage.REQUIREMENTS_TRACE__TARGET:
-				return getTarget() != null;
+		case RequirementPackage.REQUIREMENTS_TRACE__SOURCE:
+			return getSource() != null;
+		case RequirementPackage.REQUIREMENTS_TRACE__TARGET:
+			return getTarget() != null;
 		}
 		return super.eIsSet(featureID);
 	}
-
-
 
 } //RequirementsTraceImpl

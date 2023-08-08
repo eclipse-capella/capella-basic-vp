@@ -1,5 +1,4 @@
 
-
 package org.polarsys.capella.basic.requirement.util;
 
 import org.eclipse.emf.ecore.EObject;
@@ -84,142 +83,224 @@ public class RequirementSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case RequirementPackage.REQUIREMENTS_PKG: {
-				RequirementsPkg requirementsPkg = (RequirementsPkg)theEObject;
-				T result = caseRequirementsPkg(requirementsPkg);
-				if (result == null) result = caseStructure(requirementsPkg);
-				if (result == null) result = caseElementExtension(requirementsPkg);
-				if (result == null) result = caseNamespace(requirementsPkg);
-				if (result == null) result = caseNamedElement(requirementsPkg);
-				if (result == null) result = caseAbstractNamedElement(requirementsPkg);
-				if (result == null) result = caseCapellaElement(requirementsPkg);
-				if (result == null) result = caseTraceableElement(requirementsPkg);
-				if (result == null) result = casePublishableElement(requirementsPkg);
-				if (result == null) result = caseModelElement(requirementsPkg);
-				if (result == null) result = caseExtensibleElement(requirementsPkg);
-				if (result == null) result = caseElement(requirementsPkg);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RequirementPackage.REQUIREMENTS_TRACE: {
-				RequirementsTrace requirementsTrace = (RequirementsTrace)theEObject;
-				T result = caseRequirementsTrace(requirementsTrace);
-				if (result == null) result = caseTrace(requirementsTrace);
-				if (result == null) result = caseElementExtension(requirementsTrace);
-				if (result == null) result = caseRelationship(requirementsTrace);
-				if (result == null) result = caseAbstractTrace(requirementsTrace);
-				if (result == null) result = caseAbstractRelationship(requirementsTrace);
-				if (result == null) result = caseCapellaElement(requirementsTrace);
-				if (result == null) result = caseTraceableElement(requirementsTrace);
-				if (result == null) result = casePublishableElement(requirementsTrace);
-				if (result == null) result = caseModelElement(requirementsTrace);
-				if (result == null) result = caseExtensibleElement(requirementsTrace);
-				if (result == null) result = caseElement(requirementsTrace);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RequirementPackage.REQUIREMENT: {
-				Requirement requirement = (Requirement)theEObject;
-				T result = caseRequirement(requirement);
-				if (result == null) result = caseNamespace(requirement);
-				if (result == null) result = caseElementExtension(requirement);
-				if (result == null) result = caseNamedElement(requirement);
-				if (result == null) result = caseAbstractNamedElement(requirement);
-				if (result == null) result = caseCapellaElement(requirement);
-				if (result == null) result = caseTraceableElement(requirement);
-				if (result == null) result = casePublishableElement(requirement);
-				if (result == null) result = caseModelElement(requirement);
-				if (result == null) result = caseExtensibleElement(requirement);
-				if (result == null) result = caseElement(requirement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RequirementPackage.SYSTEM_FUNCTIONAL_INTERFACE_REQUIREMENT: {
-				SystemFunctionalInterfaceRequirement systemFunctionalInterfaceRequirement = (SystemFunctionalInterfaceRequirement)theEObject;
-				T result = caseSystemFunctionalInterfaceRequirement(systemFunctionalInterfaceRequirement);
-				if (result == null) result = caseRequirement(systemFunctionalInterfaceRequirement);
-				if (result == null) result = caseNamespace(systemFunctionalInterfaceRequirement);
-				if (result == null) result = caseElementExtension(systemFunctionalInterfaceRequirement);
-				if (result == null) result = caseNamedElement(systemFunctionalInterfaceRequirement);
-				if (result == null) result = caseAbstractNamedElement(systemFunctionalInterfaceRequirement);
-				if (result == null) result = caseCapellaElement(systemFunctionalInterfaceRequirement);
-				if (result == null) result = caseTraceableElement(systemFunctionalInterfaceRequirement);
-				if (result == null) result = casePublishableElement(systemFunctionalInterfaceRequirement);
-				if (result == null) result = caseModelElement(systemFunctionalInterfaceRequirement);
-				if (result == null) result = caseExtensibleElement(systemFunctionalInterfaceRequirement);
-				if (result == null) result = caseElement(systemFunctionalInterfaceRequirement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RequirementPackage.SYSTEM_FUNCTIONAL_REQUIREMENT: {
-				SystemFunctionalRequirement systemFunctionalRequirement = (SystemFunctionalRequirement)theEObject;
-				T result = caseSystemFunctionalRequirement(systemFunctionalRequirement);
-				if (result == null) result = caseRequirement(systemFunctionalRequirement);
-				if (result == null) result = caseNamespace(systemFunctionalRequirement);
-				if (result == null) result = caseElementExtension(systemFunctionalRequirement);
-				if (result == null) result = caseNamedElement(systemFunctionalRequirement);
-				if (result == null) result = caseAbstractNamedElement(systemFunctionalRequirement);
-				if (result == null) result = caseCapellaElement(systemFunctionalRequirement);
-				if (result == null) result = caseTraceableElement(systemFunctionalRequirement);
-				if (result == null) result = casePublishableElement(systemFunctionalRequirement);
-				if (result == null) result = caseModelElement(systemFunctionalRequirement);
-				if (result == null) result = caseExtensibleElement(systemFunctionalRequirement);
-				if (result == null) result = caseElement(systemFunctionalRequirement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RequirementPackage.SYSTEM_NON_FUNCTIONAL_INTERFACE_REQUIREMENT: {
-				SystemNonFunctionalInterfaceRequirement systemNonFunctionalInterfaceRequirement = (SystemNonFunctionalInterfaceRequirement)theEObject;
-				T result = caseSystemNonFunctionalInterfaceRequirement(systemNonFunctionalInterfaceRequirement);
-				if (result == null) result = caseRequirement(systemNonFunctionalInterfaceRequirement);
-				if (result == null) result = caseNamespace(systemNonFunctionalInterfaceRequirement);
-				if (result == null) result = caseElementExtension(systemNonFunctionalInterfaceRequirement);
-				if (result == null) result = caseNamedElement(systemNonFunctionalInterfaceRequirement);
-				if (result == null) result = caseAbstractNamedElement(systemNonFunctionalInterfaceRequirement);
-				if (result == null) result = caseCapellaElement(systemNonFunctionalInterfaceRequirement);
-				if (result == null) result = caseTraceableElement(systemNonFunctionalInterfaceRequirement);
-				if (result == null) result = casePublishableElement(systemNonFunctionalInterfaceRequirement);
-				if (result == null) result = caseModelElement(systemNonFunctionalInterfaceRequirement);
-				if (result == null) result = caseExtensibleElement(systemNonFunctionalInterfaceRequirement);
-				if (result == null) result = caseElement(systemNonFunctionalInterfaceRequirement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RequirementPackage.SYSTEM_NON_FUNCTIONAL_REQUIREMENT: {
-				SystemNonFunctionalRequirement systemNonFunctionalRequirement = (SystemNonFunctionalRequirement)theEObject;
-				T result = caseSystemNonFunctionalRequirement(systemNonFunctionalRequirement);
-				if (result == null) result = caseRequirement(systemNonFunctionalRequirement);
-				if (result == null) result = caseNamespace(systemNonFunctionalRequirement);
-				if (result == null) result = caseElementExtension(systemNonFunctionalRequirement);
-				if (result == null) result = caseNamedElement(systemNonFunctionalRequirement);
-				if (result == null) result = caseAbstractNamedElement(systemNonFunctionalRequirement);
-				if (result == null) result = caseCapellaElement(systemNonFunctionalRequirement);
-				if (result == null) result = caseTraceableElement(systemNonFunctionalRequirement);
-				if (result == null) result = casePublishableElement(systemNonFunctionalRequirement);
-				if (result == null) result = caseModelElement(systemNonFunctionalRequirement);
-				if (result == null) result = caseExtensibleElement(systemNonFunctionalRequirement);
-				if (result == null) result = caseElement(systemNonFunctionalRequirement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RequirementPackage.SYSTEM_USER_REQUIREMENT: {
-				SystemUserRequirement systemUserRequirement = (SystemUserRequirement)theEObject;
-				T result = caseSystemUserRequirement(systemUserRequirement);
-				if (result == null) result = caseRequirement(systemUserRequirement);
-				if (result == null) result = caseNamespace(systemUserRequirement);
-				if (result == null) result = caseElementExtension(systemUserRequirement);
-				if (result == null) result = caseNamedElement(systemUserRequirement);
-				if (result == null) result = caseAbstractNamedElement(systemUserRequirement);
-				if (result == null) result = caseCapellaElement(systemUserRequirement);
-				if (result == null) result = caseTraceableElement(systemUserRequirement);
-				if (result == null) result = casePublishableElement(systemUserRequirement);
-				if (result == null) result = caseModelElement(systemUserRequirement);
-				if (result == null) result = caseExtensibleElement(systemUserRequirement);
-				if (result == null) result = caseElement(systemUserRequirement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			default: return defaultCase(theEObject);
+		case RequirementPackage.REQUIREMENTS_PKG: {
+			RequirementsPkg requirementsPkg = (RequirementsPkg) theEObject;
+			T result = caseRequirementsPkg(requirementsPkg);
+			if (result == null)
+				result = caseStructure(requirementsPkg);
+			if (result == null)
+				result = caseElementExtension(requirementsPkg);
+			if (result == null)
+				result = caseNamespace(requirementsPkg);
+			if (result == null)
+				result = caseNamedElement(requirementsPkg);
+			if (result == null)
+				result = caseAbstractNamedElement(requirementsPkg);
+			if (result == null)
+				result = caseCapellaElement(requirementsPkg);
+			if (result == null)
+				result = caseTraceableElement(requirementsPkg);
+			if (result == null)
+				result = casePublishableElement(requirementsPkg);
+			if (result == null)
+				result = caseModelElement(requirementsPkg);
+			if (result == null)
+				result = caseExtensibleElement(requirementsPkg);
+			if (result == null)
+				result = caseElement(requirementsPkg);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RequirementPackage.REQUIREMENTS_TRACE: {
+			RequirementsTrace requirementsTrace = (RequirementsTrace) theEObject;
+			T result = caseRequirementsTrace(requirementsTrace);
+			if (result == null)
+				result = caseTrace(requirementsTrace);
+			if (result == null)
+				result = caseRelationship(requirementsTrace);
+			if (result == null)
+				result = caseAbstractTrace(requirementsTrace);
+			if (result == null)
+				result = caseAbstractRelationship(requirementsTrace);
+			if (result == null)
+				result = caseCapellaElement(requirementsTrace);
+			if (result == null)
+				result = caseTraceableElement(requirementsTrace);
+			if (result == null)
+				result = casePublishableElement(requirementsTrace);
+			if (result == null)
+				result = caseModelElement(requirementsTrace);
+			if (result == null)
+				result = caseExtensibleElement(requirementsTrace);
+			if (result == null)
+				result = caseElement(requirementsTrace);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RequirementPackage.REQUIREMENT: {
+			Requirement requirement = (Requirement) theEObject;
+			T result = caseRequirement(requirement);
+			if (result == null)
+				result = caseNamespace(requirement);
+			if (result == null)
+				result = caseNamedElement(requirement);
+			if (result == null)
+				result = caseAbstractNamedElement(requirement);
+			if (result == null)
+				result = caseCapellaElement(requirement);
+			if (result == null)
+				result = caseTraceableElement(requirement);
+			if (result == null)
+				result = casePublishableElement(requirement);
+			if (result == null)
+				result = caseModelElement(requirement);
+			if (result == null)
+				result = caseExtensibleElement(requirement);
+			if (result == null)
+				result = caseElement(requirement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RequirementPackage.SYSTEM_FUNCTIONAL_INTERFACE_REQUIREMENT: {
+			SystemFunctionalInterfaceRequirement systemFunctionalInterfaceRequirement = (SystemFunctionalInterfaceRequirement) theEObject;
+			T result = caseSystemFunctionalInterfaceRequirement(systemFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseRequirement(systemFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseNamespace(systemFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseNamedElement(systemFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseAbstractNamedElement(systemFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseCapellaElement(systemFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseTraceableElement(systemFunctionalInterfaceRequirement);
+			if (result == null)
+				result = casePublishableElement(systemFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseModelElement(systemFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseExtensibleElement(systemFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseElement(systemFunctionalInterfaceRequirement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RequirementPackage.SYSTEM_FUNCTIONAL_REQUIREMENT: {
+			SystemFunctionalRequirement systemFunctionalRequirement = (SystemFunctionalRequirement) theEObject;
+			T result = caseSystemFunctionalRequirement(systemFunctionalRequirement);
+			if (result == null)
+				result = caseRequirement(systemFunctionalRequirement);
+			if (result == null)
+				result = caseNamespace(systemFunctionalRequirement);
+			if (result == null)
+				result = caseNamedElement(systemFunctionalRequirement);
+			if (result == null)
+				result = caseAbstractNamedElement(systemFunctionalRequirement);
+			if (result == null)
+				result = caseCapellaElement(systemFunctionalRequirement);
+			if (result == null)
+				result = caseTraceableElement(systemFunctionalRequirement);
+			if (result == null)
+				result = casePublishableElement(systemFunctionalRequirement);
+			if (result == null)
+				result = caseModelElement(systemFunctionalRequirement);
+			if (result == null)
+				result = caseExtensibleElement(systemFunctionalRequirement);
+			if (result == null)
+				result = caseElement(systemFunctionalRequirement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RequirementPackage.SYSTEM_NON_FUNCTIONAL_INTERFACE_REQUIREMENT: {
+			SystemNonFunctionalInterfaceRequirement systemNonFunctionalInterfaceRequirement = (SystemNonFunctionalInterfaceRequirement) theEObject;
+			T result = caseSystemNonFunctionalInterfaceRequirement(systemNonFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseRequirement(systemNonFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseNamespace(systemNonFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseNamedElement(systemNonFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseAbstractNamedElement(systemNonFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseCapellaElement(systemNonFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseTraceableElement(systemNonFunctionalInterfaceRequirement);
+			if (result == null)
+				result = casePublishableElement(systemNonFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseModelElement(systemNonFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseExtensibleElement(systemNonFunctionalInterfaceRequirement);
+			if (result == null)
+				result = caseElement(systemNonFunctionalInterfaceRequirement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RequirementPackage.SYSTEM_NON_FUNCTIONAL_REQUIREMENT: {
+			SystemNonFunctionalRequirement systemNonFunctionalRequirement = (SystemNonFunctionalRequirement) theEObject;
+			T result = caseSystemNonFunctionalRequirement(systemNonFunctionalRequirement);
+			if (result == null)
+				result = caseRequirement(systemNonFunctionalRequirement);
+			if (result == null)
+				result = caseNamespace(systemNonFunctionalRequirement);
+			if (result == null)
+				result = caseNamedElement(systemNonFunctionalRequirement);
+			if (result == null)
+				result = caseAbstractNamedElement(systemNonFunctionalRequirement);
+			if (result == null)
+				result = caseCapellaElement(systemNonFunctionalRequirement);
+			if (result == null)
+				result = caseTraceableElement(systemNonFunctionalRequirement);
+			if (result == null)
+				result = casePublishableElement(systemNonFunctionalRequirement);
+			if (result == null)
+				result = caseModelElement(systemNonFunctionalRequirement);
+			if (result == null)
+				result = caseExtensibleElement(systemNonFunctionalRequirement);
+			if (result == null)
+				result = caseElement(systemNonFunctionalRequirement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RequirementPackage.SYSTEM_USER_REQUIREMENT: {
+			SystemUserRequirement systemUserRequirement = (SystemUserRequirement) theEObject;
+			T result = caseSystemUserRequirement(systemUserRequirement);
+			if (result == null)
+				result = caseRequirement(systemUserRequirement);
+			if (result == null)
+				result = caseNamespace(systemUserRequirement);
+			if (result == null)
+				result = caseNamedElement(systemUserRequirement);
+			if (result == null)
+				result = caseAbstractNamedElement(systemUserRequirement);
+			if (result == null)
+				result = caseCapellaElement(systemUserRequirement);
+			if (result == null)
+				result = caseTraceableElement(systemUserRequirement);
+			if (result == null)
+				result = casePublishableElement(systemUserRequirement);
+			if (result == null)
+				result = caseModelElement(systemUserRequirement);
+			if (result == null)
+				result = caseExtensibleElement(systemUserRequirement);
+			if (result == null)
+				result = caseElement(systemUserRequirement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		default:
+			return defaultCase(theEObject);
 		}
 	}
 

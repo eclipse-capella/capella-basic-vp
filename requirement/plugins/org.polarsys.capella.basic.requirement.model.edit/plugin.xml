@@ -12,11 +12,43 @@
       <factory class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory" supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider                org.eclipse.emf.edit.provider.IStructuredItemContentProvider                org.eclipse.emf.edit.provider.ITreeItemContentProvider                org.eclipse.emf.edit.provider.IItemLabelProvider                org.eclipse.emf.edit.provider.IItemPropertySource" uri="http://www.polarsys.org/capella/basic/requirement"/>
    </extension>
 
-  <extension
-        point="org.eclipse.emf.edit.childCreationExtenders">
-     <extender
-           class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$EmdeChildCreationExtender"
-           uri="http://www.polarsys.org/kitalpha/emde/1.0.0">
+   
+<!--@generated-->
+  <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated Requirement -->
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$CapellacoreChildCreationExtender" uri="http://www.polarsys.org/capella/core/core/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$OaChildCreationExtender" uri="http://www.polarsys.org/capella/core/oa/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$CtxChildCreationExtender" uri="http://www.polarsys.org/capella/core/ctx/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$PaChildCreationExtender" uri="http://www.polarsys.org/capella/core/pa/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$DeploymentChildCreationExtender" uri="http://www.polarsys.org/capella/core/pa/deployment/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$EpbsChildCreationExtender" uri="http://www.polarsys.org/capella/core/epbs/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$CapellacommonChildCreationExtender" uri="http://www.polarsys.org/capella/core/common/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$InformationChildCreationExtender" uri="http://www.polarsys.org/capella/core/information/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$CommunicationChildCreationExtender" uri="http://www.polarsys.org/capella/core/information/communication/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$DatavalueChildCreationExtender" uri="http://www.polarsys.org/capella/core/information/datavalue/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$CsChildCreationExtender" uri="http://www.polarsys.org/capella/core/cs/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$FaChildCreationExtender" uri="http://www.polarsys.org/capella/core/fa/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$InteractionChildCreationExtender" uri="http://www.polarsys.org/capella/core/interaction/7.0.0"/>
+      <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$EmdeChildCreationExtender" uri="http://www.polarsys.org/kitalpha/emde/1.0.0"/>
+   </extension>
+
+<extension point="org.eclipse.emf.edit.childCreationExtenders">
+     <extender class="org.polarsys.capella.basic.requirement.provider.RequirementItemProviderAdapterFactory$EmdeChildCreationExtender" uri="http://www.polarsys.org/kitalpha/emde/1.0.0">
      </extender>
   </extension>
+<!--@generated-->
+  <extension point="org.polarsys.capella.common.menu.dynamic.MDEMenuItemContribution">
+</extension>
+
+<!--@generated-->
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="org.polarsys.capella.core.data.capellamodeller.properties">
+</propertySections>
+    </extension>
+
+<!--@generated-->
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="org.eclipse.sirius.diagram.ui">
+</propertySections>
+    </extension>
 </plugin>

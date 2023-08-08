@@ -1,5 +1,4 @@
 
-
 package org.polarsys.capella.basic.requirement.impl;
 
 import org.eclipse.emf.ecore.EClass;
@@ -34,6 +33,5 @@ public class SystemNonFunctionalRequirementImpl extends RequirementImpl implemen
 	protected EClass eStaticClass() {
 		return RequirementPackage.Literals.SYSTEM_NON_FUNCTIONAL_REQUIREMENT;
 	}
-
 
 } //SystemNonFunctionalRequirementImpl

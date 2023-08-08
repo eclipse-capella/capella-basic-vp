@@ -1,5 +1,4 @@
 
-
 package org.polarsys.capella.basic.requirement.impl;
 
 import org.eclipse.emf.ecore.EClass;
@@ -13,7 +12,8 @@ import org.polarsys.capella.basic.requirement.SystemNonFunctionalInterfaceRequir
  *
  * @generated
  */
-public class SystemNonFunctionalInterfaceRequirementImpl extends RequirementImpl implements SystemNonFunctionalInterfaceRequirement {
+public class SystemNonFunctionalInterfaceRequirementImpl extends RequirementImpl
+		implements SystemNonFunctionalInterfaceRequirement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,6 +34,5 @@ public class SystemNonFunctionalInterfaceRequirementImpl extends RequirementImpl
 	protected EClass eStaticClass() {
 		return RequirementPackage.Literals.SYSTEM_NON_FUNCTIONAL_INTERFACE_REQUIREMENT;
 	}
-
 
 } //SystemNonFunctionalInterfaceRequirementImpl

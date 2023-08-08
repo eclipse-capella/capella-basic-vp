@@ -1,5 +1,4 @@
 
-
 package org.polarsys.capella.basic.requirement.provider;
 
 import java.util.Collection;
@@ -19,6 +18,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.polarsys.capella.common.model.copypaste.SharedInitializeCopyCommand;
 import org.polarsys.capella.basic.requirement.SystemFunctionalRequirement;
+import org.polarsys.capella.core.data.capellacore.CapellacorePackage;
+import org.polarsys.kitalpha.emde.model.EmdePackage;
 import org.polarsys.capella.basic.requirement.util.RequirementNaminghelper;
 
 /**
@@ -27,14 +28,9 @@ import org.polarsys.capella.basic.requirement.util.RequirementNaminghelper;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SystemFunctionalRequirementItemProvider
-	extends RequirementItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class SystemFunctionalRequirementItemProvider extends RequirementItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+		IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -74,27 +70,29 @@ public class SystemFunctionalRequirementItemProvider
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/SystemFunctionalRequirement")); //$NON-NLS-1$
 	}
 
-		/**
-	 * This returns the label text for the adapted class.
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @generated
 	 */
-  public String getTextGen(Object object) {
-	 String[] result = new String[] { null };
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
+	}
 
-    	//begin-capella-code
-		String label = ((SystemFunctionalRequirement)object).getName();
-		//end-capella-code
-	  
-	
-			result[0] = label == null || label.length() == 0 ?
-			//begin-capella-code
-			"[" + getString("_UI_SystemFunctionalRequirement_type") + "]" : label; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-			//end-capella-code
+	/**
+	 * This returns the label text for the adapted class.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTextGen(Object object) {
 
-		return result[0];
-
+		String label = ((SystemFunctionalRequirement) object).getName();
+		// begin-extension-code
+		return label == null || label.length() == 0 ? "[" + getString("_UI_SystemFunctionalRequirement_type") + "]" //$NON-NLS-1$//$NON-NLS-2$//$NON-NLS-3$
+				: label;
+		// end-extension-code
 	}
 
 	/**
@@ -104,12 +102,12 @@ public class SystemFunctionalRequirementItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-	  String[] result = new String[] { null };
-    String label = RequirementNaminghelper.getRequirementLabel((SystemFunctionalRequirement) object);
+		String[] result = new String[] { null };
+		String label = RequirementNaminghelper.getRequirementLabel((SystemFunctionalRequirement) object);
 
 		result[0] = label == null || label.length() == 0 ?
 		//begin-capella-code
-		"[" + getString("_UI_SystemFunctionalRequirement_type") + "]" : label; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				"[" + getString("_UI_SystemFunctionalRequirement_type") + "]" : label; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		//end-capella-code
 
 		return result[0];
@@ -138,15 +136,5 @@ public class SystemFunctionalRequirementItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected Command createInitializeCopyCommand(EditingDomain domain, EObject owner, Helper helper) {
-		return new SharedInitializeCopyCommand(domain, owner, helper);
 	}
 }

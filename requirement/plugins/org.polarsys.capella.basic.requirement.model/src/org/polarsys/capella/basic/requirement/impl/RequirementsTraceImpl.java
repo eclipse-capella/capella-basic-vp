@@ -1,5 +1,4 @@
 
-
 package org.polarsys.capella.basic.requirement.impl;
 
 import org.eclipse.core.runtime.IAdaptable;
@@ -30,11 +29,6 @@ import org.polarsys.capella.basic.requirement.RequirementsTrace;
  */
 public class RequirementsTraceImpl extends TraceImpl implements RequirementsTrace {
 
-
-
-
-
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,101 +50,31 @@ public class RequirementsTraceImpl extends TraceImpl implements RequirementsTrac
 		return RequirementPackage.Literals.REQUIREMENTS_TRACE;
 	}
 
-
-
-
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 
 	@Override
 	public TraceableElement getSource() {
 
+		return getSourceElement();
 
-    Object result = null;
-    // Helper that can get value for current feature.
-    IHelper helper = null;
-    // If current object is adaptable, ask it to get its IHelper.
-    if (this instanceof IAdaptable) {
-    	helper = (IHelper) ((IAdaptable) this).getAdapter(IHelper.class);
-    }
-    if (null == helper) {
-      // No helper found yet.
-      // Ask the platform to get the adapter 'IHelper.class' for current object.
-      IAdapterManager adapterManager = Platform.getAdapterManager();
-      helper = (IHelper) adapterManager.getAdapter(this, IHelper.class);
-    }
-    if (null == helper) {
-      EPackage package_l = eClass().getEPackage();
-      // Get the root package of the owner package.
-      EPackage rootPackage = org.polarsys.capella.common.mdsofa.common.helper.EcoreHelper.getRootPackage(package_l);
-      throw new org.polarsys.capella.common.model.helpers.HelperNotFoundException("No helper retrieved for nsURI " + rootPackage.getNsURI());  //$NON-NLS-1$
-    } 
-    // A helper is found, let's use it. 
-    EAnnotation annotation = RequirementPackage.Literals.REQUIREMENTS_TRACE__SOURCE.getEAnnotation(org.polarsys.capella.common.model.helpers.IModelConstants.HELPER_ANNOTATION_SOURCE);
-    result = helper.getValue(this, RequirementPackage.Literals.REQUIREMENTS_TRACE__SOURCE, annotation);
-		
-		try {
-			return (TraceableElement) result;
-	  } catch (ClassCastException exception) {
-	     exception.printStackTrace();
-	    return null;
-	  }
-		
 	}
-
-
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 
 	@Override
 	public TraceableElement getTarget() {
 
+		return getTargetElement();
 
-    Object result = null;
-    // Helper that can get value for current feature.
-    IHelper helper = null;
-    // If current object is adaptable, ask it to get its IHelper.
-    if (this instanceof IAdaptable) {
-    	helper = (IHelper) ((IAdaptable) this).getAdapter(IHelper.class);
-    }
-    if (null == helper) {
-      // No helper found yet.
-      // Ask the platform to get the adapter 'IHelper.class' for current object.
-      IAdapterManager adapterManager = Platform.getAdapterManager();
-      helper = (IHelper) adapterManager.getAdapter(this, IHelper.class);
-    }
-    if (null == helper) {
-      EPackage package_l = eClass().getEPackage();
-      // Get the root package of the owner package.
-      EPackage rootPackage = org.polarsys.capella.common.mdsofa.common.helper.EcoreHelper.getRootPackage(package_l);
-      throw new org.polarsys.capella.common.model.helpers.HelperNotFoundException("No helper retrieved for nsURI " + rootPackage.getNsURI());  //$NON-NLS-1$
-    } 
-    // A helper is found, let's use it. 
-    EAnnotation annotation = RequirementPackage.Literals.REQUIREMENTS_TRACE__TARGET.getEAnnotation(org.polarsys.capella.common.model.helpers.IModelConstants.HELPER_ANNOTATION_SOURCE);
-    result = helper.getValue(this, RequirementPackage.Literals.REQUIREMENTS_TRACE__TARGET, annotation);
-		
-		try {
-			return (TraceableElement) result;
-	  } catch (ClassCastException exception) {
-	     exception.printStackTrace();
-	    return null;
-	  }
-		
 	}
-
-
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,14 +84,13 @@ public class RequirementsTraceImpl extends TraceImpl implements RequirementsTrac
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RequirementPackage.REQUIREMENTS_TRACE__SOURCE:
-				return getSource();
-			case RequirementPackage.REQUIREMENTS_TRACE__TARGET:
-				return getTarget();
+		case RequirementPackage.REQUIREMENTS_TRACE__SOURCE:
+			return getSource();
+		case RequirementPackage.REQUIREMENTS_TRACE__TARGET:
+			return getTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,14 +100,12 @@ public class RequirementsTraceImpl extends TraceImpl implements RequirementsTrac
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RequirementPackage.REQUIREMENTS_TRACE__SOURCE:
-				return getSource() != null;
-			case RequirementPackage.REQUIREMENTS_TRACE__TARGET:
-				return getTarget() != null;
+		case RequirementPackage.REQUIREMENTS_TRACE__SOURCE:
+			return getSource() != null;
+		case RequirementPackage.REQUIREMENTS_TRACE__TARGET:
+			return getTarget() != null;
 		}
 		return super.eIsSet(featureID);
 	}
-
-
 
 } //RequirementsTraceImpl
