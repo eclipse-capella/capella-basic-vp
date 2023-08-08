@@ -1,5 +1,4 @@
 
-
 package org.polarsys.capella.basic.requirement;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -41,7 +40,7 @@ public interface RequirementPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "http://www.polarsys.org/capella/basic/requirement"; //$NON-NLS-1$
+	String eNS_URI = "http://www.polarsys.org/capella/basic/requirement"; //$NON-NLS-1$
 
 	/**
 	 * The package namespace name.
@@ -49,7 +48,7 @@ public interface RequirementPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_PREFIX = "org.polarsys.capella.basic.requirement";
+	String eNS_PREFIX = "org.polarsys.capella.basic.requirement";
 
 	/**
 	 * The singleton instance of the package.
@@ -2424,7 +2423,6 @@ public interface RequirementPackage extends EPackage {
 	 * @ordered
 	 */
 	int SYSTEM_USER_REQUIREMENT_FEATURE_COUNT = REQUIREMENT_FEATURE_COUNT + 0;
-
 
 	/**
 	 * Returns the meta object for class '{@link org.polarsys.capella.basic.requirement.RequirementsPkg <em>Requirements Pkg</em>}'.

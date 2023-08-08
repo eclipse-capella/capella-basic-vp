@@ -15,6 +15,6 @@
 
 <!--@generated-->
   <extension point="org.polarsys.capella.common.model.helpers.helper">
-    <helperImpl class="org.polarsys.capella.basic.requirement.helpers.RequirementPackageHelper" nsURI="http://www.polarsys.org/capella/basic/requirement"/>
+    <helperImpl class="org.polarsys.capella.basic.requirement.model.helpers.RequirementPackageHelper" nsURI="http://www.polarsys.org/capella/basic/requirement"/>
   </extension>
 </plugin>

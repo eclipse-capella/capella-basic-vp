@@ -1,12 +1,10 @@
 
-
 package org.polarsys.capella.basic.requirement;
 
 import org.polarsys.capella.common.data.modellingcore.TraceableElement;
 
 import org.polarsys.capella.core.data.capellacore.Trace;
 import org.polarsys.kitalpha.emde.model.ElementExtension;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -28,19 +26,14 @@ import org.polarsys.kitalpha.emde.model.ElementExtension;
  *        annotation="http://www.polarsys.org/kitalpha/ecore/documentation description='a specialized kind of Trace to indicate the relationship between two Requirements\r\n[source: Capella study]' usage\040guideline='used to keep track of links between Requirements, typically which requirement answers to which other requirement' used\040in\040levels='operational,system,logical,physical,epbs' usage\040examples='n/a' constraints='none' comment/notes='none' reference\040documentation='none'"
  *        annotation="http://www.polarsys.org/capella/MNoE/CapellaLike/Mapping UML/SysML\040semantic\040equivalences='' base\040metaclass\040in\040UML/SysML\040profile\040='uml::Dependency' explanation='none' constraints='none'"
  *        annotation="http://www.polarsys.org/capella/semantic"
- *        annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraint ExtendedElement='http://www.polarsys.org/capella/core/core/7.0.0#//Trace'"
  * @generated
  */
 
-public interface RequirementsTrace extends Trace, ElementExtension {
-
-
-
-
+public interface RequirementsTrace extends Trace {
 
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
@@ -53,15 +46,9 @@ public interface RequirementsTrace extends Trace, ElementExtension {
 
 	TraceableElement getSource();
 
-
-
-
-
-
-
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
@@ -73,9 +60,5 @@ public interface RequirementsTrace extends Trace, ElementExtension {
 	 */
 
 	TraceableElement getTarget();
-
-
-
-
 
 } // RequirementsTrace

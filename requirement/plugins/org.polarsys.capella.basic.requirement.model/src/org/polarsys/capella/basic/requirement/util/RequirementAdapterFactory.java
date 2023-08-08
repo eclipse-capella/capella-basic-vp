@@ -1,5 +1,4 @@
 
-
 package org.polarsys.capella.basic.requirement.util;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -72,7 +71,7 @@ public class RequirementAdapterFactory extends AdapterFactoryImpl {
 			return true;
 		}
 		if (object instanceof EObject) {
-			return ((EObject)object).eClass().getEPackage() == modelPackage;
+			return ((EObject) object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
 	}
@@ -83,105 +82,127 @@ public class RequirementAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RequirementSwitch<Adapter> modelSwitch =
-		new RequirementSwitch<Adapter>() {
-			@Override
-			public Adapter caseRequirementsPkg(RequirementsPkg object) {
-				return createRequirementsPkgAdapter();
-			}
-			@Override
-			public Adapter caseRequirementsTrace(RequirementsTrace object) {
-				return createRequirementsTraceAdapter();
-			}
-			@Override
-			public Adapter caseRequirement(Requirement object) {
-				return createRequirementAdapter();
-			}
-			@Override
-			public Adapter caseSystemFunctionalInterfaceRequirement(SystemFunctionalInterfaceRequirement object) {
-				return createSystemFunctionalInterfaceRequirementAdapter();
-			}
-			@Override
-			public Adapter caseSystemFunctionalRequirement(SystemFunctionalRequirement object) {
-				return createSystemFunctionalRequirementAdapter();
-			}
-			@Override
-			public Adapter caseSystemNonFunctionalInterfaceRequirement(SystemNonFunctionalInterfaceRequirement object) {
-				return createSystemNonFunctionalInterfaceRequirementAdapter();
-			}
-			@Override
-			public Adapter caseSystemNonFunctionalRequirement(SystemNonFunctionalRequirement object) {
-				return createSystemNonFunctionalRequirementAdapter();
-			}
-			@Override
-			public Adapter caseSystemUserRequirement(SystemUserRequirement object) {
-				return createSystemUserRequirementAdapter();
-			}
-			@Override
-			public Adapter caseElement(Element object) {
-				return createElementAdapter();
-			}
-			@Override
-			public Adapter caseExtensibleElement(ExtensibleElement object) {
-				return createExtensibleElementAdapter();
-			}
-			@Override
-			public Adapter caseModelElement(ModelElement object) {
-				return createModelElementAdapter();
-			}
-			@Override
-			public Adapter caseAbstractNamedElement(AbstractNamedElement object) {
-				return createAbstractNamedElementAdapter();
-			}
-			@Override
-			public Adapter caseTraceableElement(TraceableElement object) {
-				return createTraceableElementAdapter();
-			}
-			@Override
-			public Adapter casePublishableElement(PublishableElement object) {
-				return createPublishableElementAdapter();
-			}
-			@Override
-			public Adapter caseCapellaElement(CapellaElement object) {
-				return createCapellaElementAdapter();
-			}
-			@Override
-			public Adapter caseNamedElement(NamedElement object) {
-				return createNamedElementAdapter();
-			}
-			@Override
-			public Adapter caseNamespace(Namespace object) {
-				return createNamespaceAdapter();
-			}
-			@Override
-			public Adapter caseStructure(Structure object) {
-				return createStructureAdapter();
-			}
-			@Override
-			public Adapter caseElementExtension(ElementExtension object) {
-				return createElementExtensionAdapter();
-			}
-			@Override
-			public Adapter caseAbstractRelationship(AbstractRelationship object) {
-				return createAbstractRelationshipAdapter();
-			}
-			@Override
-			public Adapter caseRelationship(Relationship object) {
-				return createRelationshipAdapter();
-			}
-			@Override
-			public Adapter caseAbstractTrace(AbstractTrace object) {
-				return createAbstractTraceAdapter();
-			}
-			@Override
-			public Adapter caseTrace(Trace object) {
-				return createTraceAdapter();
-			}
-			@Override
-			public Adapter defaultCase(EObject object) {
-				return createEObjectAdapter();
-			}
-		};
+	protected RequirementSwitch<Adapter> modelSwitch = new RequirementSwitch<Adapter>() {
+		@Override
+		public Adapter caseRequirementsPkg(RequirementsPkg object) {
+			return createRequirementsPkgAdapter();
+		}
+
+		@Override
+		public Adapter caseRequirementsTrace(RequirementsTrace object) {
+			return createRequirementsTraceAdapter();
+		}
+
+		@Override
+		public Adapter caseRequirement(Requirement object) {
+			return createRequirementAdapter();
+		}
+
+		@Override
+		public Adapter caseSystemFunctionalInterfaceRequirement(SystemFunctionalInterfaceRequirement object) {
+			return createSystemFunctionalInterfaceRequirementAdapter();
+		}
+
+		@Override
+		public Adapter caseSystemFunctionalRequirement(SystemFunctionalRequirement object) {
+			return createSystemFunctionalRequirementAdapter();
+		}
+
+		@Override
+		public Adapter caseSystemNonFunctionalInterfaceRequirement(SystemNonFunctionalInterfaceRequirement object) {
+			return createSystemNonFunctionalInterfaceRequirementAdapter();
+		}
+
+		@Override
+		public Adapter caseSystemNonFunctionalRequirement(SystemNonFunctionalRequirement object) {
+			return createSystemNonFunctionalRequirementAdapter();
+		}
+
+		@Override
+		public Adapter caseSystemUserRequirement(SystemUserRequirement object) {
+			return createSystemUserRequirementAdapter();
+		}
+
+		@Override
+		public Adapter caseElement(Element object) {
+			return createElementAdapter();
+		}
+
+		@Override
+		public Adapter caseExtensibleElement(ExtensibleElement object) {
+			return createExtensibleElementAdapter();
+		}
+
+		@Override
+		public Adapter caseModelElement(ModelElement object) {
+			return createModelElementAdapter();
+		}
+
+		@Override
+		public Adapter caseAbstractNamedElement(AbstractNamedElement object) {
+			return createAbstractNamedElementAdapter();
+		}
+
+		@Override
+		public Adapter caseTraceableElement(TraceableElement object) {
+			return createTraceableElementAdapter();
+		}
+
+		@Override
+		public Adapter casePublishableElement(PublishableElement object) {
+			return createPublishableElementAdapter();
+		}
+
+		@Override
+		public Adapter caseCapellaElement(CapellaElement object) {
+			return createCapellaElementAdapter();
+		}
+
+		@Override
+		public Adapter caseNamedElement(NamedElement object) {
+			return createNamedElementAdapter();
+		}
+
+		@Override
+		public Adapter caseNamespace(Namespace object) {
+			return createNamespaceAdapter();
+		}
+
+		@Override
+		public Adapter caseStructure(Structure object) {
+			return createStructureAdapter();
+		}
+
+		@Override
+		public Adapter caseElementExtension(ElementExtension object) {
+			return createElementExtensionAdapter();
+		}
+
+		@Override
+		public Adapter caseAbstractRelationship(AbstractRelationship object) {
+			return createAbstractRelationshipAdapter();
+		}
+
+		@Override
+		public Adapter caseRelationship(Relationship object) {
+			return createRelationshipAdapter();
+		}
+
+		@Override
+		public Adapter caseAbstractTrace(AbstractTrace object) {
+			return createAbstractTraceAdapter();
+		}
+
+		@Override
+		public Adapter caseTrace(Trace object) {
+			return createTraceAdapter();
+		}
+
+		@Override
+		public Adapter defaultCase(EObject object) {
+			return createEObjectAdapter();
+		}
+	};
 
 	/**
 	 * Creates an adapter for the <code>target</code>.
@@ -193,9 +214,8 @@ public class RequirementAdapterFactory extends AdapterFactoryImpl {
 	 */
 	@Override
 	public Adapter createAdapter(Notifier target) {
-		return modelSwitch.doSwitch((EObject)target);
+		return modelSwitch.doSwitch((EObject) target);
 	}
-
 
 	/**
 	 * Creates a new adapter for an object of class '{@link org.polarsys.capella.basic.requirement.RequirementsPkg <em>Requirements Pkg</em>}'.

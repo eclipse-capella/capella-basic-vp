@@ -1,22 +1,12 @@
 package org.polarsys.capella.basic.requirement.helpers;
 
-import java.util.ArrayList;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-import org.polarsys.capella.common.data.modellingcore.AbstractTrace;
-import org.polarsys.capella.common.data.modellingcore.TraceableElement;
-import org.polarsys.capella.core.data.capellacore.CapellaElement;
+import org.polarsys.capella.basic.requirement.RequirementFactory;
+import org.polarsys.capella.basic.requirement.RequirementsPkg;
 import org.polarsys.capella.core.data.capellacore.Structure;
 import org.polarsys.capella.core.data.cs.BlockArchitecture;
-import org.polarsys.capella.core.data.helpers.capellacore.delegates.NamespaceHelper;
-import org.polarsys.capella.basic.requirement.Requirement;
-import org.polarsys.capella.basic.requirement.RequirementFactory;
-import org.polarsys.capella.basic.requirement.RequirementPackage;
-import org.polarsys.capella.basic.requirement.RequirementsPkg;
-import org.polarsys.capella.basic.requirement.RequirementsTrace;
 import org.polarsys.kitalpha.emde.model.ElementExtension;
 
 /**
@@ -24,47 +14,7 @@ import org.polarsys.kitalpha.emde.model.ElementExtension;
  */ 
 public class RequirementHelper {
 
-  private static final RequirementHelper instance = new RequirementHelper();
   private static String REQUIREMENTSPKG_DEFAULT_NAME = "Requirements";
-
-  /**
-   * @generated
-   */
-  public static RequirementHelper getInstance() {
-    return instance;
-  }
-
-  /**
-   * @generated
-   */
-  public Object doSwitch(Requirement element, EStructuralFeature feature) {
-    Object ret = null;
-
-    if (feature.equals(RequirementPackage.Literals.REQUIREMENT__RELATED_CAPELLA_ELEMENTS)) {
-      ret = getRelatedCapellaElements(element);
-    }
-
-    // no helper found... searching in super classes...
-    if (null == ret) {
-      // delegate to parent helper
-      ret = NamespaceHelper.getInstance().doSwitch(element, feature);
-    }
-
-    return ret;
-  }
-
-  protected List<CapellaElement> getRelatedCapellaElements(Requirement element) {
-    List<CapellaElement> ret = new ArrayList<>();
-    for (AbstractTrace trace : element.getIncomingTraces()) {
-      if (trace instanceof RequirementsTrace) {
-        TraceableElement elt = ((RequirementsTrace) trace).getSourceElement();
-        if (elt instanceof CapellaElement) {
-          ret.add((CapellaElement) elt);
-        }
-      }
-    }
-    return ret;
-  }
 
   /**
    * Retrieve the Requirement pkg from the given architecture
@@ -74,7 +24,8 @@ public class RequirementHelper {
     if (requirementPkgs.isEmpty() && create) {
       if (create) {
         // to externalize when constants in skeleton will be into helpers.
-        RequirementsPkg pkg = RequirementFactory.eINSTANCE.createRequirementsPkg(REQUIREMENTSPKG_DEFAULT_NAME); // $NON-NLS-1$
+        RequirementsPkg pkg = RequirementFactory.eINSTANCE.createRequirementsPkg(); // $NON-NLS-1$
+        pkg.setName(REQUIREMENTSPKG_DEFAULT_NAME);
         architecture.getOwnedExtensions().add(pkg);
       } else {
         return null;

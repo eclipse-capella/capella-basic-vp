@@ -17,7 +17,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui.ide,
  org.polarsys.capella.core.data.gen,
  org.polarsys.capella.common.ui,
- org.polarsys.capella.basic.requirement,
  org.eclipse.sirius,
  org.eclipse.sirius.diagram.sequence.ui,
  org.eclipse.sirius.ext.base,
@@ -27,7 +26,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.polarsys.capella.core.model.handler,
  org.polarsys.capella.basic.requirement.business.queries,
  org.polarsys.capella.core.data.business.queries,
- org.polarsys.capella.basic.requirement.model;bundle-version="7.0.0",
+ org.polarsys.capella.basic.requirement.model,
  org.polarsys.capella.core.validation
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.polarsys.capella.basic.requirement.validation

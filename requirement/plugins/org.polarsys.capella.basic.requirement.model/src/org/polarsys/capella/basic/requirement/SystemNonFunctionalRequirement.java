@@ -1,8 +1,5 @@
 
-
 package org.polarsys.capella.basic.requirement;
-
-
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +17,5 @@ package org.polarsys.capella.basic.requirement;
  */
 
 public interface SystemNonFunctionalRequirement extends Requirement {
-
-
 
 } // SystemNonFunctionalRequirement

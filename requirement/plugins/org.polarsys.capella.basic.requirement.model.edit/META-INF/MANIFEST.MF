@@ -2,16 +2,16 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.capella.basic.requirement.model.edit;singleton:=true
-Automatic-Module-Name: org.polarsys.capella.basic.requirement.edit
+Automatic-Module-Name: org.polarsys.capella.basic.requirement.model.edit
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.polarsys.capella.basic.requirement.provider.RequirementEditPlugin$Implementation
+Bundle-Activator: org.polarsys.capella.basic.requirement.model.provider.RequirementEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.polarsys.capella.basic.requirement.provider
+Export-Package: org.polarsys.capella.basic.requirement.model.provider,
+ org.polarsys.capella.basic.requirement.provider
 Require-Bundle: org.eclipse.core.runtime,
- org.polarsys.capella.basic.requirement;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.polarsys.capella.common.data.activity.gen;visibility:=reexport,
  org.polarsys.capella.common.data.activity.gen.edit;visibility:=reexport,
@@ -48,5 +48,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.polarsys.capella.common.model,
  org.eclipse.core.commands,
  org.eclipse.emf.common,
- org.polarsys.capella.basic.requirement.model;bundle-version="7.0.0"
+ org.polarsys.capella.basic.requirement.model;bundle-version="7.0.0";visibility:=reexport,
+ org.polarsys.capella.core.data.requirement.properties;visibility:=reexport
 Bundle-ActivationPolicy: lazy

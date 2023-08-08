@@ -1,5 +1,4 @@
 
-
 package org.polarsys.capella.basic.requirement;
 
 import org.eclipse.emf.common.util.EList;
@@ -7,7 +6,6 @@ import org.eclipse.emf.common.util.EList;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
 import org.polarsys.capella.core.data.capellacore.Namespace;
 import org.polarsys.kitalpha.emde.model.ElementExtension;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -34,19 +32,14 @@ import org.polarsys.kitalpha.emde.model.ElementExtension;
  *        annotation="http://www.polarsys.org/capella/2007/UML2Mapping metaclass='Class' stereotype='eng.Requirement'"
  *        annotation="http://www.polarsys.org/kitalpha/ecore/documentation description='a capability or condition that must (or should) be satisfied\r\n[source: SysML glossary for SysML v1.0]' usage\040guideline='n/a' used\040in\040levels='operational,system,logical,physical,epbs' usage\040examples='n/a' constraints='none' comment/notes='none' reference\040documentation='none'"
  *        annotation="http://www.polarsys.org/capella/MNoE/CapellaLike/Mapping UML/SysML\040semantic\040equivalences='' base\040metaclass\040in\040UML/SysML\040profile\040='' explanation='SysML::Requirements::Requirement' constraints='none'"
- *        annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraint ExtendedElement='http://www.polarsys.org/capella/core/core/7.0.0#//Namespace'"
  * @generated
  */
 
-public interface Requirement extends Namespace, ElementExtension {
-
-
-
-
+public interface Requirement extends Namespace {
 
 	/**
 	 * Returns the value of the '<em><b>Is Obsolete</b></em>' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Obsolete</em>' attribute.
@@ -60,12 +53,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	boolean isIsObsolete();
 
-
-
-
 	/**
 	 * Sets the value of the '{@link org.polarsys.capella.basic.requirement.Requirement#isIsObsolete <em>Is Obsolete</em>}' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is Obsolete</em>' attribute.
@@ -75,15 +65,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	void setIsObsolete(boolean value);
 
-
-
-
-
-
-
 	/**
 	 * Returns the value of the '<em><b>Requirement Id</b></em>' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Requirement Id</em>' attribute.
@@ -98,12 +82,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	String getRequirementId();
 
-
-
-
 	/**
 	 * Sets the value of the '{@link org.polarsys.capella.basic.requirement.Requirement#getRequirementId <em>Requirement Id</em>}' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Requirement Id</em>' attribute.
@@ -113,15 +94,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	void setRequirementId(String value);
 
-
-
-
-
-
-
 	/**
 	 * Returns the value of the '<em><b>Additional Information</b></em>' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Additional Information</em>' attribute.
@@ -136,12 +111,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	String getAdditionalInformation();
 
-
-
-
 	/**
 	 * Sets the value of the '{@link org.polarsys.capella.basic.requirement.Requirement#getAdditionalInformation <em>Additional Information</em>}' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Additional Information</em>' attribute.
@@ -151,15 +123,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	void setAdditionalInformation(String value);
 
-
-
-
-
-
-
 	/**
 	 * Returns the value of the '<em><b>Verification Method</b></em>' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Verification Method</em>' attribute.
@@ -174,12 +140,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	String getVerificationMethod();
 
-
-
-
 	/**
 	 * Sets the value of the '{@link org.polarsys.capella.basic.requirement.Requirement#getVerificationMethod <em>Verification Method</em>}' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Verification Method</em>' attribute.
@@ -189,15 +152,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	void setVerificationMethod(String value);
 
-
-
-
-
-
-
 	/**
 	 * Returns the value of the '<em><b>Verification Phase</b></em>' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Verification Phase</em>' attribute.
@@ -212,12 +169,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	String getVerificationPhase();
 
-
-
-
 	/**
 	 * Sets the value of the '{@link org.polarsys.capella.basic.requirement.Requirement#getVerificationPhase <em>Verification Phase</em>}' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Verification Phase</em>' attribute.
@@ -227,15 +181,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	void setVerificationPhase(String value);
 
-
-
-
-
-
-
 	/**
 	 * Returns the value of the '<em><b>Implementation Version</b></em>' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Implementation Version</em>' attribute.
@@ -250,12 +198,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	String getImplementationVersion();
 
-
-
-
 	/**
 	 * Sets the value of the '{@link org.polarsys.capella.basic.requirement.Requirement#getImplementationVersion <em>Implementation Version</em>}' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Implementation Version</em>' attribute.
@@ -265,15 +210,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	void setImplementationVersion(String value);
 
-
-
-
-
-
-
 	/**
 	 * Returns the value of the '<em><b>Feature</b></em>' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Feature</em>' attribute.
@@ -288,12 +227,9 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	String getFeature();
 
-
-
-
 	/**
 	 * Sets the value of the '{@link org.polarsys.capella.basic.requirement.Requirement#getFeature <em>Feature</em>}' attribute.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature</em>' attribute.
@@ -303,16 +239,10 @@ public interface Requirement extends Namespace, ElementExtension {
 
 	void setFeature(String value);
 
-
-
-
-
-
-
 	/**
 	 * Returns the value of the '<em><b>Related Capella Elements</b></em>' reference list.
 	 * The list contents are of type {@link org.polarsys.capella.core.data.capellacore.CapellaElement}.
-
+	
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Related Capella Elements</em>' reference list.
@@ -325,9 +255,5 @@ public interface Requirement extends Namespace, ElementExtension {
 	 */
 
 	EList<CapellaElement> getRelatedCapellaElements();
-
-
-
-
 
 } // Requirement
