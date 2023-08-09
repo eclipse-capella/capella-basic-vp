@@ -17,10 +17,7 @@
    <extension
          point="org.polarsys.capella.core.data.migration.migrationContributions">
       <migrationContribution
-            class="org.polarsys.capella.basic.requirement.migration.contribution.FilteringMigrationContribution">
-      </migrationContribution>
-      <migrationContribution
-            class="org.polarsys.capella.basic.requirement.migration.contribution.ActivatedFilterMigrationContribution">
+            class="org.polarsys.capella.basic.requirement.migration.contribution.RequirementMigrationContribution">
       </migrationContribution>
    </extension>
 
