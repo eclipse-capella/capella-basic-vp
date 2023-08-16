@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2019 THALES GLOBAL SERVICES.
+ * Copyright (c) 2019, 2020 THALES GLOBAL SERVICES.
  * 
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -13,6 +13,7 @@
 package org.polarsys.capella.basic.requirement.tests.ju;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.polarsys.capella.test.framework.api.BasicTestArtefact;
@@ -20,16 +21,25 @@ import org.polarsys.capella.test.framework.api.BasicTestSuite;
 
 import junit.framework.Test;
 
-public class MainTestSuite extends BasicTestSuite {
+public class RequirementsTableTestSuite extends BasicTestSuite {
 
   public static Test suite() {
-    return new MainTestSuite();
+    return new RequirementsTableTestSuite();
+  }
+
+  @Override
+  public List<String> getRequiredTestModels() {
+    return Arrays.asList("CrossTable-OA");
   }
 
   @Override
   protected List<BasicTestArtefact> getTests() {
-    List<BasicTestArtefact> testCases = new ArrayList<>();
-    return testCases;
+    ArrayList<BasicTestArtefact> tests = new ArrayList<BasicTestArtefact>();
+    tests.add(new CrossTableOATestCase());
+    tests.add(new RequirementsTableTestCase());
+    tests.add(new CapellaElement_OutgoingRequirement());
+    tests.add(new Rule_I_11());
+    return tests;
   }
 
 }
