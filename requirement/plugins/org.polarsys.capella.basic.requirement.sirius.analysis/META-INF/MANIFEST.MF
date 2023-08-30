@@ -15,7 +15,8 @@ Require-Bundle: org.eclipse.ui,
  org.polarsys.capella.core.model.helpers,
  org.eclipse.draw2d,
  org.eclipse.sirius.diagram.ui,
- org.polarsys.capella.basic.requirement.model;bundle-version="1.0.0"
+ org.polarsys.capella.basic.requirement.model;bundle-version="1.0.0",
+ org.polarsys.capella.core.sirius.analysis
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-Localization: plugin
