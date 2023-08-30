@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<vp:Viewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sirius="http://www.polarsys.org/kitalpha/ad/sirius/1.0.0" xmlns:vp="http://www.polarsys.org/kitalpha/ad/viewpoint/1.0.0" name="Basic Requirement" description="" id="org.polarsys.capella.basic.requirement" vpid="_MB6moB21EeaZT-H7SsDabc" version="7.0.0">
+  <ruleSet vpid="_oNyM8VQPEeas5ZJk-jBAEF" target="_MB6moB21EeaZT-H7SsDabc"/>
+  <serviceSet name="" description="" id="" vpid="_oNyM8FQPEeas5ZJk-jBAEF" target="_MB6moB21EeaZT-H7SsDabc"/>
+  <metamodel>
+    <models href="../../org.polarsys.capella.basic.requirement.model/model/requirement.ecore#/"/>
+  </metamodel>
+  <representation>
+    <representations xsi:type="sirius:SiriusRepresentation">
+      <odesign href="../../org.polarsys.capella.basic.requirement.sirius.analysis/description/Requirement.odesign#/"/>
+    </representations>
+  </representation>
+</vp:Viewpoint>

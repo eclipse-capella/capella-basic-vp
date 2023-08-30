@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+
+
+<plugin>
+
+   
+<!--@generated-->
+  <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Requirement -->
+      <package class="org.polarsys.capella.basic.requirement.RequirementPackage" genModel="model/Requirement.genmodel" uri="http://www.polarsys.org/capella/basic/requirement"/>
+   </extension>
+
+
+<!--@generated-->
+  <extension point="org.polarsys.capella.common.model.helpers.helper">
+    <helperImpl class="org.polarsys.capella.basic.requirement.helpers.RequirementPackageHelper" nsURI="http://www.polarsys.org/capella/basic/requirement"/>
+  </extension>
+</plugin>

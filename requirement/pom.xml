@@ -22,7 +22,7 @@
 	
 	<name>Capella Requirement Addon</name>
 	<groupId>org.polarsys</groupId>
-	<artifactId>org.polarsys.capella.requirement</artifactId>
+	<artifactId>org.polarsys.capella.basic.requirement</artifactId>
 	
 	<version>7.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -43,8 +43,8 @@
 	<modules>
 		<module>features</module>
 		<module>plugins</module>
-		<module>tests/org.polarsys.capella.requirement.tests.ju</module>
-		<module>releng/org.polarsys.capella.requirement.site</module>
+		<module>tests/org.polarsys.capella.basic.requirement.tests.ju</module>
+		<module>releng/org.polarsys.capella.basic.requirement.viewpoint.site</module>
 	</modules>
 
 	<build>
@@ -83,9 +83,9 @@
 					<target>
 						<artifact>
 							<groupId>org.polarsys</groupId>
-							<artifactId>org.polarsys.capella.requirement</artifactId>
+							<artifactId>org.polarsys.capella.basic.requirement</artifactId>
 							<version>7.0.0-SNAPSHOT</version>
-							<classifier>releng/org.polarsys.capella.requirement.update/capella.target-definition</classifier>
+							<classifier>releng/org.polarsys.capella.basic.requirement.update/capella.target-definition</classifier>
 						</artifact>
 					</target>
 					<environments>
@@ -252,7 +252,7 @@
 									<delete includeemptydirs="true">
 										<fileset
 											dir="${project.build.directory}/${packagedAddonName}/eclipse/features"
-											includes="**/org.polarsys.capella.requirement.tests*/**" />													  
+											includes="**/org.polarsys.capella.basic.requirement.tests*/**" />
 									</delete>
 									
 									
@@ -260,7 +260,7 @@
 									<delete>
 										<fileset
 											dir="${project.build.directory}/${packagedAddonName}/eclipse/plugins"
-											includes="org.polarsys.capella.requirement.tests.ju*" />
+											includes="org.polarsys.capella.basic.requirement.tests.ju*" />
 									</delete>
 									
 									<zip
