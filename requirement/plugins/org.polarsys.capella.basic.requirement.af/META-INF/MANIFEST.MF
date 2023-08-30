@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.polarsys.capella.basic.requirement.af;singleton:=true
+Require-Bundle: org.polarsys.kitalpha.ad.viewpoint.ui,
+ org.polarsys.capella.basic.requirement.sirius.analysis,
+ org.polarsys.capella.basic.requirement,
+ org.polarsys.capella.basic.requirement.model;bundle-version="7.0.0"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-Version: 7.0.0.qualifier
+Bundle-Localization: plugin
+

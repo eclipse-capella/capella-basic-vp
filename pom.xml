@@ -26,12 +26,12 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<tycho-version>2.2.0</tycho-version>
-		<tycho-extras-version>2.2.0</tycho-extras-version>
+		<tycho-version>2.7.5</tycho-version>
+		<tycho-extras-version>2.7.5</tycho-extras-version>
 		<tycho.scmUrl>scm:git:http://git.polarsys.org/c/capella/capella-basic-vp.git</tycho.scmUrl>
 		<antrun-version>3.0.0</antrun-version>
 		<jacoco-version>0.8.6</jacoco-version>
-		<java-version>JavaSE-1.8</java-version>
+		<java-version>JavaSE-17</java-version>
 		
 		<!-- for junit -->
 		<capella-product-id>org.polarsys.capella.core.platform.sirius.ui.perspective.product</capella-product-id>
@@ -66,7 +66,7 @@
 				
 				<module>requirement/features</module>
 				<module>requirement/plugins</module>
-				<module>requirement/tests/org.polarsys.capella.requirement.tests.ju</module>
+				<module>requirement/tests/org.polarsys.capella.basic.requirement.tests.ju</module>
 				<module>releng/org.polarsys.capella.basic.requirement.viewpoint.site</module>
 			</modules>
 		</profile>

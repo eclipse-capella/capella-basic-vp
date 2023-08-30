@@ -18,7 +18,7 @@
 	
 	
 	<groupId>org.polarsys</groupId>
-	<artifactId>org.polarsys.capella.requirement.bundles</artifactId>
+	<artifactId>org.polarsys.capella.basic.requirement.bundles</artifactId>
 	<version>7.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -32,20 +32,20 @@
 	<modules>
 	
 		<!-- Plugins -->
-		<module>org.polarsys.capella.requirement.af</module>
-		<module>org.polarsys.capella.requirement.business.queries</module>
-		<module>org.polarsys.capella.requirement.doc</module>
-		<module>org.polarsys.capella.requirement.menu.contribution</module>
-		<module>org.polarsys.capella.requirement</module>
-		<module>org.polarsys.capella.requirement.model</module>
-		<module>org.polarsys.capella.requirement.migration</module>
-		<module>org.polarsys.capella.requirement.model.cdo</module>
-		<module>org.polarsys.capella.requirement.model.edit</module>
-		<module>org.polarsys.capella.requirement.properties</module>
-		<module>org.polarsys.capella.requirement.semantic.queries</module>
-		<module>org.polarsys.capella.requirement.sirius.analysis</module>
-		<module>org.polarsys.capella.requirement.sirius.ui</module>
-		<module>org.polarsys.capella.requirement.tools</module>
+		<module>org.polarsys.capella.basic.requirement.af</module>
+		<module>org.polarsys.capella.basic.requirement.business.queries</module>
+		<module>org.polarsys.capella.basic.requirement.doc</module>
+		<module>org.polarsys.capella.basic.requirement.menu.contribution</module>
+		<module>org.polarsys.capella.basic.requirement</module>
+		<module>org.polarsys.capella.basic.requirement.model</module>
+		<module>org.polarsys.capella.basic.requirement.migration</module>
+		<module>org.polarsys.capella.basic.requirement.model.cdo</module>
+		<module>org.polarsys.capella.basic.requirement.model.edit</module>
+		<module>org.polarsys.capella.basic.requirement.properties</module>
+		<module>org.polarsys.capella.basic.requirement.semantic.queries</module>
+		<module>org.polarsys.capella.basic.requirement.sirius.analysis</module>
+		<module>org.polarsys.capella.basic.requirement.sirius.ui</module>
+		<module>org.polarsys.capella.basic.requirement.tools</module>
 	</modules>
 </project>
 

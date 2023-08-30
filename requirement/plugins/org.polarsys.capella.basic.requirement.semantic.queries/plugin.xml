@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+  Copyright (c) 2018 THALES GLOBAL SERVICES.
+  
+  This program and the accompanying materials are made available under the
+  terms of the Eclipse Public License 2.0 which is available at
+  http://www.eclipse.org/legal/epl-2.0
+  
+  SPDX-License-Identifier: EPL-2.0
+  
+  Contributors:
+       Thales - initial API and implementation
+-->
+<plugin>
+   <extension
+         point="org.polarsys.capella.common.ui.toolkit.browser.contentProviderCategory">
+      <category
+            id="org.polarsys.capella.basic.requirement.semantic.queries.SystemComponent_requirements"
+            isTopLevel="true"
+            name="Requirements">
+         <availableForType
+               class="org.polarsys.capella.core.data.capellacore.CapellaElement">
+         </availableForType>
+         <targetBrowserId
+               id="ReferencedElementBrowser">
+         </targetBrowserId>
+         <categoryQuery>
+            <basicQuery
+                  class="org.polarsys.capella.basic.requirement.semantic.queries.CapellaElement_requirement">
+            </basicQuery>
+         </categoryQuery>
+      </category>
+      <category
+	          id="org.polarsys.capella.basic.requirement.semantic.queries..RequirementTracedElements"
+	          isTopLevel="true"
+	          name="Traced Elements">
+	       <availableForType
+	             class="org.polarsys.capella.basic.requirement.Requirement">
+	       </availableForType>
+	       <categoryQuery>
+	          <basicQuery
+	                class="org.polarsys.capella.basic.requirement.semantic.queries.RequirementTracedElements"></basicQuery></categoryQuery>
+	       <targetBrowserId
+	             id="ReferencingElementBrowser">
+	       </targetBrowserId>
+	   </category>
+  	</extension>
+</plugin>

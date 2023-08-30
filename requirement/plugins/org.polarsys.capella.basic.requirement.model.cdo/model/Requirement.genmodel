@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.polarsys.capella.basic.requirement.cdo/src" modelPluginID="org.polarsys.capella.basic.requirement.cdo"
+    modelName="Requirement" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic" complianceLevel="8.0"
+    copyrightFields="false" optimizedHasChildren="true" runtimeVersion="2.11" usedGenPackages="platform:/plugin/org.polarsys.capella.common.data.activity.gen.cdo/model/Activity.genmodel#//activity platform:/plugin/org.polarsys.capella.common.data.behavior.gen.cdo/model/Behavior.genmodel#//behavior platform:/plugin/org.polarsys.capella.core.data.gen.cdo/model/CapellaModeller.genmodel#//capellacore platform:/plugin/org.polarsys.capella.core.data.gen.cdo/model/CapellaModeller.genmodel#//oa platform:/plugin/org.polarsys.capella.core.data.gen.cdo/model/CapellaModeller.genmodel#//ctx platform:/plugin/org.polarsys.capella.core.data.gen.cdo/model/CapellaModeller.genmodel#//la platform:/plugin/org.polarsys.capella.core.data.gen.cdo/model/CapellaModeller.genmodel#//pa platform:/plugin/org.polarsys.capella.core.data.gen.cdo/model/CapellaModeller.genmodel#//epbs platform:/plugin/org.polarsys.capella.core.data.gen.cdo/model/CapellaModeller.genmodel#//capellacommon platform:/plugin/org.polarsys.capella.core.data.gen.cdo/model/CapellaModeller.genmodel#//information platform:/plugin/org.polarsys.capella.core.data.gen.cdo/model/CapellaModeller.genmodel#//cs platform:/plugin/org.polarsys.capella.core.data.gen.cdo/model/CapellaModeller.genmodel#//fa platform:/plugin/org.polarsys.capella.core.data.gen.cdo/model/CapellaModeller.genmodel#//interaction platform:/plugin/org.polarsys.kitalpha.emde.model.cdo/model/eMDE.genmodel#//emde platform:/plugin/org.polarsys.capella.common.data.core.gen.cdo/model/ModellingCore.genmodel#//modellingcore">
+  <foreignModel>Requirement.ecore</foreignModel>
+  <modelPluginVariables>org.polarsys.capella.core.data.helpers</modelPluginVariables>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.menu.contributions</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.menu.dynamic</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.ui.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.sharedmodel.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.requirement.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.common.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.core.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.cs.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.ctx.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.epbs.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.fa.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.information.communication.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.information.datatype.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.information.datavalue.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.information.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.interaction.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.la.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.modeller.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.oa.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.pa.deployment.properties</editPluginVariables>
+  <editPluginVariables>org.polarsys.capella.core.data.pa.properties</editPluginVariables>
+  <genPackages prefix="Requirement" basePackage="org.polarsys.capella" disposableProviderFactory="true"
+      ecorePackage="../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#/">
+    <genClasses ecoreClass="../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//RequirementsPkg">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//RequirementsPkg/additionalInformation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//RequirementsPkg/level"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//RequirementsPkg/ownedRequirements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//RequirementsPkg/ownedRequirementPkgs"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//RequirementsTrace">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//RequirementsTrace/source"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//RequirementsTrace/target"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//Requirement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//Requirement/isObsolete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//Requirement/requirementId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//Requirement/additionalInformation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//Requirement/verificationMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//Requirement/verificationPhase"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//Requirement/implementationVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//Requirement/feature"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//Requirement/relatedCapellaElements"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//SystemFunctionalInterfaceRequirement"/>
+    <genClasses ecoreClass="../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//SystemFunctionalRequirement"/>
+    <genClasses ecoreClass="../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//SystemNonFunctionalInterfaceRequirement"/>
+    <genClasses ecoreClass="../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//SystemNonFunctionalRequirement"/>
+    <genClasses ecoreClass="../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#//SystemUserRequirement"/>
+  </genPackages>
+</genmodel:GenModel>

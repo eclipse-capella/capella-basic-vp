@@ -17,20 +17,20 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.polarsys</groupId>
-	<artifactId>org.polarsys.capella.requirement.features</artifactId>
+	<artifactId>org.polarsys.capella.basic.requirement.features</artifactId>
 	<version>7.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<parent>
 		<groupId>org.polarsys</groupId>
-		<artifactId>org.polarsys.capella.requirement</artifactId>
+		<artifactId>org.polarsys.capella.basic.requirement</artifactId>
 		<version>7.0.0-SNAPSHOT</version>
 		<relativePath>../</relativePath>
 	</parent>
 
 	<modules>
-		<module>org.polarsys.capella.requirement.feature</module>
-		<module>org.polarsys.capella.requirement.cdo.feature</module>
-		<module>org.polarsys.capella.requirement.tests.feature</module>
+		<module>org.polarsys.capella.basic.requirement.feature</module>
+		<module>org.polarsys.capella.basic.requirement.cdo.feature</module>
+		<module>org.polarsys.capella.basic.requirement.tests.feature</module>
 	</modules>
 </project>

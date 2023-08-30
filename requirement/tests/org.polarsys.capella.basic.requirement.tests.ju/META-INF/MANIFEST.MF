@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.polarsys.capella.basic.requirement.tests.ju
+Bundle-Version: 7.0.0.qualifier
+Bundle-Activator: org.polarsys.capella.basic.requirement.tests.ju.activator.Activator
+Require-Bundle: org.polarsys.capella.basic.requirement.model,
+ org.eclipse.emf.diffmerge.ui,
+ org.polarsys.capella.test.framework,
+ org.eclipse.emf.common,
+ org.polarsys.capella.basic.requirement.sirius.analysis,
+ org.polarsys.capella.basic.requirement.business.queries,
+ org.polarsys.capella.core.data.gen
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName

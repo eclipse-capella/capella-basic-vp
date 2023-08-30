@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+  Copyright (c) 2018 THALES GLOBAL SERVICES.
+  
+  This program and the accompanying materials are made available under the
+  terms of the Eclipse Public License 2.0 which is available at
+  http://www.eclipse.org/legal/epl-2.0
+  
+  SPDX-License-Identifier: EPL-2.0
+  
+  Contributors:
+       Thales - initial API and implementation
+-->
+<plugin>
+    <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="org.polarsys.capella.basic.requirement.sirius.ui.actions.RequirementManagerWizard.expression">
+            <with
+                  variable="selection">
+                  <iterate
+                        ifEmpty="false">
+                    <test
+		                  forcePluginActivation="true"
+		                  property="org.polarsys.capella.basic.requirement.sirius.ui.actionMode"
+		                  value="requirementManagerWizard">
+		            </test>
+                  </iterate>
+            </with>
+      </definition>
+      </extension>
+      <extension point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.polarsys.capella.core.wizards?after=additions">
+         <command commandId="org.polarsys.capella.basic.requirement.sirius.ui.actions.RequirementManagerWizardAction" >
+         <visibleWhen
+                       checkEnabled="false">
+                       <reference
+                                 definitionId="org.polarsys.capella.basic.requirement.sirius.ui.actions.RequirementManagerWizard.expression">
+                           </reference>
+                 </visibleWhen>
+        </command> 
+        
+        
+      </menuContribution>
+      </extension>
+      <extension point="org.eclipse.ui.commands">
+      <command
+         	   categoryId="org.polarsys.capella.core.wizards"
+               defaultHandler="org.polarsys.capella.basic.requirement.sirius.ui.actions.RequirementManagerWizardAction"
+               id="org.polarsys.capella.basic.requirement.sirius.ui.actions.RequirementManagerWizardAction"
+               name="%RequirementManager"
+               >
+      </command>
+      </extension>
+       <extension
+         point="org.polarsys.capella.core.preferences.capellaPreferences">
+         <category
+            description="Capella Wizards"
+            name="Wizards">
+         <item
+               enableByDefault="true"
+               id="org.polarsys.capella.basic.requirement.sirius.ui.actions.RequirementManagerWizardAction"
+               name="Requirement Manager">
+         </item>
+      </category>
+      </extension>
+      <extension
+         point="org.eclipse.ui.commandImages">
+         <image
+            commandId="org.polarsys.capella.basic.requirement.sirius.ui.actions.RequirementManagerWizardAction"
+               icon="platform:/plugin/org.polarsys.capella.core.ui.resources/icons/full/obj16/capella_edit.gif">
+      </image>
+      </extension>
+      <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+          <propertyTester
+               class="org.polarsys.capella.basic.requirement.sirius.ui.properties.RequirementPropertyTester"
+               id="org.polarsys.capella.basic.requirement.sirius.ui.actionMode"
+               namespace="org.polarsys.capella.basic.requirement.sirius.ui"
+               properties="actionMode"
+               type="org.polarsys.capella.common.data.modellingcore.ModelElement">
+         </propertyTester>
+         <propertyTester
+               class="org.polarsys.capella.basic.requirement.sirius.ui.properties.RequirementPropertyTester"
+               id="org.polarsys.capella.basic.requirement.sirius.ui.actionMode2"
+               namespace="org.polarsys.capella.basic.requirement.sirius.ui"
+               properties="graphicalActionMode"
+               type="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+         </propertyTester>
+      </extension>
+</plugin>
