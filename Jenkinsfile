@@ -3,10 +3,10 @@ pipeline {
   
   tools {
         maven 'apache-maven-latest'
-        jdk 'openjdk-jdk14-latest'
+        jdk 'openjdk-jdk17-latest'
   }
   environment {
-		JACOCO_VERSION = "0.8.6"
+		JACOCO_VERSION = "0.8.8"
 		MVN_QUALITY_PROFILES = '-Pfull'
 		JACOCO_EXEC_FILE_PATH = '${WORKSPACE}/jacoco.exec'
   }
@@ -72,27 +72,6 @@ pipeline {
         junit allowEmptyResults: true, testResults: '*.xml,**/target/surefire-reports/*.xml'
         sh "mvn -Djacoco.dataFile=$JACOCO_EXEC_FILE_PATH org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:report $MVN_QUALITY_PROFILES -e -f pom.xml"
 	  }
-    }
-    stage('Perform Sonar analysis') {
-      environment {
-          PROJECT_NAME = 'capella-basic-vp'
-          SONARCLOUD_TOKEN = credentials('sonar-token-capella-basic-vp')
-          SONAR_PROJECT_KEY = 'eclipse_capella-basic-vp'
-      }
-      steps {
-        withEnv(['MAVEN_OPTS=-Xmx4g']) {
-          script {
-            def jacocoParameters = "-Dsonar.coverage.jacoco.xmlReportPaths='target/site/jacoco/jacoco.xml,target/surefire-reports/TEST*.xml' -Dsonar.java.coveragePlugin=jacoco -Dsonar.core.codeCoveragePlugin=jacoco "
-            def sonarExclusions = "-Dsonar.exclusions='**/generated/**/*.java,**/src-gen/**/*.java' "
-            def javaVersion = "8"
-            def sonarCommon = "sonar:sonar -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.organization=eclipse -Dsonar.host.url=https://sonarcloud.io -Dsonar.login='$SONARCLOUD_TOKEN' -Dsonar.skipDesign=true -Dsonar.dynamic=reuseReports -Dsonar.java.source=${javaVersion} -Dsonar.scanner.force-deprecated-java-version=true "
-            def sonarBranchAnalysis = "-Dsonar.branch.name=${BRANCH_NAME}"
-            def sonarPullRequestAnalysis = ("${BRANCH_NAME}".contains('PR-') ? "-Dsonar.pullrequest.provider=GitHub -Dsonar.pullrequest.github.repository=eclipse/$PROJECT_NAME -Dsonar.pullrequest.key=${CHANGE_ID} -Dsonar.pullrequest.branch=${CHANGE_BRANCH}" : "" )
-            def sonar = sonarCommon + jacocoParameters + sonarExclusions + ("${BRANCH_NAME}".contains('PR-') ? sonarPullRequestAnalysis : sonarBranchAnalysis)
-            sh "mvn ${sonar} $MVN_QUALITY_PROFILES -e -f pom.xml"
-          }
-        }
-      }
-	}
+    }   
   }
 }
