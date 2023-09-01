@@ -73,604 +73,601 @@ import org.polarsys.kitalpha.emde.model.util.EmdeSwitch;
  * @generated
  */
 public class PerfoItemProviderAdapterFactory extends PerfoAdapterFactory
-		implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
-	/**
-	 * This keeps track of the root adapter factory that delegates to this adapter factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ComposedAdapterFactory parentAdapterFactory;
+    implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+  /**
+   * This keeps track of the root adapter factory that delegates to this adapter factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ComposedAdapterFactory parentAdapterFactory;
 
-	/**
-	 * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IChangeNotifier changeNotifier = new ChangeNotifier();
+  /**
+   * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected IChangeNotifier changeNotifier = new ChangeNotifier();
 
-	/**
-	 * This helps manage the child creation extenders.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(
-			PerfoEditPlugin.INSTANCE, PerfoPackage.eNS_URI);
+  /**
+   * This helps manage the child creation extenders.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(
+      PerfoEditPlugin.INSTANCE, PerfoPackage.eNS_URI);
 
-	/**
-	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Collection<Object> supportedTypes = new ArrayList<Object>();
+  /**
+   * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
-	/**
-	 * This constructs an instance.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PerfoItemProviderAdapterFactory() {
-		supportedTypes.add(IEditingDomainItemProvider.class);
-		supportedTypes.add(IStructuredItemContentProvider.class);
-		supportedTypes.add(ITreeItemContentProvider.class);
-		supportedTypes.add(IItemLabelProvider.class);
-		supportedTypes.add(IItemPropertySource.class);
-	}
+  /**
+   * This constructs an instance.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PerfoItemProviderAdapterFactory() {
+    supportedTypes.add(IEditingDomainItemProvider.class);
+    supportedTypes.add(IStructuredItemContentProvider.class);
+    supportedTypes.add(ITreeItemContentProvider.class);
+    supportedTypes.add(IItemLabelProvider.class);
+    supportedTypes.add(IItemPropertySource.class);
+  }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PerformanceCriteriaItemProvider performanceCriteriaItemProvider;
+  /**
+   * This keeps track of the one adapter used for all {@link org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected PerformanceCriteriaItemProvider performanceCriteriaItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPerformanceCriteriaAdapter() {
-		if (performanceCriteriaItemProvider == null) {
-			performanceCriteriaItemProvider = new PerformanceCriteriaItemProvider(this);
-		}
+  /**
+   * This creates an adapter for a {@link org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createPerformanceCriteriaAdapter() {
+    if (performanceCriteriaItemProvider == null) {
+      performanceCriteriaItemProvider = new PerformanceCriteriaItemProvider(this);
+    }
 
-		return performanceCriteriaItemProvider;
-	}
+    return performanceCriteriaItemProvider;
+  }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.polarsys.capella.vp.perfo.perfo.PerformanceConsumption} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PerformanceConsumptionItemProvider performanceConsumptionItemProvider;
+  /**
+   * This keeps track of the one adapter used for all {@link org.polarsys.capella.vp.perfo.perfo.PerformanceConsumption} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected PerformanceConsumptionItemProvider performanceConsumptionItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.polarsys.capella.vp.perfo.perfo.PerformanceConsumption}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPerformanceConsumptionAdapter() {
-		if (performanceConsumptionItemProvider == null) {
-			performanceConsumptionItemProvider = new PerformanceConsumptionItemProvider(this);
-		}
+  /**
+   * This creates an adapter for a {@link org.polarsys.capella.vp.perfo.perfo.PerformanceConsumption}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createPerformanceConsumptionAdapter() {
+    if (performanceConsumptionItemProvider == null) {
+      performanceConsumptionItemProvider = new PerformanceConsumptionItemProvider(this);
+    }
 
-		return performanceConsumptionItemProvider;
-	}
+    return performanceConsumptionItemProvider;
+  }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.polarsys.capella.vp.perfo.perfo.PerformanceCapacity} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PerformanceCapacityItemProvider performanceCapacityItemProvider;
+  /**
+   * This keeps track of the one adapter used for all {@link org.polarsys.capella.vp.perfo.perfo.PerformanceCapacity} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected PerformanceCapacityItemProvider performanceCapacityItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.polarsys.capella.vp.perfo.perfo.PerformanceCapacity}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPerformanceCapacityAdapter() {
-		if (performanceCapacityItemProvider == null) {
-			performanceCapacityItemProvider = new PerformanceCapacityItemProvider(this);
-		}
+  /**
+   * This creates an adapter for a {@link org.polarsys.capella.vp.perfo.perfo.PerformanceCapacity}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createPerformanceCapacityAdapter() {
+    if (performanceCapacityItemProvider == null) {
+      performanceCapacityItemProvider = new PerformanceCapacityItemProvider(this);
+    }
 
-		return performanceCapacityItemProvider;
-	}
+    return performanceCapacityItemProvider;
+  }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.polarsys.capella.vp.perfo.perfo.TimeConsumption} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TimeConsumptionItemProvider timeConsumptionItemProvider;
+  /**
+   * This keeps track of the one adapter used for all {@link org.polarsys.capella.vp.perfo.perfo.TimeConsumption} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected TimeConsumptionItemProvider timeConsumptionItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.polarsys.capella.vp.perfo.perfo.TimeConsumption}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTimeConsumptionAdapter() {
-		if (timeConsumptionItemProvider == null) {
-			timeConsumptionItemProvider = new TimeConsumptionItemProvider(this);
-		}
+  /**
+   * This creates an adapter for a {@link org.polarsys.capella.vp.perfo.perfo.TimeConsumption}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createTimeConsumptionAdapter() {
+    if (timeConsumptionItemProvider == null) {
+      timeConsumptionItemProvider = new TimeConsumptionItemProvider(this);
+    }
 
-		return timeConsumptionItemProvider;
-	}
+    return timeConsumptionItemProvider;
+  }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.polarsys.capella.vp.perfo.perfo.TimeCapacity} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TimeCapacityItemProvider timeCapacityItemProvider;
+  /**
+   * This keeps track of the one adapter used for all {@link org.polarsys.capella.vp.perfo.perfo.TimeCapacity} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected TimeCapacityItemProvider timeCapacityItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.polarsys.capella.vp.perfo.perfo.TimeCapacity}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTimeCapacityAdapter() {
-		if (timeCapacityItemProvider == null) {
-			timeCapacityItemProvider = new TimeCapacityItemProvider(this);
-		}
+  /**
+   * This creates an adapter for a {@link org.polarsys.capella.vp.perfo.perfo.TimeCapacity}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createTimeCapacityAdapter() {
+    if (timeCapacityItemProvider == null) {
+      timeCapacityItemProvider = new TimeCapacityItemProvider(this);
+    }
 
-		return timeCapacityItemProvider;
-	}
+    return timeCapacityItemProvider;
+  }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.polarsys.capella.vp.perfo.perfo.UnityElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UnityElementItemProvider unityElementItemProvider;
+  /**
+   * This keeps track of the one adapter used for all {@link org.polarsys.capella.vp.perfo.perfo.UnityElement} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected UnityElementItemProvider unityElementItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.polarsys.capella.vp.perfo.perfo.UnityElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUnityElementAdapter() {
-		if (unityElementItemProvider == null) {
-			unityElementItemProvider = new UnityElementItemProvider(this);
-		}
+  /**
+   * This creates an adapter for a {@link org.polarsys.capella.vp.perfo.perfo.UnityElement}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createUnityElementAdapter() {
+    if (unityElementItemProvider == null) {
+      unityElementItemProvider = new UnityElementItemProvider(this);
+    }
 
-		return unityElementItemProvider;
-	}
+    return unityElementItemProvider;
+  }
 
-	/**
-	 * This returns the root adapter factory that contains this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ComposeableAdapterFactory getRootAdapterFactory() {
-		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
-	}
+  /**
+   * This returns the root adapter factory that contains this factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ComposeableAdapterFactory getRootAdapterFactory() {
+    return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+  }
 
-	/**
-	 * This sets the composed adapter factory that contains this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
-		this.parentAdapterFactory = parentAdapterFactory;
-	}
+  /**
+   * This sets the composed adapter factory that contains this factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
+    this.parentAdapterFactory = parentAdapterFactory;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isFactoryForType(Object type) {
-		return supportedTypes.contains(type) || super.isFactoryForType(type);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean isFactoryForType(Object type) {
+    return supportedTypes.contains(type) || super.isFactoryForType(type);
+  }
 
-	/**
-	 * This implementation substitutes the factory itself as the key for the adapter.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter adapt(Notifier notifier, Object type) {
-		return super.adapt(notifier, this);
-	}
+  /**
+   * This implementation substitutes the factory itself as the key for the adapter.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter adapt(Notifier notifier, Object type) {
+    return super.adapt(notifier, this);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object adapt(Object object, Object type) {
-		if (isFactoryForType(type)) {
-			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
-				return adapter;
-			}
-		}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object adapt(Object object, Object type) {
+    if (isFactoryForType(type)) {
+      Object adapter = super.adapt(object, type);
+      if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
+        return adapter;
+      }
+    }
 
-		return null;
-	}
+    return null;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<IChildCreationExtender> getChildCreationExtenders() {
-		return childCreationExtenderManager.getChildCreationExtenders();
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public List<IChildCreationExtender> getChildCreationExtenders() {
+    return childCreationExtenderManager.getChildCreationExtenders();
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Collection<?> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-		return childCreationExtenderManager.getNewChildDescriptors(object, editingDomain);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Collection<?> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+    return childCreationExtenderManager.getNewChildDescriptors(object, editingDomain);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResourceLocator getResourceLocator() {
-		return childCreationExtenderManager;
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ResourceLocator getResourceLocator() {
+    return childCreationExtenderManager;
+  }
 
-	/**
-	 * This adds a listener.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void addListener(INotifyChangedListener notifyChangedListener) {
-		changeNotifier.addListener(notifyChangedListener);
-	}
+  /**
+   * This adds a listener.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void addListener(INotifyChangedListener notifyChangedListener) {
+    changeNotifier.addListener(notifyChangedListener);
+  }
 
-	/**
-	 * This removes a listener.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void removeListener(INotifyChangedListener notifyChangedListener) {
-		changeNotifier.removeListener(notifyChangedListener);
-	}
+  /**
+   * This removes a listener.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void removeListener(INotifyChangedListener notifyChangedListener) {
+    changeNotifier.removeListener(notifyChangedListener);
+  }
 
-	/**
-	 * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void fireNotifyChanged(Notification notification) {
-		changeNotifier.fireNotifyChanged(notification);
+  /**
+   * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void fireNotifyChanged(Notification notification) {
+    changeNotifier.fireNotifyChanged(notification);
 
-		if (parentAdapterFactory != null) {
-			parentAdapterFactory.fireNotifyChanged(notification);
-		}
-	}
+    if (parentAdapterFactory != null) {
+      parentAdapterFactory.fireNotifyChanged(notification);
+    }
+  }
 
-	/**
-	 * This disposes all of the item providers created by this factory. 
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void dispose() {
-		if (performanceCriteriaItemProvider != null)
-			performanceCriteriaItemProvider.dispose();
-		if (performanceConsumptionItemProvider != null)
-			performanceConsumptionItemProvider.dispose();
-		if (performanceCapacityItemProvider != null)
-			performanceCapacityItemProvider.dispose();
-		if (timeConsumptionItemProvider != null)
-			timeConsumptionItemProvider.dispose();
-		if (timeCapacityItemProvider != null)
-			timeCapacityItemProvider.dispose();
-		if (unityElementItemProvider != null)
-			unityElementItemProvider.dispose();
-	}
+  /**
+   * This disposes all of the item providers created by this factory. 
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void dispose() {
+    if (performanceCriteriaItemProvider != null)
+      performanceCriteriaItemProvider.dispose();
+    if (performanceConsumptionItemProvider != null)
+      performanceConsumptionItemProvider.dispose();
+    if (performanceCapacityItemProvider != null)
+      performanceCapacityItemProvider.dispose();
+    if (timeConsumptionItemProvider != null)
+      timeConsumptionItemProvider.dispose();
+    if (timeCapacityItemProvider != null)
+      timeCapacityItemProvider.dispose();
+    if (unityElementItemProvider != null)
+      unityElementItemProvider.dispose();
+  }
 
-	/**
-	 * A child creation extender for the {@link EmdePackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class EmdeChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends EmdeSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
+  /**
+   * A child creation extender for the {@link EmdePackage}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public static class EmdeChildCreationExtender implements IChildCreationExtender {
+    /**
+     * The switch for creating child descriptors specific to each extended class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected static class CreationSwitch extends EmdeSwitch<Object> {
+      /**
+       * The child descriptors being populated.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      protected List<Object> newChildDescriptors;
 
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
+      /**
+       * The domain in which to create the children.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      protected EditingDomain editingDomain;
 
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
+      /**
+       * Creates the a switch for populating child descriptors in the given domain.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+        this.newChildDescriptors = newChildDescriptors;
+        this.editingDomain = editingDomain;
+      }
 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseExtensibleElement(ExtensibleElement object) {
-				// begin-extension-code
-				if (ModelExtensionHelper.getInstance(object).isExtensionModelDisabled(
-						EcoreUtil.getRootContainer(object).eClass().getEPackage().getNsURI(),
-						"http://www.polarsys.org/capella/perfo")) { //$NON-NLS-1$
-					return null;
-				}
-				// end-extension-code
-				// begin-extension-code
-				{
-					CommandParameter commandParameter = createChildParameter(
-							EmdePackage.Literals.EXTENSIBLE_ELEMENT__OWNED_EXTENSIONS,
-							PerfoFactory.eINSTANCE.createTimeConsumption());
-					if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
-						newChildDescriptors.add(commandParameter);
-					}
-				}
-				// end-extension-code
+      /**
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      @Override
+      public Object caseExtensibleElement(ExtensibleElement object) {
+        // begin-extension-code
+        if (ModelExtensionHelper.getInstance(object).isExtensionModelDisabled(
+            EcoreUtil.getRootContainer(object).eClass().getEPackage().getNsURI(),
+            "http://www.polarsys.org/capella/perfo")) { //$NON-NLS-1$
+          return null;
+        }
+        // end-extension-code
+        // begin-extension-code
+        {
+          CommandParameter commandParameter = createChildParameter(
+              EmdePackage.Literals.EXTENSIBLE_ELEMENT__OWNED_EXTENSIONS,
+              PerfoFactory.eINSTANCE.createTimeConsumption());
+          if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
+            newChildDescriptors.add(commandParameter);
+          }
+        }
+        // end-extension-code
 
-				// begin-extension-code
-				{
-					CommandParameter commandParameter = createChildParameter(
-							EmdePackage.Literals.EXTENSIBLE_ELEMENT__OWNED_EXTENSIONS,
-							PerfoFactory.eINSTANCE.createTimeCapacity());
-					if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
-						newChildDescriptors.add(commandParameter);
-					}
-				}
-				// end-extension-code
+        // begin-extension-code
+        {
+          CommandParameter commandParameter = createChildParameter(
+              EmdePackage.Literals.EXTENSIBLE_ELEMENT__OWNED_EXTENSIONS, PerfoFactory.eINSTANCE.createTimeCapacity());
+          if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
+            newChildDescriptors.add(commandParameter);
+          }
+        }
+        // end-extension-code
 
-				return null;
-			}
+        return null;
+      }
 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
+      /**
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      protected CommandParameter createChildParameter(Object feature, Object child) {
+        return new CommandParameter(null, feature, child);
+      }
 
-		}
+    }
 
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject) object);
-			return result;
-		}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+      ArrayList<Object> result = new ArrayList<Object>();
+      new CreationSwitch(result, editingDomain).doSwitch((EObject) object);
+      return result;
+    }
 
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return PerfoEditPlugin.INSTANCE;
-		}
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ResourceLocator getResourceLocator() {
+      return PerfoEditPlugin.INSTANCE;
+    }
+  }
 
-	/**
-	 * A child creation extender for the {@link SharedmodelPackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class SharedmodelChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends SharedmodelSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
+  /**
+   * A child creation extender for the {@link SharedmodelPackage}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public static class SharedmodelChildCreationExtender implements IChildCreationExtender {
+    /**
+     * The switch for creating child descriptors specific to each extended class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected static class CreationSwitch extends SharedmodelSwitch<Object> {
+      /**
+       * The child descriptors being populated.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      protected List<Object> newChildDescriptors;
 
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
+      /**
+       * The domain in which to create the children.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      protected EditingDomain editingDomain;
 
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
+      /**
+       * Creates the a switch for populating child descriptors in the given domain.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+        this.newChildDescriptors = newChildDescriptors;
+        this.editingDomain = editingDomain;
+      }
 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseGenericPkg(GenericPkg object) {
-				// begin-extension-code
-				if (ModelExtensionHelper.getInstance(object).isExtensionModelDisabled(
-						EcoreUtil.getRootContainer(object).eClass().getEPackage().getNsURI(),
-						"http://www.polarsys.org/capella/perfo")) { //$NON-NLS-1$
-					return null;
-				}
-				// end-extension-code
-				// begin-extension-code
-				{
-					CommandParameter commandParameter = createChildParameter(
-							SharedmodelPackage.Literals.GENERIC_PKG__CAPELLA_ELEMENTS,
-							PerfoFactory.eINSTANCE.createPerformanceCriteria());
-					if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
-						newChildDescriptors.add(commandParameter);
-					}
-				}
-				// end-extension-code
+      /**
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      @Override
+      public Object caseGenericPkg(GenericPkg object) {
+        // begin-extension-code
+        if (ModelExtensionHelper.getInstance(object).isExtensionModelDisabled(
+            EcoreUtil.getRootContainer(object).eClass().getEPackage().getNsURI(),
+            "http://www.polarsys.org/capella/perfo")) { //$NON-NLS-1$
+          return null;
+        }
+        // end-extension-code
+        // begin-extension-code
+        {
+          CommandParameter commandParameter = createChildParameter(
+              SharedmodelPackage.Literals.GENERIC_PKG__CAPELLA_ELEMENTS,
+              PerfoFactory.eINSTANCE.createPerformanceCriteria());
+          if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
+            newChildDescriptors.add(commandParameter);
+          }
+        }
+        // end-extension-code
 
-				// begin-extension-code
-				{
-					CommandParameter commandParameter = createChildParameter(
-							SharedmodelPackage.Literals.GENERIC_PKG__CAPELLA_ELEMENTS,
-							PerfoFactory.eINSTANCE.createPerformanceConsumption());
-					if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
-						newChildDescriptors.add(commandParameter);
-					}
-				}
-				// end-extension-code
+        // begin-extension-code
+        {
+          CommandParameter commandParameter = createChildParameter(
+              SharedmodelPackage.Literals.GENERIC_PKG__CAPELLA_ELEMENTS,
+              PerfoFactory.eINSTANCE.createPerformanceConsumption());
+          if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
+            newChildDescriptors.add(commandParameter);
+          }
+        }
+        // end-extension-code
 
-				// begin-extension-code
-				{
-					CommandParameter commandParameter = createChildParameter(
-							SharedmodelPackage.Literals.GENERIC_PKG__CAPELLA_ELEMENTS,
-							PerfoFactory.eINSTANCE.createPerformanceCapacity());
-					if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
-						newChildDescriptors.add(commandParameter);
-					}
-				}
-				// end-extension-code
+        // begin-extension-code
+        {
+          CommandParameter commandParameter = createChildParameter(
+              SharedmodelPackage.Literals.GENERIC_PKG__CAPELLA_ELEMENTS,
+              PerfoFactory.eINSTANCE.createPerformanceCapacity());
+          if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
+            newChildDescriptors.add(commandParameter);
+          }
+        }
+        // end-extension-code
 
-				// begin-extension-code
-				{
-					CommandParameter commandParameter = createChildParameter(
-							SharedmodelPackage.Literals.GENERIC_PKG__CAPELLA_ELEMENTS,
-							PerfoFactory.eINSTANCE.createTimeConsumption());
-					if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
-						newChildDescriptors.add(commandParameter);
-					}
-				}
-				// end-extension-code
+        // begin-extension-code
+        {
+          CommandParameter commandParameter = createChildParameter(
+              SharedmodelPackage.Literals.GENERIC_PKG__CAPELLA_ELEMENTS,
+              PerfoFactory.eINSTANCE.createTimeConsumption());
+          if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
+            newChildDescriptors.add(commandParameter);
+          }
+        }
+        // end-extension-code
 
-				// begin-extension-code
-				{
-					CommandParameter commandParameter = createChildParameter(
-							SharedmodelPackage.Literals.GENERIC_PKG__CAPELLA_ELEMENTS,
-							PerfoFactory.eINSTANCE.createTimeCapacity());
-					if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
-						newChildDescriptors.add(commandParameter);
-					}
-				}
-				// end-extension-code
+        // begin-extension-code
+        {
+          CommandParameter commandParameter = createChildParameter(
+              SharedmodelPackage.Literals.GENERIC_PKG__CAPELLA_ELEMENTS, PerfoFactory.eINSTANCE.createTimeCapacity());
+          if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
+            newChildDescriptors.add(commandParameter);
+          }
+        }
+        // end-extension-code
 
-				// begin-extension-code
-				{
-					CommandParameter commandParameter = createChildParameter(
-							SharedmodelPackage.Literals.GENERIC_PKG__CAPELLA_ELEMENTS,
-							PerfoFactory.eINSTANCE.createUnityElement());
-					if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
-						newChildDescriptors.add(commandParameter);
-					}
-				}
-				// end-extension-code
+        // begin-extension-code
+        {
+          CommandParameter commandParameter = createChildParameter(
+              SharedmodelPackage.Literals.GENERIC_PKG__CAPELLA_ELEMENTS, PerfoFactory.eINSTANCE.createUnityElement());
+          if (NewChildDescriptorHelper.isValidCommand(object, commandParameter)) {
+            newChildDescriptors.add(commandParameter);
+          }
+        }
+        // end-extension-code
 
-				return null;
-			}
+        return null;
+      }
 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
+      /**
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      protected CommandParameter createChildParameter(Object feature, Object child) {
+        return new CommandParameter(null, feature, child);
+      }
 
-		}
+    }
 
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject) object);
-			return result;
-		}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+      ArrayList<Object> result = new ArrayList<Object>();
+      new CreationSwitch(result, editingDomain).doSwitch((EObject) object);
+      return result;
+    }
 
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return PerfoEditPlugin.INSTANCE;
-		}
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ResourceLocator getResourceLocator() {
+      return PerfoEditPlugin.INSTANCE;
+    }
+  }
 
 }

@@ -32,33 +32,33 @@ import org.polarsys.capella.core.data.capellacore.NamedElement;
 
 public interface UnityElement extends NamedElement {
 
-	/**
-	 * Returns the value of the '<em><b>Measurement Unit</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.polarsys.capella.vp.perfo.perfo.measurementUnit_Type}.
-	
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Measurement Unit</em>' attribute.
-	 * @see org.polarsys.capella.vp.perfo.perfo.measurementUnit_Type
-	 * @see #setMeasurementUnit(measurementUnit_Type)
-	 * @see org.polarsys.capella.vp.perfo.perfo.PerfoPackage#getUnityElement_MeasurementUnit()
-	 * @model
-	 * @generated
-	 */
+  /**
+   * Returns the value of the '<em><b>Measurement Unit</b></em>' attribute.
+   * The literals are from the enumeration {@link org.polarsys.capella.vp.perfo.perfo.measurementUnit_Type}.
+  
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Measurement Unit</em>' attribute.
+   * @see org.polarsys.capella.vp.perfo.perfo.measurementUnit_Type
+   * @see #setMeasurementUnit(measurementUnit_Type)
+   * @see org.polarsys.capella.vp.perfo.perfo.PerfoPackage#getUnityElement_MeasurementUnit()
+   * @model
+   * @generated
+   */
 
-	measurementUnit_Type getMeasurementUnit();
+  measurementUnit_Type getMeasurementUnit();
 
-	/**
-	 * Sets the value of the '{@link org.polarsys.capella.vp.perfo.perfo.UnityElement#getMeasurementUnit <em>Measurement Unit</em>}' attribute.
-	
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Measurement Unit</em>' attribute.
-	 * @see org.polarsys.capella.vp.perfo.perfo.measurementUnit_Type
-	 * @see #getMeasurementUnit()
-	 * @generated
-	 */
+  /**
+   * Sets the value of the '{@link org.polarsys.capella.vp.perfo.perfo.UnityElement#getMeasurementUnit <em>Measurement Unit</em>}' attribute.
+  
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Measurement Unit</em>' attribute.
+   * @see org.polarsys.capella.vp.perfo.perfo.measurementUnit_Type
+   * @see #getMeasurementUnit()
+   * @generated
+   */
 
-	void setMeasurementUnit(measurementUnit_Type value);
+  void setMeasurementUnit(measurementUnit_Type value);
 
 } // UnityElement

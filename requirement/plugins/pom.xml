@@ -24,9 +24,9 @@
 
 	<parent>
 		<groupId>org.polarsys</groupId>
-		<artifactId>org.polarsys.capella.addon.requirement</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
-		<relativePath>../</relativePath>
+		<artifactId>org.polarsys.capella.addon.basic.viewpoints</artifactId>
+		<version>7.0.0-SNAPSHOT</version>
+		<relativePath>../../</relativePath>
 	</parent>
 
 	<modules>
@@ -34,9 +34,8 @@
 		<!-- Plugins -->
 		<module>org.polarsys.capella.basic.requirement.af</module>
 		<module>org.polarsys.capella.basic.requirement.business.queries</module>
-		<module>org.polarsys.capella.basic.requirement.doc</module>
-		<module>org.polarsys.capella.basic.requirement.menu.contribution</module>
 		<module>org.polarsys.capella.basic.requirement.migration</module>
+		<module>org.polarsys.capella.basic.requirement.validation</module>
 		<module>org.polarsys.capella.basic.requirement.model</module>
 		<module>org.polarsys.capella.basic.requirement.model.cdo</module>
 		<module>org.polarsys.capella.basic.requirement.model.edit</module>
@@ -45,6 +44,7 @@
 		<module>org.polarsys.capella.basic.requirement.sirius.analysis</module>
 		<module>org.polarsys.capella.basic.requirement.sirius.ui</module>
 		<module>org.polarsys.capella.basic.requirement.trace</module>
+		
 	</modules>
 </project>
 

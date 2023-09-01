@@ -20,25 +20,25 @@ import org.polarsys.capella.vp.price.price.Price;
  */
 public class PriceHelper {
 
-	private static final PriceHelper instance = new PriceHelper();
+  private static final PriceHelper instance = new PriceHelper();
 
-	/**
-	 * @generated
-	 */
-	public static PriceHelper getInstance() {
-		return instance;
-	}
+  /**
+   * @generated
+   */
+  public static PriceHelper getInstance() {
+    return instance;
+  }
 
-	/**
-	 * @generated
-	 */
-	public Object doSwitch(Price object, EStructuralFeature feature) {
-		// handle derivated feature
+  /**
+   * @generated
+   */
+  public Object doSwitch(Price object, EStructuralFeature feature) {
+    // handle derivated feature
 
-		// delegate to parent helper
-		return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
-				.doSwitch(object, feature);
+    // delegate to parent helper
+    return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
+        .doSwitch(object, feature);
 
-	}
+  }
 
 }

@@ -24,19 +24,19 @@ import org.polarsys.capella.vp.price.price.Price;
  */
 public class PricePackageHelper implements IHelper {
 
-	/**
-	 * @generated
-	 */
-	public Object getValue(EObject object, EStructuralFeature feature, EAnnotation annotation) {
-		Object ret = null;
+  /**
+   * @generated
+   */
+  public Object getValue(EObject object, EStructuralFeature feature, EAnnotation annotation) {
+    Object ret = null;
 
-		if (ret == null && object instanceof Price) {
-			ret = PriceHelper.getInstance().doSwitch((Price) object, feature);
-		}
-		if (ret == null && object instanceof PartPrice) {
-			ret = PartPriceHelper.getInstance().doSwitch((PartPrice) object, feature);
-		}
-		return ret;
-	}
+    if (ret == null && object instanceof Price) {
+      ret = PriceHelper.getInstance().doSwitch((Price) object, feature);
+    }
+    if (ret == null && object instanceof PartPrice) {
+      ret = PartPriceHelper.getInstance().doSwitch((PartPrice) object, feature);
+    }
+    return ret;
+  }
 
 }

@@ -29,31 +29,31 @@ import org.polarsys.capella.vp.perfo.perfo.UnityElement;
  */
 public class PerfoPackageHelper implements IHelper {
 
-	/**
-	 * @generated
-	 */
-	public Object getValue(EObject object, EStructuralFeature feature, EAnnotation annotation) {
-		Object ret = null;
+  /**
+   * @generated
+   */
+  public Object getValue(EObject object, EStructuralFeature feature, EAnnotation annotation) {
+    Object ret = null;
 
-		if (ret == null && object instanceof PerformanceCriteria) {
-			ret = PerformanceCriteriaHelper.getInstance().doSwitch((PerformanceCriteria) object, feature);
-		}
-		if (ret == null && object instanceof PerformanceConsumption) {
-			ret = PerformanceConsumptionHelper.getInstance().doSwitch((PerformanceConsumption) object, feature);
-		}
-		if (ret == null && object instanceof PerformanceCapacity) {
-			ret = PerformanceCapacityHelper.getInstance().doSwitch((PerformanceCapacity) object, feature);
-		}
-		if (ret == null && object instanceof TimeConsumption) {
-			ret = TimeConsumptionHelper.getInstance().doSwitch((TimeConsumption) object, feature);
-		}
-		if (ret == null && object instanceof TimeCapacity) {
-			ret = TimeCapacityHelper.getInstance().doSwitch((TimeCapacity) object, feature);
-		}
-		if (ret == null && object instanceof UnityElement) {
-			ret = UnityElementHelper.getInstance().doSwitch((UnityElement) object, feature);
-		}
-		return ret;
-	}
+    if (ret == null && object instanceof PerformanceCriteria) {
+      ret = PerformanceCriteriaHelper.getInstance().doSwitch((PerformanceCriteria) object, feature);
+    }
+    if (ret == null && object instanceof PerformanceConsumption) {
+      ret = PerformanceConsumptionHelper.getInstance().doSwitch((PerformanceConsumption) object, feature);
+    }
+    if (ret == null && object instanceof PerformanceCapacity) {
+      ret = PerformanceCapacityHelper.getInstance().doSwitch((PerformanceCapacity) object, feature);
+    }
+    if (ret == null && object instanceof TimeConsumption) {
+      ret = TimeConsumptionHelper.getInstance().doSwitch((TimeConsumption) object, feature);
+    }
+    if (ret == null && object instanceof TimeCapacity) {
+      ret = TimeCapacityHelper.getInstance().doSwitch((TimeCapacity) object, feature);
+    }
+    if (ret == null && object instanceof UnityElement) {
+      ret = UnityElementHelper.getInstance().doSwitch((UnityElement) object, feature);
+    }
+    return ret;
+  }
 
 }

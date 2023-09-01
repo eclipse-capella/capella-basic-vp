@@ -22,39 +22,39 @@ import org.eclipse.emf.ecore.EFactory;
  * @generated
  */
 public interface PriceFactory extends EFactory {
-	/**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	PriceFactory eINSTANCE = org.polarsys.capella.vp.price.price.impl.PriceFactoryImpl.init();
+  /**
+   * The singleton instance of the factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  PriceFactory eINSTANCE = org.polarsys.capella.vp.price.price.impl.PriceFactoryImpl.init();
 
-	/**
-	 * Returns a new object of class '<em>Price</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Price</em>'.
-	 * @generated
-	 */
-	Price createPrice();
+  /**
+   * Returns a new object of class '<em>Price</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Price</em>'.
+   * @generated
+   */
+  Price createPrice();
 
-	/**
-	 * Returns a new object of class '<em>Part Price</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Part Price</em>'.
-	 * @generated
-	 */
-	PartPrice createPartPrice();
+  /**
+   * Returns a new object of class '<em>Part Price</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Part Price</em>'.
+   * @generated
+   */
+  PartPrice createPartPrice();
 
-	/**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
-	PricePackage getPricePackage();
+  /**
+   * Returns the package supported by this factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the package supported by this factory.
+   * @generated
+   */
+  PricePackage getPricePackage();
 
 } //PriceFactory

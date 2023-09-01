@@ -12,15 +12,13 @@
 package org.polarsys.capella.vp.price.price.util;
 
 import org.eclipse.emf.common.util.URI;
-
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
 
 /**
- * <!-- begin-user-doc -->
- * The <b>Resource </b> associated with the package.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> The <b>Resource </b> associated with the package. <!-- end-user-doc -->
+ * 
  * @see org.polarsys.capella.vp.price.price.util.PriceResourceFactoryImpl
- * @generated
+ * @generated not
  */
 public class PriceResourceImpl extends XMIResourceImpl {
 	/**

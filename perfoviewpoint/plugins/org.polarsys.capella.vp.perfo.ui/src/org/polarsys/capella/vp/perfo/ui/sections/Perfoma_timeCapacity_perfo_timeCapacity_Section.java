@@ -50,161 +50,160 @@ import org.polarsys.capella.core.ui.properties.fields.*;
 
 public class Perfoma_timeCapacity_perfo_timeCapacity_Section extends AbstractSection {
 
-	/**
-	* <!-- begin-model-doc -->
-	* <!-- end-model-doc -->
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @generated
-	*/
-	private TextValueGroup ValueTimeCapacityConsumption;
+  /**
+    * <!-- begin-model-doc -->
+    * <!-- end-model-doc -->
+    * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+    * @generated
+    */
+  private TextValueGroup ValueTimeCapacityConsumption;
 
-	/**
-	* <!-- begin-model-doc -->
-	* <!-- end-model-doc -->
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @generated
-	*/
-	private MeasurementUnitField_semanticKindGroup MeasurementUnitField;
+  /**
+    * <!-- begin-model-doc -->
+    * <!-- end-model-doc -->
+    * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+    * @generated
+    */
+  private MeasurementUnitField_semanticKindGroup MeasurementUnitField;
 
-	/**
-	* <!-- begin-model-doc -->
-	* <!-- end-model-doc -->
-		* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-		* @generated
-		*/
-	private Group perfo_timeCapacity_AttributeGroup;
+  /**
+    * <!-- begin-model-doc -->
+    * <!-- end-model-doc -->
+  	* <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  	* @generated
+  	*/
+  private Group perfo_timeCapacity_AttributeGroup;
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param eObject: current object
-	* @generated NOT
-	*/
-	public boolean select(Object eObject) {
-		EObject eObjectToTest = super.selection(eObject);
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @param eObject: current object
+  * @generated NOT
+  */
+  public boolean select(Object eObject) {
+    EObject eObjectToTest = super.selection(eObject);
 
-		if (eObjectToTest instanceof TimeCapacity)
-			return true;
-		else {
-			EObject children = getTimeCapacityObject(eObjectToTest);
-			if (children != null)
-				return true;
-		}
+    if (eObjectToTest instanceof TimeCapacity)
+      return true;
+    else {
+      EObject children = getTimeCapacityObject(eObjectToTest);
+      if (children != null)
+        return true;
+    }
 
-		return false;
-	}
+    return false;
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param part
-	* @param selection
-	* @generated NOT
-	*/
-	public void setInput(IWorkbenchPart part, ISelection selection) {
-		EObject newEObject = super.setInputSelection(part, selection);
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @param part
+  * @param selection
+  * @generated NOT
+  */
+  public void setInput(IWorkbenchPart part, ISelection selection) {
+    EObject newEObject = super.setInputSelection(part, selection);
 
-		if (newEObject != null && !(newEObject instanceof TimeCapacity))
-			newEObject = getTimeCapacityObject(newEObject);
+    if (newEObject != null && !(newEObject instanceof TimeCapacity))
+      newEObject = getTimeCapacityObject(newEObject);
 
-		if (newEObject != null) {
-			loadData((CapellaElement) newEObject);
-		} else {
-			return;
-		}
-	}
+    if (newEObject != null) {
+      loadData((CapellaElement) newEObject);
+    } else {
+      return;
+    }
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param parent: An EObject. It is considered as the Parent of an EMDE extension (a Viewpoint element)
-	 * @return 
-	 */
-	private EObject getTimeCapacityObject(EObject parent) {
-		if (!isViewpointActive(parent))
-			return null;
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param parent: An EObject. It is considered as the Parent of an EMDE extension (a Viewpoint element)
+   * @return 
+   */
+  private EObject getTimeCapacityObject(EObject parent) {
+    if (!isViewpointActive(parent))
+      return null;
 
-		if (parent == null || (parent != null && parent.eContents() == null))
-			return null;
+    if (parent == null || (parent != null && parent.eContents() == null))
+      return null;
 
-		EObject result = null;
-		for (EObject iEObject : parent.eContents()) {
-			if (iEObject instanceof TimeCapacity) {
-				result = (result == null ? (TimeCapacity) iEObject : null);
-				// This case is true when there is more then one extension of the same type. 
-				if (result == null)
-					break;
-			}
-		}
-		return result;
-	}
+    EObject result = null;
+    for (EObject iEObject : parent.eContents()) {
+      if (iEObject instanceof TimeCapacity) {
+        result = (result == null ? (TimeCapacity) iEObject : null);
+        // This case is true when there is more then one extension of the same type. 
+        if (result == null)
+          break;
+      }
+    }
+    return result;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return True is the AF viewpoint is active. False else. 
-	 */
-	private boolean isViewpointActive(EObject modelElement) {
-		return ViewpointManager.getInstance(modelElement).isActive("org.polarsys.capella.vp.perfo");
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return True is the AF viewpoint is active. False else. 
+   */
+  private boolean isViewpointActive(EObject modelElement) {
+    return ViewpointManager.getInstance(modelElement).isActive("org.polarsys.capella.vp.perfo");
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param parent:
-	* @param aTabbedPropertySheetPage:
-	* @generated
-	*/
-	public void createControls(Composite parent, TabbedPropertySheetPage aTabbedPropertySheetPage) {
-		super.createControls(parent, aTabbedPropertySheetPage);
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @param parent:
+  * @param aTabbedPropertySheetPage:
+  * @generated
+  */
+  public void createControls(Composite parent, TabbedPropertySheetPage aTabbedPropertySheetPage) {
+    super.createControls(parent, aTabbedPropertySheetPage);
 
-		perfo_timeCapacity_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite,
-				"Time Capacity Attributes");
-		perfo_timeCapacity_AttributeGroup.setLayout(new GridLayout(1, false));
+    perfo_timeCapacity_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite, "Time Capacity Attributes");
+    perfo_timeCapacity_AttributeGroup.setLayout(new GridLayout(1, false));
 
-		GridData gdperfo_timeCapacity_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
+    GridData gdperfo_timeCapacity_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
 
-		gdperfo_timeCapacity_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite.getLayout()).numColumns;
-		perfo_timeCapacity_AttributeGroup.setLayoutData(gdperfo_timeCapacity_AttributeGroup);
+    gdperfo_timeCapacity_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite.getLayout()).numColumns;
+    perfo_timeCapacity_AttributeGroup.setLayoutData(gdperfo_timeCapacity_AttributeGroup);
 
-		ValueTimeCapacityConsumption = new TextValueGroup(perfo_timeCapacity_AttributeGroup, "Time Limit :",
-				getWidgetFactory(), true);
+    ValueTimeCapacityConsumption = new TextValueGroup(perfo_timeCapacity_AttributeGroup, "Time Limit :",
+        getWidgetFactory(), true);
 
-		MeasurementUnitField = new MeasurementUnitField_semanticKindGroup(perfo_timeCapacity_AttributeGroup,
-				getWidgetFactory());
+    MeasurementUnitField = new MeasurementUnitField_semanticKindGroup(perfo_timeCapacity_AttributeGroup,
+        getWidgetFactory());
 
-	}
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param object
-	* @generated
-	*/
-	public void loadData(EObject object) {
-		super.loadData(object);
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @param object
+  * @generated
+  */
+  public void loadData(EObject object) {
+    super.loadData(object);
 
-		ValueTimeCapacityConsumption.loadData(object, PerfoPackage.eINSTANCE.getPerformanceCriteria_Value());
+    ValueTimeCapacityConsumption.loadData(object, PerfoPackage.eINSTANCE.getPerformanceCriteria_Value());
 
-		MeasurementUnitField.loadData(object, PerfoPackage.eINSTANCE.getUnityElement_MeasurementUnit());
+    MeasurementUnitField.loadData(object, PerfoPackage.eINSTANCE.getUnityElement_MeasurementUnit());
 
-	}
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @generated
-	*/
-	public List<AbstractSemanticField> getSemanticFields() {
-		List<AbstractSemanticField> abstractSemanticFields = new ArrayList<AbstractSemanticField>();
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @generated
+  */
+  public List<AbstractSemanticField> getSemanticFields() {
+    List<AbstractSemanticField> abstractSemanticFields = new ArrayList<AbstractSemanticField>();
 
-		abstractSemanticFields.add(ValueTimeCapacityConsumption);
+    abstractSemanticFields.add(ValueTimeCapacityConsumption);
 
-		abstractSemanticFields.add(MeasurementUnitField);
+    abstractSemanticFields.add(MeasurementUnitField);
 
-		return abstractSemanticFields;
-	}
+    return abstractSemanticFields;
+  }
 }

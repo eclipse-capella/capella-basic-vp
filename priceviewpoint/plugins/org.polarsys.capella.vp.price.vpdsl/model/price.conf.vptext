@@ -14,9 +14,9 @@ Configuration price.conf {
 	project org.polarsys.capella.vp.price
 	nsuri "http://www.polarsys.org/capella/price"
 	release {
-		version : 6.0.0.qualifier
+		version : 7.0.0.qualifier
 		description : "Capella Basic Price Viewpoint"
-		execution environments : "JavaSE-1.8"
+		execution environments : "JavaSE-17"
 	}
 	generation {
 		data (

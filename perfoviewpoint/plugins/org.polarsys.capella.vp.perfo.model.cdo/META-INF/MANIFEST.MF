@@ -2,11 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.capella.vp.perfo.model.cdo;singleton:=true
-Bundle-Version: 6.0.0.qualifier
+Bundle-Version: 7.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.polarsys.capella.vp.perfo.perfo.impl
 Import-Package: org.polarsys.capella.vp.perfo.perfo,
  org.polarsys.kitalpha.emde.model,
@@ -18,7 +18,6 @@ Import-Package: org.polarsys.capella.vp.perfo.perfo,
  org.polarsys.capella.core.data.pa,
  org.polarsys.capella.core.data.epbs,
  org.polarsys.capella.core.data.sharedmodel,
- org.polarsys.capella.core.data.requirement,
  org.polarsys.capella.core.data.capellacommon,
  org.polarsys.capella.core.data.information,
  org.polarsys.capella.core.data.cs,

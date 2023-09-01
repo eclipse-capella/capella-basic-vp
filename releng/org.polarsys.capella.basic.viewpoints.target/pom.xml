@@ -16,7 +16,7 @@
 
 	<groupId>org.polarsys</groupId>
 	<artifactId>capella.target-definition</artifactId>
-	<version>6.0.0-SNAPSHOT</version>
+	<version>7.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<licenses>
@@ -77,7 +77,7 @@
 						<id>generate.target</id>
 						<phase>validate</phase>
 						<configuration>
-							<executionEnvironment>JavaSE-1.8</executionEnvironment>
+							<executionEnvironment>JavaSE-17</executionEnvironment>
 							<applicationsArgs>
 								<args>-application ${converterApplication.name} tp/${targetPlatform.name}</args>
 							</applicationsArgs>

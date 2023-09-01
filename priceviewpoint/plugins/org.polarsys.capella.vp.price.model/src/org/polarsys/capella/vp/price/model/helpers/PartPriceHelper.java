@@ -20,25 +20,25 @@ import org.polarsys.capella.vp.price.price.PartPrice;
  */
 public class PartPriceHelper {
 
-	private static final PartPriceHelper instance = new PartPriceHelper();
+  private static final PartPriceHelper instance = new PartPriceHelper();
 
-	/**
-	 * @generated
-	 */
-	public static PartPriceHelper getInstance() {
-		return instance;
-	}
+  /**
+   * @generated
+   */
+  public static PartPriceHelper getInstance() {
+    return instance;
+  }
 
-	/**
-	 * @generated
-	 */
-	public Object doSwitch(PartPrice object, EStructuralFeature feature) {
-		// handle derivated feature
+  /**
+   * @generated
+   */
+  public Object doSwitch(PartPrice object, EStructuralFeature feature) {
+    // handle derivated feature
 
-		// delegate to parent helper
-		return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
-				.doSwitch(object, feature);
+    // delegate to parent helper
+    return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
+        .doSwitch(object, feature);
 
-	}
+  }
 
 }

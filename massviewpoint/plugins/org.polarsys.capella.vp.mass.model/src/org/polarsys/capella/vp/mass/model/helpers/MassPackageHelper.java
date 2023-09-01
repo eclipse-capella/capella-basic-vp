@@ -25,19 +25,19 @@ import org.polarsys.capella.vp.mass.mass.PartMass;
  */
 public class MassPackageHelper implements IHelper {
 
-	/**
-	 * @generated
-	 */
-	public Object getValue(EObject object, EStructuralFeature feature, EAnnotation annotation) {
-		Object ret = null;
+  /**
+   * @generated
+   */
+  public Object getValue(EObject object, EStructuralFeature feature, EAnnotation annotation) {
+    Object ret = null;
 
-		if (ret == null && object instanceof Mass) {
-			ret = MassHelper.getInstance().doSwitch((Mass) object, feature);
-		}
-		if (ret == null && object instanceof PartMass) {
-			ret = PartMassHelper.getInstance().doSwitch((PartMass) object, feature);
-		}
-		return ret;
-	}
+    if (ret == null && object instanceof Mass) {
+      ret = MassHelper.getInstance().doSwitch((Mass) object, feature);
+    }
+    if (ret == null && object instanceof PartMass) {
+      ret = PartMassHelper.getInstance().doSwitch((PartMass) object, feature);
+    }
+    return ret;
+  }
 
 }

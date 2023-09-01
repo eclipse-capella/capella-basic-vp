@@ -20,25 +20,25 @@ import org.polarsys.capella.vp.perfo.perfo.PerformanceCapacity;
  */
 public class PerformanceCapacityHelper {
 
-	private static final PerformanceCapacityHelper instance = new PerformanceCapacityHelper();
+  private static final PerformanceCapacityHelper instance = new PerformanceCapacityHelper();
 
-	/**
-	 * @generated
-	 */
-	public static PerformanceCapacityHelper getInstance() {
-		return instance;
-	}
+  /**
+   * @generated
+   */
+  public static PerformanceCapacityHelper getInstance() {
+    return instance;
+  }
 
-	/**
-	 * @generated
-	 */
-	public Object doSwitch(PerformanceCapacity object, EStructuralFeature feature) {
-		// handle derivated feature
+  /**
+   * @generated
+   */
+  public Object doSwitch(PerformanceCapacity object, EStructuralFeature feature) {
+    // handle derivated feature
 
-		// delegate to parent helper
-		return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
-				.doSwitch(object, feature);
+    // delegate to parent helper
+    return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
+        .doSwitch(object, feature);
 
-	}
+  }
 
 }

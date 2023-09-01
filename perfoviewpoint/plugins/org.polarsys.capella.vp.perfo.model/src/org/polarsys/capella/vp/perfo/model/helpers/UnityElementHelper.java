@@ -20,25 +20,25 @@ import org.polarsys.capella.vp.perfo.perfo.UnityElement;
  */
 public class UnityElementHelper {
 
-	private static final UnityElementHelper instance = new UnityElementHelper();
+  private static final UnityElementHelper instance = new UnityElementHelper();
 
-	/**
-	 * @generated
-	 */
-	public static UnityElementHelper getInstance() {
-		return instance;
-	}
+  /**
+   * @generated
+   */
+  public static UnityElementHelper getInstance() {
+    return instance;
+  }
 
-	/**
-	 * @generated
-	 */
-	public Object doSwitch(UnityElement object, EStructuralFeature feature) {
-		// handle derivated feature
+  /**
+   * @generated
+   */
+  public Object doSwitch(UnityElement object, EStructuralFeature feature) {
+    // handle derivated feature
 
-		// delegate to parent helper
-		return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
-				.doSwitch(object, feature);
+    // delegate to parent helper
+    return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
+        .doSwitch(object, feature);
 
-	}
+  }
 
 }
