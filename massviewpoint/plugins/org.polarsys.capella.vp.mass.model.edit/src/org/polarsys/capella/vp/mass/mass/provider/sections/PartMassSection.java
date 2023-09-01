@@ -23,14 +23,13 @@ import org.polarsys.capella.vp.mass.mass.PartMass;
  * @generated
  */
 public class PartMassSection extends NamedElementSection {
-	/**
-	 * @generated
-	 */
-	@Override
-	public boolean select(Object toTest) {
-		EObject obj = CapellaAdapterHelper.resolveSemanticObject(toTest);
+  /**
+   * @generated
+   */
+  @Override
+  public boolean select(Object toTest) {
+    EObject obj = CapellaAdapterHelper.resolveSemanticObject(toTest);
 
-		return obj != null
-				&& obj.eClass().equals(org.polarsys.capella.vp.mass.mass.MassPackage.eINSTANCE.getPartMass());
-	}
+    return obj != null && obj.eClass().equals(org.polarsys.capella.vp.mass.mass.MassPackage.eINSTANCE.getPartMass());
+  }
 }

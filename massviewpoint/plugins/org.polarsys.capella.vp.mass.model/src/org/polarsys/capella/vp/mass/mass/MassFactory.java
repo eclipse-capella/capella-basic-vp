@@ -22,39 +22,39 @@ import org.eclipse.emf.ecore.EFactory;
  * @generated
  */
 public interface MassFactory extends EFactory {
-	/**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	MassFactory eINSTANCE = org.polarsys.capella.vp.mass.mass.impl.MassFactoryImpl.init();
+  /**
+   * The singleton instance of the factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  MassFactory eINSTANCE = org.polarsys.capella.vp.mass.mass.impl.MassFactoryImpl.init();
 
-	/**
-	 * Returns a new object of class '<em>Mass</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Mass</em>'.
-	 * @generated
-	 */
-	Mass createMass();
+  /**
+   * Returns a new object of class '<em>Mass</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mass</em>'.
+   * @generated
+   */
+  Mass createMass();
 
-	/**
-	 * Returns a new object of class '<em>Part Mass</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Part Mass</em>'.
-	 * @generated
-	 */
-	PartMass createPartMass();
+  /**
+   * Returns a new object of class '<em>Part Mass</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Part Mass</em>'.
+   * @generated
+   */
+  PartMass createPartMass();
 
-	/**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
-	MassPackage getMassPackage();
+  /**
+   * Returns the package supported by this factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the package supported by this factory.
+   * @generated
+   */
+  MassPackage getMassPackage();
 
 } //MassFactory

@@ -2,9 +2,9 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Obeo
 Bundle-SymbolicName: org.polarsys.capella.vp.mass.tests.ju
-Bundle-Version: 6.0.0.qualifier
+Bundle-Version: 7.0.0.qualifier
 Automatic-Module-Name: org.polarsys.capella.vp.mass.ju
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.polarsys.capella.core.libraries,
  org.polarsys.capella.core.data.gen,
  org.polarsys.capella.vp.mass,

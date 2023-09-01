@@ -58,196 +58,196 @@ import org.polarsys.capella.core.ui.properties.fields.*;
 
 public class Mass_PartMass_mass_PartMass_Section extends AbstractSection {
 
-	/**
-	* <!-- begin-model-doc -->
-	* <!-- end-model-doc -->
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @generated
-	*/
-	private TextValueGroup ValueField;
+  /**
+    * <!-- begin-model-doc -->
+    * <!-- end-model-doc -->
+    * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+    * @generated
+    */
+  private TextValueGroup ValueField;
 
-	/**
-	* <!-- begin-model-doc -->
-	* <!-- end-model-doc -->
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @generated
-	*/
-	private TextValueGroup MaxValueField;
+  /**
+    * <!-- begin-model-doc -->
+    * <!-- end-model-doc -->
+    * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+    * @generated
+    */
+  private TextValueGroup MaxValueField;
 
-	/**
-	* <!-- begin-model-doc -->
-	* <!-- end-model-doc -->
-		* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-		* @generated
-		*/
-	private Group mass_PartMass_AttributeGroup;
+  /**
+    * <!-- begin-model-doc -->
+    * <!-- end-model-doc -->
+  	* <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  	* @generated
+  	*/
+  private Group mass_PartMass_AttributeGroup;
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param eObject: current object
-	* @generated NOT
-	*/
-	public boolean select(Object eObject) {
-		EObject eObjectToTest = super.selection(eObject);
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @param eObject: current object
+  * @generated NOT
+  */
+  public boolean select(Object eObject) {
+    EObject eObjectToTest = super.selection(eObject);
 
-		if (eObjectToTest instanceof Mass)
-			return true;
-		else {
-			EObject children = getMassObject(eObject);
-			if (children != null)
-				return true;
-		}
+    if (eObjectToTest instanceof Mass)
+      return true;
+    else {
+      EObject children = getMassObject(eObject);
+      if (children != null)
+        return true;
+    }
 
-		return false;
-	}
+    return false;
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param part
-	* @param selection
-	* @generated NOT
-	*/
-	public void setInput(IWorkbenchPart part, ISelection selection) {
-		EObject newEObject = super.setInputSelection(part, selection);
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @param part
+  * @param selection
+  * @generated NOT
+  */
+  public void setInput(IWorkbenchPart part, ISelection selection) {
+    EObject newEObject = super.setInputSelection(part, selection);
 
-		if (newEObject != null && !(newEObject instanceof Mass)) {
-			final Object firstElement = ((StructuredSelection) selection).getFirstElement();
-			newEObject = getMassObject(firstElement);
-		}
+    if (newEObject != null && !(newEObject instanceof Mass)) {
+      final Object firstElement = ((StructuredSelection) selection).getFirstElement();
+      newEObject = getMassObject(firstElement);
+    }
 
-		if (newEObject != null) {
-			loadData((CapellaElement) newEObject);
-		} else {
-			return;
-		}
-	}
+    if (newEObject != null) {
+      loadData((CapellaElement) newEObject);
+    } else {
+      return;
+    }
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param parent: An EObject. It is considered as the Parent of an EMDE extension (a Viewpoint element)
-	 * @return 
-	 */
-	private EObject getMassObject(Object element) {
-		EObject parent = null;
-		if (element instanceof Part) {
-			parent = (EObject) element;
-		} else {
-			parent = getPartParent(element);
-		}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param parent: An EObject. It is considered as the Parent of an EMDE extension (a Viewpoint element)
+   * @return 
+   */
+  private EObject getMassObject(Object element) {
+    EObject parent = null;
+    if (element instanceof Part) {
+      parent = (EObject) element;
+    } else {
+      parent = getPartParent(element);
+    }
 
-		if (parent == null || (parent != null && parent.eContents() == null) || !isViewpointActive(parent))
-			return null;
+    if (parent == null || (parent != null && parent.eContents() == null) || !isViewpointActive(parent))
+      return null;
 
-		EObject result = null;
+    EObject result = null;
 
-		for (EObject iEObject : parent.eContents()) {
-			if (iEObject instanceof Mass) {
-				result = (result == null ? (Mass) iEObject : null);
-				// This case is true when there is more then one extension of the same type. 
-				if (result == null)
-					break;
-			}
-		}
-		return result;
-	}
+    for (EObject iEObject : parent.eContents()) {
+      if (iEObject instanceof Mass) {
+        result = (result == null ? (Mass) iEObject : null);
+        // This case is true when there is more then one extension of the same type. 
+        if (result == null)
+          break;
+      }
+    }
+    return result;
+  }
 
-	/**
-	 * Getting the {@link Part} element from the selection.
-	 * @param element the current selection
-	 * @return the selected {@link Part} 
-	 */
-	private static EObject getPartParent(Object element) {
-		EObject result = null;
-		try {
-			Object adapter = ((IAdaptable) element).getAdapter(EObject.class);
-			if (adapter instanceof EObject) {
-				result = (EObject) Platform.getAdapterManager().getAdapter(adapter, ModelElement.class);
-			}
+  /**
+   * Getting the {@link Part} element from the selection.
+   * @param element the current selection
+   * @return the selected {@link Part} 
+   */
+  private static EObject getPartParent(Object element) {
+    EObject result = null;
+    try {
+      Object adapter = ((IAdaptable) element).getAdapter(EObject.class);
+      if (adapter instanceof EObject) {
+        result = (EObject) Platform.getAdapterManager().getAdapter(adapter, ModelElement.class);
+      }
 
-			// Manage the PAB target
-			if (result instanceof PhysicalComponent && result.eContainer() instanceof PhysicalArchitecture) {
-				PhysicalComponent physicalComponent = (PhysicalComponent) result;
-				EList<AbstractTypedElement> abstractTypedElements = physicalComponent.getAbstractTypedElements();
-				for (AbstractTypedElement abstractTypedElement : abstractTypedElements) {
-					if (abstractTypedElement instanceof Part) {
-						result = abstractTypedElement;
-						break;
-					}
-				}
-			}
-		} catch (Exception e) {
-			// Do nothing to return null and ignore the selection 
-		}
+      // Manage the PAB target
+      if (result instanceof PhysicalComponent && result.eContainer() instanceof PhysicalArchitecture) {
+        PhysicalComponent physicalComponent = (PhysicalComponent) result;
+        EList<AbstractTypedElement> abstractTypedElements = physicalComponent.getAbstractTypedElements();
+        for (AbstractTypedElement abstractTypedElement : abstractTypedElements) {
+          if (abstractTypedElement instanceof Part) {
+            result = abstractTypedElement;
+            break;
+          }
+        }
+      }
+    } catch (Exception e) {
+      // Do nothing to return null and ignore the selection 
+    }
 
-		return result;
-	}
+    return result;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return True is the AF viewpoint is active. False else. 
-	 */
-	private boolean isViewpointActive(EObject modelElement) {
-		return ViewpointManager.getInstance(modelElement).isActive("org.polarsys.capella.vp.mass");
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return True is the AF viewpoint is active. False else. 
+   */
+  private boolean isViewpointActive(EObject modelElement) {
+    return ViewpointManager.getInstance(modelElement).isActive("org.polarsys.capella.vp.mass");
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param parent:
-	* @param aTabbedPropertySheetPage:
-	* @generated
-	*/
-	public void createControls(Composite parent, TabbedPropertySheetPage aTabbedPropertySheetPage) {
-		super.createControls(parent, aTabbedPropertySheetPage);
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @param parent:
+  * @param aTabbedPropertySheetPage:
+  * @generated
+  */
+  public void createControls(Composite parent, TabbedPropertySheetPage aTabbedPropertySheetPage) {
+    super.createControls(parent, aTabbedPropertySheetPage);
 
-		mass_PartMass_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite, "Part Mass Attributes");
-		mass_PartMass_AttributeGroup.setLayout(new GridLayout(1, false));
+    mass_PartMass_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite, "Part Mass Attributes");
+    mass_PartMass_AttributeGroup.setLayout(new GridLayout(1, false));
 
-		GridData gdmass_PartMass_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
+    GridData gdmass_PartMass_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
 
-		gdmass_PartMass_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite.getLayout()).numColumns;
-		mass_PartMass_AttributeGroup.setLayoutData(gdmass_PartMass_AttributeGroup);
+    gdmass_PartMass_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite.getLayout()).numColumns;
+    mass_PartMass_AttributeGroup.setLayoutData(gdmass_PartMass_AttributeGroup);
 
-		ValueField = new TextValueGroup(mass_PartMass_AttributeGroup, "Value :", getWidgetFactory(), true);
+    ValueField = new TextValueGroup(mass_PartMass_AttributeGroup, "Value :", getWidgetFactory(), true);
 
-		MaxValueField = new TextValueGroup(mass_PartMass_AttributeGroup, "Max Value :", getWidgetFactory(), true);
+    MaxValueField = new TextValueGroup(mass_PartMass_AttributeGroup, "Max Value :", getWidgetFactory(), true);
 
-	}
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param object
-	* @generated
-	*/
-	public void loadData(EObject object) {
-		super.loadData(object);
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @param object
+  * @generated
+  */
+  public void loadData(EObject object) {
+    super.loadData(object);
 
-		ValueField.loadData(object, MassPackage.eINSTANCE.getMass_Value());
+    ValueField.loadData(object, MassPackage.eINSTANCE.getMass_Value());
 
-		MaxValueField.loadData(object, MassPackage.eINSTANCE.getMass_MaxValue());
+    MaxValueField.loadData(object, MassPackage.eINSTANCE.getMass_MaxValue());
 
-	}
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @generated
-	*/
-	public List<AbstractSemanticField> getSemanticFields() {
-		List<AbstractSemanticField> abstractSemanticFields = new ArrayList<AbstractSemanticField>();
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @generated
+  */
+  public List<AbstractSemanticField> getSemanticFields() {
+    List<AbstractSemanticField> abstractSemanticFields = new ArrayList<AbstractSemanticField>();
 
-		abstractSemanticFields.add(ValueField);
+    abstractSemanticFields.add(ValueField);
 
-		abstractSemanticFields.add(MaxValueField);
+    abstractSemanticFields.add(MaxValueField);
 
-		return abstractSemanticFields;
-	}
+    return abstractSemanticFields;
+  }
 }

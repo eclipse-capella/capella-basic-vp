@@ -3,12 +3,12 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.capella.vp.price.model.edit;singleton:=true
 Automatic-Module-Name: org.polarsys.capella.vp.price.model.edit
-Bundle-Version: 6.0.0.qualifier
+Bundle-Version: 7.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.polarsys.capella.vp.price.price.provider.PriceEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.polarsys.capella.vp.price.price.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.polarsys.capella.vp.price.model;visibility:=reexport,
@@ -29,7 +29,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.polarsys.capella.core.menu.dynamic;visibility:=reexport,
  org.polarsys.capella.core.ui.properties;visibility:=reexport,
  org.polarsys.capella.core.data.sharedmodel.properties;visibility:=reexport,
- org.polarsys.capella.core.data.requirement.properties;visibility:=reexport,
  org.polarsys.capella.core.data.common.properties;visibility:=reexport,
  org.polarsys.capella.core.data.core.properties;visibility:=reexport,
  org.polarsys.capella.core.data.cs.properties;visibility:=reexport,

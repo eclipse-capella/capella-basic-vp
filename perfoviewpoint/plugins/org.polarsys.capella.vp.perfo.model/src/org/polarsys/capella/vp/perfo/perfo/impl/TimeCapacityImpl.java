@@ -41,258 +41,258 @@ import org.polarsys.kitalpha.emde.model.ElementExtension;
  */
 public class TimeCapacityImpl extends PerformanceCapacityImpl implements TimeCapacity {
 
-	/**
-	 * The default value of the '{@link #getMeasurementUnit() <em>Measurement Unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMeasurementUnit()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final measurementUnit_Type MEASUREMENT_UNIT_EDEFAULT = measurementUnit_Type.MILLISECOND;
+  /**
+   * The default value of the '{@link #getMeasurementUnit() <em>Measurement Unit</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMeasurementUnit()
+   * @generated
+   * @ordered
+   */
+  protected static final measurementUnit_Type MEASUREMENT_UNIT_EDEFAULT = measurementUnit_Type.MILLISECOND;
 
-	/**
-	 * The cached value of the '{@link #getMeasurementUnit() <em>Measurement Unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMeasurementUnit()
-	 * @generated
-	 * @ordered
-	 */
-	protected measurementUnit_Type measurementUnit = MEASUREMENT_UNIT_EDEFAULT;
+  /**
+   * The cached value of the '{@link #getMeasurementUnit() <em>Measurement Unit</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMeasurementUnit()
+   * @generated
+   * @ordered
+   */
+  protected measurementUnit_Type measurementUnit = MEASUREMENT_UNIT_EDEFAULT;
 
-	/**
-	 * The default value of the '{@link #getCurrentExecutionTime() <em>Current Execution Time</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCurrentExecutionTime()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int CURRENT_EXECUTION_TIME_EDEFAULT = 0;
+  /**
+   * The default value of the '{@link #getCurrentExecutionTime() <em>Current Execution Time</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCurrentExecutionTime()
+   * @generated
+   * @ordered
+   */
+  protected static final int CURRENT_EXECUTION_TIME_EDEFAULT = 0;
 
-	/**
-	 * The cached value of the '{@link #getCurrentExecutionTime() <em>Current Execution Time</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCurrentExecutionTime()
-	 * @generated
-	 * @ordered
-	 */
-	protected int currentExecutionTime = CURRENT_EXECUTION_TIME_EDEFAULT;
+  /**
+   * The cached value of the '{@link #getCurrentExecutionTime() <em>Current Execution Time</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCurrentExecutionTime()
+   * @generated
+   * @ordered
+   */
+  protected int currentExecutionTime = CURRENT_EXECUTION_TIME_EDEFAULT;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TimeCapacityImpl() {
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected TimeCapacityImpl() {
 
-		super();
+    super();
 
-	}
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return PerfoPackage.Literals.TIME_CAPACITY;
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  protected EClass eStaticClass() {
+    return PerfoPackage.Literals.TIME_CAPACITY;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
 
-	@Override
-	public measurementUnit_Type getMeasurementUnit() {
+  @Override
+  public measurementUnit_Type getMeasurementUnit() {
 
-		return measurementUnit;
-	}
+    return measurementUnit;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
 
-	@Override
-	public void setMeasurementUnit(measurementUnit_Type newMeasurementUnit) {
+  @Override
+  public void setMeasurementUnit(measurementUnit_Type newMeasurementUnit) {
 
-		measurementUnit_Type oldMeasurementUnit = measurementUnit;
-		measurementUnit = newMeasurementUnit == null ? MEASUREMENT_UNIT_EDEFAULT : newMeasurementUnit;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT,
-					oldMeasurementUnit, measurementUnit));
+    measurementUnit_Type oldMeasurementUnit = measurementUnit;
+    measurementUnit = newMeasurementUnit == null ? MEASUREMENT_UNIT_EDEFAULT : newMeasurementUnit;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT,
+          oldMeasurementUnit, measurementUnit));
 
-	}
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
 
-	@Override
-	public int getCurrentExecutionTime() {
+  @Override
+  public int getCurrentExecutionTime() {
 
-		return currentExecutionTime;
-	}
+    return currentExecutionTime;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
 
-	@Override
-	public void setCurrentExecutionTime(int newCurrentExecutionTime) {
+  @Override
+  public void setCurrentExecutionTime(int newCurrentExecutionTime) {
 
-		int oldCurrentExecutionTime = currentExecutionTime;
-		currentExecutionTime = newCurrentExecutionTime;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PerfoPackage.TIME_CAPACITY__CURRENT_EXECUTION_TIME,
-					oldCurrentExecutionTime, currentExecutionTime));
+    int oldCurrentExecutionTime = currentExecutionTime;
+    currentExecutionTime = newCurrentExecutionTime;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PerfoPackage.TIME_CAPACITY__CURRENT_EXECUTION_TIME,
+          oldCurrentExecutionTime, currentExecutionTime));
 
-	}
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT:
-			return getMeasurementUnit();
-		case PerfoPackage.TIME_CAPACITY__CURRENT_EXECUTION_TIME:
-			return getCurrentExecutionTime();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    switch (featureID) {
+    case PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT:
+      return getMeasurementUnit();
+    case PerfoPackage.TIME_CAPACITY__CURRENT_EXECUTION_TIME:
+      return getCurrentExecutionTime();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT:
-			setMeasurementUnit((measurementUnit_Type) newValue);
-			return;
-		case PerfoPackage.TIME_CAPACITY__CURRENT_EXECUTION_TIME:
-			setCurrentExecutionTime((Integer) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eSet(int featureID, Object newValue) {
+    switch (featureID) {
+    case PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT:
+      setMeasurementUnit((measurementUnit_Type) newValue);
+      return;
+    case PerfoPackage.TIME_CAPACITY__CURRENT_EXECUTION_TIME:
+      setCurrentExecutionTime((Integer) newValue);
+      return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT:
-			setMeasurementUnit(MEASUREMENT_UNIT_EDEFAULT);
-			return;
-		case PerfoPackage.TIME_CAPACITY__CURRENT_EXECUTION_TIME:
-			setCurrentExecutionTime(CURRENT_EXECUTION_TIME_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID) {
+    switch (featureID) {
+    case PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT:
+      setMeasurementUnit(MEASUREMENT_UNIT_EDEFAULT);
+      return;
+    case PerfoPackage.TIME_CAPACITY__CURRENT_EXECUTION_TIME:
+      setCurrentExecutionTime(CURRENT_EXECUTION_TIME_EDEFAULT);
+      return;
+    }
+    super.eUnset(featureID);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT:
-			return measurementUnit != MEASUREMENT_UNIT_EDEFAULT;
-		case PerfoPackage.TIME_CAPACITY__CURRENT_EXECUTION_TIME:
-			return currentExecutionTime != CURRENT_EXECUTION_TIME_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID) {
+    switch (featureID) {
+    case PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT:
+      return measurementUnit != MEASUREMENT_UNIT_EDEFAULT;
+    case PerfoPackage.TIME_CAPACITY__CURRENT_EXECUTION_TIME:
+      return currentExecutionTime != CURRENT_EXECUTION_TIME_EDEFAULT;
+    }
+    return super.eIsSet(featureID);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == UnityElement.class) {
-			switch (derivedFeatureID) {
-			case PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT:
-				return PerfoPackage.UNITY_ELEMENT__MEASUREMENT_UNIT;
-			default:
-				return -1;
-			}
-		}
-		if (baseClass == ElementExtension.class) {
-			switch (derivedFeatureID) {
-			default:
-				return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+    if (baseClass == UnityElement.class) {
+      switch (derivedFeatureID) {
+      case PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT:
+        return PerfoPackage.UNITY_ELEMENT__MEASUREMENT_UNIT;
+      default:
+        return -1;
+      }
+    }
+    if (baseClass == ElementExtension.class) {
+      switch (derivedFeatureID) {
+      default:
+        return -1;
+      }
+    }
+    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == UnityElement.class) {
-			switch (baseFeatureID) {
-			case PerfoPackage.UNITY_ELEMENT__MEASUREMENT_UNIT:
-				return PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT;
-			default:
-				return -1;
-			}
-		}
-		if (baseClass == ElementExtension.class) {
-			switch (baseFeatureID) {
-			default:
-				return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+    if (baseClass == UnityElement.class) {
+      switch (baseFeatureID) {
+      case PerfoPackage.UNITY_ELEMENT__MEASUREMENT_UNIT:
+        return PerfoPackage.TIME_CAPACITY__MEASUREMENT_UNIT;
+      default:
+        return -1;
+      }
+    }
+    if (baseClass == ElementExtension.class) {
+      switch (baseFeatureID) {
+      default:
+        return -1;
+      }
+    }
+    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString() {
+    if (eIsProxy())
+      return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (measurementUnit: "); //$NON-NLS-1$
-		result.append(measurementUnit);
-		result.append(", currentExecutionTime: "); //$NON-NLS-1$
-		result.append(currentExecutionTime);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (measurementUnit: "); //$NON-NLS-1$
+    result.append(measurementUnit);
+    result.append(", currentExecutionTime: "); //$NON-NLS-1$
+    result.append(currentExecutionTime);
+    result.append(')');
+    return result.toString();
+  }
 
 } //TimeCapacityImpl

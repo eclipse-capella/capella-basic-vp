@@ -25,28 +25,28 @@ import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
  * @generated
  */
 public class MassResourceFactoryImpl extends ResourceFactoryImpl {
-	/**
-	 * Creates an instance of the resource factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MassResourceFactoryImpl() {
-		super();
-	}
+  /**
+   * Creates an instance of the resource factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MassResourceFactoryImpl() {
+    super();
+  }
 
-	/**
-	 * Creates an instance of the resource.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Resource createResource(URI uri) {
+  /**
+   * Creates an instance of the resource.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Resource createResource(URI uri) {
 
-		Resource result = new MassResourceImpl(uri);
-		return result;
+    Resource result = new MassResourceImpl(uri);
+    return result;
 
-	}
+  }
 
 } //MassResourceFactoryImpl

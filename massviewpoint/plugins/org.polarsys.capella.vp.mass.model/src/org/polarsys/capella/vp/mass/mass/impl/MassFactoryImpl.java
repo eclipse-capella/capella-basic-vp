@@ -30,124 +30,124 @@ import org.polarsys.capella.vp.mass.mass.*;
  * @generated
  */
 public class MassFactoryImpl extends EFactoryImpl implements MassFactory {
-	/**
-	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static MassFactory init() {
-		try {
-			MassFactory theMassFactory = (MassFactory) EPackage.Registry.INSTANCE.getEFactory(MassPackage.eNS_URI);
-			if (theMassFactory != null) {
-				return theMassFactory;
-			}
-		} catch (Exception exception) {
-			EcorePlugin.INSTANCE.log(exception);
-		}
-		return new MassFactoryImpl();
-	}
+  /**
+   * Creates the default factory implementation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public static MassFactory init() {
+    try {
+      MassFactory theMassFactory = (MassFactory) EPackage.Registry.INSTANCE.getEFactory(MassPackage.eNS_URI);
+      if (theMassFactory != null) {
+        return theMassFactory;
+      }
+    } catch (Exception exception) {
+      EcorePlugin.INSTANCE.log(exception);
+    }
+    return new MassFactoryImpl();
+  }
 
-	/**
-	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MassFactoryImpl() {
-		super();
-	}
+  /**
+   * Creates an instance of the factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MassFactoryImpl() {
+    super();
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-		case MassPackage.MASS:
-			return createMass();
-		case MassPackage.PART_MASS:
-			return createPartMass();
-		default:
-			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
-		}
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EObject create(EClass eClass) {
+    switch (eClass.getClassifierID()) {
+    case MassPackage.MASS:
+      return createMass();
+    case MassPackage.PART_MASS:
+      return createPartMass();
+    default:
+      throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+    }
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Mass createMass() {
-		MassImpl mass = new MassImpl();
-		//begin-capella-code
-		mass.setId(IdGenerator.createId());
-		//end-capella-code
-		return mass;
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Mass createMass() {
+    MassImpl mass = new MassImpl();
+    //begin-capella-code
+    mass.setId(IdGenerator.createId());
+    //end-capella-code
+    return mass;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PartMass createPartMass() {
-		PartMassImpl partMass = new PartMassImpl();
-		//begin-capella-code
-		partMass.setId(IdGenerator.createId());
-		//end-capella-code
-		return partMass;
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PartMass createPartMass() {
+    PartMassImpl partMass = new PartMassImpl();
+    //begin-capella-code
+    partMass.setId(IdGenerator.createId());
+    //end-capella-code
+    return partMass;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MassPackage getMassPackage() {
-		return (MassPackage) getEPackage();
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MassPackage getMassPackage() {
+    return (MassPackage) getEPackage();
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static MassPackage getPackage() {
-		return MassPackage.eINSTANCE;
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @deprecated
+   * @generated
+   */
+  @Deprecated
+  public static MassPackage getPackage() {
+    return MassPackage.eINSTANCE;
+  }
 
-	//begin-capella-code
+  //begin-capella-code
 
-	/**
-	 * Creates class and sets its name
-	 * (This method comes from a customization of the standard EMF generator)
-	 *
-	 * @param name_p : default name of created element
-	 * @generated
-	 */
-	public Mass createMass(String name_p) {
-		Mass mass = createMass();
-		mass.setName(name_p);
-		return mass;
-	}
+  /**
+   * Creates class and sets its name
+   * (This method comes from a customization of the standard EMF generator)
+   *
+   * @param name_p : default name of created element
+   * @generated
+   */
+  public Mass createMass(String name_p) {
+    Mass mass = createMass();
+    mass.setName(name_p);
+    return mass;
+  }
 
-	/**
-	 * Creates class and sets its name
-	 * (This method comes from a customization of the standard EMF generator)
-	 *
-	 * @param name_p : default name of created element
-	 * @generated
-	 */
-	public PartMass createPartMass(String name_p) {
-		PartMass partMass = createPartMass();
-		partMass.setName(name_p);
-		return partMass;
-	}
+  /**
+   * Creates class and sets its name
+   * (This method comes from a customization of the standard EMF generator)
+   *
+   * @param name_p : default name of created element
+   * @generated
+   */
+  public PartMass createPartMass(String name_p) {
+    PartMass partMass = createPartMass();
+    partMass.setName(name_p);
+    return partMass;
+  }
 
-	//end-capella-code
+  //end-capella-code
 } //MassFactoryImpl

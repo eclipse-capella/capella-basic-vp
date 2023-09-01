@@ -20,25 +20,25 @@ import org.polarsys.capella.vp.mass.mass.Mass;
  */
 public class MassHelper {
 
-	private static final MassHelper instance = new MassHelper();
+  private static final MassHelper instance = new MassHelper();
 
-	/**
-	 * @generated
-	 */
-	public static MassHelper getInstance() {
-		return instance;
-	}
+  /**
+   * @generated
+   */
+  public static MassHelper getInstance() {
+    return instance;
+  }
 
-	/**
-	 * @generated
-	 */
-	public Object doSwitch(Mass object, EStructuralFeature feature) {
-		// handle derivated feature
+  /**
+   * @generated
+   */
+  public Object doSwitch(Mass object, EStructuralFeature feature) {
+    // handle derivated feature
 
-		// delegate to parent helper
-		return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
-				.doSwitch(object, feature);
+    // delegate to parent helper
+    return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
+        .doSwitch(object, feature);
 
-	}
+  }
 
 }

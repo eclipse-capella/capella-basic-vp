@@ -24,14 +24,14 @@ import org.polarsys.capella.vp.perfo.perfo.TimeCapacity;
  * @generated
  */
 public class TimeCapacitySection extends NamedElementSection {
-	/**
-	 * @generated
-	 */
-	@Override
-	public boolean select(Object toTest) {
-		EObject obj = CapellaAdapterHelper.resolveSemanticObject(toTest);
+  /**
+   * @generated
+   */
+  @Override
+  public boolean select(Object toTest) {
+    EObject obj = CapellaAdapterHelper.resolveSemanticObject(toTest);
 
-		return obj != null
-				&& obj.eClass().equals(org.polarsys.capella.vp.perfo.perfo.PerfoPackage.eINSTANCE.getTimeCapacity());
-	}
+    return obj != null
+        && obj.eClass().equals(org.polarsys.capella.vp.perfo.perfo.PerfoPackage.eINSTANCE.getTimeCapacity());
+  }
 }

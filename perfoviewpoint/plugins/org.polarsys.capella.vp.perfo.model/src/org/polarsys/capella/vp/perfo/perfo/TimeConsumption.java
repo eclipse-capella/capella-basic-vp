@@ -21,7 +21,7 @@ import org.polarsys.kitalpha.emde.model.ElementExtension;
  *
  *
  * @see org.polarsys.capella.vp.perfo.perfo.PerfoPackage#getTimeConsumption()
- * @model annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraint ExtendedElement=' http://www.polarsys.org/capella/core/fa/6.0.0#//FunctionalExchange http://www.polarsys.org/capella/core/pa/6.0.0#//PhysicalFunction http://www.polarsys.org/capella/core/la/6.0.0#//LogicalFunction'"
+ * @model annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraint ExtendedElement=' http://www.polarsys.org/capella/core/fa/7.0.0#//FunctionalExchange http://www.polarsys.org/capella/core/pa/7.0.0#//PhysicalFunction http://www.polarsys.org/capella/core/la/7.0.0#//LogicalFunction'"
  *        annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraintMapping Mapping=' platform:/plugin/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore#//FunctionalExchange platform:/plugin/org.polarsys.capella.core.data.gen/model/PhysicalArchitecture.ecore#//PhysicalFunction platform:/plugin/org.polarsys.capella.core.data.gen/model/LogicalArchitecture.ecore#//LogicalFunction'"
  * @generated
  */

@@ -48,146 +48,145 @@ import org.polarsys.capella.core.ui.properties.fields.*;
 
 public class Perfoma_timeConsumption_perfo_timeConsumption_Section extends AbstractSection {
 
-	/**
-	* <!-- begin-model-doc -->
-	* <!-- end-model-doc -->
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @generated
-	*/
-	private TextValueGroup ValueTimeConsumptionField;
+  /**
+    * <!-- begin-model-doc -->
+    * <!-- end-model-doc -->
+    * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+    * @generated
+    */
+  private TextValueGroup ValueTimeConsumptionField;
 
-	/**
-	* <!-- begin-model-doc -->
-	* <!-- end-model-doc -->
-		* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-		* @generated
-		*/
-	private Group perfo_timeConsumption_AttributeGroup;
+  /**
+    * <!-- begin-model-doc -->
+    * <!-- end-model-doc -->
+  	* <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  	* @generated
+  	*/
+  private Group perfo_timeConsumption_AttributeGroup;
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param eObject: current object
-	* @generated NOT
-	*/
-	public boolean select(Object eObject) {
-		EObject eObjectToTest = super.selection(eObject);
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @param eObject: current object
+  * @generated NOT
+  */
+  public boolean select(Object eObject) {
+    EObject eObjectToTest = super.selection(eObject);
 
-		if (eObjectToTest instanceof TimeConsumption)
-			return true;
-		else {
-			EObject children = getTimeConsumptionObject(eObjectToTest);
-			if (children != null)
-				return true;
-		}
+    if (eObjectToTest instanceof TimeConsumption)
+      return true;
+    else {
+      EObject children = getTimeConsumptionObject(eObjectToTest);
+      if (children != null)
+        return true;
+    }
 
-		return false;
-	}
+    return false;
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param part
-	* @param selection
-	* @generated NOT
-	*/
-	public void setInput(IWorkbenchPart part, ISelection selection) {
-		EObject newEObject = super.setInputSelection(part, selection);
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @param part
+  * @param selection
+  * @generated NOT
+  */
+  public void setInput(IWorkbenchPart part, ISelection selection) {
+    EObject newEObject = super.setInputSelection(part, selection);
 
-		if (newEObject != null && !(newEObject instanceof TimeConsumption))
-			newEObject = getTimeConsumptionObject(newEObject);
+    if (newEObject != null && !(newEObject instanceof TimeConsumption))
+      newEObject = getTimeConsumptionObject(newEObject);
 
-		if (newEObject != null) {
-			loadData((CapellaElement) newEObject);
-		} else {
-			return;
-		}
-	}
+    if (newEObject != null) {
+      loadData((CapellaElement) newEObject);
+    } else {
+      return;
+    }
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param parent: An EObject. It is considered as the Parent of an EMDE extension (a Viewpoint element)
-	 * @return 
-	 */
-	private EObject getTimeConsumptionObject(EObject parent) {
-		if (!isViewpointActive(parent))
-			return null;
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param parent: An EObject. It is considered as the Parent of an EMDE extension (a Viewpoint element)
+   * @return 
+   */
+  private EObject getTimeConsumptionObject(EObject parent) {
+    if (!isViewpointActive(parent))
+      return null;
 
-		if (parent == null || (parent != null && parent.eContents() == null))
-			return null;
+    if (parent == null || (parent != null && parent.eContents() == null))
+      return null;
 
-		EObject result = null;
-		for (EObject iEObject : parent.eContents()) {
-			if (iEObject instanceof TimeConsumption) {
-				result = (result == null ? (TimeConsumption) iEObject : null);
-				// This case is true when there is more then one extension of the same type. 
-				if (result == null)
-					break;
-			}
-		}
-		return result;
-	}
+    EObject result = null;
+    for (EObject iEObject : parent.eContents()) {
+      if (iEObject instanceof TimeConsumption) {
+        result = (result == null ? (TimeConsumption) iEObject : null);
+        // This case is true when there is more then one extension of the same type. 
+        if (result == null)
+          break;
+      }
+    }
+    return result;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return True is the AF viewpoint is active. False else. 
-	 */
-	private boolean isViewpointActive(EObject modelElement) {
-		return ViewpointManager.getInstance(modelElement).isActive("org.polarsys.capella.vp.perfo");
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return True is the AF viewpoint is active. False else. 
+   */
+  private boolean isViewpointActive(EObject modelElement) {
+    return ViewpointManager.getInstance(modelElement).isActive("org.polarsys.capella.vp.perfo");
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param parent:
-	* @param aTabbedPropertySheetPage:
-	* @generated
-	*/
-	public void createControls(Composite parent, TabbedPropertySheetPage aTabbedPropertySheetPage) {
-		super.createControls(parent, aTabbedPropertySheetPage);
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @param parent:
+  * @param aTabbedPropertySheetPage:
+  * @generated
+  */
+  public void createControls(Composite parent, TabbedPropertySheetPage aTabbedPropertySheetPage) {
+    super.createControls(parent, aTabbedPropertySheetPage);
 
-		perfo_timeConsumption_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite,
-				"Time Consumption Attributes");
-		perfo_timeConsumption_AttributeGroup.setLayout(new GridLayout(1, false));
+    perfo_timeConsumption_AttributeGroup = getWidgetFactory().createGroup(rootParentComposite,
+        "Time Consumption Attributes");
+    perfo_timeConsumption_AttributeGroup.setLayout(new GridLayout(1, false));
 
-		GridData gdperfo_timeConsumption_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
+    GridData gdperfo_timeConsumption_AttributeGroup = new GridData(GridData.FILL_HORIZONTAL);
 
-		gdperfo_timeConsumption_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite
-				.getLayout()).numColumns;
-		perfo_timeConsumption_AttributeGroup.setLayoutData(gdperfo_timeConsumption_AttributeGroup);
+    gdperfo_timeConsumption_AttributeGroup.horizontalSpan = ((GridLayout) rootParentComposite.getLayout()).numColumns;
+    perfo_timeConsumption_AttributeGroup.setLayoutData(gdperfo_timeConsumption_AttributeGroup);
 
-		ValueTimeConsumptionField = new TextValueGroup(perfo_timeConsumption_AttributeGroup, "Execution Time :",
-				getWidgetFactory(), true);
+    ValueTimeConsumptionField = new TextValueGroup(perfo_timeConsumption_AttributeGroup, "Execution Time :",
+        getWidgetFactory(), true);
 
-	}
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param object
-	* @generated
-	*/
-	public void loadData(EObject object) {
-		super.loadData(object);
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @param object
+  * @generated
+  */
+  public void loadData(EObject object) {
+    super.loadData(object);
 
-		ValueTimeConsumptionField.loadData(object, PerfoPackage.eINSTANCE.getPerformanceCriteria_Value());
+    ValueTimeConsumptionField.loadData(object, PerfoPackage.eINSTANCE.getPerformanceCriteria_Value());
 
-	}
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @generated
-	*/
-	public List<AbstractSemanticField> getSemanticFields() {
-		List<AbstractSemanticField> abstractSemanticFields = new ArrayList<AbstractSemanticField>();
+  /**
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @generated
+  */
+  public List<AbstractSemanticField> getSemanticFields() {
+    List<AbstractSemanticField> abstractSemanticFields = new ArrayList<AbstractSemanticField>();
 
-		abstractSemanticFields.add(ValueTimeConsumptionField);
+    abstractSemanticFields.add(ValueTimeConsumptionField);
 
-		return abstractSemanticFields;
-	}
+    return abstractSemanticFields;
+  }
 }

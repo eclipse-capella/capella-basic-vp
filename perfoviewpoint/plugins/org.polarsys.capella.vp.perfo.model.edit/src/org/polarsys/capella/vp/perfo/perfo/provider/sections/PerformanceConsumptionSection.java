@@ -23,14 +23,14 @@ import org.polarsys.capella.vp.perfo.perfo.PerformanceConsumption;
  * @generated
  */
 public class PerformanceConsumptionSection extends NamedElementSection {
-	/**
-	 * @generated
-	 */
-	@Override
-	public boolean select(Object toTest) {
-		EObject obj = CapellaAdapterHelper.resolveSemanticObject(toTest);
+  /**
+   * @generated
+   */
+  @Override
+  public boolean select(Object toTest) {
+    EObject obj = CapellaAdapterHelper.resolveSemanticObject(toTest);
 
-		return obj != null && obj.eClass()
-				.equals(org.polarsys.capella.vp.perfo.perfo.PerfoPackage.eINSTANCE.getPerformanceConsumption());
-	}
+    return obj != null
+        && obj.eClass().equals(org.polarsys.capella.vp.perfo.perfo.PerfoPackage.eINSTANCE.getPerformanceConsumption());
+  }
 }

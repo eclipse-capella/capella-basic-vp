@@ -12,7 +12,6 @@
 package org.polarsys.capella.vp.mass.mass.util;
 
 import org.eclipse.emf.common.util.URI;
-
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
 
 /**
@@ -20,7 +19,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
  * The <b>Resource </b> associated with the package.
  * <!-- end-user-doc -->
  * @see org.polarsys.capella.vp.mass.mass.util.MassResourceFactoryImpl
- * @generated
+ * @generated not
  */
 public class MassResourceImpl extends XMIResourceImpl {
 	/**

@@ -25,28 +25,28 @@ import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
  * @generated
  */
 public class PerfoResourceFactoryImpl extends ResourceFactoryImpl {
-	/**
-	 * Creates an instance of the resource factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PerfoResourceFactoryImpl() {
-		super();
-	}
+  /**
+   * Creates an instance of the resource factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PerfoResourceFactoryImpl() {
+    super();
+  }
 
-	/**
-	 * Creates an instance of the resource.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Resource createResource(URI uri) {
+  /**
+   * Creates an instance of the resource.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Resource createResource(URI uri) {
 
-		Resource result = new PerfoResourceImpl(uri);
-		return result;
+    Resource result = new PerfoResourceImpl(uri);
+    return result;
 
-	}
+  }
 
 } //PerfoResourceFactoryImpl

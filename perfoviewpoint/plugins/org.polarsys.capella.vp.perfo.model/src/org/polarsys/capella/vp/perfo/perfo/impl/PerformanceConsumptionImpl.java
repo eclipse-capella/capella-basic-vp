@@ -24,25 +24,25 @@ import org.polarsys.capella.vp.perfo.perfo.PerformanceConsumption;
  * @generated
  */
 public class PerformanceConsumptionImpl extends PerformanceCriteriaImpl implements PerformanceConsumption {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PerformanceConsumptionImpl() {
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected PerformanceConsumptionImpl() {
 
-		super();
+    super();
 
-	}
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return PerfoPackage.Literals.PERFORMANCE_CONSUMPTION;
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  protected EClass eStaticClass() {
+    return PerfoPackage.Literals.PERFORMANCE_CONSUMPTION;
+  }
 
 } //PerformanceConsumptionImpl

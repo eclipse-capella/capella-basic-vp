@@ -24,25 +24,25 @@ import org.polarsys.capella.vp.perfo.perfo.PerformanceCapacity;
  * @generated
  */
 public class PerformanceCapacityImpl extends PerformanceCriteriaImpl implements PerformanceCapacity {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PerformanceCapacityImpl() {
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected PerformanceCapacityImpl() {
 
-		super();
+    super();
 
-	}
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return PerfoPackage.Literals.PERFORMANCE_CAPACITY;
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  protected EClass eStaticClass() {
+    return PerfoPackage.Literals.PERFORMANCE_CAPACITY;
+  }
 
 } //PerformanceCapacityImpl

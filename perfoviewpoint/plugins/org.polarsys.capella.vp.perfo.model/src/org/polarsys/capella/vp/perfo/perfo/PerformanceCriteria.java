@@ -34,82 +34,82 @@ import org.polarsys.capella.core.data.capellacore.NamedElement;
 
 public interface PerformanceCriteria extends NamedElement {
 
-	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute.
-	
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(int)
-	 * @see org.polarsys.capella.vp.perfo.perfo.PerfoPackage#getPerformanceCriteria_Value()
-	 * @model
-	 * @generated
-	 */
+  /**
+   * Returns the value of the '<em><b>Value</b></em>' attribute.
+  
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Value</em>' attribute.
+   * @see #setValue(int)
+   * @see org.polarsys.capella.vp.perfo.perfo.PerfoPackage#getPerformanceCriteria_Value()
+   * @model
+   * @generated
+   */
 
-	int getValue();
+  int getValue();
 
-	/**
-	 * Sets the value of the '{@link org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria#getValue <em>Value</em>}' attribute.
-	
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #getValue()
-	 * @generated
-	 */
+  /**
+   * Sets the value of the '{@link org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria#getValue <em>Value</em>}' attribute.
+  
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Value</em>' attribute.
+   * @see #getValue()
+   * @generated
+   */
 
-	void setValue(int value);
+  void setValue(int value);
 
-	/**
-	 * Returns the value of the '<em><b>Max Value</b></em>' attribute.
-	
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Max Value</em>' attribute.
-	 * @see #setMaxValue(int)
-	 * @see org.polarsys.capella.vp.perfo.perfo.PerfoPackage#getPerformanceCriteria_MaxValue()
-	 * @model
-	 * @generated
-	 */
+  /**
+   * Returns the value of the '<em><b>Max Value</b></em>' attribute.
+  
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Max Value</em>' attribute.
+   * @see #setMaxValue(int)
+   * @see org.polarsys.capella.vp.perfo.perfo.PerfoPackage#getPerformanceCriteria_MaxValue()
+   * @model
+   * @generated
+   */
 
-	int getMaxValue();
+  int getMaxValue();
 
-	/**
-	 * Sets the value of the '{@link org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria#getMaxValue <em>Max Value</em>}' attribute.
-	
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Max Value</em>' attribute.
-	 * @see #getMaxValue()
-	 * @generated
-	 */
+  /**
+   * Sets the value of the '{@link org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria#getMaxValue <em>Max Value</em>}' attribute.
+  
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Max Value</em>' attribute.
+   * @see #getMaxValue()
+   * @generated
+   */
 
-	void setMaxValue(int value);
+  void setMaxValue(int value);
 
-	/**
-	 * Returns the value of the '<em><b>Min Value</b></em>' attribute.
-	
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Min Value</em>' attribute.
-	 * @see #setMinValue(int)
-	 * @see org.polarsys.capella.vp.perfo.perfo.PerfoPackage#getPerformanceCriteria_MinValue()
-	 * @model
-	 * @generated
-	 */
+  /**
+   * Returns the value of the '<em><b>Min Value</b></em>' attribute.
+  
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Min Value</em>' attribute.
+   * @see #setMinValue(int)
+   * @see org.polarsys.capella.vp.perfo.perfo.PerfoPackage#getPerformanceCriteria_MinValue()
+   * @model
+   * @generated
+   */
 
-	int getMinValue();
+  int getMinValue();
 
-	/**
-	 * Sets the value of the '{@link org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria#getMinValue <em>Min Value</em>}' attribute.
-	
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Min Value</em>' attribute.
-	 * @see #getMinValue()
-	 * @generated
-	 */
+  /**
+   * Sets the value of the '{@link org.polarsys.capella.vp.perfo.perfo.PerformanceCriteria#getMinValue <em>Min Value</em>}' attribute.
+  
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Min Value</em>' attribute.
+   * @see #getMinValue()
+   * @generated
+   */
 
-	void setMinValue(int value);
+  void setMinValue(int value);
 
 } // PerformanceCriteria

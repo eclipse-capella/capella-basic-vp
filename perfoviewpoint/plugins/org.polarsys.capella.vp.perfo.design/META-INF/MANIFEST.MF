@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.capella.vp.perfo.design;singleton:=true
-Bundle-Version: 6.0.0.qualifier
+Bundle-Version: 7.0.0.qualifier
 Bundle-Activator: org.polarsys.capella.vp.perfo.design.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -15,7 +15,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.common.acceleo.aql,
  org.polarsys.capella.core.model.handler
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-Localization: plugin
 Bundle-Vendor: %providerName
 Import-Package: org.polarsys.capella.core.model.helpers

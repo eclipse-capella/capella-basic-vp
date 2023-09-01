@@ -20,25 +20,25 @@ import org.polarsys.capella.vp.mass.mass.PartMass;
  */
 public class PartMassHelper {
 
-	private static final PartMassHelper instance = new PartMassHelper();
+  private static final PartMassHelper instance = new PartMassHelper();
 
-	/**
-	 * @generated
-	 */
-	public static PartMassHelper getInstance() {
-		return instance;
-	}
+  /**
+   * @generated
+   */
+  public static PartMassHelper getInstance() {
+    return instance;
+  }
 
-	/**
-	 * @generated
-	 */
-	public Object doSwitch(PartMass object, EStructuralFeature feature) {
-		// handle derivated feature
+  /**
+   * @generated
+   */
+  public Object doSwitch(PartMass object, EStructuralFeature feature) {
+    // handle derivated feature
 
-		// delegate to parent helper
-		return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
-				.doSwitch(object, feature);
+    // delegate to parent helper
+    return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
+        .doSwitch(object, feature);
 
-	}
+  }
 
 }

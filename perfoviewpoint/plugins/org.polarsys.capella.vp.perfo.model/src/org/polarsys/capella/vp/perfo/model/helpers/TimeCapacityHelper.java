@@ -20,25 +20,25 @@ import org.polarsys.capella.vp.perfo.perfo.TimeCapacity;
  */
 public class TimeCapacityHelper {
 
-	private static final TimeCapacityHelper instance = new TimeCapacityHelper();
+  private static final TimeCapacityHelper instance = new TimeCapacityHelper();
 
-	/**
-	 * @generated
-	 */
-	public static TimeCapacityHelper getInstance() {
-		return instance;
-	}
+  /**
+   * @generated
+   */
+  public static TimeCapacityHelper getInstance() {
+    return instance;
+  }
 
-	/**
-	 * @generated
-	 */
-	public Object doSwitch(TimeCapacity object, EStructuralFeature feature) {
-		// handle derivated feature
+  /**
+   * @generated
+   */
+  public Object doSwitch(TimeCapacity object, EStructuralFeature feature) {
+    // handle derivated feature
 
-		// delegate to parent helper
-		return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
-				.doSwitch(object, feature);
+    // delegate to parent helper
+    return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
+        .doSwitch(object, feature);
 
-	}
+  }
 
 }

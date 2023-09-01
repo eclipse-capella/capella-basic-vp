@@ -27,37 +27,37 @@ import org.polarsys.kitalpha.emde.model.ElementExtension;
  * </ul>
  *
  * @see org.polarsys.capella.vp.perfo.perfo.PerfoPackage#getTimeCapacity()
- * @model annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraint ExtendedElement=' http://www.polarsys.org/capella/core/fa/6.0.0#//FunctionalChain'"
+ * @model annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraint ExtendedElement=' http://www.polarsys.org/capella/core/fa/7.0.0#//FunctionalChain'"
  *        annotation="http://www.polarsys.org/kitalpha/emde/1.0.0/constraintMapping Mapping=' platform:/plugin/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore#//FunctionalChain'"
  * @generated
  */
 
 public interface TimeCapacity extends PerformanceCapacity, UnityElement, ElementExtension {
 
-	/**
-	 * Returns the value of the '<em><b>Current Execution Time</b></em>' attribute.
-	
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Current Execution Time</em>' attribute.
-	 * @see #setCurrentExecutionTime(int)
-	 * @see org.polarsys.capella.vp.perfo.perfo.PerfoPackage#getTimeCapacity_CurrentExecutionTime()
-	 * @model
-	 * @generated
-	 */
+  /**
+   * Returns the value of the '<em><b>Current Execution Time</b></em>' attribute.
+  
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Current Execution Time</em>' attribute.
+   * @see #setCurrentExecutionTime(int)
+   * @see org.polarsys.capella.vp.perfo.perfo.PerfoPackage#getTimeCapacity_CurrentExecutionTime()
+   * @model
+   * @generated
+   */
 
-	int getCurrentExecutionTime();
+  int getCurrentExecutionTime();
 
-	/**
-	 * Sets the value of the '{@link org.polarsys.capella.vp.perfo.perfo.TimeCapacity#getCurrentExecutionTime <em>Current Execution Time</em>}' attribute.
-	
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Current Execution Time</em>' attribute.
-	 * @see #getCurrentExecutionTime()
-	 * @generated
-	 */
+  /**
+   * Sets the value of the '{@link org.polarsys.capella.vp.perfo.perfo.TimeCapacity#getCurrentExecutionTime <em>Current Execution Time</em>}' attribute.
+  
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Current Execution Time</em>' attribute.
+   * @see #getCurrentExecutionTime()
+   * @generated
+   */
 
-	void setCurrentExecutionTime(int value);
+  void setCurrentExecutionTime(int value);
 
 } // TimeCapacity

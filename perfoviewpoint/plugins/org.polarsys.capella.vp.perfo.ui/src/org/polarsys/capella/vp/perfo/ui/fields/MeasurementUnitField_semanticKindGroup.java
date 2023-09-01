@@ -33,49 +33,48 @@ import org.polarsys.capella.vp.perfo.perfo.measurementUnit_Type;
 
 public class MeasurementUnitField_semanticKindGroup extends AbstractSemanticKindGroup {
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @generated
-	*/
-	private Button _measurementUnit_TypeBtnMILLISECOND;
+  /**
+   * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+   * @generated
+   */
+  private Button _measurementUnit_TypeBtnMILLISECOND;
 
-	/**
-	* Constructor.
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @param parent_p
-	* @param widgetFactory_p
-	* @generated
-	*/
-	public MeasurementUnitField_semanticKindGroup(Composite parent_p,
-			TabbedPropertySheetWidgetFactory widgetFactory_p) {
-		super(parent_p, widgetFactory_p, "Measurement Unit", 6); //$NON-NLS-1$
+  /**
+   * Constructor.
+   * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+   * @param parent_p
+   * @param widgetFactory_p
+   * @generated
+   */
+  public MeasurementUnitField_semanticKindGroup(Composite parent_p, TabbedPropertySheetWidgetFactory widgetFactory_p) {
+    super(parent_p, widgetFactory_p, "Measurement Unit", 6); //$NON-NLS-1$
 
-		_measurementUnit_TypeBtnMILLISECOND = createButton(measurementUnit_Type.MILLISECOND);
-	}
+    _measurementUnit_TypeBtnMILLISECOND = createButton(measurementUnit_Type.MILLISECOND);
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* {@inheritDoc}
-	* @generated   
-	*/
-	@Override
-	public List<Button> getSemanticFields() {
-		List<Button> fields = new ArrayList<Button>();
-		fields.add(_measurementUnit_TypeBtnMILLISECOND);
-		return fields;
-	}
+  /**
+   * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+   * {@inheritDoc}
+   * @generated   
+   */
+  @Override
+  public List<Button> getSemanticFields() {
+    List<Button> fields = new ArrayList<Button>();
+    fields.add(_measurementUnit_TypeBtnMILLISECOND);
+    return fields;
+  }
 
-	/**
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* {@inheritDoc}
-	* @generated   
-	*/
-	@Override
-	public Button getDefaultSemanticField() {
-		return _measurementUnit_TypeBtnMILLISECOND;
-	}
+  /**
+   * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+   * {@inheritDoc}
+   * @generated   
+   */
+  @Override
+  public Button getDefaultSemanticField() {
+    return _measurementUnit_TypeBtnMILLISECOND;
+  }
 }

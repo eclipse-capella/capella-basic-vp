@@ -37,113 +37,112 @@ import org.polarsys.capella.vp.mass.mass.PartMass;
  * @generated
  */
 public class PartMassItemProvider extends MassItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
-	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PartMassItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+    IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+  /**
+   * This constructs an instance from a factory and a notifier.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PartMassItemProvider(AdapterFactory adapterFactory) {
+    super(adapterFactory);
+  }
 
-	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+  /**
+   * This returns the property descriptors for the adapted class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
+    if (itemPropertyDescriptors == null) {
+      super.getPropertyDescriptors(object);
 
-			addCurrentMassPropertyDescriptor(object);
-		}
-		// begin-extension-code
-		checkChildCreationExtender(object);
-		// end-extension-code
-		return itemPropertyDescriptors;
-	}
+      addCurrentMassPropertyDescriptor(object);
+    }
+    // begin-extension-code
+    checkChildCreationExtender(object);
+    // end-extension-code
+    return itemPropertyDescriptors;
+  }
 
-	/**
-	 * This adds a property descriptor for the Current Mass feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCurrentMassPropertyDescriptor(Object object) {
+  /**
+   * This adds a property descriptor for the Current Mass feature.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected void addCurrentMassPropertyDescriptor(Object object) {
 
-		// begin-extension-code
-		itemPropertyDescriptors.add(createItemPropertyDescriptor
-		// end-extension-code
-		(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_PartMass_currentMass_feature"), //$NON-NLS-1$
-				getString("_UI_PropertyDescriptor_description", "_UI_PartMass_currentMass_feature", //$NON-NLS-1$//$NON-NLS-2$
-						"_UI_PartMass_type"), //$NON-NLS-1$
-				MassPackage.Literals.PART_MASS__CURRENT_MASS, true, false, false,
-				ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null,
-				// begin-extension-code
-				null));
-		// end-extension-code
-	}
+    // begin-extension-code
+    itemPropertyDescriptors.add(createItemPropertyDescriptor
+    // end-extension-code
+    (((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+        getString("_UI_PartMass_currentMass_feature"), //$NON-NLS-1$
+        getString("_UI_PropertyDescriptor_description", "_UI_PartMass_currentMass_feature", "_UI_PartMass_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        MassPackage.Literals.PART_MASS__CURRENT_MASS, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+        null,
+        // begin-extension-code
+        null));
+    // end-extension-code
+  }
 
-	/**
-	 * This returns PartMass.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/PartMass")); //$NON-NLS-1$
-	}
+  /**
+   * This returns PartMass.gif.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object getImage(Object object) {
+    return overlayImage(object, getResourceLocator().getImage("full/obj16/PartMass")); //$NON-NLS-1$
+  }
 
-	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getText(Object object) {
+  /**
+   * This returns the label text for the adapted class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getText(Object object) {
 
-		String label = ((PartMass) object).getName();
-		// begin-extension-code
-		return label == null || label.length() == 0 ? "[" + getString("_UI_PartMass_type") + "]" : label; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-		// end-extension-code
-	}
+    String label = ((PartMass) object).getName();
+    // begin-extension-code
+    return label == null || label.length() == 0 ? "[" + getString("_UI_PartMass_type") + "]" : label; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+    // end-extension-code
+  }
 
-	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+  /**
+   * This handles model notifications by calling {@link #updateChildren} to update any cached
+   * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void notifyChanged(Notification notification) {
+    updateChildren(notification);
 
-		switch (notification.getFeatureID(PartMass.class)) {
-		case MassPackage.PART_MASS__CURRENT_MASS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
-		super.notifyChanged(notification);
-	}
+    switch (notification.getFeatureID(PartMass.class)) {
+    case MassPackage.PART_MASS__CURRENT_MASS:
+      fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+      return;
+    }
+    super.notifyChanged(notification);
+  }
 
-	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+  /**
+   * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+   * that can be created under this object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    super.collectNewChildDescriptors(newChildDescriptors, object);
+  }
 
 }

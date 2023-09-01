@@ -23,14 +23,14 @@ import org.polarsys.capella.vp.price.price.PartPrice;
  * @generated
  */
 public class PartPriceSection extends NamedElementSection {
-	/**
-	 * @generated
-	 */
-	@Override
-	public boolean select(Object toTest) {
-		EObject obj = CapellaAdapterHelper.resolveSemanticObject(toTest);
+  /**
+   * @generated
+   */
+  @Override
+  public boolean select(Object toTest) {
+    EObject obj = CapellaAdapterHelper.resolveSemanticObject(toTest);
 
-		return obj != null
-				&& obj.eClass().equals(org.polarsys.capella.vp.price.price.PricePackage.eINSTANCE.getPartPrice());
-	}
+    return obj != null
+        && obj.eClass().equals(org.polarsys.capella.vp.price.price.PricePackage.eINSTANCE.getPartPrice());
+  }
 }

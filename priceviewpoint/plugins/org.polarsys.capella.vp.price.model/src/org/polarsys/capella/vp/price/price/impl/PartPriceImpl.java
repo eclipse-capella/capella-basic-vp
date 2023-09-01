@@ -35,149 +35,149 @@ import org.polarsys.capella.vp.price.price.PricePackage;
  */
 public class PartPriceImpl extends PriceImpl implements PartPrice {
 
-	/**
-	 * The default value of the '{@link #getCurrentPrice() <em>Current Price</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCurrentPrice()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int CURRENT_PRICE_EDEFAULT = 0;
+  /**
+   * The default value of the '{@link #getCurrentPrice() <em>Current Price</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCurrentPrice()
+   * @generated
+   * @ordered
+   */
+  protected static final int CURRENT_PRICE_EDEFAULT = 0;
 
-	/**
-	 * The cached value of the '{@link #getCurrentPrice() <em>Current Price</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCurrentPrice()
-	 * @generated
-	 * @ordered
-	 */
-	protected int currentPrice = CURRENT_PRICE_EDEFAULT;
+  /**
+   * The cached value of the '{@link #getCurrentPrice() <em>Current Price</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCurrentPrice()
+   * @generated
+   * @ordered
+   */
+  protected int currentPrice = CURRENT_PRICE_EDEFAULT;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PartPriceImpl() {
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected PartPriceImpl() {
 
-		super();
+    super();
 
-	}
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return PricePackage.Literals.PART_PRICE;
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  protected EClass eStaticClass() {
+    return PricePackage.Literals.PART_PRICE;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
 
-	@Override
-	public int getCurrentPrice() {
+  @Override
+  public int getCurrentPrice() {
 
-		return currentPrice;
-	}
+    return currentPrice;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
 
-	@Override
-	public void setCurrentPrice(int newCurrentPrice) {
+  @Override
+  public void setCurrentPrice(int newCurrentPrice) {
 
-		int oldCurrentPrice = currentPrice;
-		currentPrice = newCurrentPrice;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PricePackage.PART_PRICE__CURRENT_PRICE,
-					oldCurrentPrice, currentPrice));
+    int oldCurrentPrice = currentPrice;
+    currentPrice = newCurrentPrice;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PricePackage.PART_PRICE__CURRENT_PRICE, oldCurrentPrice,
+          currentPrice));
 
-	}
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case PricePackage.PART_PRICE__CURRENT_PRICE:
-			return getCurrentPrice();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    switch (featureID) {
+    case PricePackage.PART_PRICE__CURRENT_PRICE:
+      return getCurrentPrice();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case PricePackage.PART_PRICE__CURRENT_PRICE:
-			setCurrentPrice((Integer) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eSet(int featureID, Object newValue) {
+    switch (featureID) {
+    case PricePackage.PART_PRICE__CURRENT_PRICE:
+      setCurrentPrice((Integer) newValue);
+      return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case PricePackage.PART_PRICE__CURRENT_PRICE:
-			setCurrentPrice(CURRENT_PRICE_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID) {
+    switch (featureID) {
+    case PricePackage.PART_PRICE__CURRENT_PRICE:
+      setCurrentPrice(CURRENT_PRICE_EDEFAULT);
+      return;
+    }
+    super.eUnset(featureID);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case PricePackage.PART_PRICE__CURRENT_PRICE:
-			return currentPrice != CURRENT_PRICE_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID) {
+    switch (featureID) {
+    case PricePackage.PART_PRICE__CURRENT_PRICE:
+      return currentPrice != CURRENT_PRICE_EDEFAULT;
+    }
+    return super.eIsSet(featureID);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString() {
+    if (eIsProxy())
+      return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (currentPrice: "); //$NON-NLS-1$
-		result.append(currentPrice);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (currentPrice: "); //$NON-NLS-1$
+    result.append(currentPrice);
+    result.append(')');
+    return result.toString();
+  }
 
 } //PartPriceImpl

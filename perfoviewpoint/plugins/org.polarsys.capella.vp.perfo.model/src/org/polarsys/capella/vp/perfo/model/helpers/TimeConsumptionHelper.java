@@ -20,25 +20,25 @@ import org.polarsys.capella.vp.perfo.perfo.TimeConsumption;
  */
 public class TimeConsumptionHelper {
 
-	private static final TimeConsumptionHelper instance = new TimeConsumptionHelper();
+  private static final TimeConsumptionHelper instance = new TimeConsumptionHelper();
 
-	/**
-	 * @generated
-	 */
-	public static TimeConsumptionHelper getInstance() {
-		return instance;
-	}
+  /**
+   * @generated
+   */
+  public static TimeConsumptionHelper getInstance() {
+    return instance;
+  }
 
-	/**
-	 * @generated
-	 */
-	public Object doSwitch(TimeConsumption object, EStructuralFeature feature) {
-		// handle derivated feature
+  /**
+   * @generated
+   */
+  public Object doSwitch(TimeConsumption object, EStructuralFeature feature) {
+    // handle derivated feature
 
-		// delegate to parent helper
-		return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
-				.doSwitch(object, feature);
+    // delegate to parent helper
+    return org.polarsys.capella.core.data.helpers.capellacore.delegates.NamedElementHelper.getInstance()
+        .doSwitch(object, feature);
 
-	}
+  }
 
 }
