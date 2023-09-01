@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-SymbolicName: org.polarsys.capella.basic.requirement.migration;singleton:=true
-Bundle-Version: 7.0.0.qualifier
+Bundle-Version: 1.0.0.qualifier
 Export-Package: org.polarsys.capella.basic.requirement.migration.contribution
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -15,4 +15,4 @@ Require-Bundle: org.eclipse.ui,
  org.polarsys.kitalpha.ad.metadata.model,
  org.eclipse.sirius.diagram,
  org.polarsys.kitalpha.ad.metadata
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17

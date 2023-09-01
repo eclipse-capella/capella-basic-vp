@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Activator: org.polarsys.capella.basic.requirement.model.provider.RequirementEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.polarsys.capella.basic.requirement.model.provider,
  org.polarsys.capella.basic.requirement.provider
 Require-Bundle: org.eclipse.core.runtime,
@@ -48,6 +48,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.polarsys.capella.common.model,
  org.eclipse.core.commands,
  org.eclipse.emf.common,
- org.polarsys.capella.basic.requirement.model;bundle-version="7.0.0";visibility:=reexport,
- org.polarsys.capella.core.data.requirement.properties;visibility:=reexport
+ org.polarsys.capella.basic.requirement.model;bundle-version="1.0.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy

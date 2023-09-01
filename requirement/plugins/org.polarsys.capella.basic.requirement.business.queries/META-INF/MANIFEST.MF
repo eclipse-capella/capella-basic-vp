@@ -1,14 +1,14 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.polarsys.capella.requirement.business.queries;singleton:=true
-Bundle-Version: 7.0.0.qualifier
+Bundle-SymbolicName: org.polarsys.capella.basic.requirement.business.queries;singleton:=true
+Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: %providerName
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.emf.common,
  org.polarsys.capella.common.data.core.gen,
  org.polarsys.capella.core.data.business.queries;visibility:=reexport,
- org.polarsys.capella.requirement.model;bundle-version="7.0.0",
+ org.polarsys.capella.basic.requirement.model;bundle-version="1.0.0",
  org.polarsys.capella.common.helpers
-Export-Package: org.polarsys.capella.requirement.business.queries
+Export-Package: org.polarsys.capella.basic.requirement.business.queries
