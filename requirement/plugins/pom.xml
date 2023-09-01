@@ -44,7 +44,7 @@
 		<module>org.polarsys.capella.basic.requirement.semantic.queries</module>
 		<module>org.polarsys.capella.basic.requirement.sirius.analysis</module>
 		<module>org.polarsys.capella.basic.requirement.sirius.ui</module>
-		<module>org.polarsys.capella.basic.requirement.tools</module>
+		<module>org.polarsys.capella.basic.requirement.trace</module>
 	</modules>
 </project>
 
