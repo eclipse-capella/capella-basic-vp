@@ -15,6 +15,8 @@ package org.polarsys.capella.basic.requirement.sirius.analysis;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
+import org.eclipse.osgi.util.NLS;
+
 /**
  */
 public class Messages {
@@ -24,10 +26,14 @@ public class Messages {
 
   public static String Requirement_Label;
 
-  private Messages() {
-    //
+  static {
+    // initialize resource bundle
+    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
   }
 
+  private Messages() {
+  }
+  
   public static String getString(String key) {
     try {
       return RESOURCE_BUNDLE.getString(key);
