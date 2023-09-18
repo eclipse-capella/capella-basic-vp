@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="CapellaBasicViewpoints" sequenceNumber="1693569101">
+<target name="CapellaBasicViewpoints" sequenceNumber="1695044671">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.gmf.runtime.notation.sdk.feature.group" version="0.0.0"/>
@@ -127,15 +127,15 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.rcp.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.cdo.mock.feature.feature.group" version="0.0.0"/>
-      <repository id="capella-master" location="https://download.eclipse.org/capella/core/updates/nightly/master-PR-2689-22/org.polarsys.capella.rcp.site"/>
+      <repository id="capella-master" location="https://download.eclipse.org/capella/core/updates/stable/7.0.0-S20230904/org.polarsys.capella.rcp.site"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.cdo.sdk.feature.group" version="5.14.0.v20230420-0638"/>
       <repository location="https://download.eclipse.org/modeling/emf/cdo/drops/R20230606-0205"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.polarsys.capella.test.feature.feature.group" version="7.0.0.202308311758"/>
-      <repository id="capella-test" location="https://download.eclipse.org/capella/core/updates/nightly/master-PR-2689-22/org.polarsys.capella.test.site"/>
+      <unit id="org.polarsys.capella.test.feature.feature.group" version="7.0.0.202309041141"/>
+      <repository id="capella-test" location="https://download.eclipse.org/capella/core/updates/stable/7.0.0-S20230904/org.polarsys.capella.test.site"/>
     </location>
   </locations>
 </target>
