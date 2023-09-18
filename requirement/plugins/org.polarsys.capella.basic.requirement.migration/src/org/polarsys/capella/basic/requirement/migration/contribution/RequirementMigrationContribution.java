@@ -51,7 +51,11 @@ public class RequirementMigrationContribution extends AbstractMigrationContribut
   @Override
   public EStructuralFeature getFeature(EObject object, String prefix, String name, boolean isElement) {
     if (name.equals("ownedRequirementPkgs")) {
-      return ModellingcorePackage.Literals.MODEL_ELEMENT__OWNED_MIGRATED_ELEMENTS;
+      if(object instanceof BlockArchitecture) {
+        return ModellingcorePackage.Literals.MODEL_ELEMENT__OWNED_MIGRATED_ELEMENTS;
+      }
+       return RequirementPackage.Literals.REQUIREMENTS_PKG__OWNED_REQUIREMENT_PKGS;
+      
     }
     return super.getFeature(object, prefix, name, isElement);
   }
@@ -60,7 +64,10 @@ public class RequirementMigrationContribution extends AbstractMigrationContribut
   public String getFeatureName(String prefix, String name, boolean isElement, EObject peekObject, String value,
       Resource resource, MigrationContext context) {
     if (name.equals("ownedRequirementPkgs")) {
-      return ModellingcorePackage.Literals.MODEL_ELEMENT__OWNED_MIGRATED_ELEMENTS.getName();
+      if(peekObject instanceof BlockArchitecture) {
+        return ModellingcorePackage.Literals.MODEL_ELEMENT__OWNED_MIGRATED_ELEMENTS.getName();
+      }
+      return RequirementPackage.Literals.REQUIREMENTS_PKG__OWNED_REQUIREMENT_PKGS.getName();
     }
     return super.getFeatureName(prefix, name, isElement, peekObject, value, resource, context);
   }
