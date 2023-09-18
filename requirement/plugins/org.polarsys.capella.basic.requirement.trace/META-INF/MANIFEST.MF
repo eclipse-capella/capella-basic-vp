@@ -4,6 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.capella.basic.requirement.trace;singleton:=true
 Automatic-Module-Name: org.polarsys.capella.basic.requirement.trace
 Bundle-Version: 1.0.0.qualifier
+Export-Package: org.polarsys.capella.basic.requirement.trace.extension
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
