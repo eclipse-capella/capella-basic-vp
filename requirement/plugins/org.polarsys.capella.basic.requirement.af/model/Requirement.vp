@@ -3,7 +3,7 @@
   <ruleSet vpid="_oNyM8VQPEeas5ZJk-jBAEF" target="_MB6moB21EeaZT-H7SsDabc"/>
   <serviceSet name="" description="" id="" vpid="_oNyM8FQPEeas5ZJk-jBAEF" target="_MB6moB21EeaZT-H7SsDabc"/>
   <metamodel>
-    <models href="../../org.polarsys.capella.basic.requirement.model/model/requirement.ecore#/"/>
+    <models href="../../org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#/"/>
   </metamodel>
   <representation>
     <representations xsi:type="sirius:SiriusRepresentation">
