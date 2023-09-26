@@ -1,0 +1,27 @@
+<!--
+  Copyright (c) 2023 THALES GLOBAL SERVICES.
+  
+  This program and the accompanying materials are made available under the
+  terms of the Eclipse Public License 2.0 which is available at
+  http://www.eclipse.org/legal/epl-2.0
+  
+  SPDX-License-Identifier: EPL-2.0
+  
+  Contributors:
+       Thales - initial API and implementation
+-->
+=Trace Manager=
+
+'''Basic Requirement integrates with Capella's Trace Manager'''. Requirements can also be applied on Capella elements using the Trace Manager.
+
+Right-click on an element and select Wizards > Trace Manager
+
+
+<center>[[Image:../Images/trace_menu.png]]</center>
+
+
+From here you apply or remove requirements, by creating or deleting a requirement trace to the chosen requirements.
+
+
+<center>[[Image:../Images/trace_manager.png]]</center>
+
