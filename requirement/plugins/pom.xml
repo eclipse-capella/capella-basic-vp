@@ -34,6 +34,7 @@
 		<!-- Plugins -->
 		<module>org.polarsys.capella.basic.requirement.af</module>
 		<module>org.polarsys.capella.basic.requirement.business.queries</module>
+		<module>org.polarsys.capella.basic.requirement.doc</module>
 		<module>org.polarsys.capella.basic.requirement.migration</module>
 		<module>org.polarsys.capella.basic.requirement.validation</module>
 		<module>org.polarsys.capella.basic.requirement.model</module>
