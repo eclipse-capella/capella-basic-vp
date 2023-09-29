@@ -12,11 +12,11 @@
  *******************************************************************************/
 target "CapellaBasicViewpoints"
 
-include "https://download.eclipse.org/capella/core/updates/stable/7.0.0-S20230904/targets/capella.target-definition.targetplatform"
+include "https://download.eclipse.org/capella/core/updates/nightly/master/targets/capella.target-definition.targetplatform"
 
 with source, requirements
 
-location capella-master "https://download.eclipse.org/capella/core/updates/stable/7.0.0-S20230904/org.polarsys.capella.rcp.site" {
+location capella-master "https://download.eclipse.org/capella/core/updates/nightly/master/org.polarsys.capella.rcp.site" {
 	org.polarsys.capella.rcp.feature.group lazy
 	org.polarsys.capella.cdo.mock.feature.feature.group lazy
 }
@@ -26,6 +26,6 @@ location "https://download.eclipse.org/modeling/emf/cdo/drops/R20230606-0205" {
 }
 
 //following locations are used for tests
-location capella-test "https://download.eclipse.org/capella/core/updates/stable/7.0.0-S20230904/org.polarsys.capella.test.site" {
-	org.polarsys.capella.test.feature.feature.group
+location capella-test "https://download.eclipse.org/capella/core/updates/nightly/master/org.polarsys.capella.test.site" {
+	org.polarsys.capella.test.feature.feature.group lazy
 }
