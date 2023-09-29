@@ -68,4 +68,9 @@ public class RequirementTraceExtension implements ITraceExtension {
     return isRequirementsTrace(element);
   }
 
+  @Override
+  public String getViewpointID() {
+    return "org.polarsys.capella.basic.requirement";
+  }
+
 }
