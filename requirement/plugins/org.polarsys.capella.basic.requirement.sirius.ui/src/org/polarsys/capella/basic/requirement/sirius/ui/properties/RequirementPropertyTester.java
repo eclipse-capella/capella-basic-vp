@@ -13,22 +13,17 @@
 package org.polarsys.capella.basic.requirement.sirius.ui.properties;
 
 import org.eclipse.core.expressions.PropertyTester;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.polarsys.capella.basic.requirement.util.IRequirementConstants;
 import org.polarsys.capella.common.data.modellingcore.ModelElement;
 import org.polarsys.capella.common.ui.actions.ModelAdaptation;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
-import org.polarsys.capella.core.data.cs.Component;
-import org.polarsys.capella.core.data.cs.Part;
-import org.polarsys.capella.core.data.epbs.ConfigurationItem;
-import org.polarsys.capella.core.data.fa.AbstractFunction;
-import org.polarsys.capella.core.data.fa.ComponentExchange;
-import org.polarsys.capella.core.data.fa.FunctionalExchange;
-import org.polarsys.capella.core.data.information.datavalue.LiteralNumericValue;
-import org.polarsys.capella.core.model.utils.CapellaLayerCheckingExt;
+import org.polarsys.kitalpha.ad.services.manager.ViewpointManager;
 
 /**
  *
  */
-public class RequirementPropertyTester extends PropertyTester {
+public class RequirementPropertyTester extends PropertyTester implements IRequirementConstants {
 
   /**
    * @see org.eclipse.core.expressions.IPropertyTester#test(java.lang.Object, java.lang.String, java.lang.Object[],
@@ -41,14 +36,16 @@ public class RequirementPropertyTester extends PropertyTester {
       ModelElement element = ModelAdaptation.adaptToCapella(object_p);
       if ((element != null) && (element instanceof CapellaElement)) {
         String actionName = (String) testedValue_p;
-        
         if ("requirementManagerWizard".equals(actionName)) { //$NON-NLS-1$
-          return isRequirementManagerWizard(element);
+          ResourceSet rSet = element.eResource().getResourceSet();
+          boolean isActive = ViewpointManager.getInstance(rSet).isActive(VIEWPOINT_ID);
+          return isActive && isRequirementManagerWizard(element);
         }
       }
     }
     return result;
   }
+
   private boolean isRequirementManagerWizard(ModelElement element) {
     return true;
   }

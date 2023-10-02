@@ -14,10 +14,11 @@ package org.polarsys.capella.basic.requirement.trace.extension;
 
 import org.polarsys.capella.basic.requirement.RequirementFactory;
 import org.polarsys.capella.basic.requirement.RequirementsTrace;
+import org.polarsys.capella.basic.requirement.util.IRequirementConstants;
 import org.polarsys.capella.core.data.capellacore.Trace;
 import org.polarsys.capella.core.platform.eclipse.capella.ui.trace.extension.ITraceExtension;
 
-public class RequirementTraceExtension implements ITraceExtension {
+public class RequirementTraceExtension implements ITraceExtension, IRequirementConstants {
 
   @Override
   public boolean canDelete(Trace element) {
@@ -70,7 +71,7 @@ public class RequirementTraceExtension implements ITraceExtension {
 
   @Override
   public String getViewpointID() {
-    return "org.polarsys.capella.basic.requirement";
+    return VIEWPOINT_ID;
   }
 
 }
