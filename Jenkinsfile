@@ -12,6 +12,11 @@ pipeline {
 		BUILD_KEY = (github.isPullRequest() ? CHANGE_TARGET : BRANCH_NAME).replaceFirst(/^v/, '')
   }
   stages {
+	stage('Generate Target Platform') {
+		steps {
+		    sh 'mvn verify -f releng/org.polarsys.capella.basic.viewpoints.target/pom.xml'
+		}
+	}
     stage('Package basic vp') {
       steps {
         wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
