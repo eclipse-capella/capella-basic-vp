@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_3="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" name="General" version="12.0.0.2017041100">
-  <ownedViewpoints documentation="sd&#xD;&#xA;" name="Requirement" label="Requirement" modelFileExtension="capella">
+  <ownedViewpoints documentation="sd&#xD;&#xA;" name="Requirement" label="Basic Requirement" modelFileExtension="capella">
     <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Requirements" domainClass="RequirementsPkg">
       <metamodel href="platform:/plugin/org.polarsys.capella.basic.requirement.model/model/Requirement.ecore#/"/>
       <metamodel href="http://www.eclipse.org/emf/2002/Ecore#/"/>

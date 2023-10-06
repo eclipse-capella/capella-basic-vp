@@ -24,9 +24,7 @@ There are two options to install the Add-On:
 * '''''Update site:''''' '''Help -&gt; Install new software'''. Then''' Add '''a new repository location and click '''Archive''' to select the update site zip file. Select a name and follow the installation wizard. Uncheck '''Group by category''' to see the feature to install. To uninstall, click '''Help -&gt; About Capella '''and then '''Installation Details'''. Find and select the Add-On in the '''Installed Software''' tab and click '''Uninstall'''.
 To check that the Add-On is correctly installed, click on '''Help -&gt; About Capella -&gt; Installation Details'''
 
-Check that the '''Capella Requirement''' is installed as below.
-
-<center>[[Image:Images/requirement_install.png]]</center>
+Check that the '''Basic Requirement''' is listed.
 
 =Model Migration=
 

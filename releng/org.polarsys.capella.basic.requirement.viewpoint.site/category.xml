@@ -12,7 +12,7 @@
 -->
 <site>
    <description url="http://www.polarsys.org/capella">
-      Capella Basic Requirement 
+      Basic Requirement 
    </description>
    <feature id="org.polarsys.capella.basic.requirement.feature.source">
       <category name="org.polarsys.capella.basic.requirement"/>
