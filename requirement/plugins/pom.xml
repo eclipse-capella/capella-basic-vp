@@ -40,11 +40,13 @@
 		<module>org.polarsys.capella.basic.requirement.model</module>
 		<module>org.polarsys.capella.basic.requirement.model.cdo</module>
 		<module>org.polarsys.capella.basic.requirement.model.edit</module>
+		<module>org.polarsys.capella.basic.requirement.preferences</module>
 		<module>org.polarsys.capella.basic.requirement.properties</module>
 		<module>org.polarsys.capella.basic.requirement.semantic.queries</module>
 		<module>org.polarsys.capella.basic.requirement.sirius.analysis</module>
 		<module>org.polarsys.capella.basic.requirement.sirius.ui</module>
 		<module>org.polarsys.capella.basic.requirement.trace</module>
+		<module>org.polarsys.capella.basic.requirement.transition</module>
 		
 	</modules>
 </project>

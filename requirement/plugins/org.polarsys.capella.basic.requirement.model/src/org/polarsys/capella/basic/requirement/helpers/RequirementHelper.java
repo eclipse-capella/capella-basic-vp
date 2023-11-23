@@ -31,7 +31,10 @@ public class RequirementHelper {
         return null;
       }
     }
-    return requirementPkgs.iterator().next();
+    if (requirementPkgs.iterator().hasNext())
+      return requirementPkgs.iterator().next();
+
+    return null;
   }
 
   /**

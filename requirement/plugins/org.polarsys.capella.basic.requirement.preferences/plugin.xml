@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+  Copyright (c) 2023 THALES GLOBAL SERVICES.
+  
+  This program and the accompanying materials are made available under the
+  terms of the Eclipse Public License 2.0 which is available at
+  http://www.eclipse.org/legal/epl-2.0
+  
+  SPDX-License-Identifier: EPL-2.0
+  
+  Contributors:
+       Thales - initial API and implementation
+-->
+<plugin>
+   <extension
+         point="org.polarsys.capella.core.platform.eclipse.capella.ui.trace.extension">
+      <extensionClass
+            traceExtension="org.polarsys.capella.basic.requirement.preferences.RequirementTraceExtension">
+      </extensionClass>
+   </extension>
+   <extension
+         point="org.polarsys.capella.common.flexibility.properties">
+      <properties
+            id="capella.core.transition.system2subsystem">
+            <inheritance properties="capella.core.transition.system" />
+   <group
+               id="requirements"
+               name="%group.requirements"
+               parent="extensionGroup">
+         </group>
+    <property
+               class="org.polarsys.capella.basic.requirement.preferences.RequirementsPreference"
+               enabled="true"
+               group="requirements"
+               id="requirementsExport"
+               name="%property.requirements">
+            <argument
+                  id="scope"
+                  value="capella.core.transition.system2subsystem">
+            </argument>
+            <argument
+                  id="default"
+                  value="">
+            </argument>
+         </property>
+      </properties>
+   </extension>
+</plugin>
