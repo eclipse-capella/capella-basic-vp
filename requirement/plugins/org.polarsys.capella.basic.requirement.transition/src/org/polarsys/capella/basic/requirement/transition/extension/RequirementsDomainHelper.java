@@ -25,12 +25,4 @@ public class RequirementsDomainHelper extends CapellaTransitionDomainHelper {
     ePackages.add(RequirementPackage.eINSTANCE);
     return ePackages;
   }
-
-  /**
-   * @see org.polarsys.capella.core.transition.system.domain.CapellaTransitionDomainHelper#isDomainFor(Object)
-   */
-  @Override
-  public boolean isDomainFor(Object object) {
-    return true;
-  }
 }
