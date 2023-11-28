@@ -13,22 +13,17 @@
        Thales - initial API and implementation
 -->
 <plugin>
-   <extension
-         point="org.polarsys.capella.core.transition.extension">
-      <extensionClass
-            transitionExtension="org.polarsys.capella.basic.requirement.transition.extension.RequirementTransitionExtension">
-      </extensionClass>
-   </extension>
      <extension
          id="org.polarsys.capella.transition.system2subsystem"
          name="Requirements Transition Mapping"
          point="org.polarsys.kitalpha.transposer.rules.handler.mapping">
+         
       <mapping
             context="org.polarsys.capella.core.transition.common.context.TransitionContext"
             description="A system to subsystem transition including Requirements"
             domainHelper="org.polarsys.capella.basic.requirement.transition.extension.RequirementsDomainHelper"
             extendedMappingExtensionID="org.polarsys.capella.core.transition.system"
-            mappingName="System to SubSystem Transition including Requirements"
+            mappingName="System to SubSystem Transition"
             mappingPurpose="org.polarsys.capella.core.transition">
          
          <mappingPackage
@@ -71,5 +66,31 @@
             </mappingElement>
          </mappingPackage>            
        </mapping>
-</extension>
+    </extension>
+
+    <extension
+         point="org.polarsys.capella.core.transition.handlers">
+      <handlers
+            id="Requirement extension"
+            mapping="all"
+            purpose="org.polarsys.capella.core.transition">
+         <domain
+               id="http://www.polarsys.org/capella/basic/requirement">
+         </domain>
+         <scopeRetriever
+               id="scopeRequirement"
+               class="org.polarsys.capella.basic.requirement.transition.extension.RequirementsScopeRetriever">
+         </scopeRetriever>
+         <scopeFilter
+               id="scopeRequirementD"
+               class="org.polarsys.capella.basic.requirement.transition.extension.RequirementsScopeFilter">
+         </scopeFilter>
+         <activityExtender
+               activityIdentifier="DifferencesMergingActivity"
+               class="org.polarsys.capella.basic.requirement.transition.extension.EnableViewpoint"
+               id="enableViewpoint">
+         </activityExtender>
+      </handlers>
+    </extension>
+    
 </plugin>

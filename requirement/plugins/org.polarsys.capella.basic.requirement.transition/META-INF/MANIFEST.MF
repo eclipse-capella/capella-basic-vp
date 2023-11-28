@@ -15,5 +15,7 @@ Require-Bundle: org.polarsys.capella.core.data.gen,
  org.polarsys.capella.basic.requirement.preferences;bundle-version="1.0.0",
  org.polarsys.capella.core.transition.system;bundle-version="7.0.0",
  com.google.guava,
- org.polarsys.capella.core.compare
+ org.polarsys.capella.core.compare,
+ org.polarsys.kitalpha.ad.services,
+ org.polarsys.capella.core.model.handler
 Bundle-ActivationPolicy: lazy
