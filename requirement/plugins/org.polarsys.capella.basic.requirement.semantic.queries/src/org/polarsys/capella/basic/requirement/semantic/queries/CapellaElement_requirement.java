@@ -16,11 +16,9 @@ package org.polarsys.capella.basic.requirement.semantic.queries;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
-import org.polarsys.capella.common.data.modellingcore.AbstractTrace;
+import org.polarsys.capella.basic.requirement.helpers.RequirementModelHelper;
 import org.polarsys.capella.common.helpers.query.IQuery;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
-import org.polarsys.capella.basic.requirement.RequirementsTrace;
 
 /**
  *
@@ -43,16 +41,8 @@ public class CapellaElement_requirement implements IQuery {
 	public List<Object> compute(Object object) {
 		List<Object> result = new ArrayList<Object>();
 		if (object instanceof CapellaElement) {
-			CapellaElement sf = (CapellaElement) object;
-        	EList<AbstractTrace> traces = sf.getOutgoingTraces();
-        	for (AbstractTrace trace : traces) {
-        		if (trace instanceof RequirementsTrace)
-        		{
-        			RequirementsTrace rt = (RequirementsTrace) trace; 
-        			result.add(rt.getTargetElement());
-        		}
-			}
+      result.addAll(RequirementModelHelper.getAppliedRequirements((CapellaElement) object));
 		}
-        return result;
+    return result;
 	}
 }

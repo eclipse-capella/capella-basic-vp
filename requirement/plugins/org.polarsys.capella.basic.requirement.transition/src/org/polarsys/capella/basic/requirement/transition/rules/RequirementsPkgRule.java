@@ -17,7 +17,7 @@ import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.polarsys.capella.basic.requirement.RequirementPackage;
-import org.polarsys.capella.basic.requirement.helpers.RequirementHelper;
+import org.polarsys.capella.basic.requirement.helpers.RequirementModelHelper;
 import org.polarsys.capella.core.data.capellacore.Structure;
 import org.polarsys.capella.core.data.cs.BlockArchitecture;
 import org.polarsys.capella.core.data.cs.CsPackage;
@@ -138,8 +138,8 @@ public class RequirementsPkgRule extends AbstractCapellaElementRule {
 			BlockArchitecture source = (BlockArchitecture) root;
 			BlockArchitecture target = (BlockArchitecture) TransformationHandlerHelper.getInstance(context)
 					.getBestTracedElement(root, context, CsPackage.Literals.BLOCK_ARCHITECTURE);
-      if (target != null && RequirementHelper.getRequirementsPkgs(source).contains(element)) {
-        Structure pkg = RequirementHelper.getRequirementsPkg(target, false);
+      if (target != null && RequirementModelHelper.getRequirementsPkgs(source).contains(element)) {
+        Structure pkg = RequirementModelHelper.getRequirementsPkg(target, false);
 				if (pkg != null) {
 					return pkg;
 				}

@@ -23,9 +23,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.polarsys.capella.basic.requirement.Requirement;
 import org.polarsys.capella.basic.requirement.RequirementPackage;
 import org.polarsys.capella.basic.requirement.RequirementsPkg;
-import org.polarsys.capella.basic.requirement.RequirementsTrace;
-import org.polarsys.capella.basic.requirement.helpers.RequirementHelper;
-import org.polarsys.capella.common.data.modellingcore.AbstractTrace;
+import org.polarsys.capella.basic.requirement.helpers.RequirementModelHelper;
 import org.polarsys.capella.common.data.modellingcore.ModellingcorePackage;
 import org.polarsys.capella.common.helpers.EObjectExt;
 import org.polarsys.capella.common.helpers.EcoreUtil2;
@@ -144,12 +142,7 @@ public class CapellaElement_OutgoingRequirement implements IBusinessQuery {
   @Override
 	public List<EObject> getCurrentElements(EObject element, boolean onlyGenerated) {
     List<EObject> currentElements = new ArrayList<EObject>();
-
-    for (AbstractTrace trace : ((CapellaElement) element).getOutgoingTraces()) {
-      if (trace instanceof RequirementsTrace) {
-        currentElements.add((CapellaElement) trace.getTargetElement());
-      }
-    }
+    currentElements.addAll(RequirementModelHelper.getAppliedRequirements((CapellaElement) element));
 
     currentElements = ListExt.removeDuplicates(currentElements);
 
@@ -172,7 +165,7 @@ public class CapellaElement_OutgoingRequirement implements IBusinessQuery {
   List<Requirement> getRequirements(BlockArchitecture arch) {
     List<Requirement> elements = new ArrayList<Requirement>();
 
-    for (RequirementsPkg pkg : RequirementHelper.getRequirementsPkgs(arch)) {
+    for (RequirementsPkg pkg : RequirementModelHelper.getRequirementsPkgs(arch)) {
       for (EObject req : EObjectExt.getAll(pkg, RequirementPackage.Literals.REQUIREMENT)) {
         elements.add((Requirement) req);
       }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generationChain:GenerationChain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SampleExtension="http://www.eclipse.org/egf/1.0.0/generationChainSampleExtension" xmlns:cdoExtension="http://www.eclipse.org/egf/genchain/extension/cdo/1.0.0" xmlns:generationChain="http://www.eclipse.org/egf/1.0.0/generationChain" name="My" factoryComponentName="org.eclipse.egf.chain.my">
+  <elements xsi:type="generationChain:GenerationChain" name="requirement">
+    <elements xsi:type="cdoExtension:CdoGeneration" name="CDO Emf Generation for requirement" modelPath="/org.polarsys.capella.basic.requirement.fc/model/requirement.fcore"/>
+    <elements xsi:type="generationChain:EmfGeneration" name="Emf Generation for requirement" modelPath="/org.polarsys.capella.basic.requirement.fc/model/requirement.fcore" generateModel="true" generateEdit="true" pluginName="org.polarsys.capella.basic.requirement.fc.requirement" basePackage="org.polarsys.capella.basic.requirement.fc"/>
+    <elements xsi:type="SampleExtension:SampleElement" name="Sample extension for requirement" modelPath="/org.polarsys.capella.basic.requirement.fc/model/requirement.fcore"/>
+    <elements xsi:type="generationChain:DocumentationGeneration" name="Emf Documentation for requirement" modelPath="/org.polarsys.capella.basic.requirement.fc/model/requirement.fcore" pluginName="org.polarsys.capella.basic.requirement.fc.doc" outputDirectoryPath="output"/>
+  </elements>
+</generationChain:GenerationChain>

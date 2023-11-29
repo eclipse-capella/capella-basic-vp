@@ -1,0 +1,22 @@
+<%
+String projectName = ctx.getValue("projectName").toString();
+String outputFolder = ctx.getValue("outputFolder").toString();
+%>
+<% // requirements%>
+<%
+List<Requirement> appliedReq = RequirementModelHelper.getAppliedRequirements(element);
+if (appliedReq.size() > 0){
+	%>
+	<h2>
+	Requirements
+	</h2>
+	
+	<%@ egf:patternCall patternId="platform:/plugin/org.polarsys.kitalpha.doc.gen.business.core/egf/HTMLDocGenCommon.fcore#LogicalName=org.polarsys.kitalpha.doc.gen.business.core.doccontent.treeview.TreeViewControlHeader" args="element:parameter, RequirementTreeServices.REQUIREMENT_TREE_ID:treeID"%>
+	<br>
+	
+	<%=RequirementTreeServices.getRequirementsTree(appliedReq, projectName, outputFolder)%>
+	
+	<%@ egf:patternCall patternId="platform:/plugin/org.polarsys.kitalpha.doc.gen.business.core/egf/HTMLDocGenCommon.fcore#LogicalName=org.polarsys.kitalpha.doc.gen.business.core.doccontent.treeview.TreeViewControlFooter" args="element:parameter, RequirementTreeServices.REQUIREMENT_TREE_ID:treeID, true:collapsed"%>
+	<%
+}
+%>

@@ -16,12 +16,10 @@ package org.polarsys.capella.basic.requirement.semantic.queries;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
-import org.polarsys.capella.common.data.modellingcore.AbstractTrace;
-import org.polarsys.capella.common.data.modellingcore.TraceableElement;
-import org.polarsys.capella.common.helpers.query.IQuery;
 import org.polarsys.capella.basic.requirement.Requirement;
-import org.polarsys.capella.basic.requirement.RequirementsTrace;
+import org.polarsys.capella.basic.requirement.helpers.RequirementModelHelper;
+import org.polarsys.capella.common.helpers.query.IQuery;
+import org.polarsys.capella.core.data.capellacore.CapellaElement;
 
 /**
  * Return all the elements associated to current requirement
@@ -43,18 +41,8 @@ public class RequirementTracedElements implements IQuery {
     if (object instanceof Requirement) {
       // Type the element
       Requirement req = (Requirement) object;
-      // Retrieve list of inComing traces 
-      EList<AbstractTrace> incomingTraces = req.getIncomingTraces();
-      for (AbstractTrace abstractTrace : incomingTraces) {
-        if (abstractTrace instanceof RequirementsTrace) {
-          // Type the element
-          RequirementsTrace requirementsTrace = (RequirementsTrace) abstractTrace;
-          // retrieve the source of the requirementsTrace 
-          TraceableElement sourceElement = requirementsTrace.getSourceElement();
-          // if source not null add to result
-          if (null != sourceElement)
-            result.add(sourceElement);
-        }
+      for (CapellaElement element : RequirementModelHelper.getRelatedCapellaElements(req)) {
+        result.add(element);
       }
     }
     return result;
