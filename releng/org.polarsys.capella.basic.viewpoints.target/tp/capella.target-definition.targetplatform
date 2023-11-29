@@ -29,3 +29,7 @@ location "https://download.eclipse.org/modeling/emf/cdo/drops/R20230606-0205" {
 location capella-test "https://download.eclipse.org/capella/core/updates/nightly/master/org.polarsys.capella.test.site" {
 	org.polarsys.capella.test.feature.feature.group lazy
 }
+
+location xhtml-docgen "https://download.eclipse.org/capella/addons/xhtmldocgen/updates/nightly/master/" {
+	 org.polarsys.capella.docgen.feature.source.feature.group lazy
+}

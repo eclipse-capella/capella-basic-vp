@@ -31,6 +31,7 @@
 	<modules>
 		<module>org.polarsys.capella.basic.requirement.feature</module>
 		<module>org.polarsys.capella.basic.requirement.cdo.feature</module>
+		<module>org.polarsys.capella.basic.requirement.docgen.feature</module>
 		<module>org.polarsys.capella.basic.requirement.tests.feature</module>
 	</modules>
 </project>

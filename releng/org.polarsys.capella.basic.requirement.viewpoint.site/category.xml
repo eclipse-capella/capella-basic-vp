@@ -20,10 +20,14 @@
    <feature id="org.polarsys.capella.basic.requirement.cdo.feature.source">
       <category name="org.polarsys.capella.basic.requirement.collaboration"/>
    </feature>
+   <feature id="org.polarsys.capella.basic.requirement.docgen.feature.source">
+      <category name="org.polarsys.capella.basic.requirement.docgen"/>
+   </feature>
    <feature id="org.polarsys.capella.basic.requirement.tests.feature.source">
       <category name="org.polarsys.capella.basic.requirement.tests"/>
    </feature>
    <category-def name="org.polarsys.capella.basic.requirement" label="Basic Requirement"/>
+   <category-def name="org.polarsys.capella.basic.requirement.docgen" label="Basic Requirement XHTML Documentation Generation"/>
    <category-def name="org.polarsys.capella.basic.requirement.collaboration" label="Basic Requirement Collaboration"/>
    <category-def name="org.polarsys.capella.basic.requirement.tests" label="Basic Requirement Tests"/>
 </site>

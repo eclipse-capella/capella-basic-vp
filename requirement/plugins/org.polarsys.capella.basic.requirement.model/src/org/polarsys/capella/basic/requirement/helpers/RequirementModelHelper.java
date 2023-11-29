@@ -1,10 +1,17 @@
 package org.polarsys.capella.basic.requirement.helpers;
 
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
+import org.eclipse.emf.ecore.EObject;
+import org.polarsys.capella.basic.requirement.Requirement;
 import org.polarsys.capella.basic.requirement.RequirementFactory;
 import org.polarsys.capella.basic.requirement.RequirementsPkg;
+import org.polarsys.capella.basic.requirement.RequirementsTrace;
+import org.polarsys.capella.common.data.modellingcore.AbstractTrace;
+import org.polarsys.capella.core.data.capellacore.CapellaElement;
 import org.polarsys.capella.core.data.capellacore.Structure;
 import org.polarsys.capella.core.data.cs.BlockArchitecture;
 import org.polarsys.kitalpha.emde.model.ElementExtension;
@@ -12,7 +19,7 @@ import org.polarsys.kitalpha.emde.model.ElementExtension;
 /**
  * @generated
  */ 
-public class RequirementHelper {
+public class RequirementModelHelper {
 
   private static String REQUIREMENTSPKG_DEFAULT_NAME = "Requirements";
 
@@ -57,6 +64,43 @@ public class RequirementHelper {
     return requirementPkgs;
   }
 
+  /**
+   * @generated not
+   * 
+   *            Retrieve the applied requirements from the given capella element
+   */
+  public static List<Requirement> getAppliedRequirements(CapellaElement element) {
+    List<Requirement> currentElements = new ArrayList<Requirement>();
+
+    for (AbstractTrace trace : element.getOutgoingTraces()) {
+      if (trace instanceof RequirementsTrace) {
+        EObject target = trace.getTargetElement();
+        if (target instanceof Requirement) {
+          currentElements.add((Requirement) target);
+        }
+      }
+    }
+    return currentElements;
+  }
+  
+  /**
+   * @generated not
+   * 
+   *            Retrieve the related capella elements from the given requirement
+   */
+  public static List<CapellaElement> getRelatedCapellaElements(Requirement element) {
+    List<CapellaElement> currentElements = new ArrayList<CapellaElement>();
+
+    for (AbstractTrace trace : element.getIncomingTraces()) {
+      if (trace instanceof RequirementsTrace) {
+        EObject source = trace.getSourceElement();
+        if (source instanceof CapellaElement) {
+          currentElements.add((CapellaElement) source);
+        }
+      }
+    }
+    return currentElements;
+  }
 }
 
 
