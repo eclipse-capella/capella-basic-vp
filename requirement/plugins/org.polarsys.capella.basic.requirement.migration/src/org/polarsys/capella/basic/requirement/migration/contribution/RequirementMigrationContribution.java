@@ -3,9 +3,12 @@ package org.polarsys.capella.basic.requirement.migration.contribution;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.Set;
 
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EFactory;
 import org.eclipse.emf.ecore.EObject;
@@ -25,19 +28,19 @@ import org.eclipse.sirius.viewpoint.description.Viewpoint;
 import org.polarsys.capella.basic.requirement.RequirementFactory;
 import org.polarsys.capella.basic.requirement.RequirementPackage;
 import org.polarsys.capella.basic.requirement.RequirementsPkg;
-import org.polarsys.capella.common.data.modellingcore.ModelElement;
 import org.polarsys.capella.common.data.modellingcore.ModellingcorePackage;
 import org.polarsys.capella.common.ef.ExecutionManager;
 import org.polarsys.capella.core.data.cs.BlockArchitecture;
 import org.polarsys.capella.core.data.migration.context.MigrationContext;
 import org.polarsys.capella.core.data.migration.contribution.AbstractMigrationContribution;
-import org.polarsys.kitalpha.emde.model.ElementExtension;
 
 public class RequirementMigrationContribution extends AbstractMigrationContribution {
 
   private URI viewpointUri = URI.createURI("viewpoint:/org.polarsys.capella.basic.requirement.sirius.analysis/Requirement");
 
+  Set<RequirementsPkg> requirementPkgsToMigrate = null;
   public RequirementMigrationContribution() {
+    requirementPkgsToMigrate = new HashSet<RequirementsPkg>();
   }
 
   @Override
@@ -92,21 +95,30 @@ public class RequirementMigrationContribution extends AbstractMigrationContribut
   }
 
   @Override
+  public IStatus preMigrationExecute(IResource fileToMigrate, MigrationContext context, boolean checkVersion) {
+    requirementPkgsToMigrate.clear();
+    return super.preMigrationExecute(fileToMigrate, context, checkVersion);
+  }
+
+  @Override
   public void unaryMigrationExecute(EObject currentElement, MigrationContext context) {
     super.unaryMigrationExecute(currentElement, context);
-
-    if (currentElement instanceof BlockArchitecture) {
-      Collection<ElementExtension> requirementPkgs = ((ModelElement) currentElement).getOwnedMigratedElements().stream()
-          .filter(RequirementsPkg.class::isInstance).map(RequirementsPkg.class::cast).collect(Collectors.toList());
-      ((BlockArchitecture) currentElement).getOwnedExtensions().addAll(requirementPkgs);
+    if (currentElement instanceof RequirementsPkg) {
+      EObject container = currentElement.eContainer();
+      if (container instanceof BlockArchitecture
+          && ((BlockArchitecture) container).getOwnedMigratedElements().contains(currentElement))
+        requirementPkgsToMigrate.add((RequirementsPkg) currentElement);
     }
-
   }
 
   @Override
   public void unaryEndMigrationExecute(ExecutionManager executionManager, Resource resource, MigrationContext context) {
     super.unaryEndMigrationExecute(executionManager, resource, context);
 
+    for (RequirementsPkg pkg : requirementPkgsToMigrate) {
+      BlockArchitecture eContainer = (BlockArchitecture) pkg.eContainer();
+      eContainer.getOwnedExtensions().add(pkg);
+    }
     resource.getContents().stream().filter(DAnalysis.class::isInstance).map(DAnalysis.class::cast)
         .forEach(this::moveInvalidRepresentations);
   }
@@ -220,5 +232,6 @@ public class RequirementMigrationContribution extends AbstractMigrationContribut
     }
     return super.getNSURI(prefix, nsUri, context);
   }
+
 
 }
