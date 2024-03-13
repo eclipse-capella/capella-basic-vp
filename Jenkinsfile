@@ -60,5 +60,13 @@ pipeline {
         sh "mvn -Djacoco.dataFile=$JACOCO_EXEC_FILE_PATH org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:report $MVN_QUALITY_PROFILES -e -f pom.xml"
 	  }
     }   
+	
+	stage('Perform Sonar analysis') {
+			steps {
+				script {
+					sonar.runSonar("eclipse-capella_capella-basic-vp", "eclipse/capella-basic-vp", "sonar-token-capella-basic-vp")
+				}
+			}
+		}
   }
 }

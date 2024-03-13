@@ -26,7 +26,7 @@
 		<tycho-extras-version>2.7.5</tycho-extras-version>
 		<tycho.scmUrl>scm:git:http://git.polarsys.org/c/capella/capella-basic-vp.git</tycho.scmUrl>
 		<antrun-version>3.0.0</antrun-version>
-		<jacoco-version>0.8.6</jacoco-version>
+		<jacoco-version>0.8.8</jacoco-version>
 		<java-version>JavaSE-17</java-version>
 		
 		<!-- for junit -->
