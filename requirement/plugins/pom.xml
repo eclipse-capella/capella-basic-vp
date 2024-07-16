@@ -29,6 +29,9 @@
 		<relativePath>../../</relativePath>
 	</parent>
 
+	<properties>
+		<sonar.sources>src</sonar.sources>
+	</properties>
 	<modules>
 	
 		<!-- Plugins -->

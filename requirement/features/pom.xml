@@ -28,6 +28,9 @@
 		<relativePath>../../</relativePath>
 	</parent>
 
+    <properties>
+      <sonar.skip>true</sonar.skip>
+    </properties>
 	<modules>
 		<module>org.polarsys.capella.basic.requirement.feature</module>
 		<module>org.polarsys.capella.basic.requirement.cdo.feature</module>

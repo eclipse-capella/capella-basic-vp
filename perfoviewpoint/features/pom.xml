@@ -19,6 +19,9 @@
 	<artifactId>org.polarsys.capella.basic.perfo.viewpoint.features</artifactId>
 	<packaging>pom</packaging>
 
+    <properties>
+      <sonar.skip>true</sonar.skip>
+    </properties>
 	<parent>
 		<groupId>org.polarsys</groupId>
 		<artifactId>org.polarsys.capella.addon.basic.viewpoints</artifactId>

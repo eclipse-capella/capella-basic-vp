@@ -26,6 +26,9 @@
 		<relativePath>../../</relativePath>
 	</parent>
 
+	<properties>
+		<sonar.sources>src</sonar.sources>
+	</properties>
 	<modules>
 		<module>org.polarsys.capella.vp.mass</module>
 		<module>org.polarsys.capella.vp.mass.af</module>
