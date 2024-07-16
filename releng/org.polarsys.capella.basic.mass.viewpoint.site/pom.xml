@@ -26,6 +26,7 @@
 
 	<properties>
 		<packagedAddonName>BasicMass</packagedAddonName>
+		<sonar.skip>true</sonar.skip>
 	</properties>
 
 	<build>

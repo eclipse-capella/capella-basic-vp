@@ -26,6 +26,9 @@
 		<relativePath>../../</relativePath>
 	</parent>
 
+    <properties>
+      <sonar.skip>true</sonar.skip>
+    </properties>
 	<modules>
 		<module>org.polarsys.capella.vp.price.af.feature</module>
 		<module>org.polarsys.capella.vp.price.feature</module>

@@ -27,6 +27,7 @@
 
 	<properties>
 		<packagedAddonName>BasicRequirement</packagedAddonName>
+		<sonar.skip>true</sonar.skip>
 	</properties>
 
 	<build>

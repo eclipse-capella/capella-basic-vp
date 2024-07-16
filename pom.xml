@@ -44,6 +44,9 @@
 	<profiles>
 		<profile>
 			<id>full</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<modules>
 				<module>massviewpoint/features</module>
 				<module>massviewpoint/plugins</module>
@@ -63,22 +66,6 @@
 				<module>requirement/features</module>
 				<module>requirement/plugins</module>
 				<module>requirement/tests/org.polarsys.capella.basic.requirement.tests.ju</module>
-				<module>releng/org.polarsys.capella.basic.requirement.viewpoint.site</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>mass</id>
-			<modules>
-				<module>massviewpoint/features</module>
-				<module>massviewpoint/plugins</module>
-				<module>releng/org.polarsys.capella.basic.mass.viewpoint.site</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>requirement</id>
-			<modules>
-				<module>requirement/features</module>
-				<module>requirement/plugins</module>
 				<module>releng/org.polarsys.capella.basic.requirement.viewpoint.site</module>
 			</modules>
 		</profile>
@@ -144,54 +131,6 @@
 					</snapshots>
 				</pluginRepository>
 			</pluginRepositories>
-		</profile>
-		<profile>
-			<id>massTests</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<modules>
-				<module>massviewpoint/tests</module>
-				<module>massviewpoint/features</module>
-				<module>massviewpoint/plugins</module>
-				<module>releng/org.polarsys.capella.basic.mass.viewpoint.site</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>priceTests</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<modules>
-				<module>priceviewpoint/tests</module>
-				<module>priceviewpoint/features</module>
-				<module>priceviewpoint/plugins</module>
-				<module>releng/org.polarsys.capella.basic.price.viewpoint.site</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>perfoTests</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<modules>
-				<module>perfoviewpoint/tests</module>
-				<module>perfoviewpoint/features</module>
-				<module>perfoviewpoint/plugins</module>
-				<module>releng/org.polarsys.capella.basic.perfo.viewpoint.site</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>requirementTests</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<modules>
-				<module>requirement/tests</module>
-				<module>requirement/features</module>
-				<module>requirement/plugins</module>
-				<module>releng/org.polarsys.capella.basic.requirement.viewpoint.site</module>
-			</modules>
 		</profile>
 	</profiles>
 
