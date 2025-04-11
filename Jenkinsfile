@@ -48,6 +48,10 @@ pipeline {
 					deployer.addonNightlyUpdateSite("${WORKSPACE}/releng/org.polarsys.capella.basic.perfo.viewpoint.site/target/*-updateSite-*.zip", deploymentDirName)
 					deployer.addonNightlyUpdateSite("${WORKSPACE}/releng/org.polarsys.capella.basic.price.viewpoint.site/target/*-updateSite-*.zip", deploymentDirName)
 					deployer.addonNightlyUpdateSite("${WORKSPACE}/releng/org.polarsys.capella.basic.requirement.viewpoint.site/target/*-updateSite-*.zip", deploymentDirName)
+					deployer.addonNightlyUpdateSite("${WORKSPACE}/releng/org.polarsys.capella.basic.mass.viewpoint.site/target/bom*.json", deploymentDirName)	
+					deployer.addonNightlyUpdateSite("${WORKSPACE}/releng/org.polarsys.capella.basic.perfo.viewpoint.site/target/bom*.json", deploymentDirName)
+					deployer.addonNightlyUpdateSite("${WORKSPACE}/releng/org.polarsys.capella.basic.price.viewpoint.site/target/bom*.json", deploymentDirName)
+					deployer.addonNightlyUpdateSite("${WORKSPACE}/releng/org.polarsys.capella.basic.requirement.viewpoint.site/target/bom*.json", deploymentDirName)
 
 					currentBuild.description = "${deploymentDirName} - <a href=\"https://download.eclipse.org/capella/addons/basic/dropins/nightly/${deploymentDirName}\">drop-in</a> - <a href=\"https://download.eclipse.org/capella/addons/basic/updates/nightly/${deploymentDirName}\">update-site</a>"
 	       		}         

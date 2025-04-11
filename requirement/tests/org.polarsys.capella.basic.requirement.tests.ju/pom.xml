@@ -35,7 +35,7 @@
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-surefire-plugin</artifactId>
 				<!--No idea why it needs to be a fixed version, cannot use ${tycho-version} -->
-				<version>2.7.5</version>
+				<version>4.0.9</version>
 				<configuration>
 					<product>${capella-product-id}</product>
 					<application>${capella-application-id}</application>
@@ -55,7 +55,7 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
-				<version>2.7.5</version>
+				<version>4.0.9</version>
 				<configuration>
 					<environments combine.self="override" />
 					<dependency-resolution>
