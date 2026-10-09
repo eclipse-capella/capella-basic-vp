@@ -34,8 +34,6 @@
 
 	<properties>
 		<sonar.skip>true</sonar.skip>
-		<tycho-version>4.0.9</tycho-version>
-		<tycho-extras-version>4.0.9</tycho-extras-version>
 		<targetPlatform.name>tp/capella.target-definition.targetplatform</targetPlatform.name>
 		<converterApplication.name>org.eclipse.cbi.targetplatform.tpd.converter</converterApplication.name>
 	</properties>
