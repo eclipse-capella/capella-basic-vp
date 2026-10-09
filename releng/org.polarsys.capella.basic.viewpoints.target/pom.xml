@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright (c) 2017, 2021 THALES GLOBAL SERVICES.
+  Copyright (c) 2017, 2026 THALES GLOBAL SERVICES.
   This program and the accompanying materials are made available under the
   terms of the Eclipse Public License 2.0 which is available at
   http://www.eclipse.org/legal/epl-2.0
@@ -49,7 +49,7 @@
 						<repository>
 							<id>targetplatform-tp</id>
 							<layout>p2</layout>
-							<url>https://download.eclipse.org/releases/2023-03</url>
+							<url>https://download.eclipse.org/releases/2025-09</url>
 						</repository>
 						<repository>
 							<id>targetplatform</id>
@@ -68,7 +68,7 @@
 							<type>eclipse-feature</type>
 						</dependency>
 					</dependencies>
-					<executionEnvironment>JavaSE-17</executionEnvironment>
+					<executionEnvironment>JavaSE-21</executionEnvironment>
 				</configuration>
 				<executions>
 					<execution>
@@ -80,7 +80,6 @@
 								<arg>${converterApplication.name}</arg>
 								<arg>${targetPlatform.name}</arg>
 							</applicationArgs>
-							<executionEnvironment>JavaSE-17</executionEnvironment>
 						</configuration>
 						<goals>
 							<goal>eclipse-run</goal>
