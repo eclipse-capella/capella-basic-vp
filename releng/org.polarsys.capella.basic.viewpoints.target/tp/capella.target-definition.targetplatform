@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2017, 2022 THALES GLOBAL SERVICES.
+ * Copyright (c) 2017, 2026 THALES GLOBAL SERVICES.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0
@@ -21,7 +21,7 @@ location capella-master "https://download.eclipse.org/capella/core/updates/night
 	org.polarsys.capella.cdo.mock.feature.feature.group lazy
 }
 
-location "https://download.eclipse.org/modeling/emf/cdo/drops/R20230606-0205" {
+location "https://download.eclipse.org/modeling/emf/cdo/drops/R20230307-0126/" {
     org.eclipse.emf.cdo.sdk.feature.group
 }
 
@@ -30,6 +30,6 @@ location capella-test "https://download.eclipse.org/capella/core/updates/nightly
 	org.polarsys.capella.test.feature.feature.group lazy
 }
 
-location xhtml-docgen "https://download.eclipse.org/capella/addons/xhtmldocgen/updates/nightly/master/" {
+location xhtml-docgen "https://download.eclipse.org/capella/addons/xhtmldocgen/updates/releases/7.0.1/" {
 	 org.polarsys.capella.docgen.feature.source.feature.group lazy
 }
