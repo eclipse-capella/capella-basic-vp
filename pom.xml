@@ -22,8 +22,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<tycho-version>4.0.9</tycho-version>
-		<tycho-extras-version>4.0.9</tycho-extras-version>
+		<tycho-extras-version>${tycho-version}</tycho-extras-version>
 		<tycho.scmUrl>scm:git:http://git.polarsys.org/c/capella/capella-basic-vp.git</tycho.scmUrl>
 		<antrun-version>3.0.0</antrun-version>
 		<jacoco-version>0.8.8</jacoco-version>
