@@ -2,8 +2,8 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Perfo VP JUnit Tests
 Bundle-SymbolicName: org.polarsys.capella.vp.perfo.tests.ju
-Bundle-Version: 7.0.0.qualifier
 Bundle-Vendor: Obeo
+Bundle-Version: 7.2.0.qualifier
 Automatic-Module-Name: org.polarsys.capella.vp.perfo.ju
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.polarsys.capella.core.libraries,
