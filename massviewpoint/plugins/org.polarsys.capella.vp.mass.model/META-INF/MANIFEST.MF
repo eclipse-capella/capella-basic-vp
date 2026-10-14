@@ -15,10 +15,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.polarsys.kitalpha.emde.model;visibility:=reexport,
- org.polarsys.capella.common.data.activity.gen;visibility:=reexport,
- org.polarsys.capella.core.data.gen;visibility:=reexport,
- org.polarsys.capella.common.data.core.gen;visibility:=reexport,
- org.polarsys.capella.common.data.behavior.gen;visibility:=reexport,
- org.polarsys.capella.core.data.helpers;visibility:=reexport,
- org.polarsys.kitalpha.emde.xmi;visibility:=reexport
+ org.polarsys.kitalpha.emde.xmi;visibility:=reexport,
+ org.polarsys.capella.common.data.activity.gen;bundle-version="7.2.0";visibility:=reexport,
+ org.polarsys.capella.core.data.gen;bundle-version="7.2.0";visibility:=reexport,
+ org.polarsys.capella.common.data.core.gen;bundle-version="7.2.0";visibility:=reexport,
+ org.polarsys.capella.common.data.behavior.gen;bundle-version="7.2.0";visibility:=reexport,
+ org.polarsys.capella.core.data.helpers;bundle-version="7.2.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
