@@ -11,9 +11,9 @@ Require-Bundle: org.polarsys.capella.basic.requirement.model,
  org.polarsys.capella.basic.requirement.sirius.analysis,
  org.polarsys.capella.basic.requirement.business.queries,
  org.polarsys.capella.core.data.gen,
- org.polarsys.capella.test.table;bundle-version="7.0.0",
- org.eclipse.sirius.table;bundle-version="7.2.0",
- org.polarsys.capella.test.diagram.common.ju;bundle-version="7.0.0",
+ org.polarsys.capella.test.table,
+ org.eclipse.sirius.table,
+ org.polarsys.capella.test.diagram.common.ju,
  org.polarsys.capella.test.business.queries.ju,
  org.polarsys.capella.test.validation.rules.ju
 Bundle-RequiredExecutionEnvironment: JavaSE-17

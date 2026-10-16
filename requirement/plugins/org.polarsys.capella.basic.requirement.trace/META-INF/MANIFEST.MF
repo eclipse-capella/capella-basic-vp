@@ -9,7 +9,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Require-Bundle: org.polarsys.capella.core.platform.eclipse.ui.trace;bundle-version="7.0.0",
+Require-Bundle: org.polarsys.capella.core.platform.eclipse.ui.trace,
  org.polarsys.capella.core.data.gen,
  org.polarsys.capella.basic.requirement.model
 Bundle-ActivationPolicy: lazy
