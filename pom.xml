@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright (c) 2017, 2020 THALES GLOBAL SERVICES.
+  Copyright (c) 2017, 2026 THALES GLOBAL SERVICES.
   This program and the accompanying materials are made available under the
   terms of the Eclipse Public License 2.0 which is available at
   http://www.eclipse.org/legal/epl-2.0
@@ -18,23 +18,23 @@
 	<name>Capella Basic Viewpoints</name>
 	<groupId>org.polarsys</groupId>
 	<artifactId>org.polarsys.capella.addon.basic.viewpoints</artifactId>
-	<version>7.0.0-SNAPSHOT</version>
+	<version>7.2.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties>
-		<tycho-version>4.0.9</tycho-version>
-		<tycho-extras-version>4.0.9</tycho-extras-version>
+		<tycho-extras-version>${tycho-version}</tycho-extras-version>
 		<tycho.scmUrl>scm:git:http://git.polarsys.org/c/capella/capella-basic-vp.git</tycho.scmUrl>
 		<antrun-version>3.0.0</antrun-version>
 		<jacoco-version>0.8.8</jacoco-version>
 		<java-version>JavaSE-17</java-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
 		<!-- for junit -->
 		<capella-product-id>org.polarsys.capella.core.platform.sirius.ui.perspective.product</capella-product-id>
 		<capella-rcp-product-id>org.polarsys.capella.rcp.product</capella-rcp-product-id>
 		<capella-application-id>org.polarsys.capella.core.platform.sirius.ui.perspective.id</capella-application-id>
 		<tycho.testArgLine>-Xms256m -Xmx1024m</tycho.testArgLine>
-		<maven.test.failure.ignore>true</maven.test.failure.ignore>
 
 		<!-- for packaging -->
 		<platform-name>oxygen</platform-name>
@@ -171,7 +171,7 @@
 						<artifact>
 							<groupId>org.polarsys</groupId>
 							<artifactId>org.polarsys.capella.addon.basic.viewpoints</artifactId>
-							<version>7.0.0-SNAPSHOT</version>
+							<version>7.2.0-SNAPSHOT</version>
 							<classifier>releng/org.polarsys.capella.basic.viewpoints.target/tp/capella.target-definition</classifier>
 						</artifact>
 					</target>
@@ -192,6 +192,7 @@
 							<arch>x86_64</arch>
 						</environment>
 					</environments>
+					<executionEnvironment>JavaSE-21</executionEnvironment>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -258,6 +259,22 @@
 						<compilerArgument>-warn:+discouraged,forbidden</compilerArgument>
 					</configuration>
 				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-surefire-plugin</artifactId>
+					<version>${tycho-version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>target-platform-configuration</artifactId>
+					<version>${tycho-version}</version>
+				</plugin>
+				<!-- This is used by org.eclipse.tycho:tycho-build for the pomless builds -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>build-helper-maven-plugin</artifactId>
+					<version>3.6.2</version>
+				</plugin>				
 
 				<!-- plugins only called if a descendant need them -->
 				<plugin>

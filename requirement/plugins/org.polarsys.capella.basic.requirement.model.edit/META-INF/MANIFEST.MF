@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.capella.basic.requirement.model.edit;singleton:=true
 Automatic-Module-Name: org.polarsys.capella.basic.requirement.model.edit
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 7.2.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.polarsys.capella.basic.requirement.model.provider.RequirementEditPlugin$Implementation
 Bundle-Vendor: %providerName
@@ -48,5 +48,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.polarsys.capella.common.model,
  org.eclipse.core.commands,
  org.eclipse.emf.common,
- org.polarsys.capella.basic.requirement.model;bundle-version="1.0.0";visibility:=reexport
+ org.polarsys.capella.basic.requirement.model;visibility:=reexport
 Bundle-ActivationPolicy: lazy
