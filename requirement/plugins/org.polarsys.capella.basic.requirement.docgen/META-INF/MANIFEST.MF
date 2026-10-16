@@ -12,7 +12,7 @@ Require-Bundle: org.polarsys.kitalpha.doc.gen.business.core,
  org.eclipse.sirius.diagram,
  org.polarsys.capella.docgen,
  org.eclipse.ui,
- org.polarsys.capella.basic.requirement.model;bundle-version="1.0.0"
+ org.polarsys.capella.basic.requirement.model
 Export-Package: org.polarsys.capella.basic.requirement.docgen,
  org.polarsys.capella.basic.requirement.docgen.helper
 Bundle-Activator: org.polarsys.capella.basic.requirement.docgen.Activator

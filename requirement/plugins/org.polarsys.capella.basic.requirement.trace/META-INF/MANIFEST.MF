@@ -11,5 +11,5 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.polarsys.capella.core.platform.eclipse.ui.trace;bundle-version="7.0.0",
  org.polarsys.capella.core.data.gen,
- org.polarsys.capella.basic.requirement.model;bundle-version="1.0.0"
+ org.polarsys.capella.basic.requirement.model
 Bundle-ActivationPolicy: lazy
