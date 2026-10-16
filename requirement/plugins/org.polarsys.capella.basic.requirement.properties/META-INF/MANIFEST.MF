@@ -8,7 +8,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.polarsys.capella.core.ui.properties,
  org.polarsys.capella.core.data.information.datatype.properties,
  org.polarsys.kitalpha.ad.services,
- org.polarsys.capella.basic.requirement.model;bundle-version="1.0.0"
+ org.polarsys.capella.basic.requirement.model
 Export-Package: org.polarsys.capella.basic.requirement.properties,
  org.polarsys.capella.basic.requirement.properties.sections
 Bundle-Localization: plugin

@@ -10,9 +10,9 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.polarsys.capella.core.data.gen,
- org.polarsys.capella.basic.requirement.model;bundle-version="1.0.0",
+ org.polarsys.capella.basic.requirement.model,
  org.polarsys.capella.common.transition,
- org.polarsys.capella.basic.requirement.preferences;bundle-version="1.0.0",
+ org.polarsys.capella.basic.requirement.preferences,
  org.polarsys.capella.core.transition.system;bundle-version="7.0.0",
  com.google.guava,
  org.polarsys.capella.core.compare,
