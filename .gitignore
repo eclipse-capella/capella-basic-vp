@@ -17,7 +17,9 @@ tmp/
 
 # Maven
 target/
-.polyglot.build.properties
+.polyglot.*
+.tycho-consumer-pom.xml
+/releng/org.polarsys.capella.basic.viewpoints.target/tp/capella.target-definition.target
 
 # External tool builders
 .externalToolBuilders/
