@@ -26,19 +26,18 @@
 		<tycho.scmUrl>scm:git:http://git.polarsys.org/c/capella/capella-basic-vp.git</tycho.scmUrl>
 		<antrun-version>3.2.0</antrun-version>
 		<jacoco-version>0.8.15</jacoco-version>
-		<java-version>JavaSE-17</java-version>
+		<java-version>JavaSE-21</java-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
 		<!-- for junit -->
-		<capella-product-id>org.polarsys.capella.core.platform.sirius.ui.perspective.product</capella-product-id>
-		<capella-rcp-product-id>org.polarsys.capella.rcp.product</capella-rcp-product-id>
-		<capella-application-id>org.polarsys.capella.core.platform.sirius.ui.perspective.id</capella-application-id>
+		<capella-product-id>org.polarsys.capella.rcp.product</capella-product-id>
+		<capella-application>org.polarsys.capella.core.platform.sirius.ui.perspective.id</capella-application>
 		<tycho.testArgLine>-Xms256m -Xmx1024m</tycho.testArgLine>
 
 		<!-- for packaging -->
-		<platform-name>oxygen</platform-name>
-		<eclipse-repo.url>http://download.eclipse.org/releases/${platform-name}</eclipse-repo.url>
+		<platform-name>2025-09</platform-name>
+		<eclipse-repo.url>https://download.eclipse.org/releases/${platform-name}</eclipse-repo.url>
 	</properties>
 
 	<profiles>
@@ -314,7 +313,7 @@
 								<type>eclipse-feature</type>
 							</dependency>
 							<dependency>
-								<artifactId>org.eclipse.equinox.ds</artifactId>
+								<artifactId>org.apache.felix.scr</artifactId>
 								<type>eclipse-plugin</type>
 							</dependency>
 							<dependency>
@@ -372,7 +371,7 @@
 									<delete includeemptydirs="true">
 										<fileset
 											dir="${project.build.directory}/${packagedAddonName}/eclipse/features"
-											includes="**/org.polarsys.capella.vp.*.tests*/**" />											  
+											includes="**/org.polarsys.capella.vp.*.tests*/**,**/org.polarsys.capella.basic.requirement.tests*/**" />
 									</delete>
 									
 									
@@ -380,7 +379,7 @@
 									<delete>
 										<fileset
 											dir="${project.build.directory}/${packagedAddonName}/eclipse/plugins"
-											includes="org.polarsys.capella.vp.*.tests.ju*" />
+											includes="org.polarsys.capella.vp.*.tests.ju*,org.polarsys.capella.basic.requirement.tests.ju*" />
 									</delete>	
 									
 									<zip
