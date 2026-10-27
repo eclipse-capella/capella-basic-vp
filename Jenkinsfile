@@ -3,10 +3,10 @@ pipeline {
   
   tools {
         maven 'apache-maven-latest'
-        jdk 'openjdk-jdk17-latest'
+        jdk 'openjdk-jdk21-latest'
   }
   environment {
-		JACOCO_VERSION = "0.8.8"
+		JACOCO_VERSION = "0.8.15"
 		MVN_QUALITY_PROFILES = '-Pfull'
 		JACOCO_EXEC_FILE_PATH = '${WORKSPACE}/jacoco.exec'
 		BUILD_KEY = (github.isPullRequest() ? CHANGE_TARGET : BRANCH_NAME).replaceFirst(/^v/, '')
